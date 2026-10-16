@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NFR-1: App chạy hoàn toàn offline.
+
+  Manifest này chỉ áp dụng cho build RELEASE. Nó xóa quyền INTERNET khỏi
+  manifest đã merge, kể cả khi một plugin nào đó (share_plus, image_picker,
+  file_picker...) tự khai báo quyền này.
+
+  Bản DEBUG vẫn giữ INTERNET (khai báo ở src/debug/AndroidManifest.xml) vì
+  Flutter tool cần nó cho hot reload và debugger — không ảnh hưởng APK phát hành.
+
+  Kiểm tra sau khi build:
+    aapt dump permissions build/app/outputs/flutter-apk/app-release.apk
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
+
+</manifest>

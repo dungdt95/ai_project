@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(flutter --version)",
+      "Bash(flutter create *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter build *)",
+      "Bash(flutter emulators *)",
+      "Bash(flutter devices *)",
+      "Bash(adb -s emulator-5554 wait-for-device shell 'while [[ -z $\\(getprop sys.boot_completed\\) ]]; do sleep 1; done; echo BOOT_DONE')",
+      "Bash(flutter install *)",
+      "Bash(adb -s emulator-5554 shell monkey -p com.quanlynhatro.quanlynhatro -c android.intent.category.LAUNCHER 1)",
+      "Bash(adb -s emulator-5554 shell dumpsys window)",
+      "Bash(mkdir -p screenshots)",
+      "Bash(adb -s emulator-5554 exec-out screencap -p)",
+      "Bash(adb -s emulator-5554 shell input tap 270 1340)",
+      "Bash(adb -s emulator-5554 shell input keyevent KEYCODE_BACK)",
+      "Bash(adb -s emulator-5554 shell input tap 324 2120)",
+      "Bash(adb -s emulator-5554 shell input tap 540 2120)",
+      "Bash(adb -s emulator-5554 shell input tap 756 2120)",
+      "Bash(adb -s emulator-5554 shell input tap 972 2120)",
+      "Bash(adb -s emulator-5554 shell uiautomator dump /sdcard/ui.xml)",
+      "Bash(adb -s emulator-5554 shell cat /sdcard/ui.xml)",
+      "Bash(adb -s emulator-5554 pull /sdcard/ui.xml \"D:\\\\ai_project\\\\quanlynhatro\\\\screenshots\\\\ui.xml\")",
+      "Bash(adb -s emulator-5554 shell 'uiautomator dump')",
+      "Bash(adb -s emulator-5554 exec-out cat /sdcard/window_dump.xml)",
+      "Bash(adb -s emulator-5554 shell \"screencap -p /sdcard/test_home.png\")",
+      "Bash(adb -s emulator-5554 pull /sdcard/test_home.png \"D:\\\\ai_project\\\\quanlynhatro\\\\bug\\\\test_home.png\")",
+      "PowerShell(adb *)"
+    ]
+  }
+}

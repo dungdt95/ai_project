@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"D:\\\\ai_project\\\\quanlychitieu\" -Recurse -File)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(New-Item *)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"D:\\\\ai_project\\\\quanlychitieu\\\\lib\\\\features\\\\loans\\\\presentation\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"D:\\\\ai_project\\\\quanlychitieu\\\\lib\\\\features\\\\reports\\\\presentation\")",
+      "Bash(New-Item -ItemType Directory -Force -Path \"D:\\\\ai_project\\\\quanlychitieu\\\\lib\\\\features\\\\settings\\\\presentation\")",
+      "Bash(Write-Output \"Directories created\")",
+      "Bash(flutter analyze *)",
+      "Bash(flutter run *)",
+      "Bash(where flutter *)",
+      "Bash(taskkill /F /IM dart.exe)",
+      "Bash(taskkill /F /IM java.exe)",
+      "PowerShell(Get-Process *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter build *)",
+      "PowerShell(flutter analyze *)",
+      "PowerShell(flutter build *)",
+      "PowerShell(flutter emulators 2>&1)",
+      "PowerShell(flutter emulators --launch Pixel_3a_API_34_extension_level_7_x86_64 2>&1)"
+    ]
+  }
+}

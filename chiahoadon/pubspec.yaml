@@ -1,0 +1,106 @@
+name: chiahoadon
+description: "Chia hóa đơn nhóm - hoạt động hoàn toàn offline"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^3.4.3
+
+  # Lưu trữ local
+  sqflite: ^2.4.4
+  path: ^1.9.1
+  path_provider: ^2.1.6
+  shared_preferences: ^2.5.5
+
+  # Tiện ích
+  intl: ^0.20.3
+  uuid: ^4.6.0
+  collection: ^1.19.1
+
+  # UI
+  fl_chart: ^1.2.0
+  flutter_slidable: ^4.0.3
+
+  # Chia sẻ & file
+  share_plus: ^13.3.1
+  image_picker: ^1.2.3
+  file_picker: ^13.1.0
+  qr_flutter: ^4.1.0
+  local_auth: ^3.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Test DAO trên máy tính, không cần emulator
+  sqflite_common_ffi: ^2.4.3
+  test: ^1.31.1
+  image: ^4.10.1
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+
+  fonts:
+    - family: BeVietnamPro
+      fonts:
+        - asset: assets/fonts/BeVietnamPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/BeVietnamPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/BeVietnamPro-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/BeVietnamPro-Bold.ttf
+          weight: 700
+
+# Icon ứng dụng — ảnh nguồn sinh bằng `dart run tool/generate_icon.dart`.
+#
+# `adaptive_icon_background` dùng mã màu thay vì ảnh để Android tự vẽ nền:
+# nhẹ hơn và không bị răng cưa ở mọi hình mặt nạ launcher áp lên.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon/app_icon.png
+  adaptive_icon_background: "#0D9488"
+  adaptive_icon_foreground: assets/icon/app_icon_foreground.png
+  # Icon đơn sắc cho chủ đề động của Android 13+.
+  adaptive_icon_monochrome: assets/icon/app_icon_foreground.png
+  # Ảnh nguồn đã chừa sẵn lề vừa đủ vùng an toàn; để thêm inset mặc định 16%
+  # nữa thì dấu hiệu bị thu nhỏ quá, nhìn lọt thỏm giữa nền.
+  adaptive_icon_foreground_inset: 0
+  # iOS không chấp nhận icon có kênh trong suốt.
+  remove_alpha_ios: true
+
+# Màn hình chờ lúc khởi động.
+#
+# Nền teal cả ở chế độ sáng lẫn tối: logo trắng nên giữ nguyên nền thì không
+# phải sinh hai bộ ảnh, và màn chờ luôn trùng màu với thanh tiêu đề của app.
+flutter_native_splash:
+  color: "#0D9488"
+  color_dark: "#0D9488"
+  image: assets/icon/splash_logo.png
+  image_dark: assets/icon/splash_logo.png
+  android_12:
+    color: "#0D9488"
+    color_dark: "#0D9488"
+    image: assets/icon/splash_logo_android12.png
+    image_dark: assets/icon/splash_logo_android12.png
+    icon_background_color: "#0D9488"
+    icon_background_color_dark: "#0D9488"
+  android: true
+  ios: true
+  web: false

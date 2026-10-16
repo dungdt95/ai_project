@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter --version)",
+      "Bash(flutter create *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter test *)",
+      "Bash(flutter emulators *)",
+      "Bash(flutter devices *)",
+      "Bash(flutter run *)",
+      "Bash(flutter build *)",
+      "Bash(flutter install *)",
+      "Bash(timeout 8)",
+      "Bash(curl -s \"http://127.0.0.1:51105/9B5Hctg6GOU=/reloadSources\" -X POST -H \"Content-Type: application/json\" -d '{\"isolateId\":\"isolates/123\"}')",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\assets\\\\bida\\\\balls\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\assets\\\\bida\\\\table\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\assets\\\\bida\\\\audio\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\domain\\\\rules\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\physics\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\ai\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\data\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\presentation\\\\widgets\")",
+      "Bash(New-Item -ItemType Directory -Force \"D:\\\\ai_project\\\\games\\\\game_hub\\\\lib\\\\games\\\\bida\\\\presentation\\\\flame\")",
+      "PowerShell(flutter analyze *)",
+      "Bash(not exist *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(adb *)",
+      "Bash(dart analyze *)",
+      "Bash(echo r *)",
+      "Bash(curl -s -X POST http://127.0.0.1:61832/yG40OEsxX60=/hotReload)",
+      "Bash(adb devices *)",
+      "Bash(Get-Content *)",
+      "Bash(adb install *)",
+      "Bash(adb shell *)"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+﻿# Dependencies / build output
+node_modules/
+.dart_tool/
+.gradle/
+build/
+dist/
+.expo/
+*.apk
+*.aab
+
+# Local
+.idea/
+*.iml
+local.properties
+.env
+.env.*
+*.jks
+*.keystore
+key.properties
+.DS_Store
+*.log
+.git.bak/
+.claude/settings.local.json

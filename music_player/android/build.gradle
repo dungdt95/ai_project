@@ -1,0 +1,77 @@
+import groovy.xml.XmlSlurper
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+// Some older plugins don't declare a `namespace` in their build.gradle, which
+// AGP 8+ requires. Backfill it from the plugin's AndroidManifest.xml package.
+subprojects { project ->
+    ['com.android.library', 'com.android.application'].each { pluginId ->
+        project.plugins.withId(pluginId) {
+            def androidExtension = project.extensions.findByName('android')
+            if (androidExtension != null && androidExtension.hasProperty('namespace') && androidExtension.namespace == null) {
+                def manifestFile = project.file('src/main/AndroidManifest.xml')
+                if (manifestFile.exists()) {
+                    def manifest = new XmlSlurper().parse(manifestFile)
+                    def packageName = manifest.@package.text()
+                    if (packageName) {
+                        androidExtension.namespace = packageName
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Some older plugins don't pin a JVM target, so AGP/Kotlin pick mismatched
+// defaults (e.g. Java 11 vs Kotlin 17) for their Java and Kotlin compile
+// tasks. Force both to JDK 17 (installed toolchain) for consistency.
+subprojects { project ->
+    project.plugins.withId('com.android.library') {
+        def androidExtension = project.extensions.findByName('android')
+        if (androidExtension != null) {
+            androidExtension.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_17
+                targetCompatibility JavaVersion.VERSION_17
+            }
+        }
+    }
+    if (project.name != 'app') {
+        project.plugins.withId('org.jetbrains.kotlin.android') {
+            def androidExtension = project.extensions.findByName('android')
+            if (androidExtension != null && androidExtension.hasProperty('kotlinOptions')) {
+                androidExtension.kotlinOptions {
+                    jvmTarget = '17'
+                }
+            }
+        }
+        // Some older plugins pin their own (too low) compileSdkVersion, which
+        // must win over ours in `plugins.withId` above since it's set later
+        // in their own build.gradle — so fix it up after their script runs.
+        project.afterEvaluate {
+            def androidExtension = project.extensions.findByName('android')
+            if (androidExtension != null && androidExtension.hasProperty('compileSdkVersion') && androidExtension.compileSdkVersion != null) {
+                def sdkNum = androidExtension.compileSdkVersion.toString().replace('android-', '')
+                if (sdkNum.isInteger() && sdkNum.toInteger() < 36) {
+                    androidExtension.compileSdkVersion = 36
+                }
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

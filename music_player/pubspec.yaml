@@ -1,0 +1,54 @@
+name: music_player
+description: "Music player with local files and YouTube downloader."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Audio
+  just_audio: ^0.9.36
+  audio_service: ^0.18.13
+  just_audio_background: ^0.0.1-beta.11
+
+  # Storage & files
+  file_picker: ^12.0.0
+  permission_handler: ^11.1.0
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+  # Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # YouTube download
+  youtube_explode_dart: ^3.1.0
+  dio: ^5.4.3
+
+  # Audio metadata + artwork (Android MediaStore)
+  on_audio_query: ^2.9.0
+
+  # Dynamic color from album art
+  palette_generator: ^0.3.3
+
+  # UI
+  cached_network_image: ^3.3.1
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"D:\\\\ai_project\\\\chitieu-expo\" -Force | Select-Object Name, Mode | Where-Object { $_.Name -ne \"node_modules\" })",
+      "PowerShell(Test-Path \"D:\\\\ai_project\\\\chitieu-expo\\\\node_modules\\\\babel-preset-expo\"; \\(Get-Content \"D:\\\\ai_project\\\\chitieu-expo\\\\node_modules\\\\babel-preset-expo\\\\package.json\" | ConvertFrom-Json\\).version)",
+      "PowerShell(\\(Get-Content \"D:\\\\ai_project\\\\chitieu-expo\\\\node_modules\\\\babel-preset-expo\\\\package.json\" | ConvertFrom-Json\\).version)"
+    ]
+  }
+}

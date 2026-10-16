@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter --version)",
+      "Bash(flutter doctor *)",
+      "Bash(flutter create *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter test *)",
+      "Bash(flutter devices *)",
+      "Bash(flutter emulators *)",
+      "Bash(flutter run *)",
+      "Bash(adb -s emulator-5554 shell screencap -p /sdcard/screen.png)",
+      "Bash(adb -s emulator-5554 pull /sdcard/screen.png \"/d/ai_project/minishop/screen_items.png\")",
+      "Bash(adb -s emulator-5554 shell screencap /sdcard/screen.png)",
+      "Bash(adb *)",
+      "Bash(MSYS_NO_PATHCONV=1 adb *)",
+      "Bash(python3 -c \"import pyzbar\")",
+      "Bash(python3 *)",
+      "PowerShell(py *)",
+      "Bash(flutter build *)",
+      "Bash(dart format *)"
+    ]
+  }
+}

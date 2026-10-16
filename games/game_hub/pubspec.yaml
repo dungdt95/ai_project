@@ -1,0 +1,63 @@
+name: game_hub
+description: "Game Hub - Trung tâm game mobile"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management (manual providers, no codegen)
+  flutter_riverpod: ^2.5.1
+
+  # Routing
+  go_router: ^13.2.4
+
+  # Local storage (Hive for all — settings + history)
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+
+  # Device info & networking
+  network_info_plus: ^5.0.3
+  path_provider: ^2.1.3
+
+  # QR code
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^4.0.1
+
+  # Audio
+  audioplayers: ^5.2.1
+
+  # Game engine + physics (Bida)
+  flame: ^1.17.0
+  flame_forge2d: ^0.17.0
+
+  # i18n (pinned by flutter_localizations in Flutter 3.19)
+  intl: ^0.18.1
+
+  cupertino_icons: ^1.0.6
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/audio/
+    - assets/images/
+    - assets/translations/
+    - assets/bida/balls/
+    - assets/bida/table/
+    - assets/bida/audio/
