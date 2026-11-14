@@ -71,13 +71,13 @@ class SettlementRepository {
     );
 
     return Result.guard(() async {
-      await _paymentDao.insert(payment);
+      await _paymentDao.insertAndSync(payment);
       return payment;
     });
   }
 
   Future<Result<void>> deletePayment(String id) =>
-      Result.guard(() => _paymentDao.delete(id));
+      Result.guard(() => _paymentDao.deleteAndRevert(id));
 
   /// Kiểm tra bất biến: tổng số dư ròng của mọi thành viên phải bằng 0.
   ///

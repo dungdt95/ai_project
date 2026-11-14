@@ -80,15 +80,23 @@ class SettlementNotifier extends AsyncNotifier<SettlementView> {
           note: note,
           method: method,
         );
-    if (result.isOk) ref.invalidateSelf();
+    if (result.isOk) _reload();
     return result;
+  }
+
+  /// Ghi/xóa chuyển tiền có thể đổi trạng thái "đã trả" ở từng hóa đơn, nên
+  /// phải nạp lại cả danh sách lẫn mọi màn chi tiết hóa đơn.
+  void _reload() {
+    ref.invalidate(billDetailProvider);
+    ref.invalidate(billListProvider);
+    ref.invalidateSelf();
   }
 
   Future<Result<void>> deletePayment(String id) async {
     final result = await ref
         .read(settlementRepositoryProvider)
         .deletePayment(id);
-    if (result.isOk) ref.invalidateSelf();
+    if (result.isOk) _reload();
     return result;
   }
 }

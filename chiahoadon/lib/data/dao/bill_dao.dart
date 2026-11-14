@@ -185,11 +185,16 @@ class BillDao {
     await _database.transaction((txn) async {
       await txn.update(
         Tables.billParticipants,
-        {'paid_amount': paidAmount, 'settled_at': isSettled ? now : null},
+        {
+          'paid_amount': paidAmount,
+          'settled_at': isSettled ? now : null,
+          // Người dùng tự sửa thì không còn là dấu vết của quyết toán nữa.
+          'settled_by_payment_id': null,
+        },
         where: 'bill_id = ? AND member_id = ?',
         whereArgs: [billId, memberId],
       );
-      await _refreshStatus(txn, billId, now);
+      await refreshStatus(txn, billId, now);
     });
   }
 
@@ -201,7 +206,8 @@ class BillDao {
       await txn.rawUpdate(
         '''
         UPDATE ${Tables.billParticipants}
-        SET paid_amount = share_amount, settled_at = ?
+        SET paid_amount = share_amount, settled_at = ?,
+            settled_by_payment_id = NULL
         WHERE bill_id = ?
         ''',
         [now, billId],
@@ -239,7 +245,11 @@ class BillDao {
   ///
   /// Giữ cùng quy tắc với `Bill.derivedStatus`: người ứng tiền không bị tính
   /// là còn nợ, vì họ đã bỏ tiền ra trước.
-  Future<void> _refreshStatus(Transaction txn, String billId, int now) async {
+  static Future<void> refreshStatus(
+    Transaction txn,
+    String billId,
+    int now,
+  ) async {
     final rows = await txn.rawQuery(
       '''
       SELECT bp.share_amount, bp.paid_amount,
