@@ -195,6 +195,10 @@ class Schema {
       share_amount         INTEGER NOT NULL DEFAULT 0,
       paid_amount          INTEGER NOT NULL DEFAULT 0,
       settled_at           INTEGER,
+      -- payments.id đã tự đánh dấu "đã trả" cho dòng này; NULL nếu người dùng
+      -- tự đánh dấu. Dùng để hoàn tác khi xóa ghi nhận chuyển tiền.
+      settled_by_payment_id TEXT,
+      settle_prev_paid     INTEGER NOT NULL DEFAULT 0,
       UNIQUE (bill_id, member_id)
     )
   ''';

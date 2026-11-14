@@ -6,7 +6,7 @@ class AppConstants {
   static const String dbFileName = 'chiahoadon.db';
   /// Phiên bản lược đồ. Tăng mỗi khi `schema.dart` đổi, và **luôn** kèm một
   /// bước trong `Migrations.steps` — xem PLAN §4.5 và 13.13.
-  static const int dbVersion = 3;
+  static const int dbVersion = 4;
 
   /// Thư mục con trong app documents dir để lưu ảnh hóa đơn.
   static const String billImageDir = 'bill_images';

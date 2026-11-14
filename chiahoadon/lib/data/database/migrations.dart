@@ -20,6 +20,7 @@ class Migrations {
   static final Map<int, Future<void> Function(Database db)> steps = {
     2: _addBillTitleNorm,
     3: _addItemPresets,
+    4: _addSettlementSyncColumns,
   };
 
   /// Chạy mọi bước từ [from] (không bao gồm) tới [to] (bao gồm).
@@ -62,6 +63,22 @@ class Migrations {
       );
     }
     await batch.commit(noResult: true);
+  }
+
+  /// v4 — đồng bộ quyết toán sang từng hóa đơn.
+  ///
+  /// `settled_by_payment_id` nhớ lần chuyển tiền nào đã tự đánh dấu "đã trả",
+  /// `settle_prev_paid` nhớ số đã trả trước đó, để xóa ghi nhận thì hoàn tác
+  /// được mà không đụng tới những gì người dùng tự đánh dấu.
+  static Future<void> _addSettlementSyncColumns(Database db) async {
+    await db.execute(
+      'ALTER TABLE ${Tables.billParticipants} '
+      'ADD COLUMN settled_by_payment_id TEXT',
+    );
+    await db.execute(
+      'ALTER TABLE ${Tables.billParticipants} '
+      'ADD COLUMN settle_prev_paid INTEGER NOT NULL DEFAULT 0',
+    );
   }
 
   /// v3 — thêm bảng món đặt sẵn.
