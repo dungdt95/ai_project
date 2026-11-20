@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/utils/format.dart';
 import '../../domain/models/book.dart';
+import '../drive/drive_provider.dart';
+import '../drive/drive_ui.dart';
 import '../import/import_controller.dart';
 import '../reader/reader_screen.dart';
 import '../stats/stats_screen.dart';
@@ -40,6 +42,20 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
       MaterialPageRoute(builder: (_) => ReaderScreen(bookId: book.id)),
     );
     if (mounted) await ref.read(libraryProvider.notifier).refresh();
+  }
+
+  /// Kéo để làm mới: tải lại danh sách và kiểm tra cập nhật các truyện Drive.
+  Future<void> _refresh() async {
+    await ref.read(libraryProvider.notifier).refresh();
+    await ref.read(driveUpdatesProvider.notifier).checkAll(force: true);
+  }
+
+  Future<void> _onBookMenu(Book book, String action) async {
+    if (action == 'drive') {
+      await DriveUi.syncNow(context, ref, book);
+    } else {
+      await _confirmDelete(book);
+    }
   }
 
   Future<void> _confirmDelete(Book book) async {
@@ -123,7 +139,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => ImportController.pickAndImport(context, ref),
+        onPressed: () => ImportController.showImportMenu(context, ref),
         icon: const Icon(Icons.add),
         label: const Text('Nhập truyện'),
       ),
@@ -137,70 +153,122 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
             );
           }
           final now = DateTime.now();
-          return ListView.separated(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 96),
-            itemCount: list.length,
-            separatorBuilder: (_, _) => const SizedBox(height: 4),
-            itemBuilder: (context, i) {
-              final b = list[i];
-              return InkWell(
-                borderRadius: BorderRadius.circular(8),
-                onTap: () => _openBook(b),
-                onLongPress: () => _confirmDelete(b),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      BookCover(title: b.title),
-                      const SizedBox(width: 14),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              b.title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                            if (b.volume.isNotEmpty)
-                              Text(
-                                b.volume,
-                                maxLines: 1,
+          final updates = ref.watch(driveUpdatesProvider);
+          return RefreshIndicator(
+            onRefresh: _refresh,
+            child: ListView.separated(
+              physics: const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 96),
+              itemCount: list.length,
+              separatorBuilder: (_, _) => const SizedBox(height: 4),
+              itemBuilder: (context, i) {
+                final b = list[i];
+                return InkWell(
+                  borderRadius: BorderRadius.circular(8),
+                  onTap: () => _openBook(b),
+                  onLongPress: () => _confirmDelete(b),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        BookCover(title: b.title),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(text: b.title),
+                                    if (updates.containsKey(b.id))
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                            left: 8,
+                                          ),
+                                          child: _UpdateBadge(
+                                            count: updates[b.id]!.newChapters,
+                                          ),
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                                maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                              if (b.volume.isNotEmpty)
+                                Text(
+                                  b.volume,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme.of(context).textTheme.bodySmall,
+                                ),
+                              const SizedBox(height: 6),
+                              LinearProgressIndicator(
+                                value: b.progress,
+                                minHeight: 5,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                '${(b.progress * 100).round()}% · ${b.chapterCount} chương · ${Fmt.relative(b.lastReadAt, now)}',
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
-                            const SizedBox(height: 6),
-                            LinearProgressIndicator(
-                              value: b.progress,
-                              minHeight: 5,
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              '${(b.progress * 100).round()}% · ${b.chapterCount} chương · ${Fmt.relative(b.lastReadAt, now)}',
-                              style: Theme.of(context).textTheme.bodySmall,
+                            ],
+                          ),
+                        ),
+                        PopupMenuButton<String>(
+                          tooltip: 'Tùy chọn',
+                          onSelected: (a) => _onBookMenu(b, a),
+                          itemBuilder: (_) => [
+                            if (b.isDrive)
+                              const PopupMenuItem(
+                                value: 'drive',
+                                child: Text('Cập nhật từ Drive'),
+                              ),
+                            const PopupMenuItem(
+                              value: 'delete',
+                              child: Text('Xóa truyện'),
                             ),
                           ],
                         ),
-                      ),
-                      PopupMenuButton<String>(
-                        tooltip: 'Tùy chọn',
-                        onSelected: (_) => _confirmDelete(b),
-                        itemBuilder: (_) => const [
-                          PopupMenuItem(
-                            value: 'delete',
-                            child: Text('Xóa truyện'),
-                          ),
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           );
         },
+      ),
+    );
+  }
+}
+
+class _UpdateBadge extends StatelessWidget {
+  const _UpdateBadge({required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+      decoration: BoxDecoration(
+        color: scheme.primary,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        count > 0 ? '+$count mới' : 'Có cập nhật',
+        style: TextStyle(
+          color: scheme.onPrimary,
+          fontSize: 11,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }
@@ -226,7 +294,7 @@ class _EmptyState extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              searching ? 'Không có truyện khớp.' : 'Thư viện còn trống.\nBấm "Nhập truyện" để thêm tệp .zip, .txt hoặc .epub.',
+              searching ? 'Không có truyện khớp.' : 'Thư viện còn trống.\nBấm "Nhập truyện" để thêm tệp .zip, .txt, .epub, các tệp chương .md hoặc thư mục Google Drive.',
               textAlign: TextAlign.center,
             ),
           ],

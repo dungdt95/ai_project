@@ -5,11 +5,19 @@ class ParsedChapter {
     required this.number,
     required this.title,
     required this.content,
+    this.driveFileId = '',
+    this.contentHash = '',
+    this.driveModified = '',
   });
 
   final int number;
   final String title;
   final String content;
+
+  /// Chỉ dùng cho truyện từ Drive.
+  final String driveFileId;
+  final String contentHash;
+  final String driveModified;
 
   int get wordCount =>
       content.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).length;
@@ -24,7 +32,11 @@ class ParsedBook {
     this.volume = '',
     this.author = '',
     this.arcs = const [],
+    this.driveFolderId = '',
   });
+
+  /// Id thư mục Drive (rỗng nếu không phải nguồn Drive).
+  final String driveFolderId;
 
   final String title;
   final String volume;

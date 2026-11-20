@@ -6,7 +6,7 @@ class AppConstants {
   static const String dbFileName = 'doctruyen.db';
 
   /// Tăng mỗi khi `schema.dart` đổi, kèm một bước trong `Migrations.steps`.
-  static const int dbVersion = 1;
+  static const int dbVersion = 2;
 
   /// Kênh MethodChannel giữa Dart và MainActivity.
   static const String systemChannel = 'com.dtd.doctruyen/system';

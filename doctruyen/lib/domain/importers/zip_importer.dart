@@ -27,7 +27,25 @@ class ZipImporter {
       if (!f.isFile) continue;
       files[f.name.replaceAll('\\', '/')] = f.content;
     }
+    return fromFiles(files, fileName);
+  }
 
+  /// Trường `book` trong chapters.json (nếu có và đọc được).
+  static String? manifestBookTitle(Map<String, Uint8List> files) {
+    final path = _findManifest(files.keys);
+    if (path == null) return null;
+    try {
+      final json = jsonDecode(TextDecoder.decode(files[path]!));
+      final b = json is Map ? json['book'] : null;
+      return b is String && b.trim().isNotEmpty ? b.trim() : null;
+    } on FormatException {
+      return null;
+    }
+  }
+
+  /// Dựng sách từ các tệp đã có sẵn (tên -> byte); dùng chung cho ZIP và nhập
+  /// nhiều tệp rời kèm `chapters.json`.
+  static ParsedBook fromFiles(Map<String, Uint8List> files, String fileName) {
     final manifestPath = _findManifest(files.keys);
     if (manifestPath == null) return _fallback(files, fileName);
 

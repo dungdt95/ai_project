@@ -1,4 +1,4 @@
-/// Lược đồ cơ sở dữ liệu, phiên bản 1.
+/// Lược đồ cơ sở dữ liệu, phiên bản 2 (v2 thêm các cột Google Drive).
 ///
 /// DDL thuần SQL như bên chiahoadon: dễ đối chiếu, không cần build_runner.
 class Schema {
@@ -31,6 +31,8 @@ CREATE TABLE books (
   last_chapter_id INTEGER,
   last_paragraph INTEGER NOT NULL DEFAULT 0,
   last_fraction REAL NOT NULL DEFAULT 0,
+  drive_folder_id TEXT NOT NULL DEFAULT '',
+  drive_synced_at INTEGER,
   UNIQUE (title, volume)
 )''';
 
@@ -52,6 +54,9 @@ CREATE TABLE chapters (
   content TEXT NOT NULL,
   word_count INTEGER NOT NULL DEFAULT 0,
   finished INTEGER NOT NULL DEFAULT 0,
+  drive_file_id TEXT NOT NULL DEFAULT '',
+  content_hash TEXT NOT NULL DEFAULT '',
+  drive_modified TEXT NOT NULL DEFAULT '',
   UNIQUE (book_id, number)
 )''';
 

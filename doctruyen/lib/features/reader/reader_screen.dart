@@ -13,6 +13,8 @@ import '../../domain/models/reading_settings.dart';
 import '../../domain/text/markdown_lite.dart';
 import '../../domain/text/paragraph.dart';
 import '../../services/tts_audio_handler.dart';
+import '../drive/drive_provider.dart';
+import '../drive/drive_ui.dart';
 import '../settings/settings_provider.dart';
 import '../tts/sleep_timer_sheet.dart';
 import '../tts/tts_provider.dart';
@@ -138,6 +140,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
         chapterId = chapters.first.id;
       }
       await _openChapter(chapterId, paragraph);
+      if (book.isDrive) unawaited(_checkDriveUpdates(book));
     } catch (e) {
       if (mounted) {
         setState(() {
@@ -254,6 +257,27 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
     await _saveNow();
     await _openChapter(_chapters[i].id, 0);
     unawaited(_refreshChapterList());
+  }
+
+  /// Kiểm tra nền xem thư mục Drive có chương mới không (tối đa 10 phút/lần).
+  Future<void> _checkDriveUpdates(Book book) async {
+    final check = await ref.read(driveUpdatesProvider.notifier).check(book);
+    final messenger = _messenger;
+    if (!mounted || check == null || !check.hasUpdates || messenger == null) {
+      return;
+    }
+    DriveUi.showUpdateAvailable(
+      messenger,
+      check,
+      onUpdate: () => unawaited(_syncDrive()),
+    );
+  }
+
+  Future<void> _syncDrive() async {
+    final book = _book;
+    if (book == null) return;
+    final report = await DriveUi.syncNow(context, ref, book);
+    if (report != null && mounted) await _refreshChapterList();
   }
 
   Future<void> _refreshChapterList() async {
@@ -774,6 +798,14 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
           icon: const Icon(Icons.text_fields),
           onPressed: () => showReaderSettingsSheet(context),
         ),
+        if (_book?.isDrive ?? false)
+          PopupMenuButton<String>(
+            tooltip: 'Thêm',
+            onSelected: (_) => unawaited(_syncDrive()),
+            itemBuilder: (_) => const [
+              PopupMenuItem(value: 'drive', child: Text('Cập nhật từ Drive')),
+            ],
+          ),
       ],
     );
   }

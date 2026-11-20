@@ -7,7 +7,24 @@ import 'package:sqflite/sqflite.dart';
 class Migrations {
   const Migrations._();
 
-  static final Map<int, Future<void> Function(Database db)> steps = {};
+  static final Map<int, Future<void> Function(Database db)> steps = {
+    // v2: nguồn Google Drive (id thư mục; id tệp, băm, nhãn sửa của chương).
+    2: (db) async {
+      await db.execute(
+        "ALTER TABLE books ADD COLUMN drive_folder_id TEXT NOT NULL DEFAULT ''",
+      );
+      await db.execute('ALTER TABLE books ADD COLUMN drive_synced_at INTEGER');
+      await db.execute(
+        "ALTER TABLE chapters ADD COLUMN drive_file_id TEXT NOT NULL DEFAULT ''",
+      );
+      await db.execute(
+        "ALTER TABLE chapters ADD COLUMN content_hash TEXT NOT NULL DEFAULT ''",
+      );
+      await db.execute(
+        "ALTER TABLE chapters ADD COLUMN drive_modified TEXT NOT NULL DEFAULT ''",
+      );
+    },
+  };
 
   static Future<void> run(Database db, int from, int to) async {
     for (var version = from + 1; version <= to; version++) {

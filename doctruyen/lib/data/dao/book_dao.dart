@@ -23,6 +23,21 @@ class ImportResult {
   final int unchanged;
 }
 
+/// Chương đã lưu kèm dấu vết nguồn Drive.
+class StoredDriveChapter {
+  const StoredDriveChapter({
+    required this.fileId,
+    required this.number,
+    required this.hash,
+    required this.modified,
+  });
+
+  final String fileId;
+  final int number;
+  final String hash;
+  final String modified;
+}
+
 class BookDao {
   BookDao(this._database);
 
@@ -50,6 +65,52 @@ FROM books b''';
     final rows = await _db.rawQuery('$_bookSelect WHERE b.id = ?', [id]);
     return rows.isEmpty ? null : Book.fromMap(rows.first);
   }
+
+  /// Truyện nhập từ Drive (có id thư mục).
+  Future<List<Book>> listDriveBooks() async {
+    final rows = await _db.rawQuery(
+      "$_bookSelect WHERE b.drive_folder_id <> ''",
+    );
+    return rows.map(Book.fromMap).toList();
+  }
+
+  /// Dấu vết Drive của từng chương đã lưu (chỉ chương có id tệp).
+  Future<List<StoredDriveChapter>> driveChapters(int bookId) async {
+    final rows = await _db.query(
+      Tables.chapters,
+      columns: ['number', 'drive_file_id', 'content_hash', 'drive_modified'],
+      where: "book_id = ? AND drive_file_id <> ''",
+      whereArgs: [bookId],
+    );
+    return rows
+        .map(
+          (r) => StoredDriveChapter(
+            fileId: r['drive_file_id']! as String,
+            number: r['number']! as int,
+            hash: r['content_hash']! as String,
+            modified: r['drive_modified']! as String,
+          ),
+        )
+        .toList();
+  }
+
+  /// Mọi số chương hiện có (kể cả chương không còn trên Drive).
+  Future<Set<int>> chapterNumbers(int bookId) async {
+    final rows = await _db.query(
+      Tables.chapters,
+      columns: ['number'],
+      where: 'book_id = ?',
+      whereArgs: [bookId],
+    );
+    return rows.map((r) => r['number']! as int).toSet();
+  }
+
+  Future<void> touchDriveSynced(int bookId, DateTime now) => _db.update(
+    Tables.books,
+    {'drive_synced_at': now.millisecondsSinceEpoch},
+    where: 'id = ?',
+    whereArgs: [bookId],
+  );
 
   Future<void> deleteBook(int id) =>
       _db.delete(Tables.books, where: 'id = ?', whereArgs: [id]);
@@ -216,16 +277,39 @@ FROM books b''';
   /// được giữ lại. Danh sách hồi (arc) được thay mới.
   Future<ImportResult> upsertParsed(ParsedBook parsed, DateTime now) {
     return _db.transaction((txn) async {
-      final existing = await txn.query(
-        Tables.books,
-        columns: ['id'],
-        where: 'title = ? AND volume = ?',
-        whereArgs: [parsed.title, parsed.volume],
-      );
+      final isDrive = parsed.driveFolderId.isNotEmpty;
+      // Truyện Drive khớp theo id thư mục trước (đổi tên thư mục vẫn đúng truyện).
+      var existing = isDrive
+          ? await txn.query(
+              Tables.books,
+              columns: ['id'],
+              where: 'drive_folder_id = ?',
+              whereArgs: [parsed.driveFolderId],
+            )
+          : <Map<String, Object?>>[];
+      if (existing.isEmpty) {
+        existing = await txn.query(
+          Tables.books,
+          columns: ['id'],
+          where: 'title = ? AND volume = ?',
+          whereArgs: [parsed.title, parsed.volume],
+        );
+      }
       final isUpdate = existing.isNotEmpty;
       final int bookId;
       if (isUpdate) {
         bookId = existing.first['id']! as int;
+        if (isDrive) {
+          await txn.update(
+            Tables.books,
+            {
+              'drive_folder_id': parsed.driveFolderId,
+              'drive_synced_at': now.millisecondsSinceEpoch,
+            },
+            where: 'id = ?',
+            whereArgs: [bookId],
+          );
+        }
         if (parsed.author.isNotEmpty) {
           await txn.update(
             Tables.books,
@@ -241,13 +325,23 @@ FROM books b''';
           'author': parsed.author,
           'source_type': parsed.sourceType.name,
           'created_at': now.millisecondsSinceEpoch,
+          if (isDrive) 'drive_folder_id': parsed.driveFolderId,
+          if (isDrive) 'drive_synced_at': now.millisecondsSinceEpoch,
         });
       }
 
       final old = <int, Map<String, Object?>>{};
       for (final r in await txn.query(
         Tables.chapters,
-        columns: ['id', 'number', 'title', 'content'],
+        columns: [
+          'id',
+          'number',
+          'title',
+          'content',
+          'drive_file_id',
+          'content_hash',
+          'drive_modified',
+        ],
         where: 'book_id = ?',
         whereArgs: [bookId],
       )) {
@@ -266,17 +360,43 @@ FROM books b''';
             'title': c.title,
             'content': c.content,
             'word_count': c.wordCount,
+            'drive_file_id': c.driveFileId,
+            'content_hash': c.contentHash,
+            'drive_modified': c.driveModified,
           });
           added++;
         } else if (o['content'] != c.content || o['title'] != c.title) {
           await txn.update(
             Tables.chapters,
-            {'title': c.title, 'content': c.content, 'word_count': c.wordCount},
+            {
+              'title': c.title,
+              'content': c.content,
+              'word_count': c.wordCount,
+              'drive_file_id': c.driveFileId,
+              'content_hash': c.contentHash,
+              'drive_modified': c.driveModified,
+            },
             where: 'id = ?',
             whereArgs: [o['id']],
           );
           updated++;
         } else {
+          // Nội dung không đổi: chỉ làm mới dấu vết Drive (nhãn sửa, băm).
+          if (c.driveFileId.isNotEmpty &&
+              (o['drive_file_id'] != c.driveFileId ||
+                  o['content_hash'] != c.contentHash ||
+                  o['drive_modified'] != c.driveModified)) {
+            await txn.update(
+              Tables.chapters,
+              {
+                'drive_file_id': c.driveFileId,
+                'content_hash': c.contentHash,
+                'drive_modified': c.driveModified,
+              },
+              where: 'id = ?',
+              whereArgs: [o['id']],
+            );
+          }
           unchanged++;
         }
       }

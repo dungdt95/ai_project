@@ -1,5 +1,5 @@
 /// Nguồn nhập của một truyện.
-enum SourceType { zip, txt, epub }
+enum SourceType { zip, txt, epub, drive }
 
 class Book {
   const Book({
@@ -14,6 +14,8 @@ class Book {
     required this.lastParagraph,
     required this.progress,
     required this.chapterCount,
+    this.driveFolderId = '',
+    this.driveSyncedAt,
   });
 
   factory Book.fromMap(Map<String, Object?> m) => Book(
@@ -33,6 +35,10 @@ class Book {
     lastParagraph: (m['last_paragraph'] as int?) ?? 0,
     progress: ((m['progress'] as num?) ?? 0).toDouble().clamp(0.0, 1.0),
     chapterCount: (m['chapter_count'] as int?) ?? 0,
+    driveFolderId: (m['drive_folder_id'] as String?) ?? '',
+    driveSyncedAt: m['drive_synced_at'] == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(m['drive_synced_at']! as int),
   );
 
   final int id;
@@ -48,6 +54,12 @@ class Book {
   /// 0..1, tính từ chương đang đọc và vị trí trong chương.
   final double progress;
   final int chapterCount;
+
+  /// Id thư mục Google Drive nếu truyện nhập từ Drive, ngược lại rỗng.
+  final String driveFolderId;
+  final DateTime? driveSyncedAt;
+
+  bool get isDrive => driveFolderId.isNotEmpty;
 
   String get displayTitle => volume.isEmpty ? title : '$title — $volume';
 }
