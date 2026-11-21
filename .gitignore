@@ -3,7 +3,10 @@ node_modules/
 .dart_tool/
 .gradle/
 build/
+!excel_app/build/
+!doc_app/build/
 dist/
+release/
 .expo/
 *.apk
 *.aab

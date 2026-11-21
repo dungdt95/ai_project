@@ -1,0 +1,1194 @@
+/* Microsoft Excel 365 Theme & Layout Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #323130;
+  background-color: #f3f2f1;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.excel-app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   1. Title Bar (Excel 365 Header)
+   ========================================================================== */
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  background-color: #107c41;
+  color: #ffffff;
+  padding: 0 10px 0 12px;
+  -webkit-app-region: drag;
+}
+
+.quick-access-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-app-region: no-drag;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-right: 6px;
+}
+
+.brand-icon {
+  color: #ffffff;
+}
+
+.quick-divider {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 4px;
+}
+
+.quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.quick-btn:hover:not(.disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quick-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.title-center {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.title-input {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 6px;
+  text-align: center;
+  max-width: 220px;
+  cursor: text;
+}
+
+.title-input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.title-input:focus {
+  background-color: #ffffff;
+  color: #323130;
+  outline: none;
+  border-color: #0b5a2f;
+}
+
+.title-extension {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-left: -4px;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.status-badge.saved {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #e6f4ea;
+}
+
+.status-badge.modified {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+  -webkit-app-region: no-drag;
+}
+
+.win-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.win-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.win-btn.win-close:hover {
+  background-color: #e81123;
+}
+
+/* ==========================================================================
+   2. Ribbon Bar
+   ========================================================================== */
+.ribbon-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f2f1;
+  border-bottom: 1px solid #d2d0ce;
+}
+
+.ribbon-tabs {
+  display: flex;
+  height: 30px;
+  padding-left: 8px;
+  background-color: #f3f2f1;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.ribbon-tab-btn {
+  padding: 0 14px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #323130;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.ribbon-tab-btn:hover {
+  background-color: #edebe9;
+}
+
+.ribbon-tab-btn.active {
+  background-color: #ffffff;
+  border-bottom: 3px solid #107c41;
+  color: #107c41;
+  font-weight: 600;
+}
+
+.ribbon-toolbar {
+  height: 86px;
+  background-color: #ffffff;
+  padding: 4px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.ribbon-tab-content {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  gap: 8px;
+}
+
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 8px;
+  border-right: 1px solid #edebe9;
+  height: 100%;
+}
+
+.group-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.group-label {
+  text-align: center;
+  font-size: 10px;
+  color: #605e5c;
+  padding-top: 2px;
+}
+
+.ribbon-large-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #323130;
+  cursor: pointer;
+  height: 54px;
+  min-width: 48px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.ribbon-large-btn:hover {
+  background-color: #f3f2f1;
+  border-color: #d2d0ce;
+}
+
+.small-btn-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ribbon-small-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 11px;
+  color: #323130;
+  cursor: pointer;
+  height: 24px;
+  transition: background-color 0.15s;
+}
+
+.ribbon-small-btn:hover {
+  background-color: #f3f2f1;
+  border-color: #e1dfdd;
+}
+
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.font-group, .align-group, .number-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.font-select {
+  height: 24px;
+  border: 1px solid #d2d0ce;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-size: 11px;
+  width: 120px;
+  background-color: #ffffff;
+}
+
+.size-select {
+  height: 24px;
+  border: 1px solid #d2d0ce;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-size: 11px;
+  width: 50px;
+  background-color: #ffffff;
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #323130;
+  cursor: pointer;
+}
+
+.tool-btn:hover {
+  background-color: #f3f2f1;
+  border-color: #d2d0ce;
+}
+
+.merge-btn {
+  width: auto;
+  padding: 0 6px;
+}
+
+.divider-vert {
+  width: 1px;
+  height: 18px;
+  background-color: #edebe9;
+  margin: 0 2px;
+}
+
+.color-picker-btn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  color: #605e5c;
+  margin: 0 2px;
+}
+
+.color-picker-btn input[type="color"] {
+  border: 1px solid #d2d0ce;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+.number-format-select {
+  height: 24px;
+  border: 1px solid #d2d0ce;
+  border-radius: 3px;
+  padding: 0 4px;
+  font-size: 11px;
+  width: 130px;
+  background-color: #ffffff;
+}
+
+.number-quick-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.quick-num-btn {
+  width: 26px;
+  height: 22px;
+  background: transparent;
+  border: 1px solid #d2d0ce;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #323130;
+  cursor: pointer;
+}
+
+.quick-num-btn:hover {
+  background-color: #f3f2f1;
+  border-color: #107c41;
+  color: #107c41;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 4px 0;
+  min-width: 180px;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #323130;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f3f2f1;
+  color: #107c41;
+}
+
+/* ==========================================================================
+   3. Formula Bar
+   ========================================================================== */
+.formula-bar-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d0ce;
+  padding: 0 8px;
+  gap: 6px;
+}
+
+.name-box-wrapper {
+  width: 80px;
+}
+
+.name-box-input {
+  width: 100%;
+  height: 22px;
+  border: 1px solid #d2d0ce;
+  border-radius: 3px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #323130;
+}
+
+.name-box-input:focus {
+  outline: none;
+  border-color: #107c41;
+}
+
+.formula-divider {
+  width: 1px;
+  height: 18px;
+  background-color: #d2d0ce;
+}
+
+.formula-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.formula-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #605e5c;
+}
+
+.formula-action-btn:hover {
+  background-color: #f3f2f1;
+}
+
+.formula-action-btn.check-btn:hover {
+  color: #107c41;
+}
+
+.formula-action-btn.cancel-btn:hover {
+  color: #d9381e;
+}
+
+.formula-action-btn.fx-btn {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #605e5c;
+}
+
+.formula-input-wrapper {
+  flex: 1;
+}
+
+.formula-input {
+  width: 100%;
+  height: 22px;
+  border: 1px solid transparent;
+  padding: 0 6px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #323130;
+}
+
+.formula-input:focus {
+  outline: none;
+  border: 1px solid #107c41;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   4. Grid Spreadsheet Canvas
+   ========================================================================== */
+.grid-wrapper {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.grid-scrollable {
+  display: inline-block;
+  min-width: 100%;
+}
+
+.excel-grid {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background-color: #ffffff;
+}
+
+/* Corner Header */
+.grid-corner-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 45px;
+  min-width: 45px;
+  height: 24px;
+  background-color: #f3f2f1;
+  border-right: 1px solid #d2d0ce;
+  border-bottom: 1px solid #d2d0ce;
+  cursor: pointer;
+}
+
+.corner-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #a19f9d transparent;
+  margin-left: auto;
+  margin-right: 3px;
+  margin-top: 8px;
+}
+
+/* Column Headers */
+.grid-col-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 24px;
+  background-color: #f3f2f1;
+  border-right: 1px solid #d2d0ce;
+  border-bottom: 1px solid #d2d0ce;
+  font-size: 11px;
+  font-weight: 500;
+  color: #323130;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.grid-col-header:hover {
+  background-color: #edebe9;
+}
+
+.grid-col-header.header-selected {
+  background-color: #c7e0f4;
+  color: #107c41;
+  font-weight: 700;
+  border-bottom: 2px solid #107c41;
+}
+
+.col-resize-divider {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 25;
+}
+
+/* Row Headers */
+.grid-row-header {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  width: 45px;
+  min-width: 45px;
+  background-color: #f3f2f1;
+  border-right: 1px solid #d2d0ce;
+  border-bottom: 1px solid #d2d0ce;
+  font-size: 11px;
+  font-weight: 500;
+  color: #323130;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.grid-row-header:hover {
+  background-color: #edebe9;
+}
+
+.grid-row-header.header-selected {
+  background-color: #c7e0f4;
+  color: #107c41;
+  font-weight: 700;
+  border-right: 2px solid #107c41;
+}
+
+.row-resize-divider {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  cursor: row-resize;
+  z-index: 15;
+}
+
+/* Data Cells */
+.grid-cell {
+  border-right: 1px solid #e1dfdd;
+  border-bottom: 1px solid #e1dfdd;
+  padding: 2px 6px;
+  font-size: 11px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.hide-gridlines .grid-cell {
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.cell-content {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Selection Range Highlighting */
+.grid-cell.in-range {
+  background-color: rgba(16, 124, 65, 0.08) !important;
+}
+
+.grid-cell.active-cell {
+  outline: 2px solid #107c41 !important;
+  outline-offset: -2px;
+  z-index: 5;
+}
+
+.grid-cell.range-top {
+  border-top: 2px solid #107c41 !important;
+}
+
+.grid-cell.range-bottom {
+  border-bottom: 2px solid #107c41 !important;
+}
+
+.grid-cell.range-left {
+  border-left: 2px solid #107c41 !important;
+}
+
+.grid-cell.range-right {
+  border-right: 2px solid #107c41 !important;
+}
+
+/* Fill Handle */
+.fill-handle {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 6px;
+  height: 6px;
+  background-color: #107c41;
+  border: 1px solid #ffffff;
+  cursor: crosshair;
+  z-index: 10;
+}
+
+/* Inline Cell Editor */
+.inline-cell-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #107c41;
+  outline: none;
+  padding: 2px 5px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+/* ==========================================================================
+   5. Sheet Tabs Bar
+   ========================================================================== */
+.sheet-tabs-container {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  background-color: #f3f2f1;
+  border-top: 1px solid #d2d0ce;
+  padding: 0 8px;
+}
+
+.sheet-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 6px;
+}
+
+.sheet-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: #605e5c;
+  cursor: pointer;
+}
+
+.sheet-nav-btn:hover {
+  background-color: #edebe9;
+}
+
+.sheet-tabs-list {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow-x: auto;
+}
+
+.sheet-tab-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 31px;
+  padding: 0 12px;
+  background: transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  font-size: 11px;
+  color: #605e5c;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.sheet-tab-item:hover {
+  background-color: #edebe9;
+}
+
+.sheet-tab-item.active {
+  background-color: #ffffff;
+  border-bottom: 2px solid #107c41;
+  color: #107c41;
+  font-weight: 600;
+}
+
+.sheet-rename-input {
+  height: 20px;
+  border: 1px solid #107c41;
+  border-radius: 2px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  width: 90px;
+  outline: none;
+}
+
+.sheet-tab-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.sheet-action-icon {
+  background: none;
+  border: none;
+  color: #605e5c;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.sheet-action-icon:hover {
+  background-color: #f3f2f1;
+}
+
+.sheet-action-icon.delete-icon:hover {
+  color: #d9381e;
+}
+
+.add-sheet-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #107c41;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: background-color 0.15s;
+}
+
+.add-sheet-btn:hover {
+  background-color: #edebe9;
+}
+
+/* ==========================================================================
+   6. Status Bar
+   ========================================================================== */
+.status-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  background-color: #f3f2f1;
+  border-top: 1px solid #e1dfdd;
+  padding: 0 12px;
+  font-size: 11px;
+  color: #605e5c;
+}
+
+.status-ready {
+  font-weight: 500;
+}
+
+.status-center {
+  display: flex;
+  align-items: center;
+}
+
+.stats-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-item strong {
+  color: #107c41;
+  font-weight: 600;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoom-icon-btn {
+  background: none;
+  border: none;
+  color: #605e5c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.zoom-icon-btn:hover {
+  color: #107c41;
+}
+
+.zoom-slider {
+  width: 80px;
+  height: 4px;
+  cursor: pointer;
+  accent-color: #107c41;
+}
+
+.zoom-percent-btn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #605e5c;
+  cursor: pointer;
+  width: 36px;
+  text-align: right;
+}
+
+.zoom-percent-btn:hover {
+  color: #107c41;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   7. Context Menu
+   ========================================================================== */
+.context-menu {
+  position: fixed;
+  z-index: 9999;
+  background-color: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 4px 0;
+  min-width: 170px;
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #323130;
+  cursor: pointer;
+  text-align: left;
+}
+
+.context-menu-item:hover {
+  background-color: #f3f2f1;
+}
+
+.context-menu-item .shortcut {
+  margin-left: auto;
+  font-size: 10px;
+  color: #8a8886;
+}
+
+.context-menu-item.text-danger:hover {
+  color: #d9381e;
+}
+
+.context-menu-divider {
+  height: 1px;
+  background-color: #edebe9;
+  margin: 4px 0;
+}
+
+/* ==========================================================================
+   8. Function Dialog
+   ========================================================================== */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.function-dialog {
+  width: 520px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f3f2f1;
+  border-bottom: 1px solid #d2d0ce;
+}
+
+.dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #107c41;
+}
+
+.dialog-close-btn {
+  background: none;
+  border: none;
+  color: #605e5c;
+  cursor: pointer;
+}
+
+.dialog-close-btn:hover {
+  color: #d9381e;
+}
+
+.dialog-body {
+  padding: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 12px;
+}
+
+.search-icon {
+  color: #8a8886;
+}
+
+.function-content-layout {
+  display: flex;
+  gap: 12px;
+  height: 220px;
+}
+
+.function-list {
+  flex: 1;
+  border: 1px solid #edebe9;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.function-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.function-item:hover {
+  background-color: #f3f2f1;
+}
+
+.function-item.active {
+  background-color: #e6f4ea;
+  color: #107c41;
+  font-weight: 600;
+}
+
+.func-cat {
+  font-size: 10px;
+  color: #8a8886;
+}
+
+.function-details {
+  flex: 1.2;
+  background-color: #faf9f8;
+  border: 1px solid #edebe9;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.detail-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #107c41;
+  margin-bottom: 6px;
+}
+
+.detail-syntax {
+  font-family: Consolas, monospace;
+  font-size: 11px;
+  background-color: #ffffff;
+  padding: 4px 6px;
+  border: 1px solid #e1dfdd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  color: #0b5a2f;
+}
+
+.detail-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #605e5c;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: #f3f2f1;
+  border-top: 1px solid #d2d0ce;
+}
+
+.dialog-btn {
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.dialog-btn.secondary {
+  background-color: #ffffff;
+  border-color: #d2d0ce;
+  color: #323130;
+}
+
+.dialog-btn.secondary:hover {
+  background-color: #f3f2f1;
+}
+
+.dialog-btn.primary {
+  background-color: #107c41;
+  color: #ffffff;
+}
+
+.dialog-btn.primary:hover {
+  background-color: #0b5a2f;
+}
