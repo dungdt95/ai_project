@@ -1,0 +1,651 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f3f2f1;
+  color: #242424;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f3f2f1;
+}
+
+/* TitleBar (Office 365 Word Blue) */
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  background-color: #185abd;
+  color: #ffffff;
+  padding: 0 8px;
+  -webkit-app-region: drag;
+  user-select: none;
+  border-bottom: 1px solid #144b9e;
+  z-index: 100;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.word-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #185abd, #103f84);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  margin-right: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.quick-btn:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.quick-btn:active {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+.quick-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.titlebar-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.titlebar-title {
+  color: #ffffff;
+  font-weight: 600;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titlebar-badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.badge-saved {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #e0f2fe;
+}
+
+.badge-dirty {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+.titlebar-right {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  -webkit-app-region: no-drag;
+}
+
+.window-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.window-control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.window-control-btn.btn-close:hover {
+  background-color: #c42b1c;
+}
+
+/* Ribbon Toolbar */
+.ribbon-container {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 90;
+}
+
+.ribbon-tabs {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  background-color: #f9fafb;
+  padding: 0 12px;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 4px;
+}
+
+.ribbon-tab {
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4b5563;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.ribbon-tab:hover {
+  color: #185abd;
+  background-color: #f3f4f6;
+}
+
+.ribbon-tab.active {
+  color: #185abd;
+  font-weight: 600;
+  border-bottom: 2.5px solid #185abd;
+  background-color: #ffffff;
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 6px 16px;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-right: 12px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.ribbon-group:last-child {
+  border-right: none;
+}
+
+.ribbon-group-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ribbon-group-label {
+  font-size: 10.5px;
+  color: #8c8c8c;
+  text-align: center;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+/* Ribbon Controls */
+.ribbon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 2px 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #374151;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+.ribbon-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.ribbon-btn.active {
+  background-color: #e0edfd;
+  border-color: #9ac2f4;
+  color: #185abd;
+}
+
+.ribbon-btn-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  min-width: 50px;
+  padding: 4px 8px;
+  font-size: 11px;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: #374151;
+}
+
+.ribbon-btn-large:hover {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.ribbon-btn-large.active {
+  background-color: #e0edfd;
+  border-color: #9ac2f4;
+  color: #185abd;
+}
+
+.ribbon-select {
+  height: 26px;
+  font-size: 12px;
+  color: #374151;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ribbon-select:focus {
+  border-color: #185abd;
+  box-shadow: 0 0 0 1px #185abd;
+}
+
+/* Document Canvas Container */
+.canvas-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  background-color: #f3f2f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 80px 16px;
+}
+
+/* Simulated A4 Page */
+.page-sheet {
+  background-color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+  transition: width 0.2s ease, min-height 0.2s ease, transform 0.1s ease;
+  transform-origin: top center;
+  cursor: text;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Page Dimensions */
+.page-sheet.portrait {
+  width: 794px;
+  min-height: 1123px; /* A4 Ratio */
+}
+
+.page-sheet.landscape {
+  width: 1123px;
+  min-height: 794px;
+}
+
+/* Margin Variations */
+.page-sheet.margin-normal {
+  padding: 72px 72px; /* 1 inch = 96px screen */
+}
+
+.page-sheet.margin-narrow {
+  padding: 36px 36px; /* 0.5 inch */
+}
+
+.page-sheet.margin-wide {
+  padding: 108px 108px; /* 1.5 inch */
+}
+
+/* Reading View */
+.canvas-wrapper.reading-mode {
+  padding: 20px;
+}
+
+.canvas-wrapper.reading-mode .page-sheet {
+  max-width: 860px;
+  width: 100%;
+  min-height: auto;
+  box-shadow: none;
+  border: 1px solid #e5e7eb;
+}
+
+/* Drop Zone Overlay */
+.dropzone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(24, 90, 189, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  border: 3px dashed #ffffff;
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+/* TipTap Editor ProseMirror Styles */
+.ProseMirror {
+  outline: none;
+  min-height: 800px;
+  font-family: inherit;
+  color: #1f2937;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ProseMirror p {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.ProseMirror h1 {
+  font-size: 24px;
+  color: #185abd;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.ProseMirror h2 {
+  font-size: 19px;
+  color: #185abd;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.3;
+}
+
+.ProseMirror h3 {
+  font-size: 16px;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 1.5px solid #d1d5db;
+  margin: 1.2rem 0;
+}
+
+.ProseMirror blockquote {
+  border-left: 3.5px solid #185abd;
+  padding-left: 14px;
+  margin-left: 0;
+  margin-right: 0;
+  color: #4b5563;
+  font-style: italic;
+  background-color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 0 4px 4px 0;
+}
+
+.ProseMirror pre {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13.5px;
+  overflow-x: auto;
+  color: #1f2937;
+}
+
+.ProseMirror pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.ProseMirror code {
+  background-color: #f3f4f6;
+  color: #c026d3;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 13.5px;
+  font-family: 'Consolas', monospace;
+}
+
+.ProseMirror mark {
+  background-color: #fef08a;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+/* TipTap Tables */
+.ProseMirror table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #d1d5db;
+}
+
+.ProseMirror table td,
+.ProseMirror table th {
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 1em;
+}
+
+.ProseMirror table th {
+  font-weight: 600;
+  text-align: left;
+  background-color: #edf2f7;
+  color: #1a202c;
+}
+
+.ProseMirror table .selectedCell:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(24, 90, 189, 0.15);
+  pointer-events: none;
+}
+
+/* TipTap Task List */
+ul[data-type="taskList"] {
+  list-style: none;
+  padding: 0;
+}
+
+ul[data-type="taskList"] li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+ul[data-type="taskList"] li > label {
+  user-select: none;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+ul[data-type="taskList"] li > label input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #185abd;
+  width: 16px;
+  height: 16px;
+}
+
+ul[data-type="taskList"] li > div {
+  flex: 1;
+}
+
+/* Images in Editor */
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 12px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: outline 0.15s ease;
+}
+
+.ProseMirror img.ProseMirror-selectednode {
+  outline: 3px solid #185abd;
+}
+
+/* Status Bar */
+.statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  background-color: #f3f2f1;
+  border-top: 1px solid #d1d5db;
+  padding: 0 12px;
+  font-size: 11.5px;
+  color: #4b5563;
+  user-select: none;
+  z-index: 100;
+}
+
+.statusbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statusbar-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statusbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.zoom-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.zoom-slider {
+  width: 100px;
+  accent-color: #185abd;
+  cursor: pointer;
+}
+
+.zoom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  border-radius: 3px;
+}
+
+.zoom-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Print Styles */
+@media print {
+  .titlebar,
+  .ribbon-container,
+  .statusbar,
+  .dropzone-overlay {
+    display: none !important;
+  }
+
+  body, html, #root, .app-container, .canvas-wrapper {
+    background-color: #ffffff !important;
+    overflow: visible !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .ProseMirror {
+    min-height: auto !important;
+  }
+}
