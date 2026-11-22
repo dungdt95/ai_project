@@ -1,0 +1,348 @@
+{
+  "id": "t01_hello",
+  "level": 1,
+  "order": 1,
+  "title_en": "Hello!",
+  "title_vi": "Chào hỏi & Gia đình",
+  "map_icon": "images/map/island_t01_hello.png",
+  "song": {
+    "id": "s01_hello_song",
+    "title": "Hello Song",
+    "audio": "audio/songs/s01_hello_song.mp3",
+    "cover": "images/songs/cover_s01_hello.png",
+    "lyrics": [
+      {
+        "t": 4,
+        "text": "Hello, hello! How are you?"
+      },
+      {
+        "t": 8,
+        "text": "Hello, hello! How are you?"
+      },
+      {
+        "t": 12,
+        "text": "I'm fine, I'm happy, thank you!"
+      },
+      {
+        "t": 16,
+        "text": "Hello Mommy! Hello Daddy!"
+      },
+      {
+        "t": 20,
+        "text": "Hello little baby, too!"
+      },
+      {
+        "t": 24,
+        "text": "Wave your hands and say hello!"
+      },
+      {
+        "t": 28,
+        "text": "Wave your hands: Goodbye, bye-bye!"
+      },
+      {
+        "t": 32,
+        "text": "See you soon, my friend!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t01_hello",
+      "text": "Hello",
+      "image": "images/topics/t01_hello/hello.png",
+      "audio": "audio/words/t01_hello.mp3",
+      "sentence": "Hello! Nice to meet you!",
+      "sentence_audio": "audio/sentences/t01_hello_s.mp3"
+    },
+    {
+      "id": "t01_goodbye",
+      "text": "Goodbye",
+      "image": "images/topics/t01_hello/goodbye.png",
+      "audio": "audio/words/t01_goodbye.mp3",
+      "sentence": "Goodbye! See you soon!",
+      "sentence_audio": "audio/sentences/t01_goodbye_s.mp3"
+    },
+    {
+      "id": "t01_boy",
+      "text": "Boy",
+      "image": "images/topics/t01_hello/boy.png",
+      "audio": "audio/words/t01_boy.mp3",
+      "sentence": "I am a happy boy!",
+      "sentence_audio": "audio/sentences/t01_boy_s.mp3"
+    },
+    {
+      "id": "t01_girl",
+      "text": "Girl",
+      "image": "images/topics/t01_hello/girl.png",
+      "audio": "audio/words/t01_girl.mp3",
+      "sentence": "I am a happy girl!",
+      "sentence_audio": "audio/sentences/t01_girl_s.mp3"
+    },
+    {
+      "id": "t01_mommy",
+      "text": "Mommy",
+      "image": "images/topics/t01_hello/mommy.png",
+      "audio": "audio/words/t01_mommy.mp3",
+      "sentence": "I love my mommy!",
+      "sentence_audio": "audio/sentences/t01_mommy_s.mp3"
+    },
+    {
+      "id": "t01_daddy",
+      "text": "Daddy",
+      "image": "images/topics/t01_hello/daddy.png",
+      "audio": "audio/words/t01_daddy.mp3",
+      "sentence": "I love my daddy!",
+      "sentence_audio": "audio/sentences/t01_daddy_s.mp3"
+    },
+    {
+      "id": "t01_baby",
+      "text": "Baby",
+      "image": "images/topics/t01_hello/baby.png",
+      "audio": "audio/words/t01_baby.mp3",
+      "sentence": "Look at the cute baby!",
+      "sentence_audio": "audio/sentences/t01_baby_s.mp3"
+    },
+    {
+      "id": "t01_friend",
+      "text": "Friend",
+      "image": "images/topics/t01_hello/friend.png",
+      "audio": "audio/words/t01_friend.mp3",
+      "sentence": "You are my good friend!",
+      "sentence_audio": "audio/sentences/t01_friend_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_hello_name",
+      "text": "Hello! What's your name?",
+      "audio": "audio/sentences/p_hello_name.mp3",
+      "vi": "Xin chào! Tên con là gì?",
+      "pron_vi": "Hê-lâu! Quát-xơ gio nêm?"
+    },
+    {
+      "id": "p_my_name",
+      "text": "My name is Momo!",
+      "audio": "audio/sentences/p_my_name.mp3",
+      "vi": "Tên tớ là Momo!",
+      "pron_vi": "Mai nêm i-zơ Mô-mô!"
+    },
+    {
+      "id": "p_how_are_you",
+      "text": "How are you? I'm happy!",
+      "audio": "audio/sentences/p_how_are_you.mp3",
+      "vi": "Con có khỏe không? Con rất vui!",
+      "pron_vi": "Hao a diu? Ai-mơ hép-pi!"
+    },
+    {
+      "id": "p_magic_words",
+      "text": "Please! Thank you! Good job!",
+      "audio": "audio/sentences/p_magic_words.mp3",
+      "vi": "Làm ơn! Cảm ơn! Con giỏi lắm!",
+      "pron_vi": "P-li-zơ! Thanh kiu! Gút chóp!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t01_hello_l1",
+      "order": 1,
+      "new_words": [
+        "t01_hello",
+        "t01_goodbye",
+        "t01_boy"
+      ],
+      "sentence": "p_hello_name",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t01_hello",
+            "t01_goodbye",
+            "t01_boy"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t01_hello",
+            "t01_goodbye",
+            "t01_boy"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t01_hello",
+            "t01_goodbye",
+            "t01_boy"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t01_hello",
+            "t01_goodbye"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_wave_hello"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t01_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hello_name"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t01_hello_l2",
+      "order": 2,
+      "new_words": [
+        "t01_girl",
+        "t01_mommy",
+        "t01_daddy"
+      ],
+      "sentence": "p_my_name",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t01_girl",
+            "t01_mommy",
+            "t01_daddy"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t01_girl",
+            "t01_mommy",
+            "t01_daddy"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t01_girl",
+            "t01_mommy",
+            "t01_daddy"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t01_girl",
+            "t01_mommy"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_wave_hello"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t01_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_my_name"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t01_hello_l3",
+      "order": 3,
+      "new_words": [
+        "t01_baby",
+        "t01_friend"
+      ],
+      "sentence": "p_how_are_you",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t01_baby",
+            "t01_friend"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t01_baby",
+            "t01_friend"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t01_baby",
+            "t01_friend"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t01_baby",
+            "t01_friend"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_wave_hello"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t01_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_are_you"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_wave_hello",
+      "text": "Wave your hands! Say hello!",
+      "image": "images/tpr/cmd_wave_hello.png",
+      "audio": "audio/instructions/cmd_wave_hello.mp3"
+    }
+  ]
+}

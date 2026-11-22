@@ -1,0 +1,407 @@
+{
+  "id": "t02_colors",
+  "level": 1,
+  "order": 2,
+  "title_en": "Colors",
+  "title_vi": "Màu sắc",
+  "map_icon": "images/map/island_t02_colors.png",
+  "song": {
+    "id": "s02_rainbow_colors",
+    "title": "Rainbow Colors",
+    "audio": "audio/songs/s02_rainbow_colors.mp3",
+    "cover": "images/songs/cover_s02_colors.png",
+    "lyrics": [
+      {
+        "t": 4,
+        "text": "Red and yellow, green and blue,"
+      },
+      {
+        "t": 8,
+        "text": "Orange, pink, and purple too!"
+      },
+      {
+        "t": 12,
+        "text": "Black and white and chocolate brown,"
+      },
+      {
+        "t": 16,
+        "text": "Pretty colors all around!"
+      },
+      {
+        "t": 20,
+        "text": "What color is it? Look and see!"
+      },
+      {
+        "t": 24,
+        "text": "Sing the rainbow song with me!"
+      },
+      {
+        "t": 28,
+        "text": "Red, blue, yellow, green! Hooray!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t02_red",
+      "text": "Red",
+      "image": "images/topics/t02_colors/red.png",
+      "audio": "audio/words/t02_red.mp3",
+      "sentence": "It's red! A red apple.",
+      "sentence_audio": "audio/sentences/t02_red_s.mp3"
+    },
+    {
+      "id": "t02_blue",
+      "text": "Blue",
+      "image": "images/topics/t02_colors/blue.png",
+      "audio": "audio/words/t02_blue.mp3",
+      "sentence": "It's blue! The sky is blue.",
+      "sentence_audio": "audio/sentences/t02_blue_s.mp3"
+    },
+    {
+      "id": "t02_yellow",
+      "text": "Yellow",
+      "image": "images/topics/t02_colors/yellow.png",
+      "audio": "audio/words/t02_yellow.mp3",
+      "sentence": "It's yellow! A yellow sun.",
+      "sentence_audio": "audio/sentences/t02_yellow_s.mp3"
+    },
+    {
+      "id": "t02_green",
+      "text": "Green",
+      "image": "images/topics/t02_colors/green.png",
+      "audio": "audio/words/t02_green.mp3",
+      "sentence": "It's green! A green leaf.",
+      "sentence_audio": "audio/sentences/t02_green_s.mp3"
+    },
+    {
+      "id": "t02_orange",
+      "text": "Orange",
+      "image": "images/topics/t02_colors/orange.png",
+      "audio": "audio/words/t02_orange.mp3",
+      "sentence": "It's orange! I like orange.",
+      "sentence_audio": "audio/sentences/t02_orange_s.mp3"
+    },
+    {
+      "id": "t02_pink",
+      "text": "Pink",
+      "image": "images/topics/t02_colors/pink.png",
+      "audio": "audio/words/t02_pink.mp3",
+      "sentence": "It's pink! A pink flower.",
+      "sentence_audio": "audio/sentences/t02_pink_s.mp3"
+    },
+    {
+      "id": "t02_purple",
+      "text": "Purple",
+      "image": "images/topics/t02_colors/purple.png",
+      "audio": "audio/words/t02_purple.mp3",
+      "sentence": "It's purple! Purple grapes.",
+      "sentence_audio": "audio/sentences/t02_purple_s.mp3"
+    },
+    {
+      "id": "t02_black",
+      "text": "Black",
+      "image": "images/topics/t02_colors/black.png",
+      "audio": "audio/words/t02_black.mp3",
+      "sentence": "It's black! A black hat.",
+      "sentence_audio": "audio/sentences/t02_black_s.mp3"
+    },
+    {
+      "id": "t02_white",
+      "text": "White",
+      "image": "images/topics/t02_colors/white.png",
+      "audio": "audio/words/t02_white.mp3",
+      "sentence": "It's white! A white cloud.",
+      "sentence_audio": "audio/sentences/t02_white_s.mp3"
+    },
+    {
+      "id": "t02_brown",
+      "text": "Brown",
+      "image": "images/topics/t02_colors/brown.png",
+      "audio": "audio/words/t02_brown.mp3",
+      "sentence": "It's brown! Momo is brown.",
+      "sentence_audio": "audio/sentences/t02_brown_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_what_color",
+      "text": "What color is it? It's red!",
+      "audio": "audio/sentences/p_what_color.mp3",
+      "vi": "Đây là màu gì? Màu đỏ đấy!",
+      "pron_vi": "Quát có-lờ i-zít? Ít-xơ rét!"
+    },
+    {
+      "id": "p_i_like_color",
+      "text": "I like blue!",
+      "audio": "audio/sentences/p_i_like_color.mp3",
+      "vi": "Con thích màu xanh dương!",
+      "pron_vi": "Ai lai-kơ b-lu!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t02_colors_l1",
+      "order": 1,
+      "new_words": [
+        "t02_red",
+        "t02_blue",
+        "t02_yellow"
+      ],
+      "sentence": "p_what_color",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t02_red",
+            "t02_blue",
+            "t02_yellow"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t02_red",
+            "t02_blue",
+            "t02_yellow"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t02_red",
+            "t02_blue",
+            "t02_yellow"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t02_red",
+            "t02_blue"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t02_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_what_color"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t02_colors_l2",
+      "order": 2,
+      "new_words": [
+        "t02_green",
+        "t02_orange",
+        "t02_pink"
+      ],
+      "sentence": "p_i_like_color",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t02_green",
+            "t02_orange",
+            "t02_pink"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t02_green",
+            "t02_orange",
+            "t02_pink"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t02_green",
+            "t02_orange",
+            "t02_pink"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t02_green",
+            "t02_orange"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t02_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_i_like_color"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t02_colors_l3",
+      "order": 3,
+      "new_words": [
+        "t02_purple",
+        "t02_black",
+        "t02_white"
+      ],
+      "sentence": "p_what_color",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t02_purple",
+            "t02_black",
+            "t02_white"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t02_purple",
+            "t02_black",
+            "t02_white"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t02_purple",
+            "t02_black",
+            "t02_white"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t02_purple",
+            "t02_black"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t02_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_what_color"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t02_colors_l4",
+      "order": 4,
+      "new_words": [
+        "t02_brown"
+      ],
+      "sentence": "p_i_like_color",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t02_brown"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t02_brown"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t02_brown"
+          ],
+          "pairs": 1
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t02_brown"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t02_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_i_like_color"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

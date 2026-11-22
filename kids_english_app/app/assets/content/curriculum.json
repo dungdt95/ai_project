@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "topics": [
+    {
+      "id": "t01_hello",
+      "file": "topics/t01_hello.json"
+    },
+    {
+      "id": "t02_colors",
+      "file": "topics/t02_colors.json"
+    },
+    {
+      "id": "t03_numbers",
+      "file": "topics/t03_numbers.json"
+    },
+    {
+      "id": "t04_animals",
+      "file": "topics/t04_animals.json"
+    },
+    {
+      "id": "t05_body",
+      "file": "topics/t05_body.json"
+    }
+  ]
+}

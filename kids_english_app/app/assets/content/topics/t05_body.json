@@ -1,0 +1,453 @@
+{
+  "id": "t05_body",
+  "level": 1,
+  "order": 5,
+  "title_en": "My Body",
+  "title_vi": "Cơ thể của bé",
+  "map_icon": "images/map/island_t05_body.png",
+  "song": {
+    "id": "s05_head_shoulders",
+    "title": "Head & Tummy",
+    "audio": "audio/songs/s05_head_shoulders.mp3",
+    "cover": "images/songs/cover_s05_body.png",
+    "lyrics": [
+      {
+        "t": 4,
+        "text": "Head and tummy, arms and legs, arms and legs!"
+      },
+      {
+        "t": 8,
+        "text": "Head and tummy, arms and legs, arms and legs!"
+      },
+      {
+        "t": 12,
+        "text": "And eyes, and ears, and mouth, and nose!"
+      },
+      {
+        "t": 16,
+        "text": "Clap your hands and stamp your feet, stamp your feet!"
+      },
+      {
+        "t": 20,
+        "text": "Touch your hair and wiggle your fingers, too!"
+      },
+      {
+        "t": 24,
+        "text": "Eyes, and ears, and mouth, and nose! Hooray!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t05_head",
+      "text": "Head",
+      "image": "images/topics/t05_body/head.png",
+      "audio": "audio/words/t05_head.mp3",
+      "sentence": "Touch your head!",
+      "sentence_audio": "audio/sentences/t05_head_s.mp3"
+    },
+    {
+      "id": "t05_eyes",
+      "text": "Eyes",
+      "image": "images/topics/t05_body/eyes.png",
+      "audio": "audio/words/t05_eyes.mp3",
+      "sentence": "Close your eyes. Open your eyes!",
+      "sentence_audio": "audio/sentences/t05_eyes_s.mp3"
+    },
+    {
+      "id": "t05_ears",
+      "text": "Ears",
+      "image": "images/topics/t05_body/ears.png",
+      "audio": "audio/words/t05_ears.mp3",
+      "sentence": "These are my ears.",
+      "sentence_audio": "audio/sentences/t05_ears_s.mp3"
+    },
+    {
+      "id": "t05_nose",
+      "text": "Nose",
+      "image": "images/topics/t05_body/nose.png",
+      "audio": "audio/words/t05_nose.mp3",
+      "sentence": "This is my little nose!",
+      "sentence_audio": "audio/sentences/t05_nose_s.mp3"
+    },
+    {
+      "id": "t05_mouth",
+      "text": "Mouth",
+      "image": "images/topics/t05_body/mouth.png",
+      "audio": "audio/words/t05_mouth.mp3",
+      "sentence": "Open your mouth! Ah!",
+      "sentence_audio": "audio/sentences/t05_mouth_s.mp3"
+    },
+    {
+      "id": "t05_hair",
+      "text": "Hair",
+      "image": "images/topics/t05_body/hair.png",
+      "audio": "audio/words/t05_hair.mp3",
+      "sentence": "Brush your nice hair.",
+      "sentence_audio": "audio/sentences/t05_hair_s.mp3"
+    },
+    {
+      "id": "t05_hands",
+      "text": "Hands",
+      "image": "images/topics/t05_body/hands.png",
+      "audio": "audio/words/t05_hands.mp3",
+      "sentence": "Clap your hands!",
+      "sentence_audio": "audio/sentences/t05_hands_s.mp3"
+    },
+    {
+      "id": "t05_fingers",
+      "text": "Fingers",
+      "image": "images/topics/t05_body/fingers.png",
+      "audio": "audio/words/t05_fingers.mp3",
+      "sentence": "Wiggle your ten fingers!",
+      "sentence_audio": "audio/sentences/t05_fingers_s.mp3"
+    },
+    {
+      "id": "t05_arms",
+      "text": "Arms",
+      "image": "images/topics/t05_body/arms.png",
+      "audio": "audio/words/t05_arms.mp3",
+      "sentence": "Stretch your arms up high!",
+      "sentence_audio": "audio/sentences/t05_arms_s.mp3"
+    },
+    {
+      "id": "t05_legs",
+      "text": "Legs",
+      "image": "images/topics/t05_body/legs.png",
+      "audio": "audio/words/t05_legs.mp3",
+      "sentence": "Look at my two legs!",
+      "sentence_audio": "audio/sentences/t05_legs_s.mp3"
+    },
+    {
+      "id": "t05_feet",
+      "text": "Feet",
+      "image": "images/topics/t05_body/feet.png",
+      "audio": "audio/words/t05_feet.mp3",
+      "sentence": "Stamp your feet!",
+      "sentence_audio": "audio/sentences/t05_feet_s.mp3"
+    },
+    {
+      "id": "t05_tummy",
+      "text": "Tummy",
+      "image": "images/topics/t05_body/tummy.png",
+      "audio": "audio/words/t05_tummy.mp3",
+      "sentence": "Pat your round tummy!",
+      "sentence_audio": "audio/sentences/t05_tummy_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_touch_your",
+      "text": "Touch your nose!",
+      "audio": "audio/sentences/p_touch_your.mp3",
+      "vi": "Hãy chạm vào mũi của con nào!",
+      "pron_vi": "Tắt-chơ gio nâu-zơ!"
+    },
+    {
+      "id": "p_clap_hands",
+      "text": "Clap your hands!",
+      "audio": "audio/sentences/p_clap_hands.mp3",
+      "vi": "Vỗ tay nào!",
+      "pron_vi": "C-lép gio hen-zơ!"
+    },
+    {
+      "id": "p_this_is_my",
+      "text": "This is my tummy!",
+      "audio": "audio/sentences/p_this_is_my.mp3",
+      "vi": "Đây là cái bụng của con!",
+      "pron_vi": "Đít i-zơ mai tăm-mi!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t05_body_l1",
+      "order": 1,
+      "new_words": [
+        "t05_head",
+        "t05_eyes",
+        "t05_ears"
+      ],
+      "sentence": "p_touch_your",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t05_head",
+            "t05_eyes",
+            "t05_ears"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t05_head",
+            "t05_eyes",
+            "t05_ears"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t05_head",
+            "t05_eyes",
+            "t05_ears"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t05_head",
+            "t05_eyes"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_touch_nose"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t05_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_touch_your"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t05_body_l2",
+      "order": 2,
+      "new_words": [
+        "t05_nose",
+        "t05_mouth",
+        "t05_hair"
+      ],
+      "sentence": "p_clap_hands",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t05_nose",
+            "t05_mouth",
+            "t05_hair"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t05_nose",
+            "t05_mouth",
+            "t05_hair"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t05_nose",
+            "t05_mouth",
+            "t05_hair"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t05_nose",
+            "t05_mouth"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_touch_head"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t05_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_clap_hands"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t05_body_l3",
+      "order": 3,
+      "new_words": [
+        "t05_hands",
+        "t05_fingers",
+        "t05_arms"
+      ],
+      "sentence": "p_this_is_my",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t05_hands",
+            "t05_fingers",
+            "t05_arms"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t05_hands",
+            "t05_fingers",
+            "t05_arms"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t05_hands",
+            "t05_fingers",
+            "t05_arms"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t05_hands",
+            "t05_fingers"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_stamp_feet"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t05_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_this_is_my"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t05_body_l4",
+      "order": 4,
+      "new_words": [
+        "t05_legs",
+        "t05_feet",
+        "t05_tummy"
+      ],
+      "sentence": "p_touch_your",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t05_legs",
+            "t05_feet",
+            "t05_tummy"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t05_legs",
+            "t05_feet",
+            "t05_tummy"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t05_legs",
+            "t05_feet",
+            "t05_tummy"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t05_legs",
+            "t05_feet"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t05_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_touch_your"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_touch_nose",
+      "text": "Touch your nose!",
+      "image": "images/tpr/cmd_touch_nose.png",
+      "audio": "audio/instructions/cmd_touch_nose.mp3"
+    },
+    {
+      "id": "cmd_touch_head",
+      "text": "Touch your head!",
+      "image": "images/tpr/cmd_touch_head.png",
+      "audio": "audio/instructions/cmd_touch_head.mp3"
+    },
+    {
+      "id": "cmd_stamp_feet",
+      "text": "Stamp your feet!",
+      "image": "images/tpr/cmd_stamp_feet.png",
+      "audio": "audio/instructions/cmd_stamp_feet.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

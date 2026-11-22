@@ -1,0 +1,449 @@
+{
+  "id": "t04_animals",
+  "level": 1,
+  "order": 4,
+  "title_en": "Animals",
+  "title_vi": "Con vật",
+  "map_icon": "images/map/island_t04_animals.png",
+  "song": {
+    "id": "s04_old_macdonald",
+    "title": "Old MacDonald",
+    "audio": "audio/songs/s04_old_macdonald.mp3",
+    "cover": "images/songs/cover_s04_animals.png",
+    "lyrics": [
+      {
+        "t": 4,
+        "text": "Old MacDonald had a farm, E-I-E-I-O!"
+      },
+      {
+        "t": 8,
+        "text": "And on his farm he had a dog, E-I-E-I-O!"
+      },
+      {
+        "t": 12,
+        "text": "With a woof-woof here, and a woof-woof there!"
+      },
+      {
+        "t": 16,
+        "text": "And on his farm he had a cat, E-I-E-I-O!"
+      },
+      {
+        "t": 20,
+        "text": "With a meow-meow here, and a meow-meow there!"
+      },
+      {
+        "t": 24,
+        "text": "And on his farm he had a duck, E-I-E-I-O!"
+      },
+      {
+        "t": 28,
+        "text": "With a quack-quack here, and a moo-moo there!"
+      },
+      {
+        "t": 32,
+        "text": "Old MacDonald had a farm, E-I-E-I-O!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t04_dog",
+      "text": "Dog",
+      "image": "images/topics/t04_animals/dog.png",
+      "audio": "audio/words/t04_dog.mp3",
+      "sentence": "It's a dog! Woof, woof!",
+      "sentence_audio": "audio/sentences/t04_dog_s.mp3"
+    },
+    {
+      "id": "t04_cat",
+      "text": "Cat",
+      "image": "images/topics/t04_animals/cat.png",
+      "audio": "audio/words/t04_cat.mp3",
+      "sentence": "It's a cat! Meow, meow!",
+      "sentence_audio": "audio/sentences/t04_cat_s.mp3"
+    },
+    {
+      "id": "t04_bird",
+      "text": "Bird",
+      "image": "images/topics/t04_animals/bird.png",
+      "audio": "audio/words/t04_bird.mp3",
+      "sentence": "It's a bird! Tweet, tweet!",
+      "sentence_audio": "audio/sentences/t04_bird_s.mp3"
+    },
+    {
+      "id": "t04_fish",
+      "text": "Fish",
+      "image": "images/topics/t04_animals/fish.png",
+      "audio": "audio/words/t04_fish.mp3",
+      "sentence": "Look! The fish can swim!",
+      "sentence_audio": "audio/sentences/t04_fish_s.mp3"
+    },
+    {
+      "id": "t04_duck",
+      "text": "Duck",
+      "image": "images/topics/t04_animals/duck.png",
+      "audio": "audio/words/t04_duck.mp3",
+      "sentence": "It's a duck! Quack, quack!",
+      "sentence_audio": "audio/sentences/t04_duck_s.mp3"
+    },
+    {
+      "id": "t04_chicken",
+      "text": "Chicken",
+      "image": "images/topics/t04_animals/chicken.png",
+      "audio": "audio/words/t04_chicken.mp3",
+      "sentence": "It's a chicken! Cluck, cluck!",
+      "sentence_audio": "audio/sentences/t04_chicken_s.mp3"
+    },
+    {
+      "id": "t04_cow",
+      "text": "Cow",
+      "image": "images/topics/t04_animals/cow.png",
+      "audio": "audio/words/t04_cow.mp3",
+      "sentence": "It's a cow! Moo, moo!",
+      "sentence_audio": "audio/sentences/t04_cow_s.mp3"
+    },
+    {
+      "id": "t04_pig",
+      "text": "Pig",
+      "image": "images/topics/t04_animals/pig.png",
+      "audio": "audio/words/t04_pig.mp3",
+      "sentence": "It's a cute pink pig! Oink, oink!",
+      "sentence_audio": "audio/sentences/t04_pig_s.mp3"
+    },
+    {
+      "id": "t04_horse",
+      "text": "Horse",
+      "image": "images/topics/t04_animals/horse.png",
+      "audio": "audio/words/t04_horse.mp3",
+      "sentence": "The horse runs fast! Neigh!",
+      "sentence_audio": "audio/sentences/t04_horse_s.mp3"
+    },
+    {
+      "id": "t04_rabbit",
+      "text": "Rabbit",
+      "image": "images/topics/t04_animals/rabbit.png",
+      "audio": "audio/words/t04_rabbit.mp3",
+      "sentence": "Hop, hop like a rabbit!",
+      "sentence_audio": "audio/sentences/t04_rabbit_s.mp3"
+    },
+    {
+      "id": "t04_mouse",
+      "text": "Mouse",
+      "image": "images/topics/t04_animals/mouse.png",
+      "audio": "audio/words/t04_mouse.mp3",
+      "sentence": "A little mouse! Squeak, squeak!",
+      "sentence_audio": "audio/sentences/t04_mouse_s.mp3"
+    },
+    {
+      "id": "t04_sheep",
+      "text": "Sheep",
+      "image": "images/topics/t04_animals/sheep.png",
+      "audio": "audio/words/t04_sheep.mp3",
+      "sentence": "A white sheep! Baa, baa!",
+      "sentence_audio": "audio/sentences/t04_sheep_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_whats_this",
+      "text": "What's this? It's a dog!",
+      "audio": "audio/sentences/p_whats_this.mp3",
+      "vi": "Đây là con gì? Là con chó đấy!",
+      "pron_vi": "Quát-xơ đít? Ít-xơ ờ đóc!"
+    },
+    {
+      "id": "p_animal_says",
+      "text": "The cat says meow, meow!",
+      "audio": "audio/sentences/p_animal_says.mp3",
+      "vi": "Con mèo kêu meo meo!",
+      "pron_vi": "Đờ két xây-zơ mi-ao, mi-ao!"
+    },
+    {
+      "id": "p_i_like_animal",
+      "text": "I like rabbits!",
+      "audio": "audio/sentences/p_i_like_animal.mp3",
+      "vi": "Con thích những chú thỏ!",
+      "pron_vi": "Ai lai-kơ rép-bịt-xơ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t04_animals_l1",
+      "order": 1,
+      "new_words": [
+        "t04_dog",
+        "t04_cat",
+        "t04_bird"
+      ],
+      "sentence": "p_whats_this",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t04_dog",
+            "t04_cat",
+            "t04_bird"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t04_dog",
+            "t04_cat",
+            "t04_bird"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t04_dog",
+            "t04_cat",
+            "t04_bird"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t04_dog",
+            "t04_cat"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t04_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_whats_this"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t04_animals_l2",
+      "order": 2,
+      "new_words": [
+        "t04_fish",
+        "t04_duck",
+        "t04_chicken"
+      ],
+      "sentence": "p_animal_says",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t04_fish",
+            "t04_duck",
+            "t04_chicken"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t04_fish",
+            "t04_duck",
+            "t04_chicken"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t04_fish",
+            "t04_duck",
+            "t04_chicken"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t04_fish",
+            "t04_duck"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_swim_fish"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t04_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_animal_says"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t04_animals_l3",
+      "order": 3,
+      "new_words": [
+        "t04_cow",
+        "t04_pig",
+        "t04_horse"
+      ],
+      "sentence": "p_i_like_animal",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t04_cow",
+            "t04_pig",
+            "t04_horse"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t04_cow",
+            "t04_pig",
+            "t04_horse"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t04_cow",
+            "t04_pig",
+            "t04_horse"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t04_cow",
+            "t04_pig"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t04_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_i_like_animal"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t04_animals_l4",
+      "order": 4,
+      "new_words": [
+        "t04_rabbit",
+        "t04_mouse",
+        "t04_sheep"
+      ],
+      "sentence": "p_whats_this",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t04_rabbit",
+            "t04_mouse",
+            "t04_sheep"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t04_rabbit",
+            "t04_mouse",
+            "t04_sheep"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t04_rabbit",
+            "t04_mouse",
+            "t04_sheep"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t04_rabbit",
+            "t04_mouse"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_swim_fish"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t04_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_whats_this"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_fly_bird",
+      "text": "Fly like a little bird!",
+      "image": "images/tpr/cmd_fly_bird.png",
+      "audio": "audio/instructions/cmd_fly_bird.mp3"
+    },
+    {
+      "id": "cmd_swim_fish",
+      "text": "Swim like a happy fish!",
+      "image": "images/tpr/cmd_swim_fish.png",
+      "audio": "audio/instructions/cmd_swim_fish.mp3"
+    }
+  ]
+}

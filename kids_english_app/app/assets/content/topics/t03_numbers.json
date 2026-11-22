@@ -1,0 +1,418 @@
+{
+  "id": "t03_numbers",
+  "level": 1,
+  "order": 3,
+  "title_en": "Numbers",
+  "title_vi": "Số đếm 1-10",
+  "map_icon": "images/map/island_t03_numbers.png",
+  "song": {
+    "id": "s03_ten_little_fingers",
+    "title": "Ten Little Fingers",
+    "audio": "audio/songs/s03_ten_little_fingers.mp3",
+    "cover": "images/songs/cover_s03_numbers.png",
+    "lyrics": [
+      {
+        "t": 4,
+        "text": "One little, two little, three little fingers,"
+      },
+      {
+        "t": 8,
+        "text": "Four little, five little, six little fingers,"
+      },
+      {
+        "t": 12,
+        "text": "Seven little, eight little, nine little fingers,"
+      },
+      {
+        "t": 16,
+        "text": "Ten little fingers on my hands!"
+      },
+      {
+        "t": 20,
+        "text": "Let's count together!"
+      },
+      {
+        "t": 24,
+        "text": "One, two, three, four, five!"
+      },
+      {
+        "t": 28,
+        "text": "Six, seven, eight, nine, ten!"
+      },
+      {
+        "t": 32,
+        "text": "Clap, clap, ten little fingers!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t03_one",
+      "text": "One",
+      "image": "images/topics/t03_numbers/one.png",
+      "audio": "audio/words/t03_one.mp3",
+      "sentence": "One! One little star.",
+      "sentence_audio": "audio/sentences/t03_one_s.mp3"
+    },
+    {
+      "id": "t03_two",
+      "text": "Two",
+      "image": "images/topics/t03_numbers/two.png",
+      "audio": "audio/words/t03_two.mp3",
+      "sentence": "Two! One, two strawberries.",
+      "sentence_audio": "audio/sentences/t03_two_s.mp3"
+    },
+    {
+      "id": "t03_three",
+      "text": "Three",
+      "image": "images/topics/t03_numbers/three.png",
+      "audio": "audio/words/t03_three.mp3",
+      "sentence": "Three! Three yellow ducks.",
+      "sentence_audio": "audio/sentences/t03_three_s.mp3"
+    },
+    {
+      "id": "t03_four",
+      "text": "Four",
+      "image": "images/topics/t03_numbers/four.png",
+      "audio": "audio/words/t03_four.mp3",
+      "sentence": "Four! I am four years old!",
+      "sentence_audio": "audio/sentences/t03_four_s.mp3"
+    },
+    {
+      "id": "t03_five",
+      "text": "Five",
+      "image": "images/topics/t03_numbers/five.png",
+      "audio": "audio/words/t03_five.mp3",
+      "sentence": "Five! Give me high five!",
+      "sentence_audio": "audio/sentences/t03_five_s.mp3"
+    },
+    {
+      "id": "t03_six",
+      "text": "Six",
+      "image": "images/topics/t03_numbers/six.png",
+      "audio": "audio/words/t03_six.mp3",
+      "sentence": "Six! Six big balloons.",
+      "sentence_audio": "audio/sentences/t03_six_s.mp3"
+    },
+    {
+      "id": "t03_seven",
+      "text": "Seven",
+      "image": "images/topics/t03_numbers/seven.png",
+      "audio": "audio/words/t03_seven.mp3",
+      "sentence": "Seven! Seven rainbow stars.",
+      "sentence_audio": "audio/sentences/t03_seven_s.mp3"
+    },
+    {
+      "id": "t03_eight",
+      "text": "Eight",
+      "image": "images/topics/t03_numbers/eight.png",
+      "audio": "audio/words/t03_eight.mp3",
+      "sentence": "Eight! Eight yummy carrots.",
+      "sentence_audio": "audio/sentences/t03_eight_s.mp3"
+    },
+    {
+      "id": "t03_nine",
+      "text": "Nine",
+      "image": "images/topics/t03_numbers/nine.png",
+      "audio": "audio/words/t03_nine.mp3",
+      "sentence": "Nine! Nine blue butterflies.",
+      "sentence_audio": "audio/sentences/t03_nine_s.mp3"
+    },
+    {
+      "id": "t03_ten",
+      "text": "Ten",
+      "image": "images/topics/t03_numbers/ten.png",
+      "audio": "audio/words/t03_ten.mp3",
+      "sentence": "Ten! Ten little fingers!",
+      "sentence_audio": "audio/sentences/t03_ten_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_lets_count",
+      "text": "Let's count! One, two, three!",
+      "audio": "audio/sentences/p_lets_count.mp3",
+      "vi": "Cùng đếm nào! Một, hai, ba!",
+      "pron_vi": "Lét-xơ cao-tờ! Oăn, tu, th-ri!"
+    },
+    {
+      "id": "p_how_many",
+      "text": "How many? Five!",
+      "audio": "audio/sentences/p_how_many.mp3",
+      "vi": "Có bao nhiêu nhỉ? Năm!",
+      "pron_vi": "Hao me-ni? Fai-vờ!"
+    },
+    {
+      "id": "p_how_old",
+      "text": "I'm four years old!",
+      "audio": "audio/sentences/p_how_old.mp3",
+      "vi": "Con lên bốn tuổi!",
+      "pron_vi": "Ai-mơ fo gia-zơ âu!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t03_numbers_l1",
+      "order": 1,
+      "new_words": [
+        "t03_one",
+        "t03_two",
+        "t03_three"
+      ],
+      "sentence": "p_lets_count",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_one",
+            "t03_two"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_lets_count"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l2",
+      "order": 2,
+      "new_words": [
+        "t03_four",
+        "t03_five",
+        "t03_six"
+      ],
+      "sentence": "p_how_many",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_four",
+            "t03_five"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_many"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l3",
+      "order": 3,
+      "new_words": [
+        "t03_seven",
+        "t03_eight",
+        "t03_nine"
+      ],
+      "sentence": "p_how_old",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_seven",
+            "t03_eight"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_old"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l4",
+      "order": 4,
+      "new_words": [
+        "t03_ten"
+      ],
+      "sentence": "p_lets_count",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_ten"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_ten"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_ten"
+          ],
+          "pairs": 1
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_ten"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_lets_count"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    }
+  ]
+}
