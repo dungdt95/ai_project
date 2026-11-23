@@ -189,11 +189,42 @@ class ProfileSelectScreen extends ConsumerWidget {
 }
 
 // ======================= Bản đồ (Khu của Bé) =======================
-class KidHomeScreen extends ConsumerWidget {
+class KidHomeScreen extends ConsumerStatefulWidget {
   const KidHomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<KidHomeScreen> createState() => _KidHomeScreenState();
+}
+
+class _KidHomeScreenState extends ConsumerState<KidHomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Đồng bộ ngầm Google Drive một lần mỗi phiên; không bao giờ chặn hay làm lỗi giao diện của bé.
+    if (!ref.read(driveBackgroundSyncDoneProvider) && ref.read(settingsProvider).autoSyncDrive) {
+      // Ghi provider ngoài vòng build (Riverpod cấm sửa provider khi cây widget đang dựng).
+      Future(_backgroundSync);
+    }
+  }
+
+  Future<void> _backgroundSync() async {
+    if (!mounted || ref.read(driveBackgroundSyncDoneProvider)) return;
+    ref.read(driveBackgroundSyncDoneProvider.notifier).mark();
+    try {
+      final n = await ref.read(driveSyncServiceProvider).syncInBackground();
+      if (n > 0 && mounted) {
+        await ref.read(settingsProvider.notifier).markDriveSynced();
+        if (!mounted) return;
+        ref.invalidate(topicsProvider);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('🎉 Đã cập nhật $n chủ đề mới từ Google Drive!')),
+        );
+      }
+    } catch (_) {}
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final topicsAsync = ref.watch(topicsProvider);
     final profile = ref.watch(activeProfileProvider);
     ref.watch(progressVersionProvider);

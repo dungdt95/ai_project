@@ -1,15 +1,51 @@
+import 'dart:io';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 import '../core/media.dart';
 import '../data/content_repository.dart';
+import '../data/drive_sync_service.dart';
+import '../data/pack_installer.dart';
 import '../data/models.dart';
 import '../data/storage.dart';
 
 /// Được ghi đè trong main() sau khi mở Hive.
 final storageProvider = Provider<Storage>((ref) => throw UnimplementedError('storageProvider chưa được override'));
 
-/// Danh sách nguồn nội dung. Giai đoạn sau thêm FileContentSource (gói .bvpack đã cài).
-final contentSourcesProvider = Provider<List<ContentSource>>((ref) => [AssetContentSource()]);
+/// Thư mục chứa các gói đã cài (`<appSupport>/packs`). Được ghi đè trong main().
+final packsDirProvider = Provider<Directory>((ref) => throw UnimplementedError('packsDirProvider chưa được override'));
+
+/// Danh sách nguồn nội dung: built-in trước, gói đã cài sau (gói ghi đè chủ đề built-in cùng id).
+final contentSourcesProvider = Provider<List<ContentSource>>(
+  (ref) => [AssetContentSource(), FileContentSource(ref.watch(packsDirProvider))],
+);
+
+final packInstallerProvider = Provider<PackInstaller>((ref) => PackInstaller(ref.watch(packsDirProvider)));
+
+final driveSyncServiceProvider = Provider<DriveSyncService>((ref) {
+  final client = http.Client();
+  ref.onDispose(client.close);
+  final storage = ref.read(storageProvider);
+  return DriveSyncService(
+    auth: GoogleDriveAuth(),
+    installer: ref.watch(packInstallerProvider),
+    client: client,
+    folderId: () => ref.read(settingsProvider).driveFolderId,
+    readVersions: storage.installedPackVersions,
+    writeVersions: storage.putInstalledPackVersions,
+  );
+});
+
+/// Chỉ đồng bộ ngầm một lần trong mỗi phiên chạy app.
+final driveBackgroundSyncDoneProvider = NotifierProvider<_FlagNotifier, bool>(_FlagNotifier.new);
+
+class _FlagNotifier extends Notifier<bool> {
+  @override
+  bool build() => false;
+  void mark() => state = true;
+}
+
 
 final topicsProvider = FutureProvider<List<Topic>>((ref) => ContentRegistry(ref.watch(contentSourcesProvider)).load());
 
@@ -18,12 +54,33 @@ class AppSettings {
   final bool viHints;
   final int dailyLimitMin;
   final bool musicOn;
-  const AppSettings({this.viHints = false, this.dailyLimitMin = 60, this.musicOn = true});
+  final bool autoSyncDrive;
+  final String driveFolderId;
+  final String? lastDriveSyncAt;
+  const AppSettings({
+    this.viHints = false,
+    this.dailyLimitMin = 60,
+    this.musicOn = true,
+    this.autoSyncDrive = false,
+    this.driveFolderId = SettingKeys.defaultDriveFolderId,
+    this.lastDriveSyncAt,
+  });
 
-  AppSettings copyWith({bool? viHints, int? dailyLimitMin, bool? musicOn}) => AppSettings(
+  AppSettings copyWith({
+    bool? viHints,
+    int? dailyLimitMin,
+    bool? musicOn,
+    bool? autoSyncDrive,
+    String? driveFolderId,
+    String? lastDriveSyncAt,
+  }) =>
+      AppSettings(
         viHints: viHints ?? this.viHints,
         dailyLimitMin: dailyLimitMin ?? this.dailyLimitMin,
         musicOn: musicOn ?? this.musicOn,
+        autoSyncDrive: autoSyncDrive ?? this.autoSyncDrive,
+        driveFolderId: driveFolderId ?? this.driveFolderId,
+        lastDriveSyncAt: lastDriveSyncAt ?? this.lastDriveSyncAt,
       );
 }
 
@@ -35,6 +92,9 @@ class SettingsNotifier extends Notifier<AppSettings> {
       viHints: s.setting(SettingKeys.viHints, false),
       dailyLimitMin: s.setting(SettingKeys.dailyLimitMin, 60),
       musicOn: s.setting(SettingKeys.musicOn, true),
+      autoSyncDrive: s.setting(SettingKeys.autoSyncDrive, false),
+      driveFolderId: s.setting(SettingKeys.driveFolderId, SettingKeys.defaultDriveFolderId),
+      lastDriveSyncAt: s.setting<String?>(SettingKeys.lastDriveSyncAt, null),
     );
   }
 
@@ -51,6 +111,17 @@ class SettingsNotifier extends Notifier<AppSettings> {
   Future<void> setMusic(bool v) async {
     state = state.copyWith(musicOn: v);
     await ref.read(storageProvider).putSetting(SettingKeys.musicOn, v);
+  }
+
+  Future<void> setAutoSyncDrive(bool v) async {
+    state = state.copyWith(autoSyncDrive: v);
+    await ref.read(storageProvider).putSetting(SettingKeys.autoSyncDrive, v);
+  }
+
+  Future<void> markDriveSynced([DateTime? at]) async {
+    final iso = (at ?? DateTime.now()).toIso8601String();
+    state = state.copyWith(lastDriveSyncAt: iso);
+    await ref.read(storageProvider).putSetting(SettingKeys.lastDriveSyncAt, iso);
   }
 }
 

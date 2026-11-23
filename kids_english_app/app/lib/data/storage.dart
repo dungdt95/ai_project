@@ -109,6 +109,19 @@ class Storage {
   // ---- Cài đặt ----
   T setting<T>(String key, T fallback) => (_settingsBox.get(key) as T?) ?? fallback;
   Future<void> putSetting(String key, Object value) => _settingsBox.put(key, value);
+
+  /// Version đã cài của từng gói (topicId hoặc tên file → version/timestamp).
+  Map<String, int> installedPackVersions() {
+    final raw = _settingsBox.get(SettingKeys.installedPackVersions);
+    if (raw is! Map) return {};
+    return {
+      for (final e in Map.from(raw).entries)
+        if (e.key is String && e.value is num) e.key as String: (e.value as num).toInt(),
+    };
+  }
+
+  Future<void> putInstalledPackVersions(Map<String, int> v) =>
+      _settingsBox.put(SettingKeys.installedPackVersions, Map<String, int>.from(v));
 }
 
 /// Khoá cài đặt.
@@ -117,4 +130,10 @@ class SettingKeys {
   static const dailyLimitMin = 'dailyLimitMin'; // mặc định 20
   static const musicOn = 'musicOn'; // mặc định true
   static const activeProfile = 'activeProfileId';
+  static const autoSyncDrive = 'autoSyncDrive'; // mặc định false
+  static const driveFolderId = 'driveFolderId';
+  static const lastDriveSyncAt = 'lastDriveSyncAt'; // ISO-8601, có thể null
+  static const installedPackVersions = 'installedPackVersions'; // Map<String,int>
+
+  static const defaultDriveFolderId = '10d5w1ZMGNRy4OmdX6_6nnhpaIu1H6hHm';
 }

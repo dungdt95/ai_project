@@ -27,8 +27,12 @@ Future<void> main() async {
   } catch (_) {}
 
   final storage = await Storage.open();
+  final packsDir = Directory('${(await getApplicationSupportDirectory()).path}/packs');
   runApp(ProviderScope(
-    overrides: [storageProvider.overrideWithValue(storage)],
+    overrides: [
+      storageProvider.overrideWithValue(storage),
+      packsDirProvider.overrideWithValue(packsDir),
+    ],
     child: const BeVuiApp(),
   ));
 }

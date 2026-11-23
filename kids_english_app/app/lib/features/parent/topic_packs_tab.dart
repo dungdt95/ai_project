@@ -1,42 +1,11 @@
-import 'dart:convert';
 import 'dart:io';
-import 'package:archive/archive.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../app/providers.dart';
 import '../../app/theme.dart';
-import '../../data/content_repository.dart';
-import '../../data/models.dart';
-
-/// Nguồn nạp chủ đề từ các gói file đã cài đặt trong bộ nhớ máy
-class FileContentSource implements ContentSource {
-  FileContentSource(this.installedPacksDir);
-  final Directory installedPacksDir;
-
-  @override
-  Future<List<Topic>> loadTopics() async {
-    if (!await installedPacksDir.exists()) return [];
-
-    final topics = <Topic>[];
-    final entities = await installedPacksDir.list().toList();
-
-    for (final entity in entities) {
-      if (entity is Directory) {
-        final topicFile = File('${entity.path}/topic.json');
-        if (await topicFile.exists()) {
-          try {
-            final content = await topicFile.readAsString();
-            final json = jsonDecode(content) as Map<String, dynamic>;
-            topics.add(Topic.fromJson(json, baseDir: entity.path));
-          } catch (_) {}
-        }
-      }
-    }
-    return topics;
-  }
-}
+import '../../data/drive_sync_service.dart';
 
 class TopicPacksTab extends ConsumerStatefulWidget {
   const TopicPacksTab({super.key});
@@ -47,6 +16,115 @@ class TopicPacksTab extends ConsumerStatefulWidget {
 
 class _TopicPacksTabState extends ConsumerState<TopicPacksTab> {
   bool _isImporting = false;
+  bool _isSyncing = false;
+  bool _checking = true;
+  DriveAccessStatus _status = DriveAccessStatus.notSignedIn;
+  String? _authError;
+  final List<String> _progress = [];
+
+  DriveSyncService get _drive => ref.read(driveSyncServiceProvider);
+
+  @override
+  void initState() {
+    super.initState();
+    _refreshStatus(silent: true);
+  }
+
+  void _toast(String msg, {bool error = false}) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(backgroundColor: error ? Colors.red : AppColors.teal, content: Text(msg)),
+    );
+  }
+
+  Future<void> _refreshStatus({bool silent = false}) async {
+    setState(() => _checking = true);
+    try {
+      if (silent && _drive.account == null) await _drive.signInSilently();
+      final st = await _drive.checkAccess();
+      if (mounted) setState(() => _status = st);
+    } catch (_) {
+      if (mounted) setState(() => _status = DriveAccessStatus.error);
+    } finally {
+      if (mounted) setState(() => _checking = false);
+    }
+  }
+
+  Future<void> _signIn() async {
+    setState(() {
+      _authError = null;
+      _checking = true;
+    });
+    try {
+      final acc = await _drive.signIn();
+      if (acc == null) {
+        if (mounted) setState(() => _checking = false);
+        return;
+      }
+      await _refreshStatus();
+    } on DriveAuthException catch (e) {
+      if (mounted) {
+        setState(() {
+          _authError = e.message;
+          _checking = false;
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _authError = 'Đăng nhập thất bại: $e';
+          _checking = false;
+        });
+      }
+    }
+  }
+
+  Future<void> _signOut() async {
+    await _drive.signOut();
+    if (mounted) setState(() => _authError = null);
+    await _refreshStatus();
+  }
+
+  Future<void> _requestAccess() async {
+    final id = ref.read(settingsProvider).driveFolderId;
+    var ok = false;
+    try {
+      ok = await launchUrl(Uri.parse('https://drive.google.com/drive/folders/$id'), mode: LaunchMode.externalApplication);
+    } catch (_) {}
+    if (!ok) _toast('Không mở được trang Google Drive.', error: true);
+  }
+
+  Future<void> _syncNow() async {
+    setState(() {
+      _isSyncing = true;
+      _progress.clear();
+    });
+    try {
+      final r = await _drive.syncNow(onProgress: (m) {
+        if (mounted) setState(() => _progress.add(m));
+      });
+      if (mounted) setState(() => _status = r.status);
+      if (r.status == DriveAccessStatus.ready) {
+        await ref.read(settingsProvider.notifier).markDriveSynced();
+        if (r.installed > 0) ref.invalidate(topicsProvider);
+        final msg = r.installed > 0
+            ? 'Đã nạp ${r.installed} chủ đề từ Google Drive.'
+            : (r.errors.isEmpty ? 'Tất cả chủ đề đã là bản mới nhất.' : 'Không nạp được chủ đề nào.');
+        _toast(r.errors.isEmpty ? msg : '$msg (${r.errors.length} lỗi)', error: r.errors.isNotEmpty && r.installed == 0);
+        if (mounted) setState(() => _progress.addAll(r.errors.map((e) => 'Lỗi: $e')));
+      } else if (r.status == DriveAccessStatus.notSignedIn) {
+        _toast('Hãy đăng nhập Gmail trước.', error: true);
+      } else if (r.status == DriveAccessStatus.noPermission) {
+        _toast('Tài khoản chưa được cấp quyền vào kho chủ đề.', error: true);
+      } else {
+        _toast('Lỗi mạng hoặc Google Drive. Vui lòng thử lại.', error: true);
+      }
+    } catch (e) {
+      _toast('Lỗi đồng bộ: $e', error: true);
+    } finally {
+      if (mounted) setState(() => _isSyncing = false);
+    }
+  }
 
   Future<void> _importPack() async {
     final result = await FilePicker.pickFiles(
@@ -57,61 +135,180 @@ class _TopicPacksTabState extends ConsumerState<TopicPacksTab> {
     if (result.isEmpty || result.first.path == null) return;
 
     setState(() => _isImporting = true);
-    final filePath = result.first.path!;
-
     try {
-      final bytes = await File(filePath).readAsBytes();
-      final archive = ZipDecoder().decodeBytes(bytes);
-
-      final appDir = await getApplicationSupportDirectory();
-      final packsDir = Directory('${appDir.path}/packs');
-      if (!await packsDir.exists()) await packsDir.create(recursive: true);
-
-      // Tìm pack.json hoặc topic.json để lấy ID
-      String topicId = 'pack_${DateTime.now().millisecondsSinceEpoch}';
-      for (final file in archive) {
-        if (file.name == 'pack.json' || file.name == 'topic.json') {
-          final content = utf8.decode(file.content as List<int>);
-          final j = jsonDecode(content);
-          if (j['id'] != null) topicId = j['id'];
-          break;
-        }
-      }
-
-      final targetDir = Directory('${packsDir.path}/$topicId');
-      if (await targetDir.exists()) await targetDir.delete(recursive: true);
-      await targetDir.create(recursive: true);
-
-      for (final file in archive) {
-        final filename = file.name;
-        if (file.isFile) {
-          final data = file.content as List<int>;
-          final outFile = File('${targetDir.path}/$filename');
-          await outFile.parent.create(recursive: true);
-          await outFile.writeAsBytes(data);
-        }
-      }
-
-      // Làm mới danh sách nguồn nội dung
+      final bytes = await File(result.first.path!).readAsBytes();
+      final topic = await ref.read(packInstallerProvider).install(bytes);
       ref.invalidate(topicsProvider);
-
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            backgroundColor: AppColors.teal,
-            content: Text("Đã nạp thành công gói chủ đề: $topicId!"),
-          ),
-        );
-      }
+      _toast('Đã nạp thành công gói chủ đề: ${topic.titleEn}!');
     } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(backgroundColor: Colors.red, content: Text("Lỗi khi nạp gói: $e")),
-        );
-      }
+      _toast('Lỗi khi nạp gói: $e', error: true);
     } finally {
       if (mounted) setState(() => _isImporting = false);
     }
+  }
+
+  Future<void> _deletePack(String topicId, String title) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Xóa gói chủ đề?'),
+        content: Text('Gói "$title" sẽ bị xóa khỏi máy. Bạn có thể nạp lại sau.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Hủy')),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: Colors.red),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Xóa'),
+          ),
+        ],
+      ),
+    );
+    if (ok != true) return;
+    try {
+      await ref.read(packInstallerProvider).uninstall(topicId);
+      final storage = ref.read(storageProvider);
+      final v = storage.installedPackVersions()..remove(topicId);
+      await storage.putInstalledPackVersions(v);
+      ref.invalidate(topicsProvider);
+      _toast('Đã xóa gói "$title".');
+    } catch (e) {
+      _toast('Không xóa được gói: $e', error: true);
+    }
+  }
+
+  String _formatTime(String iso) {
+    final t = DateTime.tryParse(iso)?.toLocal();
+    if (t == null) return '';
+    String two(int n) => n.toString().padLeft(2, '0');
+    return '${two(t.hour)}:${two(t.minute)} ${two(t.day)}/${two(t.month)}/${t.year}';
+  }
+
+  Widget _driveCard() {
+    final settings = ref.watch(settingsProvider);
+    final email = _drive.account?.email;
+    final busy = _isSyncing || _checking;
+
+    Widget statusArea;
+    if (_checking) {
+      statusArea = const Row(children: [
+        SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2)),
+        SizedBox(width: 8),
+        Text('Đang kiểm tra...'),
+      ]);
+    } else if (_status == DriveAccessStatus.noPermission) {
+      statusArea = Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.orange.shade50,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.orange),
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Row(children: [
+            Icon(Icons.lock_outline, color: AppColors.orange),
+            SizedBox(width: 8),
+            Expanded(
+              child: Text('Tài khoản này chưa được cấp quyền vào kho chủ đề.', style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+          ]),
+          const SizedBox(height: 6),
+          const Text(
+            'Bấm nút dưới đây để mở Google Drive và chọn "Yêu cầu quyền truy cập". Khi chủ kho đồng ý, quay lại đây bấm "Kiểm tra lại".',
+          ),
+          const SizedBox(height: 8),
+          Wrap(spacing: 8, children: [
+            FilledButton.icon(
+              style: FilledButton.styleFrom(backgroundColor: AppColors.orange),
+              onPressed: _requestAccess,
+              icon: const Icon(Icons.mail_outline),
+              label: const Text('Gửi yêu cầu cấp quyền truy cập'),
+            ),
+            OutlinedButton(onPressed: _refreshStatus, child: const Text('Kiểm tra lại')),
+          ]),
+        ]),
+      );
+    } else if (_status == DriveAccessStatus.ready) {
+      final last = settings.lastDriveSyncAt;
+      statusArea = Row(children: [
+        const Icon(Icons.check_circle, color: AppColors.teal),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            'Đã kết nối kho chủ đề${last == null ? '' : '\nĐồng bộ gần nhất: ${_formatTime(last)}'}',
+            style: const TextStyle(fontWeight: FontWeight.w600),
+          ),
+        ),
+      ]);
+    } else if (_status == DriveAccessStatus.error) {
+      statusArea = Row(children: [
+        const Icon(Icons.cloud_off, color: Colors.red),
+        const SizedBox(width: 8),
+        const Expanded(child: Text('Không kết nối được Google Drive (lỗi mạng?).')),
+        TextButton(onPressed: _refreshStatus, child: const Text('Thử lại')),
+      ]);
+    } else {
+      statusArea = const Text('Hãy đăng nhập Gmail đã được cấp quyền để nạp chủ đề mới.');
+    }
+
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Row(children: [
+              Icon(Icons.cloud_sync_rounded, color: AppColors.teal, size: 28),
+              SizedBox(width: 8),
+              Text('Đồng bộ từ Google Drive', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            ]),
+            const SizedBox(height: 12),
+            Row(children: [
+              const Icon(Icons.account_circle_outlined),
+              const SizedBox(width: 8),
+              Expanded(child: Text(email ?? 'Chưa đăng nhập Gmail', style: const TextStyle(fontWeight: FontWeight.w600))),
+              if (email == null)
+                FilledButton(onPressed: busy ? null : _signIn, child: const Text('Đăng nhập Gmail'))
+              else ...[
+                OutlinedButton(onPressed: busy ? null : _signIn, child: const Text('Đổi tài khoản')),
+                const SizedBox(width: 8),
+                TextButton(onPressed: busy ? null : _signOut, child: const Text('Đăng xuất')),
+              ],
+            ]),
+            if (_authError != null) ...[
+              const SizedBox(height: 8),
+              Text(_authError!, style: const TextStyle(color: Colors.red)),
+            ],
+            const SizedBox(height: 12),
+            statusArea,
+            const SizedBox(height: 8),
+            SwitchListTile(
+              contentPadding: EdgeInsets.zero,
+              title: const Text('Tự động kiểm tra & nạp chủ đề mới khi mở app'),
+              value: settings.autoSyncDrive,
+              onChanged: (v) => ref.read(settingsProvider.notifier).setAutoSyncDrive(v),
+            ),
+            FilledButton.icon(
+              style: FilledButton.styleFrom(
+                backgroundColor: AppColors.teal,
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+              ),
+              onPressed: busy ? null : _syncNow,
+              icon: _isSyncing
+                  ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                  : const Icon(Icons.cloud_download_outlined),
+              label: Text(_isSyncing ? 'Đang đồng bộ...' : 'Kiểm tra & Nạp từ Google Drive ngay'),
+            ),
+            if (_progress.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              for (final line in _progress.length > 8 ? _progress.sublist(_progress.length - 8) : _progress)
+                Text(line, style: TextStyle(fontSize: 13, color: line.startsWith('Lỗi') ? Colors.red : Colors.black54)),
+            ],
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -121,6 +318,8 @@ class _TopicPacksTabState extends ConsumerState<TopicPacksTab> {
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
+        _driveCard(),
+        const SizedBox(height: 16),
         Card(
           elevation: 2,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -179,6 +378,13 @@ class _TopicPacksTabState extends ConsumerState<TopicPacksTab> {
                   ),
                   title: Text(t.titleEn, style: const TextStyle(fontWeight: FontWeight.bold)),
                   subtitle: Text("${t.titleVi} • ${t.words.length} từ vựng • ${isBuiltin ? 'Tích hợp sẵn' : 'Gói cài thêm'}"),
+                  trailing: isBuiltin
+                      ? null
+                      : IconButton(
+                          tooltip: 'Xóa gói này',
+                          icon: const Icon(Icons.delete_outline, color: Colors.red),
+                          onPressed: () => _deletePack(t.id, t.titleEn),
+                        ),
                 ),
               );
             }).toList(),

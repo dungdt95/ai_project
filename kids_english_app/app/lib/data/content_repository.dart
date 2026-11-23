@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 
@@ -24,6 +25,35 @@ class AssetContentSource implements ContentSource {
       final file = (entry as Map<String, dynamic>)['file'] as String;
       final j = jsonDecode(await b.loadString('$root/$file')) as Map<String, dynamic>;
       topics.add(Topic.fromJson(j));
+    }
+    return topics;
+  }
+}
+
+/// Nguồn nạp chủ đề từ các gói đã cài trong bộ nhớ máy: `<installedPacksDir>/<topicId>/topic.json`.
+/// Bỏ qua thư mục bắt đầu bằng "." (thư mục tạm/sao lưu của PackInstaller).
+class FileContentSource implements ContentSource {
+  FileContentSource(this.installedPacksDir);
+  final Directory installedPacksDir;
+
+  @override
+  Future<List<Topic>> loadTopics() async {
+    if (!await installedPacksDir.exists()) return [];
+
+    final topics = <Topic>[];
+    final entities = await installedPacksDir.list().toList();
+
+    for (final entity in entities) {
+      if (entity is! Directory) continue;
+      final name = entity.path.replaceAll(r'\', '/').split('/').last;
+      if (name.startsWith('.')) continue;
+      final topicFile = File('${entity.path}/topic.json');
+      if (await topicFile.exists()) {
+        try {
+          final json = jsonDecode(await topicFile.readAsString()) as Map<String, dynamic>;
+          topics.add(Topic.fromJson(json, baseDir: entity.path));
+        } catch (_) {}
+      }
     }
     return topics;
   }
