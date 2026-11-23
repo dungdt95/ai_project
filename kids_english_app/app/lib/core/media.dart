@@ -46,20 +46,26 @@ class AudioService {
         if (baseDir != null) {
           final f = File('$baseDir/$path');
           if (!await f.exists()) throw const FileSystemException('missing');
+          print('>>> [AudioService] Playing FILE: ${f.path}');
           await _voice.setFilePath(f.path);
         } else {
+          print('>>> [AudioService] Loading ASSET: assets/$path');
           await rootBundle.load('assets/$path'); // ném lỗi nếu thiếu
           await _voice.setAsset('assets/$path');
         }
+        print('>>> [AudioService] Play STARTING: $path, duration: ${_voice.duration}');
         await _voice.play();
+        print('>>> [AudioService] Play CALLED successfully for: $path');
         return;
       } catch (e, s) {
+        print('>>> [AudioService] ERROR playing asset ($path): $e');
         debugPrint('[AudioService] Play asset error ($path): $e\n$s');
         // rơi xuống TTS
       }
     }
     if (fallbackText.isEmpty) return;
     try {
+      print('>>> [AudioService] FALLBACK TO TTS: $fallbackText');
       await _initTts();
       await _tts.speak(fallbackText);
     } catch (_) {}

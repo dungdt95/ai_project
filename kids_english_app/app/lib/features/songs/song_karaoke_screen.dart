@@ -54,14 +54,17 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
     // Lắng nghe vị trí phát nhạc theo thời gian thực (real-time stream)
     _posSub = audio.positionStream.listen((pos) {
       if (!mounted) return;
+      _fallbackTimer?.cancel();
       final sec = pos.inSeconds;
       if (sec != _currentSeconds) {
+        print('>>> [Karaoke] Real-time audio pos: ${pos.inMilliseconds}ms -> sec: $sec');
         _updatePosition(sec);
       }
     });
 
     _stateSub = audio.playerStateStream.listen((state) {
       if (!mounted) return;
+      print('>>> [Karaoke] Audio player state: ${state.processingState}, playing: ${state.playing}');
       if (state.processingState == ProcessingState.completed) {
         setState(() {
           _isPlaying = false;
@@ -69,17 +72,19 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
       }
     });
 
-    // Fallback timer (dành cho môi trường test hoặc TTS fallback)
-    _fallbackTimer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (!mounted) return;
-      if (!_isPlaying) return;
-      // Nếu positionStream chưa kích hoạt cập nhật, dùng timer đếm
-      if (_currentSeconds < 45) {
-        _updatePosition(_currentSeconds + 1);
-      } else {
-        _fallbackTimer?.cancel();
-        setState(() => _isPlaying = false);
-      }
+    // Fallback timer (chỉ chạy nếu positionStream không phát tín hiệu sau 2 giây)
+    _fallbackTimer = Timer(const Duration(seconds: 2), () {
+      if (!mounted || !_isPlaying) return;
+      print('>>> [Karaoke] WARNING: positionStream not received, using fallback timer');
+      _fallbackTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+        if (!mounted || !_isPlaying) return;
+        if (_currentSeconds < 45) {
+          _updatePosition(_currentSeconds + 1);
+        } else {
+          _fallbackTimer?.cancel();
+          setState(() => _isPlaying = false);
+        }
+      });
     });
   }
 
