@@ -86,51 +86,54 @@ class _MemoryMatchActivityState extends State<MemoryMatchActivity> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text(
-            "Find the matching pairs!",
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
-          ),
-          const SizedBox(height: 24),
-          Wrap(
-            spacing: 16,
-            runSpacing: 16,
-            alignment: WrapAlignment.center,
-            children: _cards.map((card) {
-              return GestureDetector(
-                onTap: () => _onCardTap(card),
-                child: AnimatedContainer(
-                  duration: 300.ms,
-                  width: 140,
-                  height: 140,
-                  decoration: BoxDecoration(
-                    color: card.isMatched
-                        ? const Color(0xFFE8F5E9)
-                        : (card.isFaceUp ? Colors.white : const Color(0xFFFF9F1C)),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: card.isMatched ? const Color(0xFF4CAF50) : const Color(0xFF3D2C2E),
-                      width: 3,
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text(
+              "Find the matching pairs!",
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 14,
+              runSpacing: 12,
+              alignment: WrapAlignment.center,
+              children: _cards.map((card) {
+                return GestureDetector(
+                  onTap: () => _onCardTap(card),
+                  child: AnimatedContainer(
+                    duration: 300.ms,
+                    width: 105,
+                    height: 105,
+                    decoration: BoxDecoration(
+                      color: card.isMatched
+                          ? const Color(0xFFE8F5E9)
+                          : (card.isFaceUp ? Colors.white : const Color(0xFFFF9F1C)),
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(
+                        color: card.isMatched ? const Color(0xFF4CAF50) : const Color(0xFF3D2C2E),
+                        width: 3,
+                      ),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 3)),
+                      ],
                     ),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 4)),
-                    ],
+                    child: Center(
+                      child: card.isFaceUp || card.isMatched
+                          ? Padding(
+                              padding: const EdgeInsets.all(8),
+                              child: MediaImage(card.word.image, baseDir: widget.baseDir, label: card.word.text),
+                            )
+                          : const Text('❓', style: TextStyle(fontSize: 38)),
+                    ),
                   ),
-                  child: Center(
-                    child: card.isFaceUp || card.isMatched
-                        ? Padding(
-                            padding: const EdgeInsets.all(12),
-                            child: MediaImage(card.word.image, baseDir: widget.baseDir, label: card.word.text),
-                          )
-                        : const Text('❓', style: TextStyle(fontSize: 48)),
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
-        ],
+                );
+              }).toList(),
+            ),
+          ],
+        ),
       ),
     );
   }

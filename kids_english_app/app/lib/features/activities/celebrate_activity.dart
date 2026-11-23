@@ -63,41 +63,51 @@ class _CelebrateActivityState extends State<CelebrateActivity> {
           ),
         ),
         Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('🌟🌟🌟', style: TextStyle(fontSize: 52))
-                  .animate()
-                  .scale(duration: 500.ms, curve: Curves.elasticOut),
-              const SizedBox(height: 12),
-              const Text(
-                "You are amazing!",
-                style: TextStyle(fontSize: 38, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
-              ),
-              const SizedBox(height: 24),
-              if (widget.stickerPath != null)
-                Container(
-                  width: 160,
-                  height: 160,
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 16)],
-                    border: Border.all(color: const Color(0xFFFFD23F), width: 6),
-                  ),
-                  child: MediaImage(widget.stickerPath!, baseDir: widget.baseDir, label: "Sticker"),
-                ).animate().rotate(duration: 800.ms, curve: Curves.easeOutBack),
-              const SizedBox(height: 32),
-              FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: const Color(0xFFFF9F1C),
-                  padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 20),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                if (widget.stickerPath != null) ...[
+                  Container(
+                    width: 140,
+                    height: 140,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 14)],
+                      border: Border.all(color: const Color(0xFFFFD23F), width: 5),
+                    ),
+                    child: MediaImage(widget.stickerPath!, baseDir: widget.baseDir, label: "Sticker"),
+                  ).animate().rotate(duration: 800.ms, curve: Curves.easeOutBack),
+                  const SizedBox(width: 48),
+                ],
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('🌟🌟🌟', style: TextStyle(fontSize: 36))
+                        .animate()
+                        .scale(duration: 500.ms, curve: Curves.elasticOut),
+                    const SizedBox(height: 6),
+                    const Text(
+                      "You are amazing!",
+                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
+                    ),
+                    const SizedBox(height: 14),
+                    FilledButton(
+                      style: FilledButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF9F1C),
+                        padding: const EdgeInsets.symmetric(horizontal: 44, vertical: 14),
+                      ),
+                      onPressed: widget.onFinished,
+                      child: const Text("Finish!", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                    ).animate().scale(delay: 500.ms),
+                  ],
                 ),
-                onPressed: widget.onFinished,
-                child: const Text("Finish!", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-              ).animate().scale(delay: 500.ms),
-            ],
+              ],
+            ),
           ),
         ),
       ],
