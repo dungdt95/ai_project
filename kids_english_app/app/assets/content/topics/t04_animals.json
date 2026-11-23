@@ -32,7 +32,7 @@
         "text": "Happy farm cow says moo, moo, moo!"
       },
       {
-        "t": 17.0,
+        "t": 17,
         "text": "Little pink pig says oink, oink, oink!"
       },
       {
@@ -52,7 +52,8 @@
       "image": "images/topics/t04_animals/dog.png",
       "audio": "audio/words/t04_dog.mp3",
       "sentence": "It's a dog! Woof, woof!",
-      "sentence_audio": "audio/sentences/t04_dog_s.mp3"
+      "sentence_audio": "audio/sentences/t04_dog_s.mp3",
+      "vi": "Con chó"
     },
     {
       "id": "t04_cat",
@@ -60,7 +61,8 @@
       "image": "images/topics/t04_animals/cat.png",
       "audio": "audio/words/t04_cat.mp3",
       "sentence": "It's a cat! Meow, meow!",
-      "sentence_audio": "audio/sentences/t04_cat_s.mp3"
+      "sentence_audio": "audio/sentences/t04_cat_s.mp3",
+      "vi": "Con mèo"
     },
     {
       "id": "t04_bird",
@@ -68,7 +70,8 @@
       "image": "images/topics/t04_animals/bird.png",
       "audio": "audio/words/t04_bird.mp3",
       "sentence": "It's a bird! Tweet, tweet!",
-      "sentence_audio": "audio/sentences/t04_bird_s.mp3"
+      "sentence_audio": "audio/sentences/t04_bird_s.mp3",
+      "vi": "Con chim"
     },
     {
       "id": "t04_fish",
@@ -76,7 +79,8 @@
       "image": "images/topics/t04_animals/fish.png",
       "audio": "audio/words/t04_fish.mp3",
       "sentence": "Look! The fish can swim!",
-      "sentence_audio": "audio/sentences/t04_fish_s.mp3"
+      "sentence_audio": "audio/sentences/t04_fish_s.mp3",
+      "vi": "Con cá"
     },
     {
       "id": "t04_duck",
@@ -84,7 +88,8 @@
       "image": "images/topics/t04_animals/duck.png",
       "audio": "audio/words/t04_duck.mp3",
       "sentence": "It's a duck! Quack, quack!",
-      "sentence_audio": "audio/sentences/t04_duck_s.mp3"
+      "sentence_audio": "audio/sentences/t04_duck_s.mp3",
+      "vi": "Con vịt"
     },
     {
       "id": "t04_chicken",
@@ -92,7 +97,8 @@
       "image": "images/topics/t04_animals/chicken.png",
       "audio": "audio/words/t04_chicken.mp3",
       "sentence": "It's a chicken! Cluck, cluck!",
-      "sentence_audio": "audio/sentences/t04_chicken_s.mp3"
+      "sentence_audio": "audio/sentences/t04_chicken_s.mp3",
+      "vi": "Con gà"
     },
     {
       "id": "t04_cow",
@@ -100,7 +106,8 @@
       "image": "images/topics/t04_animals/cow.png",
       "audio": "audio/words/t04_cow.mp3",
       "sentence": "It's a cow! Moo, moo!",
-      "sentence_audio": "audio/sentences/t04_cow_s.mp3"
+      "sentence_audio": "audio/sentences/t04_cow_s.mp3",
+      "vi": "Con bò"
     },
     {
       "id": "t04_pig",
@@ -108,7 +115,8 @@
       "image": "images/topics/t04_animals/pig.png",
       "audio": "audio/words/t04_pig.mp3",
       "sentence": "It's a cute pink pig! Oink, oink!",
-      "sentence_audio": "audio/sentences/t04_pig_s.mp3"
+      "sentence_audio": "audio/sentences/t04_pig_s.mp3",
+      "vi": "Con heo (lợn)"
     },
     {
       "id": "t04_horse",
@@ -116,7 +124,8 @@
       "image": "images/topics/t04_animals/horse.png",
       "audio": "audio/words/t04_horse.mp3",
       "sentence": "The horse runs fast! Neigh!",
-      "sentence_audio": "audio/sentences/t04_horse_s.mp3"
+      "sentence_audio": "audio/sentences/t04_horse_s.mp3",
+      "vi": "Con ngựa"
     },
     {
       "id": "t04_rabbit",
@@ -124,7 +133,8 @@
       "image": "images/topics/t04_animals/rabbit.png",
       "audio": "audio/words/t04_rabbit.mp3",
       "sentence": "Hop, hop like a rabbit!",
-      "sentence_audio": "audio/sentences/t04_rabbit_s.mp3"
+      "sentence_audio": "audio/sentences/t04_rabbit_s.mp3",
+      "vi": "Con thỏ"
     },
     {
       "id": "t04_mouse",
@@ -132,7 +142,8 @@
       "image": "images/topics/t04_animals/mouse.png",
       "audio": "audio/words/t04_mouse.mp3",
       "sentence": "A little mouse! Squeak, squeak!",
-      "sentence_audio": "audio/sentences/t04_mouse_s.mp3"
+      "sentence_audio": "audio/sentences/t04_mouse_s.mp3",
+      "vi": "Con chuột"
     },
     {
       "id": "t04_sheep",
@@ -140,7 +151,8 @@
       "image": "images/topics/t04_animals/sheep.png",
       "audio": "audio/words/t04_sheep.mp3",
       "sentence": "A white sheep! Baa, baa!",
-      "sentence_audio": "audio/sentences/t04_sheep_s.mp3"
+      "sentence_audio": "audio/sentences/t04_sheep_s.mp3",
+      "vi": "Con cừu"
     }
   ],
   "sentences": [

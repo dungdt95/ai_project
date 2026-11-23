@@ -100,14 +100,15 @@ class _LessonPlayerScreenState extends ConsumerState<LessonPlayerScreen> {
           return WarmupActivity(
             lesson: lesson,
             onFinished: () => _onStepFinished(lesson, words),
-            playAudio: (path, text) => audio.play(path, text, baseDir: topic.baseDir),
+            playAudio: (path, text, {viText}) => audio.instruction(path, text, viText: viText),
           );
         case 'discover':
           return DiscoverActivity(
             words: words,
             baseDir: topic.baseDir,
+            showViHint: ref.watch(settingsProvider).viHints,
             onFinished: () => _onStepFinished(lesson, words),
-            playAudio: (path, text) => audio.play(path, text, baseDir: topic.baseDir),
+            playAudio: (path, text, {viText}) => audio.playWord(path, text, viText: viText, baseDir: topic.baseDir),
           );
         case 'tap_find':
           return TapFindActivity(
@@ -169,7 +170,7 @@ class _LessonPlayerScreenState extends ConsumerState<LessonPlayerScreen> {
             stickerPath: sticker,
             baseDir: topic.baseDir,
             onFinished: () => _completeLesson(lesson, words),
-            playAudio: (path, text) => audio.play(path, text, baseDir: topic.baseDir),
+            playAudio: (path, text, {viText}) => audio.instruction(path, text, viText: viText),
           );
         default:
           return Center(

@@ -44,7 +44,8 @@
       "image": "images/topics/t05_body/head.png",
       "audio": "audio/words/t05_head.mp3",
       "sentence": "Touch your head!",
-      "sentence_audio": "audio/sentences/t05_head_s.mp3"
+      "sentence_audio": "audio/sentences/t05_head_s.mp3",
+      "vi": "Đầu"
     },
     {
       "id": "t05_eyes",
@@ -52,7 +53,8 @@
       "image": "images/topics/t05_body/eyes.png",
       "audio": "audio/words/t05_eyes.mp3",
       "sentence": "Close your eyes. Open your eyes!",
-      "sentence_audio": "audio/sentences/t05_eyes_s.mp3"
+      "sentence_audio": "audio/sentences/t05_eyes_s.mp3",
+      "vi": "Mắt"
     },
     {
       "id": "t05_ears",
@@ -60,7 +62,8 @@
       "image": "images/topics/t05_body/ears.png",
       "audio": "audio/words/t05_ears.mp3",
       "sentence": "These are my ears.",
-      "sentence_audio": "audio/sentences/t05_ears_s.mp3"
+      "sentence_audio": "audio/sentences/t05_ears_s.mp3",
+      "vi": "Tai"
     },
     {
       "id": "t05_nose",
@@ -68,7 +71,8 @@
       "image": "images/topics/t05_body/nose.png",
       "audio": "audio/words/t05_nose.mp3",
       "sentence": "This is my little nose!",
-      "sentence_audio": "audio/sentences/t05_nose_s.mp3"
+      "sentence_audio": "audio/sentences/t05_nose_s.mp3",
+      "vi": "Mũi"
     },
     {
       "id": "t05_mouth",
@@ -76,7 +80,8 @@
       "image": "images/topics/t05_body/mouth.png",
       "audio": "audio/words/t05_mouth.mp3",
       "sentence": "Open your mouth! Ah!",
-      "sentence_audio": "audio/sentences/t05_mouth_s.mp3"
+      "sentence_audio": "audio/sentences/t05_mouth_s.mp3",
+      "vi": "Miệng"
     },
     {
       "id": "t05_hair",
@@ -84,7 +89,8 @@
       "image": "images/topics/t05_body/hair.png",
       "audio": "audio/words/t05_hair.mp3",
       "sentence": "Brush your nice hair.",
-      "sentence_audio": "audio/sentences/t05_hair_s.mp3"
+      "sentence_audio": "audio/sentences/t05_hair_s.mp3",
+      "vi": "Tóc"
     },
     {
       "id": "t05_hands",
@@ -92,7 +98,8 @@
       "image": "images/topics/t05_body/hands.png",
       "audio": "audio/words/t05_hands.mp3",
       "sentence": "Clap your hands!",
-      "sentence_audio": "audio/sentences/t05_hands_s.mp3"
+      "sentence_audio": "audio/sentences/t05_hands_s.mp3",
+      "vi": "Bàn tay"
     },
     {
       "id": "t05_fingers",
@@ -100,7 +107,8 @@
       "image": "images/topics/t05_body/fingers.png",
       "audio": "audio/words/t05_fingers.mp3",
       "sentence": "Wiggle your ten fingers!",
-      "sentence_audio": "audio/sentences/t05_fingers_s.mp3"
+      "sentence_audio": "audio/sentences/t05_fingers_s.mp3",
+      "vi": "Ngón tay"
     },
     {
       "id": "t05_arms",
@@ -108,7 +116,8 @@
       "image": "images/topics/t05_body/arms.png",
       "audio": "audio/words/t05_arms.mp3",
       "sentence": "Stretch your arms up high!",
-      "sentence_audio": "audio/sentences/t05_arms_s.mp3"
+      "sentence_audio": "audio/sentences/t05_arms_s.mp3",
+      "vi": "Cánh tay"
     },
     {
       "id": "t05_legs",
@@ -116,7 +125,8 @@
       "image": "images/topics/t05_body/legs.png",
       "audio": "audio/words/t05_legs.mp3",
       "sentence": "Look at my two legs!",
-      "sentence_audio": "audio/sentences/t05_legs_s.mp3"
+      "sentence_audio": "audio/sentences/t05_legs_s.mp3",
+      "vi": "Chân"
     },
     {
       "id": "t05_feet",
@@ -124,7 +134,8 @@
       "image": "images/topics/t05_body/feet.png",
       "audio": "audio/words/t05_feet.mp3",
       "sentence": "Stamp your feet!",
-      "sentence_audio": "audio/sentences/t05_feet_s.mp3"
+      "sentence_audio": "audio/sentences/t05_feet_s.mp3",
+      "vi": "Bàn chân"
     },
     {
       "id": "t05_tummy",
@@ -132,7 +143,8 @@
       "image": "images/topics/t05_body/tummy.png",
       "audio": "audio/words/t05_tummy.mp3",
       "sentence": "Pat your round tummy!",
-      "sentence_audio": "audio/sentences/t05_tummy_s.mp3"
+      "sentence_audio": "audio/sentences/t05_tummy_s.mp3",
+      "vi": "Bụng"
     }
   ],
   "sentences": [

@@ -10,12 +10,14 @@ class DiscoverActivity extends StatefulWidget {
     required this.baseDir,
     required this.onFinished,
     required this.playAudio,
+    this.showViHint = false,
   });
 
   final List<Word> words;
   final String? baseDir;
   final VoidCallback onFinished;
-  final void Function(String? path, String text) playAudio;
+  final void Function(String? path, String text, {String? viText}) playAudio;
+  final bool showViHint;
 
   @override
   State<DiscoverActivity> createState() => _DiscoverActivityState();
@@ -34,7 +36,7 @@ class _DiscoverActivityState extends State<DiscoverActivity> {
   void _speakCurrent() {
     if (widget.words.isEmpty) return;
     final w = widget.words[_index];
-    widget.playAudio(w.audio, w.text);
+    widget.playAudio(w.audio, w.text, viText: w.vi);
   }
 
   @override
@@ -64,7 +66,7 @@ class _DiscoverActivityState extends State<DiscoverActivity> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: GestureDetector(
-                    onTap: () => widget.playAudio(w.audio, w.text),
+                    onTap: () => widget.playAudio(w.audio, w.text, viText: w.vi),
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
                       decoration: BoxDecoration(
@@ -102,6 +104,17 @@ class _DiscoverActivityState extends State<DiscoverActivity> {
                               const Icon(Icons.volume_up_rounded, color: Color(0xFFFF9F1C), size: 34),
                             ],
                           ),
+                          if (widget.showViHint && w.vi != null && w.vi!.isNotEmpty) ...[
+                            const SizedBox(height: 4),
+                            Text(
+                              w.vi!,
+                              style: const TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF2EC4B6),
+                              ),
+                            ),
+                          ],
                           if (w.sentence.isNotEmpty) ...[
                             const SizedBox(height: 4),
                             Text(

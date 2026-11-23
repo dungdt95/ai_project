@@ -15,7 +15,7 @@ class CelebrateActivity extends StatefulWidget {
   final String? stickerPath;
   final String? baseDir;
   final VoidCallback onFinished;
-  final void Function(String? path, String text) playAudio;
+  final void Function(String? path, String text, {String? viText}) playAudio;
 
   @override
   State<CelebrateActivity> createState() => _CelebrateActivityState();
@@ -33,6 +33,7 @@ class _CelebrateActivityState extends State<CelebrateActivity> {
       widget.playAudio(
         'audio/instructions/celebrate_sticker.mp3',
         "Hooray! You finished the lesson! Good job!",
+        viText: "Bé giỏi quá! Chúc mừng con!",
       );
     });
   }

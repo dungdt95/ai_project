@@ -71,11 +71,22 @@ class AudioService {
     } catch (_) {}
   }
 
+  /// Phát từ vựng: tiếng Anh trước (bằng audio asset hoặc TTS en-US).
+  /// Nếu [_viEnabled] là true và [viText] không rỗng, phát nối tiếp giọng đọc tiếng Việt bằng TTS vi-VN.
+  Future<void> playWord(String? path, String enText, {String? viText, String? baseDir}) async {
+    await play(path, enText, baseDir: baseDir);
+    if (_viEnabled() && viText != null && viText.isNotEmpty) {
+      await Future<void>.delayed(const Duration(milliseconds: 300));
+      await _playVi(null, viText);
+    }
+  }
+
   /// Hướng dẫn của Momo. Nếu phụ huynh bật "gợi ý tiếng Việt" thì đọc thêm bản tiếng Việt
   /// (chỉ cần truyền [viPath]/[viText]; việc bật/tắt do dịch vụ này quyết định, không rải `if` ở UI).
   Future<void> instruction(String? path, String enText, {String? viPath, String? viText}) async {
     await play(path, enText);
-    if (_viEnabled() && (viText != null || viPath != null)) {
+    if (_viEnabled() && ((viText != null && viText.isNotEmpty) || (viPath != null && viPath.isNotEmpty))) {
+      await Future<void>.delayed(const Duration(milliseconds: 300));
       await _playVi(viPath, viText ?? '');
     }
   }
@@ -92,6 +103,9 @@ class AudioService {
     if (text.isEmpty) return;
     try {
       await _tts.setLanguage('vi-VN');
+      await _tts.setSpeechRate(0.4);
+      await _tts.setPitch(1.0);
+      await _tts.awaitSpeakCompletion(true);
       await _tts.speak(text);
     } catch (_) {} finally {
       _ttsReady = false; // buộc đặt lại en-US lần sau

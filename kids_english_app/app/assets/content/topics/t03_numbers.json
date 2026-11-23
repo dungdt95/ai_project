@@ -52,7 +52,8 @@
       "image": "images/topics/t03_numbers/one.png",
       "audio": "audio/words/t03_one.mp3",
       "sentence": "One! One little star.",
-      "sentence_audio": "audio/sentences/t03_one_s.mp3"
+      "sentence_audio": "audio/sentences/t03_one_s.mp3",
+      "vi": "Số một (1)"
     },
     {
       "id": "t03_two",
@@ -60,7 +61,8 @@
       "image": "images/topics/t03_numbers/two.png",
       "audio": "audio/words/t03_two.mp3",
       "sentence": "Two! One, two strawberries.",
-      "sentence_audio": "audio/sentences/t03_two_s.mp3"
+      "sentence_audio": "audio/sentences/t03_two_s.mp3",
+      "vi": "Số hai (2)"
     },
     {
       "id": "t03_three",
@@ -68,7 +70,8 @@
       "image": "images/topics/t03_numbers/three.png",
       "audio": "audio/words/t03_three.mp3",
       "sentence": "Three! Three yellow ducks.",
-      "sentence_audio": "audio/sentences/t03_three_s.mp3"
+      "sentence_audio": "audio/sentences/t03_three_s.mp3",
+      "vi": "Số ba (3)"
     },
     {
       "id": "t03_four",
@@ -76,7 +79,8 @@
       "image": "images/topics/t03_numbers/four.png",
       "audio": "audio/words/t03_four.mp3",
       "sentence": "Four! I am four years old!",
-      "sentence_audio": "audio/sentences/t03_four_s.mp3"
+      "sentence_audio": "audio/sentences/t03_four_s.mp3",
+      "vi": "Số bốn (4)"
     },
     {
       "id": "t03_five",
@@ -84,7 +88,8 @@
       "image": "images/topics/t03_numbers/five.png",
       "audio": "audio/words/t03_five.mp3",
       "sentence": "Five! Give me high five!",
-      "sentence_audio": "audio/sentences/t03_five_s.mp3"
+      "sentence_audio": "audio/sentences/t03_five_s.mp3",
+      "vi": "Số năm (5)"
     },
     {
       "id": "t03_six",
@@ -92,7 +97,8 @@
       "image": "images/topics/t03_numbers/six.png",
       "audio": "audio/words/t03_six.mp3",
       "sentence": "Six! Six big balloons.",
-      "sentence_audio": "audio/sentences/t03_six_s.mp3"
+      "sentence_audio": "audio/sentences/t03_six_s.mp3",
+      "vi": "Số sáu (6)"
     },
     {
       "id": "t03_seven",
@@ -100,7 +106,8 @@
       "image": "images/topics/t03_numbers/seven.png",
       "audio": "audio/words/t03_seven.mp3",
       "sentence": "Seven! Seven rainbow stars.",
-      "sentence_audio": "audio/sentences/t03_seven_s.mp3"
+      "sentence_audio": "audio/sentences/t03_seven_s.mp3",
+      "vi": "Số bảy (7)"
     },
     {
       "id": "t03_eight",
@@ -108,7 +115,8 @@
       "image": "images/topics/t03_numbers/eight.png",
       "audio": "audio/words/t03_eight.mp3",
       "sentence": "Eight! Eight yummy carrots.",
-      "sentence_audio": "audio/sentences/t03_eight_s.mp3"
+      "sentence_audio": "audio/sentences/t03_eight_s.mp3",
+      "vi": "Số tám (8)"
     },
     {
       "id": "t03_nine",
@@ -116,7 +124,8 @@
       "image": "images/topics/t03_numbers/nine.png",
       "audio": "audio/words/t03_nine.mp3",
       "sentence": "Nine! Nine blue butterflies.",
-      "sentence_audio": "audio/sentences/t03_nine_s.mp3"
+      "sentence_audio": "audio/sentences/t03_nine_s.mp3",
+      "vi": "Số chín (9)"
     },
     {
       "id": "t03_ten",
@@ -124,7 +133,8 @@
       "image": "images/topics/t03_numbers/ten.png",
       "audio": "audio/words/t03_ten.mp3",
       "sentence": "Ten! Ten little fingers!",
-      "sentence_audio": "audio/sentences/t03_ten_s.mp3"
+      "sentence_audio": "audio/sentences/t03_ten_s.mp3",
+      "vi": "Số mười (10)"
     }
   ],
   "sentences": [

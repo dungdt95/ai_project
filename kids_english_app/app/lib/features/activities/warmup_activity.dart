@@ -12,7 +12,7 @@ class WarmupActivity extends StatefulWidget {
 
   final Lesson lesson;
   final VoidCallback onFinished;
-  final void Function(String? path, String text) playAudio;
+  final void Function(String? path, String text, {String? viText}) playAudio;
 
   @override
   State<WarmupActivity> createState() => _WarmupActivityState();
@@ -26,6 +26,7 @@ class _WarmupActivityState extends State<WarmupActivity> {
       widget.playAudio(
         'audio/instructions/warmup_start.mp3',
         "Hello! Are you ready? Let's start!",
+        viText: "Xin chào! Con đã sẵn sàng chưa?",
       );
     });
   }

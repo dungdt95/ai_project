@@ -36,7 +36,7 @@
         "text": "Sing the rainbow song with me!"
       },
       {
-        "t": 16.0,
+        "t": 16,
         "text": "Red, blue, yellow, green! Hooray!"
       }
     ]
@@ -48,7 +48,8 @@
       "image": "images/topics/t02_colors/red.png",
       "audio": "audio/words/t02_red.mp3",
       "sentence": "It's red! A red apple.",
-      "sentence_audio": "audio/sentences/t02_red_s.mp3"
+      "sentence_audio": "audio/sentences/t02_red_s.mp3",
+      "vi": "Màu đỏ"
     },
     {
       "id": "t02_blue",
@@ -56,7 +57,8 @@
       "image": "images/topics/t02_colors/blue.png",
       "audio": "audio/words/t02_blue.mp3",
       "sentence": "It's blue! The sky is blue.",
-      "sentence_audio": "audio/sentences/t02_blue_s.mp3"
+      "sentence_audio": "audio/sentences/t02_blue_s.mp3",
+      "vi": "Màu xanh dương"
     },
     {
       "id": "t02_yellow",
@@ -64,7 +66,8 @@
       "image": "images/topics/t02_colors/yellow.png",
       "audio": "audio/words/t02_yellow.mp3",
       "sentence": "It's yellow! A yellow sun.",
-      "sentence_audio": "audio/sentences/t02_yellow_s.mp3"
+      "sentence_audio": "audio/sentences/t02_yellow_s.mp3",
+      "vi": "Màu vàng"
     },
     {
       "id": "t02_green",
@@ -72,7 +75,8 @@
       "image": "images/topics/t02_colors/green.png",
       "audio": "audio/words/t02_green.mp3",
       "sentence": "It's green! A green leaf.",
-      "sentence_audio": "audio/sentences/t02_green_s.mp3"
+      "sentence_audio": "audio/sentences/t02_green_s.mp3",
+      "vi": "Màu xanh lá"
     },
     {
       "id": "t02_orange",
@@ -80,7 +84,8 @@
       "image": "images/topics/t02_colors/orange.png",
       "audio": "audio/words/t02_orange.mp3",
       "sentence": "It's orange! I like orange.",
-      "sentence_audio": "audio/sentences/t02_orange_s.mp3"
+      "sentence_audio": "audio/sentences/t02_orange_s.mp3",
+      "vi": "Màu cam"
     },
     {
       "id": "t02_pink",
@@ -88,7 +93,8 @@
       "image": "images/topics/t02_colors/pink.png",
       "audio": "audio/words/t02_pink.mp3",
       "sentence": "It's pink! A pink flower.",
-      "sentence_audio": "audio/sentences/t02_pink_s.mp3"
+      "sentence_audio": "audio/sentences/t02_pink_s.mp3",
+      "vi": "Màu hồng"
     },
     {
       "id": "t02_purple",
@@ -96,7 +102,8 @@
       "image": "images/topics/t02_colors/purple.png",
       "audio": "audio/words/t02_purple.mp3",
       "sentence": "It's purple! Purple grapes.",
-      "sentence_audio": "audio/sentences/t02_purple_s.mp3"
+      "sentence_audio": "audio/sentences/t02_purple_s.mp3",
+      "vi": "Màu tím"
     },
     {
       "id": "t02_black",
@@ -104,7 +111,8 @@
       "image": "images/topics/t02_colors/black.png",
       "audio": "audio/words/t02_black.mp3",
       "sentence": "It's black! A black hat.",
-      "sentence_audio": "audio/sentences/t02_black_s.mp3"
+      "sentence_audio": "audio/sentences/t02_black_s.mp3",
+      "vi": "Màu đen"
     },
     {
       "id": "t02_white",
@@ -112,7 +120,8 @@
       "image": "images/topics/t02_colors/white.png",
       "audio": "audio/words/t02_white.mp3",
       "sentence": "It's white! A white cloud.",
-      "sentence_audio": "audio/sentences/t02_white_s.mp3"
+      "sentence_audio": "audio/sentences/t02_white_s.mp3",
+      "vi": "Màu trắng"
     },
     {
       "id": "t02_brown",
@@ -120,7 +129,8 @@
       "image": "images/topics/t02_colors/brown.png",
       "audio": "audio/words/t02_brown.mp3",
       "sentence": "It's brown! Momo is brown.",
-      "sentence_audio": "audio/sentences/t02_brown_s.mp3"
+      "sentence_audio": "audio/sentences/t02_brown_s.mp3",
+      "vi": "Màu nâu"
     }
   ],
   "sentences": [

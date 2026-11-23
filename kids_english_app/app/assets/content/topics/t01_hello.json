@@ -24,7 +24,7 @@
         "text": "I'm fine, I'm happy, thank you!"
       },
       {
-        "t": 16.0,
+        "t": 16,
         "text": "Hello Mommy! Hello Daddy!"
       },
       {
@@ -52,7 +52,8 @@
       "image": "images/topics/t01_hello/hello.png",
       "audio": "audio/words/t01_hello.mp3",
       "sentence": "Hello! Nice to meet you!",
-      "sentence_audio": "audio/sentences/t01_hello_s.mp3"
+      "sentence_audio": "audio/sentences/t01_hello_s.mp3",
+      "vi": "Xin chào"
     },
     {
       "id": "t01_goodbye",
@@ -60,7 +61,8 @@
       "image": "images/topics/t01_hello/goodbye.png",
       "audio": "audio/words/t01_goodbye.mp3",
       "sentence": "Goodbye! See you soon!",
-      "sentence_audio": "audio/sentences/t01_goodbye_s.mp3"
+      "sentence_audio": "audio/sentences/t01_goodbye_s.mp3",
+      "vi": "Tạm biệt"
     },
     {
       "id": "t01_boy",
@@ -68,7 +70,8 @@
       "image": "images/topics/t01_hello/boy.png",
       "audio": "audio/words/t01_boy.mp3",
       "sentence": "I am a happy boy!",
-      "sentence_audio": "audio/sentences/t01_boy_s.mp3"
+      "sentence_audio": "audio/sentences/t01_boy_s.mp3",
+      "vi": "Bé trai"
     },
     {
       "id": "t01_girl",
@@ -76,7 +79,8 @@
       "image": "images/topics/t01_hello/girl.png",
       "audio": "audio/words/t01_girl.mp3",
       "sentence": "I am a happy girl!",
-      "sentence_audio": "audio/sentences/t01_girl_s.mp3"
+      "sentence_audio": "audio/sentences/t01_girl_s.mp3",
+      "vi": "Bé gái"
     },
     {
       "id": "t01_mommy",
@@ -84,7 +88,8 @@
       "image": "images/topics/t01_hello/mommy.png",
       "audio": "audio/words/t01_mommy.mp3",
       "sentence": "I love my mommy!",
-      "sentence_audio": "audio/sentences/t01_mommy_s.mp3"
+      "sentence_audio": "audio/sentences/t01_mommy_s.mp3",
+      "vi": "Mẹ"
     },
     {
       "id": "t01_daddy",
@@ -92,7 +97,8 @@
       "image": "images/topics/t01_hello/daddy.png",
       "audio": "audio/words/t01_daddy.mp3",
       "sentence": "I love my daddy!",
-      "sentence_audio": "audio/sentences/t01_daddy_s.mp3"
+      "sentence_audio": "audio/sentences/t01_daddy_s.mp3",
+      "vi": "Bố"
     },
     {
       "id": "t01_baby",
@@ -100,7 +106,8 @@
       "image": "images/topics/t01_hello/baby.png",
       "audio": "audio/words/t01_baby.mp3",
       "sentence": "Look at the cute baby!",
-      "sentence_audio": "audio/sentences/t01_baby_s.mp3"
+      "sentence_audio": "audio/sentences/t01_baby_s.mp3",
+      "vi": "Em bé"
     },
     {
       "id": "t01_friend",
@@ -108,7 +115,8 @@
       "image": "images/topics/t01_hello/friend.png",
       "audio": "audio/words/t01_friend.mp3",
       "sentence": "You are my good friend!",
-      "sentence_audio": "audio/sentences/t01_friend_s.mp3"
+      "sentence_audio": "audio/sentences/t01_friend_s.mp3",
+      "vi": "Bạn bè"
     }
   ],
   "sentences": [
