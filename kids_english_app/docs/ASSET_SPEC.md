@@ -456,33 +456,33 @@ CHARACTER MOMO: A cute happy baby monkey mascot, 4 years old look, warm cinnamon
   ```
 
 #### 3. `audio/songs/s03_ten_little_fingers.mp3` (Chủ đề 3: Numbers 1–10)
-- **Music Prompt:** `Playful counting song for toddlers, bouncy pizzicato strings, glockenspiel, warm clear female vocal en-US, slow clear counting 96 BPM`
+- **Music Prompt:** `Playful counting song for toddlers, bouncy pizzicato strings, glockenspiel, warm clear female vocal en-US, slow clear counting 98 BPM`
 - **Lyrics:**
   ```text
   [00:00 - 00:04] (Intro music)
-  [00:04 - 00:08] One little, two little, three little fingers,
-  [00:08 - 00:12] Four little, five little, six little fingers,
-  [00:12 - 00:16] Seven little, eight little, nine little fingers,
-  [00:16 - 00:20] Ten little fingers on my hands!
-  [00:20 - 00:24] Let's count together!
-  [00:24 - 00:28] One, two, three, four, five!
-  [00:28 - 00:32] Six, seven, eight, nine, ten!
-  [00:32 - 00:36] Clap, clap, ten little fingers!
+  [00:04 - 00:08] One and two, and three bright stars,
+  [00:08 - 00:12] Four and five, and six so far!
+  [00:12 - 00:16] Seven, eight, and nine, and ten,
+  [00:16 - 00:20] Let's all count them once again!
+  [00:20 - 00:24] Show your fingers, ready, go!
+  [00:24 - 00:28] One, two, three, four, five in a row!
+  [00:28 - 00:32] Six, seven, eight, nine, ten up high!
+  [00:32 - 00:36] Clap your hands and touch the sky!
   ```
 
 #### 4. `audio/songs/s04_old_macdonald.mp3` (Chủ đề 4: Animals)
-- **Music Prompt:** `Classic Old MacDonald Had a Farm nursery rhyme arrangement, cheerful banjo, acoustic guitar, fun animal sound effects, clear female vocal en-US, 102 BPM`
+- **Music Prompt:** `Cheerful country farm nursery rhyme, acoustic guitar, bouncy banjo, fun farm animal sound effects, clear female vocal en-US, 102 BPM`
 - **Lyrics:**
   ```text
   [00:00 - 00:04] (Intro music)
-  [00:04 - 00:08] Old MacDonald had a farm, E-I-E-I-O!
-  [00:08 - 00:12] And on his farm he had a dog, E-I-E-I-O!
-  [00:12 - 00:16] With a woof-woof here, and a woof-woof there!
-  [00:16 - 00:20] And on his farm he had a cat, E-I-E-I-O!
-  [00:20 - 00:24] With a meow-meow here, and a meow-meow there!
-  [00:24 - 00:28] And on his farm he had a duck, E-I-E-I-O!
-  [00:28 - 00:32] With a quack-quack here, and a moo-moo there!
-  [00:32 - 00:36] Old MacDonald had a farm, E-I-E-I-O!
+  [00:04 - 00:08] Welcome to Momo's happy farm!
+  [00:08 - 00:12] Little puppy dog says woof, woof, woof!
+  [00:12 - 00:16] Fluffy kitty cat says meow, meow, meow!
+  [00:16 - 00:20] Yellow baby duck says quack, quack, quack!
+  [00:20 - 00:24] Happy farm cow says moo, moo, moo!
+  [00:24 - 00:28] Little pink pig says oink, oink, oink!
+  [00:28 - 00:32] Bird in the sky and fish in the pond,
+  [00:32 - 00:36] Sing with the animals all day long!
   ```
 
 #### 5. `audio/songs/s05_head_shoulders.mp3` (Chủ đề 5: My Body)

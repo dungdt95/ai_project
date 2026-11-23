@@ -72,7 +72,7 @@ See you soon, my good friend!
 
 #### 🎵 Style of Music Prompt (Suno):
 ```text
-Bright happy preschool nursery rhyme, Twinkle Twinkle Little Star melody style, cheerful female vocal, kids choir backing, acoustic guitar, bright xylophone, glockenspiel chimes, playful clapping, 105 BPM, warm educational vibe
+Bright happy preschool nursery rhyme, cheerful female vocal, kids choir backing, acoustic guitar, bright xylophone, glockenspiel chimes, playful clapping, 105 BPM, warm educational vibe
 ```
 
 #### 📝 Custom Lyrics (Suno):
@@ -97,7 +97,7 @@ Red, blue, yellow, green! Hooray!
 * **Tên file đích:** `assets/audio/songs/s03_ten_little_fingers.mp3`
 * **File JSON đồng bộ:** `assets/content/topics/t03_numbers.json`
 * **Từ vựng cốt lõi:** Các số từ 1 đến 10 (`One` đến `Ten`)
-* **Thời lượng lý tưởng:** ~36 – 42 giây (96 – 100 BPM - nhịp đếm chậm, rõ chữ)
+* **Thời lượng lý tưởng:** ~36 – 42 giây (98 BPM - nhịp đếm chậm, rõ chữ)
 
 #### 🎵 Style of Music Prompt (Suno):
 ```text
@@ -106,18 +106,18 @@ Playful counting song for toddlers, bouncy pizzicato strings, glockenspiel, upbe
 
 #### 📝 Custom Lyrics (Suno):
 ```text
-[Intro: Bouncy pizzicato strings and playful bass]
+[Intro: Bouncy pizzicato strings and playful glockenspiel]
 
-One little, two little, three little fingers,
-Four little, five little, six little fingers,
-Seven little, eight little, nine little fingers,
-Ten little fingers on my hands!
-Let's count together!
-One, two, three, four, five!
-Six, seven, eight, nine, ten!
-Clap, clap, ten little fingers!
+One and two, and three bright stars,
+Four and five, and six so far!
+Seven, eight, and nine, and ten,
+Let's all count them once again!
+Show your fingers, ready, go!
+One, two, three, four, five in a row!
+Six, seven, eight, nine, ten up high!
+Clap your hands and touch the sky!
 
-[Outro: Rhythmic double clap, cheerful giggles]
+[Outro: Rhythmic double clap, kids cheering "Hooray!"]
 ```
 
 ---
@@ -127,27 +127,27 @@ Clap, clap, ten little fingers!
 * **Tên file đích:** `assets/audio/songs/s04_old_macdonald.mp3`
 * **File JSON đồng bộ:** `assets/content/topics/t04_animals.json`
 * **Từ vựng cốt lõi:** `Dog`, `Cat`, `Duck`, `Cow`, `Pig`, `Bird`, `Fish`, `Sheep`
-* **Thời lượng lý tưởng:** ~40 – 45 giây (102 BPM)
+* **Thời lượng lý tưởng:** ~38 – 42 giây (102 BPM)
 
 #### 🎵 Style of Music Prompt (Suno):
 ```text
-Classic Old MacDonald nursery rhyme arrangement, cheerful country acoustic guitar, banjo, fun farm animal sounds, joyful clear female vocal with kids shouting animal sounds, upbeat 102 BPM, super fun and engaging
+Cheerful country farm nursery rhyme, acoustic guitar, bouncy banjo, fun farm animal sounds, joyful clear female vocal with kids shouting animal sounds, upbeat 102 BPM, super fun and engaging
 ```
 
 #### 📝 Custom Lyrics (Suno):
 ```text
-[Intro: Cheerful banjo strum and whistle]
+[Intro: Cheerful banjo strum and playful whistle]
 
-Old MacDonald had a farm, E-I-E-I-O!
-And on his farm he had a dog, E-I-E-I-O!
-With a woof-woof here, and a woof-woof there!
-And on his farm he had a cat, E-I-E-I-O!
-With a meow-meow here, and a meow-meow there!
-And on his farm he had a duck, E-I-E-I-O!
-With a quack-quack here, and a quack-quack there!
-Old MacDonald had a farm, E-I-E-I-O!
+Welcome to Momo's happy farm!
+Little puppy dog says woof, woof, woof!
+Fluffy kitty cat says meow, meow, meow!
+Yellow baby duck says quack, quack, quack!
+Happy farm cow says moo, moo, moo!
+Little pink pig says oink, oink, oink!
+Bird in the sky and fish in the pond,
+Sing with the animals all day long!
 
-[Outro: Fun animal farm sound effects, banjo flourish]
+[Outro: Fun animal farm sound effects, kids cheering "Hooray!"]
 ```
 
 ---
@@ -161,7 +161,7 @@ Old MacDonald had a farm, E-I-E-I-O!
 
 #### 🎵 Style of Music Prompt (Suno):
 ```text
-High-energy preschool action song, Head Shoulders Knees and Toes melody, upbeat marimba, handclaps, cheerful acoustic drums, bright warm female vocal, interactive dance rhythm, 105 BPM, happy movement song
+High-energy preschool action song, upbeat marimba, handclaps, cheerful acoustic drums, bright warm female vocal with kids chorus, interactive dance rhythm, 105 BPM, happy movement song
 ```
 
 #### 📝 Custom Lyrics (Suno):
