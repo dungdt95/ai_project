@@ -248,7 +248,7 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
                                 children: [
                                   const Text('🎶 ', style: TextStyle(fontSize: 20)),
                                   Text(
-                                    'Music Intro... Ready to sing in ${4 - _currentSeconds}s! 🎵',
+                                    'Music Intro... Ready to sing in ${((widget.song.lyrics.isNotEmpty ? widget.song.lyrics.first.t : 3) - _currentSeconds).clamp(1, 10)}s! 🎵',
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
