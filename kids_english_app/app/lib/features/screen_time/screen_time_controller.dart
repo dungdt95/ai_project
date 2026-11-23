@@ -51,12 +51,12 @@ class ScreenTimeController extends Notifier<ScreenTimeState> {
   }
 
   /// Reset hoặc mở thêm giờ cho hôm nay (gọi từ khu phụ huynh)
-  void grantMoreTime(int extraMinutes) {
+  Future<void> grantMoreTime(int extraMinutes) async {
     final profile = ref.read(activeProfileProvider);
     if (profile == null) return;
 
     final storage = ref.read(storageProvider);
-    storage.resetPlaySeconds(profile.id);
+    await storage.resetPlaySeconds(profile.id);
     state = _calculateCurrentState();
   }
 }

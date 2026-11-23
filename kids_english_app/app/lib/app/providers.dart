@@ -18,7 +18,7 @@ class AppSettings {
   final bool viHints;
   final int dailyLimitMin;
   final bool musicOn;
-  const AppSettings({this.viHints = false, this.dailyLimitMin = 20, this.musicOn = true});
+  const AppSettings({this.viHints = false, this.dailyLimitMin = 60, this.musicOn = true});
 
   AppSettings copyWith({bool? viHints, int? dailyLimitMin, bool? musicOn}) => AppSettings(
         viHints: viHints ?? this.viHints,
@@ -33,7 +33,7 @@ class SettingsNotifier extends Notifier<AppSettings> {
     final s = ref.read(storageProvider);
     return AppSettings(
       viHints: s.setting(SettingKeys.viHints, false),
-      dailyLimitMin: s.setting(SettingKeys.dailyLimitMin, 20),
+      dailyLimitMin: s.setting(SettingKeys.dailyLimitMin, 60),
       musicOn: s.setting(SettingKeys.musicOn, true),
     );
   }

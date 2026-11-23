@@ -3,6 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../app/providers.dart';
+import 'screen_time_controller.dart';
 
 class BedtimeSleepScreen extends ConsumerStatefulWidget {
   const BedtimeSleepScreen({super.key});
@@ -78,9 +79,9 @@ class _BedtimeSleepScreenState extends ConsumerState<BedtimeSleepScreen> {
                   side: const BorderSide(color: Colors.white38),
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
-                onPressed: () {
-                  ref.read(screenTimeProvider.notifier).grantMoreTime(60);
-                  context.go('/home');
+                onPressed: () async {
+                  await ref.read(screenTimeProvider.notifier).grantMoreTime(60);
+                  if (context.mounted) context.go('/home');
                 },
                 icon: const Icon(Icons.lock_open_rounded, size: 20),
                 label: const Text("Chơi thêm 60 phút", style: TextStyle(fontSize: 18)),
