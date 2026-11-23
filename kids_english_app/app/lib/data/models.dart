@@ -56,7 +56,7 @@ class Sentence {
 }
 
 class LyricLine {
-  final int t;
+  final num t;
   final String text;
   const LyricLine(this.t, this.text);
 }
@@ -83,7 +83,7 @@ class Song {
         cover: (j['cover'] ?? '') as String,
         lyrics: [
           for (final l in (j['lyrics'] as List? ?? const []))
-            LyricLine((l['t'] as num).toInt(), l['text'] as String),
+            LyricLine(l['t'] as num, l['text'] as String),
         ],
       );
 }

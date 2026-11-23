@@ -12,35 +12,35 @@
     "cover": "images/songs/cover_s01_hello.png",
     "lyrics": [
       {
-        "t": 3,
+        "t": 2.2,
         "text": "Hello, hello! How are you?"
       },
       {
-        "t": 6,
+        "t": 6.8,
         "text": "Hello, hello! How are you?"
       },
       {
-        "t": 10,
+        "t": 11.4,
         "text": "I'm fine, I'm happy, thank you!"
       },
       {
-        "t": 14,
+        "t": 16.0,
         "text": "Hello Mommy! Hello Daddy!"
       },
       {
-        "t": 17,
+        "t": 18.3,
         "text": "Hello little baby, too!"
       },
       {
-        "t": 20,
+        "t": 20.6,
         "text": "Happy boy and happy girl,"
       },
       {
-        "t": 23,
+        "t": 22.9,
         "text": "Wave your hands: Goodbye, bye-bye!"
       },
       {
-        "t": 27,
+        "t": 25.1,
         "text": "See you soon, my good friend!"
       }
     ]

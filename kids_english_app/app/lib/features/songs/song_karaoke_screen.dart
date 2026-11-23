@@ -25,6 +25,7 @@ class SongKaraokeScreen extends ConsumerStatefulWidget {
 
 class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
   int _currentSeconds = 0;
+  double _currentPosSec = 0.0;
   int _activeIndex = -1;
   bool _isPlaying = false;
 
@@ -42,6 +43,7 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
   void _startSong() {
     _isPlaying = true;
     _currentSeconds = 0;
+    _currentPosSec = 0.0;
     _activeIndex = -1;
     _posSub?.cancel();
     _stateSub?.cancel();
@@ -51,15 +53,12 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
     final lyricsText = widget.song.lyrics.map((l) => l.text).join(" ");
     audio.play(widget.song.audio, lyricsText, baseDir: widget.baseDir);
 
-    // Lắng nghe vị trí phát nhạc theo thời gian thực (real-time stream)
+    // Lắng nghe vị trí phát nhạc theo thời gian thực (độ chính xác mili-giây)
     _posSub = audio.positionStream.listen((pos) {
       if (!mounted) return;
       _fallbackTimer?.cancel();
-      final sec = pos.inSeconds;
-      if (sec != _currentSeconds) {
-        print('>>> [Karaoke] Real-time audio pos: ${pos.inMilliseconds}ms -> sec: $sec');
-        _updatePosition(sec);
-      }
+      final posSec = pos.inMilliseconds / 1000.0;
+      _updatePosition(posSec);
     });
 
     _stateSub = audio.playerStateStream.listen((state) {
@@ -79,7 +78,7 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
       _fallbackTimer = Timer.periodic(const Duration(seconds: 1), (_) {
         if (!mounted || !_isPlaying) return;
         if (_currentSeconds < 45) {
-          _updatePosition(_currentSeconds + 1);
+          _updatePosition((_currentSeconds + 1).toDouble());
         } else {
           _fallbackTimer?.cancel();
           setState(() => _isPlaying = false);
@@ -88,22 +87,25 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
     });
   }
 
-  void _updatePosition(int sec) {
+  void _updatePosition(double posSec) {
+    final sec = posSec.floor();
     int idx = -1;
     for (var i = 0; i < widget.song.lyrics.length; i++) {
-      if (sec >= widget.song.lyrics[i].t) {
+      if (posSec >= widget.song.lyrics[i].t.toDouble()) {
         idx = i;
       }
     }
 
     if (idx != _activeIndex || sec != _currentSeconds) {
+      final prevIdx = _activeIndex;
       setState(() {
         _currentSeconds = sec;
+        _currentPosSec = posSec;
         _activeIndex = idx;
       });
 
       // Tự động cuộn danh sách lời bài hát đưa câu đang hát ra giữa màn hình
-      if (idx >= 0 && _scrollController.hasClients) {
+      if (idx != prevIdx && idx >= 0 && _scrollController.hasClients) {
         final targetOffset = (idx * 56.0).clamp(0.0, _scrollController.position.maxScrollExtent);
         _scrollController.animateTo(
           targetOffset,
@@ -111,6 +113,8 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
           curve: Curves.easeOutCubic,
         );
       }
+    } else {
+      _currentPosSec = posSec;
     }
   }
 
@@ -129,7 +133,8 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isIntro = _currentSeconds < (widget.song.lyrics.isNotEmpty ? widget.song.lyrics.first.t : 4);
+    final firstT = widget.song.lyrics.isNotEmpty ? widget.song.lyrics.first.t.toDouble() : 3.0;
+    final isIntro = _activeIndex < 0 && _currentPosSec < firstT;
 
     return Scaffold(
       backgroundColor: AppColors.sky,
@@ -248,7 +253,7 @@ class _SongKaraokeScreenState extends ConsumerState<SongKaraokeScreen> {
                                 children: [
                                   const Text('🎶 ', style: TextStyle(fontSize: 20)),
                                   Text(
-                                    'Music Intro... Ready to sing in ${((widget.song.lyrics.isNotEmpty ? widget.song.lyrics.first.t : 3) - _currentSeconds).clamp(1, 10)}s! 🎵',
+                                    'Music Intro... Ready to sing in ${(firstT - _currentPosSec).ceil().clamp(1, 15)}s! 🎵',
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
