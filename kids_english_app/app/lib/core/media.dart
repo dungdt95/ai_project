@@ -15,6 +15,15 @@ class AudioService {
   final FlutterTts _tts = FlutterTts();
   bool _ttsReady = false;
 
+  /// Luồng cập nhật thời gian phát hiện tại cho màn hình Karaoke.
+  Stream<Duration> get positionStream => _voice.positionStream;
+
+  /// Trạng thái phát của AudioPlayer.
+  Stream<PlayerState> get playerStateStream => _voice.playerStateStream;
+
+  /// Độ dài bài hát hiện tại.
+  Duration? get duration => _voice.duration;
+
   Future<void> _initTts() async {
     if (_ttsReady) return;
     await _tts.setLanguage('en-US');
