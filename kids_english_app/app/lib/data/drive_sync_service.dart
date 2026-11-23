@@ -12,7 +12,11 @@ const driveApiKey = String.fromEnvironment('DRIVE_API_KEY');
 
 /// Web client ID (OAuth "Web application") — google_sign_in v7 trên Android BẮT BUỘC có.
 /// Truyền khi chạy: `--dart-define=GOOGLE_SERVER_CLIENT_ID=xxxx.apps.googleusercontent.com`
-const googleServerClientId = String.fromEnvironment('GOOGLE_SERVER_CLIENT_ID');
+/// Mặc định là Web client của project Google Cloud của app (Client ID không phải bí mật).
+const googleServerClientId = String.fromEnvironment(
+  'GOOGLE_SERVER_CLIENT_ID',
+  defaultValue: '84168100648-5lo151npadkulfcn8pov821nqo9lc2dg.apps.googleusercontent.com',
+);
 
 const driveReadonlyScope = 'https://www.googleapis.com/auth/drive.readonly';
 
