@@ -12,35 +12,35 @@
     "cover": "images/songs/cover_s04_animals.png",
     "lyrics": [
       {
-        "t": 2.8,
+        "t": 5.1,
         "text": "Welcome to Momo's happy farm!"
       },
       {
-        "t": 5.6,
+        "t": 7.6,
         "text": "Little puppy dog says woof, woof, woof!"
       },
       {
-        "t": 9.3,
+        "t": 9.8,
         "text": "Fluffy kitty cat says meow, meow, meow!"
       },
       {
-        "t": 13.1,
+        "t": 12.2,
         "text": "Yellow baby duck says quack, quack, quack!"
       },
       {
-        "t": 16.9,
+        "t": 14.6,
         "text": "Happy farm cow says moo, moo, moo!"
       },
       {
-        "t": 20.7,
+        "t": 17.0,
         "text": "Little pink pig says oink, oink, oink!"
       },
       {
-        "t": 24.5,
+        "t": 19.4,
         "text": "Bird in the sky and fish in the pond,"
       },
       {
-        "t": 28.1,
+        "t": 21.8,
         "text": "Sing with the animals all day long!"
       }
     ]

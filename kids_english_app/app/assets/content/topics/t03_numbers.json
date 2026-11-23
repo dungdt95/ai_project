@@ -12,35 +12,35 @@
     "cover": "images/songs/cover_s03_numbers.png",
     "lyrics": [
       {
-        "t": 8.3,
+        "t": 11.5,
         "text": "One and two, and three bright stars,"
       },
       {
-        "t": 10.6,
+        "t": 13.9,
         "text": "Four and five, and six so far!"
       },
       {
-        "t": 12.8,
+        "t": 16.2,
         "text": "Seven, eight, and nine, and ten,"
       },
       {
-        "t": 15.1,
+        "t": 18.5,
         "text": "Let's all count them once again!"
       },
       {
-        "t": 17.3,
+        "t": 20.9,
         "text": "Show your fingers, ready, go!"
       },
       {
-        "t": 19.6,
+        "t": 23.3,
         "text": "One, two, three, four, five in a row!"
       },
       {
-        "t": 21.8,
+        "t": 25.6,
         "text": "Six, seven, eight, nine, ten up high!"
       },
       {
-        "t": 26.2,
+        "t": 32.7,
         "text": "Clap your hands and touch the sky!"
       }
     ]

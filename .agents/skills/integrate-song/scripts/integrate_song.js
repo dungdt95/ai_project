@@ -65,13 +65,43 @@ function main() {
     const { WaveFile } = require(path.join(SCRATCH_MODULES, 'wavefile'));
     const tempWav = path.join(process.env.TEMP || 'C:\\Users\\User\\AppData\\Local\\Temp', `vocal_${topicData.id}.wav`);
 
-    execSync(`"${ffmpegPath}" -y -i "${targetMp3Path}" -af "highpass=f=300,lowpass=f=3200" -ar 16000 -ac 1 -c:a pcm_s16le "${tempWav}"`, { stdio: 'pipe' });
+    execSync(`"${ffmpegPath}" -y -i "${targetMp3Path}" -af "highpass=f=250,lowpass=f=3800" -ar 16000 -ac 2 -c:a pcm_s16le "${tempWav}"`, { stdio: 'pipe' });
 
     const wav = new WaveFile(fs.readFileSync(tempWav));
     wav.toBitDepth('32f');
-    const samples = Float32Array.from(wav.getSamples());
-    const duration = samples.length / 16000;
+    const samples = wav.getSamples();
+    const left = samples[0];
+    const right = samples[1] || samples[0];
+    const sr = 16000;
+    const duration = left.length / sr;
     console.log(`[2/2] Audio Duration: ${duration.toFixed(2)}s`);
+
+    // Print 0.2s stereo Mid/Side vocal dominance profile
+    const stepSamples = Math.floor(sr * 0.2);
+    const rows = [];
+    let maxVocal = 0.0001;
+    for (let i = 0; i < left.length; i += stepSamples) {
+      const end = Math.min(left.length, i + stepSamples);
+      let sumMid = 0, sumSide = 0;
+      for (let j = i; j < end; j++) {
+        const mid = 0.5 * (left[j] + right[j]);
+        const side = 0.5 * (left[j] - right[j]);
+        sumMid += mid * mid;
+        sumSide += side * side;
+      }
+      const rmsMid = Math.sqrt(sumMid / (end - i));
+      const rmsSide = Math.sqrt(sumSide / (end - i));
+      const vocalScore = Math.max(0, rmsMid - 0.6 * rmsSide);
+      if (vocalScore > maxVocal) maxVocal = vocalScore;
+      rows.push({ t: i / sr, rmsMid, rmsSide, vocalScore });
+    }
+
+    console.log(`\n0.2s Stereo Center-Vocal Envelope:`);
+    for (const r of rows) {
+      const norm = r.vocalScore / maxVocal;
+      const bar = '#'.repeat(Math.round(norm * 30));
+      console.log(`${r.t.toFixed(1).padStart(5, ' ')}s | V:${norm.toFixed(2)} | ${bar}`);
+    }
 
     console.log(`\nCurrent Lyrics in JSON (${topicData.song.lyrics.length} lines):`);
     topicData.song.lyrics.forEach((l, idx) => {
