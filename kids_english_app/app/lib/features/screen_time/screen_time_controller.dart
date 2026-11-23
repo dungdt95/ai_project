@@ -52,12 +52,19 @@ class ScreenTimeController extends Notifier<ScreenTimeState> {
 
   /// Reset hoặc mở thêm giờ cho hôm nay (gọi từ khu phụ huynh)
   Future<void> grantMoreTime(int extraMinutes) async {
-    final profile = ref.read(activeProfileProvider);
-    if (profile == null) return;
-
     final storage = ref.read(storageProvider);
-    await storage.resetPlaySeconds(profile.id);
-    state = _calculateCurrentState();
+    final profile = ref.read(activeProfileProvider);
+    if (profile != null) {
+      await storage.resetPlaySeconds(profile.id);
+    }
+    final currentLimit = ref.read(settingsProvider).dailyLimitMin;
+    await ref.read(settingsProvider.notifier).setDailyLimit(currentLimit + extraMinutes);
+    state = ScreenTimeState(
+      playedMinutes: 0,
+      limitMinutes: currentLimit + extraMinutes,
+      isTimeUp: false,
+      isWarning: false,
+    );
   }
 }
 

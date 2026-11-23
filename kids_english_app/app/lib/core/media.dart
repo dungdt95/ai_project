@@ -44,7 +44,8 @@ class AudioService {
         }
         await _voice.play();
         return;
-      } catch (_) {
+      } catch (e, s) {
+        debugPrint('[AudioService] Play asset error ($path): $e\n$s');
         // rơi xuống TTS
       }
     }

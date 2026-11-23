@@ -64,6 +64,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     try {
       await ref.read(topicsProvider.future);
     } catch (_) {}
+    final storage = ref.read(storageProvider);
+    if (storage.profiles().isEmpty) {
+      final p = await ref.read(profilesProvider.notifier).add('Bé Bo', 'monkey');
+      await ref.read(activeProfileIdProvider.notifier).set(p.id);
+    }
     await Future<void>.delayed(const Duration(milliseconds: 900));
     if (!mounted) return;
     context.go(ref.read(activeProfileProvider) != null ? '/home' : '/profiles');
@@ -126,8 +131,8 @@ class ProfileSelectScreen extends ConsumerWidget {
         ),
       ),
     );
-    final name = nameCtl.text.trim();
-    if (ok == true && name.isNotEmpty) {
+    final name = nameCtl.text.trim().isEmpty ? 'Bé' : nameCtl.text.trim();
+    if (ok == true) {
       final p = await ref.read(profilesProvider.notifier).add(name, avatar);
       await ref.read(activeProfileIdProvider.notifier).set(p.id);
       if (context.mounted) context.go('/home');
