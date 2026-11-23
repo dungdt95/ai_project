@@ -101,6 +101,11 @@ class Storage {
     return _sessionsBox.put('$profileId|${_dayKey(d)}', secondsPlayed(profileId, d) + seconds);
   }
 
+  Future<void> resetPlaySeconds(String profileId, {DateTime? day}) {
+    final d = day ?? DateTime.now();
+    return _sessionsBox.put('$profileId|${_dayKey(d)}', 0);
+  }
+
   // ---- Cài đặt ----
   T setting<T>(String key, T fallback) => (_settingsBox.get(key) as T?) ?? fallback;
   Future<void> putSetting(String key, Object value) => _settingsBox.put(key, value);

@@ -56,9 +56,7 @@ class ScreenTimeController extends Notifier<ScreenTimeState> {
     if (profile == null) return;
 
     final storage = ref.read(storageProvider);
-    final current = storage.secondsPlayed(profile.id, DateTime.now());
-    final reduced = (current - extraMinutes * 60).clamp(0, double.infinity).toInt();
-    storage.putSetting('${profile.id}_manual_offset', reduced);
+    storage.resetPlaySeconds(profile.id);
     state = _calculateCurrentState();
   }
 }
