@@ -1,0 +1,433 @@
+{
+  "id": "t09_shapes",
+  "level": 2,
+  "order": 9,
+  "title_en": "Fun Shapes",
+  "title_vi": "Hình khối quanh bé",
+  "map_icon": "images/map/island_t09_shapes.png",
+  "song": {
+    "id": "s09_shapes_song",
+    "title": "Shapes All Around Us",
+    "audio": "audio/songs/s09_shapes_song.mp3",
+    "cover": "images/songs/cover_s09_shapes.png",
+    "lyrics": [
+      {
+        "t": 1.9,
+        "text": "Circle, Square, and Triangle too,"
+      },
+      {
+        "t": 6.6,
+        "text": "Shapes are waiting here for you!"
+      },
+      {
+        "t": 11.2,
+        "text": "Round like a ball is a Circle bright,"
+      },
+      {
+        "t": 15.9,
+        "text": "Four even sides make a Square just right!"
+      },
+      {
+        "t": 20.6,
+        "text": "Star in the sky and a pink Heart sweet,"
+      },
+      {
+        "t": 25.2,
+        "text": "Rectangle, Oval, and Diamond meet!"
+      },
+      {
+        "t": 30,
+        "text": "Draw a straight Line and a Rainbow high,"
+      },
+      {
+        "t": 34.8,
+        "text": "Shapes all around under the sky!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t09_circle",
+      "text": "Circle",
+      "vi": "Hình tròn",
+      "image": "images/topics/t09_shapes/circle.png",
+      "audio": "audio/words/t09_circle.mp3",
+      "sentence": "A round circle, like a ball!",
+      "sentence_audio": "audio/sentences/t09_circle_s.mp3"
+    },
+    {
+      "id": "t09_square",
+      "text": "Square",
+      "vi": "Hình vuông",
+      "image": "images/topics/t09_shapes/square.png",
+      "audio": "audio/words/t09_square.mp3",
+      "sentence": "A square has four equal sides!",
+      "sentence_audio": "audio/sentences/t09_square_s.mp3"
+    },
+    {
+      "id": "t09_triangle",
+      "text": "Triangle",
+      "vi": "Hình tam giác",
+      "image": "images/topics/t09_shapes/triangle.png",
+      "audio": "audio/words/t09_triangle.mp3",
+      "sentence": "A triangle has three corners!",
+      "sentence_audio": "audio/sentences/t09_triangle_s.mp3"
+    },
+    {
+      "id": "t09_star",
+      "text": "Star",
+      "vi": "Hình ngôi sao",
+      "image": "images/topics/t09_shapes/star.png",
+      "audio": "audio/words/t09_star.mp3",
+      "sentence": "A bright yellow star in the sky!",
+      "sentence_audio": "audio/sentences/t09_star_s.mp3"
+    },
+    {
+      "id": "t09_heart",
+      "text": "Heart",
+      "vi": "Hình trái tim",
+      "image": "images/topics/t09_shapes/heart.png",
+      "audio": "audio/words/t09_heart.mp3",
+      "sentence": "A pink heart full of love!",
+      "sentence_audio": "audio/sentences/t09_heart_s.mp3"
+    },
+    {
+      "id": "t09_rectangle",
+      "text": "Rectangle",
+      "vi": "Hình chữ nhật",
+      "image": "images/topics/t09_shapes/rectangle.png",
+      "audio": "audio/words/t09_rectangle.mp3",
+      "sentence": "The door is a big rectangle!",
+      "sentence_audio": "audio/sentences/t09_rectangle_s.mp3"
+    },
+    {
+      "id": "t09_oval",
+      "text": "Oval",
+      "vi": "Hình bầu dục",
+      "image": "images/topics/t09_shapes/oval.png",
+      "audio": "audio/words/t09_oval.mp3",
+      "sentence": "An egg has an oval shape!",
+      "sentence_audio": "audio/sentences/t09_oval_s.mp3"
+    },
+    {
+      "id": "t09_diamond",
+      "text": "Diamond",
+      "vi": "Hình thoi",
+      "image": "images/topics/t09_shapes/diamond.png",
+      "audio": "audio/words/t09_diamond.mp3",
+      "sentence": "The kite is a flying diamond!",
+      "sentence_audio": "audio/sentences/t09_diamond_s.mp3"
+    },
+    {
+      "id": "t09_rainbow",
+      "text": "Rainbow",
+      "vi": "Cầu vồng",
+      "image": "images/topics/t09_shapes/rainbow.png",
+      "audio": "audio/words/t09_rainbow.mp3",
+      "sentence": "Look at the seven-color rainbow!",
+      "sentence_audio": "audio/sentences/t09_rainbow_s.mp3"
+    },
+    {
+      "id": "t09_line",
+      "text": "Line",
+      "vi": "Đường thẳng",
+      "image": "images/topics/t09_shapes/line.png",
+      "audio": "audio/words/t09_line.mp3",
+      "sentence": "Draw a straight line with me!",
+      "sentence_audio": "audio/sentences/t09_line_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_what_shape",
+      "text": "What shape is it? It's a circle!",
+      "audio": "audio/sentences/p_what_shape.mp3",
+      "vi": "Hình gì đây con? Hình tròn đấy!",
+      "pron_vi": "Quát sếp i-zơ ít? Ít-xơ ờ xơ-cồ!"
+    },
+    {
+      "id": "p_yellow_star",
+      "text": "Look at the bright yellow star!",
+      "audio": "audio/sentences/p_yellow_star.mp3",
+      "vi": "Nhìn ngôi sao màu vàng sáng kìa!",
+      "pron_vi": "Lúc ét đờ bờ-rai die-lâu xờ-ta!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t09_shapes_l1",
+      "order": 1,
+      "new_words": [
+        "t09_circle",
+        "t09_square",
+        "t09_triangle"
+      ],
+      "sentence": "p_what_shape",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t09_circle",
+            "t09_square",
+            "t09_triangle"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t09_circle",
+            "t09_square",
+            "t09_triangle"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t09_circle",
+            "t09_square"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_draw_circle"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t09_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_what_shape"
+        ],
+        "activity_vi": "Bố mẹ cùng bé tìm các đồ vật trong nhà có hình tròn, hình vuông, hình tam giác."
+      }
+    },
+    {
+      "id": "t09_shapes_l2",
+      "order": 2,
+      "new_words": [
+        "t09_star",
+        "t09_heart",
+        "t09_rectangle"
+      ],
+      "sentence": "p_yellow_star",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t09_star",
+            "t09_heart",
+            "t09_rectangle"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t09_star",
+            "t09_heart",
+            "t09_rectangle"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t09_star",
+            "t09_heart",
+            "t09_rectangle"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t09_star",
+            "t09_heart"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t09_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_yellow_star"
+        ],
+        "activity_vi": "Bố mẹ cùng bé tìm các đồ vật trong nhà có hình tròn, hình vuông, hình tam giác."
+      }
+    },
+    {
+      "id": "t09_shapes_l3",
+      "order": 3,
+      "new_words": [
+        "t09_oval",
+        "t09_diamond"
+      ],
+      "sentence": "p_what_shape",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t09_oval",
+            "t09_diamond"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t09_oval",
+            "t09_diamond"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t09_oval",
+            "t09_diamond"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t09_oval",
+            "t09_diamond"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_draw_circle"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t09_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_what_shape"
+        ],
+        "activity_vi": "Bố mẹ cùng bé tìm các đồ vật trong nhà có hình tròn, hình vuông, hình tam giác."
+      }
+    },
+    {
+      "id": "t09_shapes_l4",
+      "order": 4,
+      "new_words": [
+        "t09_rainbow",
+        "t09_line"
+      ],
+      "sentence": "p_yellow_star",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t09_rainbow",
+            "t09_line"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t09_circle",
+            "t09_square",
+            "t09_triangle",
+            "t09_star",
+            "t09_heart",
+            "t09_rectangle",
+            "t09_oval",
+            "t09_diamond",
+            "t09_rainbow",
+            "t09_line"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t09_rainbow",
+            "t09_line"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t09_rainbow",
+            "t09_line"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t09_rainbow",
+            "t09_line"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t09_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_yellow_star"
+        ],
+        "activity_vi": "Bố mẹ cùng bé tìm các đồ vật trong nhà có hình tròn, hình vuông, hình tam giác."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_draw_circle",
+      "text": "Draw a big round circle in the air!",
+      "image": "images/tpr/cmd_draw_circle.png",
+      "audio": "audio/instructions/cmd_draw_circle.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

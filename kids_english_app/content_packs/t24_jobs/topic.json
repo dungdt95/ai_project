@@ -1,0 +1,433 @@
+{
+  "id": "t24_jobs",
+  "level": 5,
+  "order": 24,
+  "title_en": "Cool Jobs",
+  "title_vi": "Nghề nghiệp quanh bé",
+  "map_icon": "images/map/island_t24_jobs.png",
+  "song": {
+    "id": "s24_jobs_song",
+    "title": "When I Grow Up",
+    "audio": "audio/songs/s24_jobs_song.mp3",
+    "cover": "images/songs/cover_s24_jobs.png",
+    "lyrics": [
+      {
+        "t": 2.4,
+        "text": "Doctor and Nurse help us feel fine,"
+      },
+      {
+        "t": 4.8,
+        "text": "Firefighter, Police Officer shine!"
+      },
+      {
+        "t": 7.2,
+        "text": "Chef in the kitchen cooks a treat,"
+      },
+      {
+        "t": 16.6,
+        "text": "Farmer grows healthy food to eat!"
+      },
+      {
+        "t": 21.4,
+        "text": "Driver on the road and Builder strong,"
+      },
+      {
+        "t": 26.1,
+        "text": "Singer on the stage sings a happy song!"
+      },
+      {
+        "t": 30.8,
+        "text": "Astronaut flies where the bright stars glow,"
+      },
+      {
+        "t": 35.7,
+        "text": "What will you be as you learn and grow?"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t24_doctor",
+      "text": "Doctor",
+      "vi": "Bác sĩ",
+      "image": "images/topics/t24_jobs/doctor.png",
+      "audio": "audio/words/t24_doctor.mp3",
+      "sentence": "The kind doctor helps me feel better!",
+      "sentence_audio": "audio/sentences/t24_doctor_s.mp3"
+    },
+    {
+      "id": "t24_nurse",
+      "text": "Nurse",
+      "vi": "Y tá",
+      "image": "images/topics/t24_jobs/nurse.png",
+      "audio": "audio/words/t24_nurse.mp3",
+      "sentence": "The caring nurse gives me a sticker!",
+      "sentence_audio": "audio/sentences/t24_nurse_s.mp3"
+    },
+    {
+      "id": "t24_firefighter",
+      "text": "Firefighter",
+      "vi": "Lính cứu hỏa",
+      "image": "images/topics/t24_jobs/firefighter.png",
+      "audio": "audio/words/t24_firefighter.mp3",
+      "sentence": "The brave firefighter puts out the fire!",
+      "sentence_audio": "audio/sentences/t24_firefighter_s.mp3"
+    },
+    {
+      "id": "t24_police_officer",
+      "text": "Police officer",
+      "vi": "Cảnh sát",
+      "image": "images/topics/t24_jobs/police_officer.png",
+      "audio": "audio/words/t24_police_officer.mp3",
+      "sentence": "The police officer helps people on the street!",
+      "sentence_audio": "audio/sentences/t24_police_officer_s.mp3"
+    },
+    {
+      "id": "t24_chef",
+      "text": "Chef",
+      "vi": "Đầu bếp",
+      "image": "images/topics/t24_jobs/chef.png",
+      "audio": "audio/words/t24_chef.mp3",
+      "sentence": "The chef wears a tall white hat and cooks yummy food!",
+      "sentence_audio": "audio/sentences/t24_chef_s.mp3"
+    },
+    {
+      "id": "t24_farmer",
+      "text": "Farmer",
+      "vi": "Nông dân",
+      "image": "images/topics/t24_jobs/farmer.png",
+      "audio": "audio/words/t24_farmer.mp3",
+      "sentence": "The farmer grows fresh fruit and vegetables!",
+      "sentence_audio": "audio/sentences/t24_farmer_s.mp3"
+    },
+    {
+      "id": "t24_driver",
+      "text": "Driver",
+      "vi": "Tài xế",
+      "image": "images/topics/t24_jobs/driver.png",
+      "audio": "audio/words/t24_driver.mp3",
+      "sentence": "The bus driver drives us safely!",
+      "sentence_audio": "audio/sentences/t24_driver_s.mp3"
+    },
+    {
+      "id": "t24_builder",
+      "text": "Builder",
+      "vi": "Thợ xây",
+      "image": "images/topics/t24_jobs/builder.png",
+      "audio": "audio/words/t24_builder.mp3",
+      "sentence": "The builder wears a yellow helmet and builds houses!",
+      "sentence_audio": "audio/sentences/t24_builder_s.mp3"
+    },
+    {
+      "id": "t24_singer",
+      "text": "Singer",
+      "vi": "Ca sĩ",
+      "image": "images/topics/t24_jobs/singer.png",
+      "audio": "audio/words/t24_singer.mp3",
+      "sentence": "The singer holds a mic and sings on stage!",
+      "sentence_audio": "audio/sentences/t24_singer_s.mp3"
+    },
+    {
+      "id": "t24_astronaut",
+      "text": "Astronaut",
+      "vi": "Phi hành gia",
+      "image": "images/topics/t24_jobs/astronaut.png",
+      "audio": "audio/words/t24_astronaut.mp3",
+      "sentence": "The astronaut flies a rocket to the stars!",
+      "sentence_audio": "audio/sentences/t24_astronaut_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_want_to_be",
+      "text": "What do you want to be? A doctor!",
+      "audio": "audio/sentences/p_want_to_be.mp3",
+      "vi": "Lớn lên con muốn làm nghề gì? Bác sĩ ạ!",
+      "pron_vi": "Quát đu diu quăn tu bi? Ờ đóc-tơ!"
+    },
+    {
+      "id": "p_brave_firefighter",
+      "text": "The firefighter is very brave!",
+      "audio": "audio/sentences/p_brave_firefighter.mp3",
+      "vi": "Chú lính cứu hỏa thật dũng cảm!",
+      "pron_vi": "Đờ phai-ờ-phai-tơ i-zơ ve-ri bờ-rây-vờ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t24_jobs_l1",
+      "order": 1,
+      "new_words": [
+        "t24_doctor",
+        "t24_nurse",
+        "t24_firefighter"
+      ],
+      "sentence": "p_want_to_be",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t24_doctor",
+            "t24_nurse",
+            "t24_firefighter"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t24_doctor",
+            "t24_nurse",
+            "t24_firefighter"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t24_doctor",
+            "t24_nurse"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_drive_car"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t24_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_want_to_be"
+        ],
+        "activity_vi": "Bố mẹ trò chuyện cùng bé về các nghề nghiệp và hỏi \"What do you want to be?\"."
+      }
+    },
+    {
+      "id": "t24_jobs_l2",
+      "order": 2,
+      "new_words": [
+        "t24_police_officer",
+        "t24_chef",
+        "t24_farmer"
+      ],
+      "sentence": "p_brave_firefighter",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t24_police_officer",
+            "t24_chef",
+            "t24_farmer"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t24_police_officer",
+            "t24_chef",
+            "t24_farmer"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t24_police_officer",
+            "t24_chef",
+            "t24_farmer"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t24_police_officer",
+            "t24_chef"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t24_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_brave_firefighter"
+        ],
+        "activity_vi": "Bố mẹ trò chuyện cùng bé về các nghề nghiệp và hỏi \"What do you want to be?\"."
+      }
+    },
+    {
+      "id": "t24_jobs_l3",
+      "order": 3,
+      "new_words": [
+        "t24_driver",
+        "t24_builder"
+      ],
+      "sentence": "p_want_to_be",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t24_driver",
+            "t24_builder"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t24_driver",
+            "t24_builder"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t24_driver",
+            "t24_builder"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t24_driver",
+            "t24_builder"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_drive_car"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t24_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_want_to_be"
+        ],
+        "activity_vi": "Bố mẹ trò chuyện cùng bé về các nghề nghiệp và hỏi \"What do you want to be?\"."
+      }
+    },
+    {
+      "id": "t24_jobs_l4",
+      "order": 4,
+      "new_words": [
+        "t24_singer",
+        "t24_astronaut"
+      ],
+      "sentence": "p_brave_firefighter",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t24_singer",
+            "t24_astronaut"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t24_doctor",
+            "t24_nurse",
+            "t24_firefighter",
+            "t24_police_officer",
+            "t24_chef",
+            "t24_farmer",
+            "t24_driver",
+            "t24_builder",
+            "t24_singer",
+            "t24_astronaut"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t24_singer",
+            "t24_astronaut"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t24_singer",
+            "t24_astronaut"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t24_singer",
+            "t24_astronaut"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t24_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_brave_firefighter"
+        ],
+        "activity_vi": "Bố mẹ trò chuyện cùng bé về các nghề nghiệp và hỏi \"What do you want to be?\"."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_drive_car",
+      "text": "Drive your little car! Beep, beep!",
+      "image": "images/tpr/cmd_drive_car.png",
+      "audio": "audio/instructions/cmd_drive_car.mp3"
+    },
+    {
+      "id": "cmd_smile_happy",
+      "text": "Show me your biggest happy smile!",
+      "image": "images/tpr/cmd_smile_happy.png",
+      "audio": "audio/instructions/cmd_smile_happy.mp3"
+    }
+  ]
+}

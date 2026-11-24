@@ -1,0 +1,463 @@
+{
+  "id": "t07_wild_animals",
+  "level": 2,
+  "order": 7,
+  "title_en": "Zoo Animals",
+  "title_vi": "Động vật sở thú",
+  "map_icon": "images/map/island_t07_wild_animals.png",
+  "song": {
+    "id": "s07_zoo_song",
+    "title": "Welcome to Momo's Jungle Zoo",
+    "audio": "audio/songs/s07_zoo_song.mp3",
+    "cover": "images/songs/cover_s07_zoo.png",
+    "lyrics": [
+      {
+        "t": 1.7,
+        "text": "Let's go walking to the zoo,"
+      },
+      {
+        "t": 4,
+        "text": "Momo wants to go with you!"
+      },
+      {
+        "t": 6.3,
+        "text": "Lion roars and Tiger leaps,"
+      },
+      {
+        "t": 8.6,
+        "text": "Big gray Elephant stomps his feet!"
+      },
+      {
+        "t": 11,
+        "text": "Tall Giraffe and Zebra run,"
+      },
+      {
+        "t": 13.3,
+        "text": "Bear and Panda having fun!"
+      },
+      {
+        "t": 15.6,
+        "text": "Hippo, Crocodile, Kangaroo,"
+      },
+      {
+        "t": 17.9,
+        "text": "We love animals at the zoo!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t07_lion",
+      "text": "Lion",
+      "vi": "Sư tử",
+      "image": "images/topics/t07_wild_animals/lion.png",
+      "audio": "audio/words/t07_lion.mp3",
+      "sentence": "The lion is the king! Roar!",
+      "sentence_audio": "audio/sentences/t07_lion_s.mp3"
+    },
+    {
+      "id": "t07_tiger",
+      "text": "Tiger",
+      "vi": "Con hổ",
+      "image": "images/topics/t07_wild_animals/tiger.png",
+      "audio": "audio/words/t07_tiger.mp3",
+      "sentence": "The tiger has orange and black stripes!",
+      "sentence_audio": "audio/sentences/t07_tiger_s.mp3"
+    },
+    {
+      "id": "t07_elephant",
+      "text": "Elephant",
+      "vi": "Con voi",
+      "image": "images/topics/t07_wild_animals/elephant.png",
+      "audio": "audio/words/t07_elephant.mp3",
+      "sentence": "The elephant has a long nose!",
+      "sentence_audio": "audio/sentences/t07_elephant_s.mp3"
+    },
+    {
+      "id": "t07_monkey",
+      "text": "Monkey",
+      "vi": "Con khỉ",
+      "image": "images/topics/t07_wild_animals/monkey.png",
+      "audio": "audio/words/t07_monkey.mp3",
+      "sentence": "Momo is a happy little monkey!",
+      "sentence_audio": "audio/sentences/t07_monkey_s.mp3"
+    },
+    {
+      "id": "t07_bear",
+      "text": "Bear",
+      "vi": "Con gấu",
+      "image": "images/topics/t07_wild_animals/bear.png",
+      "audio": "audio/words/t07_bear.mp3",
+      "sentence": "The big brown bear loves honey!",
+      "sentence_audio": "audio/sentences/t07_bear_s.mp3"
+    },
+    {
+      "id": "t07_giraffe",
+      "text": "Giraffe",
+      "vi": "Hươu cao cổ",
+      "image": "images/topics/t07_wild_animals/giraffe.png",
+      "audio": "audio/words/t07_giraffe.mp3",
+      "sentence": "The giraffe has a very long neck!",
+      "sentence_audio": "audio/sentences/t07_giraffe_s.mp3"
+    },
+    {
+      "id": "t07_zebra",
+      "text": "Zebra",
+      "vi": "Ngựa vằn",
+      "image": "images/topics/t07_wild_animals/zebra.png",
+      "audio": "audio/words/t07_zebra.mp3",
+      "sentence": "The zebra is black and white!",
+      "sentence_audio": "audio/sentences/t07_zebra_s.mp3"
+    },
+    {
+      "id": "t07_hippo",
+      "text": "Hippo",
+      "vi": "Hà mã",
+      "image": "images/topics/t07_wild_animals/hippo.png",
+      "audio": "audio/words/t07_hippo.mp3",
+      "sentence": "The hippo has a big wide mouth!",
+      "sentence_audio": "audio/sentences/t07_hippo_s.mp3"
+    },
+    {
+      "id": "t07_crocodile",
+      "text": "Crocodile",
+      "vi": "Cá sấu",
+      "image": "images/topics/t07_wild_animals/crocodile.png",
+      "audio": "audio/words/t07_crocodile.mp3",
+      "sentence": "Snap, snap goes the green crocodile!",
+      "sentence_audio": "audio/sentences/t07_crocodile_s.mp3"
+    },
+    {
+      "id": "t07_snake",
+      "text": "Snake",
+      "vi": "Con rắn",
+      "image": "images/topics/t07_wild_animals/snake.png",
+      "audio": "audio/words/t07_snake.mp3",
+      "sentence": "Hiss, hiss goes the long snake!",
+      "sentence_audio": "audio/sentences/t07_snake_s.mp3"
+    },
+    {
+      "id": "t07_panda",
+      "text": "Panda",
+      "vi": "Gấu trúc",
+      "image": "images/topics/t07_wild_animals/panda.png",
+      "audio": "audio/words/t07_panda.mp3",
+      "sentence": "The cute panda eats green bamboo!",
+      "sentence_audio": "audio/sentences/t07_panda_s.mp3"
+    },
+    {
+      "id": "t07_kangaroo",
+      "text": "Kangaroo",
+      "vi": "Chuột túi",
+      "image": "images/topics/t07_wild_animals/kangaroo.png",
+      "audio": "audio/words/t07_kangaroo.mp3",
+      "sentence": "Jump, jump like a kangaroo!",
+      "sentence_audio": "audio/sentences/t07_kangaroo_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_go_to_zoo",
+      "text": "Let's go to the zoo!",
+      "audio": "audio/sentences/p_go_to_zoo.mp3",
+      "vi": "Mình cùng đi sở thú nào!",
+      "pron_vi": "Lét-xơ gâu tu đờ du!"
+    },
+    {
+      "id": "p_big_elephant",
+      "text": "Look at the big elephant!",
+      "audio": "audio/sentences/p_big_elephant.mp3",
+      "vi": "Nhìn chú voi to chưa kìa!",
+      "pron_vi": "Lúc ét đờ bíc e-li-phần!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t07_wild_animals_l1",
+      "order": 1,
+      "new_words": [
+        "t07_lion",
+        "t07_tiger",
+        "t07_elephant"
+      ],
+      "sentence": "p_go_to_zoo",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t07_lion",
+            "t07_tiger",
+            "t07_elephant"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t07_lion",
+            "t07_tiger",
+            "t07_elephant"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t07_lion",
+            "t07_tiger"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_roar_lion"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t07_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_go_to_zoo"
+        ],
+        "activity_vi": "Bố mẹ cùng bé bắt chước tiếng kêu và dáng đi của các con vật trong sở thú."
+      }
+    },
+    {
+      "id": "t07_wild_animals_l2",
+      "order": 2,
+      "new_words": [
+        "t07_monkey",
+        "t07_bear",
+        "t07_giraffe"
+      ],
+      "sentence": "p_big_elephant",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t07_monkey",
+            "t07_bear",
+            "t07_giraffe"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t07_monkey",
+            "t07_bear",
+            "t07_giraffe"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t07_monkey",
+            "t07_bear",
+            "t07_giraffe"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t07_monkey",
+            "t07_bear"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t07_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_big_elephant"
+        ],
+        "activity_vi": "Bố mẹ cùng bé bắt chước tiếng kêu và dáng đi của các con vật trong sở thú."
+      }
+    },
+    {
+      "id": "t07_wild_animals_l3",
+      "order": 3,
+      "new_words": [
+        "t07_zebra",
+        "t07_hippo",
+        "t07_crocodile"
+      ],
+      "sentence": "p_go_to_zoo",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t07_zebra",
+            "t07_hippo",
+            "t07_crocodile"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t07_zebra",
+            "t07_hippo",
+            "t07_crocodile"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t07_zebra",
+            "t07_hippo",
+            "t07_crocodile"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t07_zebra",
+            "t07_hippo",
+            "t07_crocodile"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_roar_lion"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t07_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_go_to_zoo"
+        ],
+        "activity_vi": "Bố mẹ cùng bé bắt chước tiếng kêu và dáng đi của các con vật trong sở thú."
+      }
+    },
+    {
+      "id": "t07_wild_animals_l4",
+      "order": 4,
+      "new_words": [
+        "t07_snake",
+        "t07_panda",
+        "t07_kangaroo"
+      ],
+      "sentence": "p_big_elephant",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t07_snake",
+            "t07_panda",
+            "t07_kangaroo"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t07_lion",
+            "t07_tiger",
+            "t07_elephant",
+            "t07_monkey",
+            "t07_bear",
+            "t07_giraffe",
+            "t07_zebra",
+            "t07_hippo",
+            "t07_crocodile",
+            "t07_snake",
+            "t07_panda",
+            "t07_kangaroo"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t07_snake",
+            "t07_panda",
+            "t07_kangaroo"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t07_snake",
+            "t07_panda",
+            "t07_kangaroo"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t07_snake",
+            "t07_panda",
+            "t07_kangaroo"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t07_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_big_elephant"
+        ],
+        "activity_vi": "Bố mẹ cùng bé bắt chước tiếng kêu và dáng đi của các con vật trong sở thú."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_roar_lion",
+      "text": "Roar like a brave little lion! Roar!",
+      "image": "images/tpr/cmd_roar_lion.png",
+      "audio": "audio/instructions/cmd_roar_lion.mp3"
+    },
+    {
+      "id": "cmd_reach_tall",
+      "text": "Stretch up tall like a giraffe!",
+      "image": "images/tpr/cmd_reach_tall.png",
+      "audio": "audio/instructions/cmd_reach_tall.mp3"
+    }
+  ]
+}

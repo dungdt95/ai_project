@@ -1,0 +1,463 @@
+{
+  "id": "t17_actions",
+  "level": 4,
+  "order": 17,
+  "title_en": "Let's Move!",
+  "title_vi": "Hành động & Vận động",
+  "map_icon": "images/map/island_t17_actions.png",
+  "song": {
+    "id": "s17_actions_song",
+    "title": "Move and Freeze with Momo",
+    "audio": "audio/songs/s17_actions_song.mp3",
+    "cover": "images/songs/cover_s17_actions.png",
+    "lyrics": [
+      {
+        "t": 0.7,
+        "text": "Stand up tall and walk with me,"
+      },
+      {
+        "t": 2.9,
+        "text": "Run and jump, one, two, three!"
+      },
+      {
+        "t": 5.2,
+        "text": "Dance to the music, sing out loud,"
+      },
+      {
+        "t": 7.4,
+        "text": "Laugh together, happy and proud!"
+      },
+      {
+        "t": 9.6,
+        "text": "Swim like a fish in the water blue,"
+      },
+      {
+        "t": 13.9,
+        "text": "Fly like a bird and climb up too!"
+      },
+      {
+        "t": 18.3,
+        "text": "Give a warm hug, then sit right down,"
+      },
+      {
+        "t": 21.6,
+        "text": "We are the happiest kids in town!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t17_run",
+      "text": "Run",
+      "vi": "Chạy",
+      "image": "images/topics/t17_actions/run.png",
+      "audio": "audio/words/t17_run.mp3",
+      "sentence": "Run, run fast in the park!",
+      "sentence_audio": "audio/sentences/t17_run_s.mp3"
+    },
+    {
+      "id": "t17_jump",
+      "text": "Jump",
+      "vi": "Nhảy bật lên",
+      "image": "images/topics/t17_actions/jump.png",
+      "audio": "audio/words/t17_jump.mp3",
+      "sentence": "Jump up high into the air!",
+      "sentence_audio": "audio/sentences/t17_jump_s.mp3"
+    },
+    {
+      "id": "t17_walk",
+      "text": "Walk",
+      "vi": "Đi bộ",
+      "image": "images/topics/t17_actions/walk.png",
+      "audio": "audio/words/t17_walk.mp3",
+      "sentence": "Walk, walk, one step at a time!",
+      "sentence_audio": "audio/sentences/t17_walk_s.mp3"
+    },
+    {
+      "id": "t17_dance",
+      "text": "Dance",
+      "vi": "Nhảy múa",
+      "image": "images/topics/t17_actions/dance.png",
+      "audio": "audio/words/t17_dance.mp3",
+      "sentence": "Dance to the happy music!",
+      "sentence_audio": "audio/sentences/t17_dance_s.mp3"
+    },
+    {
+      "id": "t17_sing",
+      "text": "Sing",
+      "vi": "Ca hát",
+      "image": "images/topics/t17_actions/sing.png",
+      "audio": "audio/words/t17_sing.mp3",
+      "sentence": "La-la-la! Sing a joyful song!",
+      "sentence_audio": "audio/sentences/t17_sing_s.mp3"
+    },
+    {
+      "id": "t17_swim",
+      "text": "Swim",
+      "vi": "Bơi",
+      "image": "images/topics/t17_actions/swim.png",
+      "audio": "audio/words/t17_swim.mp3",
+      "sentence": "Swim like a little fish!",
+      "sentence_audio": "audio/sentences/t17_swim_s.mp3"
+    },
+    {
+      "id": "t17_fly",
+      "text": "Fly",
+      "vi": "Bay",
+      "image": "images/topics/t17_actions/fly.png",
+      "audio": "audio/words/t17_fly.mp3",
+      "sentence": "Spread your arms and fly like a bird!",
+      "sentence_audio": "audio/sentences/t17_fly_s.mp3"
+    },
+    {
+      "id": "t17_climb",
+      "text": "Climb",
+      "vi": "Leo trèo",
+      "image": "images/topics/t17_actions/climb.png",
+      "audio": "audio/words/t17_climb.mp3",
+      "sentence": "Momo likes to climb the tree!",
+      "sentence_audio": "audio/sentences/t17_climb_s.mp3"
+    },
+    {
+      "id": "t17_sit",
+      "text": "Sit",
+      "vi": "Ngồi",
+      "image": "images/topics/t17_actions/sit.png",
+      "audio": "audio/words/t17_sit.mp3",
+      "sentence": "Sit down gently on the mat!",
+      "sentence_audio": "audio/sentences/t17_sit_s.mp3"
+    },
+    {
+      "id": "t17_stand",
+      "text": "Stand",
+      "vi": "Đứng",
+      "image": "images/topics/t17_actions/stand.png",
+      "audio": "audio/words/t17_stand.mp3",
+      "sentence": "Stand up tall and straight!",
+      "sentence_audio": "audio/sentences/t17_stand_s.mp3"
+    },
+    {
+      "id": "t17_laugh",
+      "text": "Laugh",
+      "vi": "Cười vang",
+      "image": "images/topics/t17_actions/laugh.png",
+      "audio": "audio/words/t17_laugh.mp3",
+      "sentence": "Ha-ha-ha! Laugh out loud!",
+      "sentence_audio": "audio/sentences/t17_laugh_s.mp3"
+    },
+    {
+      "id": "t17_hug",
+      "text": "Hug",
+      "vi": "Ôm",
+      "image": "images/topics/t17_actions/hug.png",
+      "audio": "audio/words/t17_hug.mp3",
+      "sentence": "Give your friend a warm hug!",
+      "sentence_audio": "audio/sentences/t17_hug_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_can_you_jump",
+      "text": "Can you jump high? Yes, I can!",
+      "audio": "audio/sentences/p_can_you_jump.mp3",
+      "vi": "Con nhảy cao được không? Dạ được ạ!",
+      "pron_vi": "Ken diu chăm-pờ hai? Diét, ai ken!"
+    },
+    {
+      "id": "p_stand_and_sit",
+      "text": "Stand up, please! Sit down, please!",
+      "audio": "audio/sentences/p_stand_and_sit.mp3",
+      "vi": "Đứng lên nào! Ngồi xuống nào!",
+      "pron_vi": "Xờ-ten ắp, pờ-li-zơ! Xít đao, pờ-li-zơ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t17_actions_l1",
+      "order": 1,
+      "new_words": [
+        "t17_run",
+        "t17_jump",
+        "t17_walk"
+      ],
+      "sentence": "p_can_you_jump",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t17_run",
+            "t17_jump",
+            "t17_walk"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t17_run",
+            "t17_jump",
+            "t17_walk"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t17_run",
+            "t17_jump"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t17_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_can_you_jump"
+        ],
+        "activity_vi": "Bố mẹ chơi trò \"Simon Says\" hô các động từ tiếng Anh để bé vận động theo."
+      }
+    },
+    {
+      "id": "t17_actions_l2",
+      "order": 2,
+      "new_words": [
+        "t17_dance",
+        "t17_sing",
+        "t17_swim"
+      ],
+      "sentence": "p_stand_and_sit",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t17_dance",
+            "t17_sing",
+            "t17_swim"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t17_dance",
+            "t17_sing",
+            "t17_swim"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t17_dance",
+            "t17_sing",
+            "t17_swim"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t17_dance",
+            "t17_sing"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t17_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_stand_and_sit"
+        ],
+        "activity_vi": "Bố mẹ chơi trò \"Simon Says\" hô các động từ tiếng Anh để bé vận động theo."
+      }
+    },
+    {
+      "id": "t17_actions_l3",
+      "order": 3,
+      "new_words": [
+        "t17_fly",
+        "t17_climb",
+        "t17_sit"
+      ],
+      "sentence": "p_can_you_jump",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t17_fly",
+            "t17_climb",
+            "t17_sit"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t17_fly",
+            "t17_climb",
+            "t17_sit"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t17_fly",
+            "t17_climb",
+            "t17_sit"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t17_fly",
+            "t17_climb",
+            "t17_sit"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t17_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_can_you_jump"
+        ],
+        "activity_vi": "Bố mẹ chơi trò \"Simon Says\" hô các động từ tiếng Anh để bé vận động theo."
+      }
+    },
+    {
+      "id": "t17_actions_l4",
+      "order": 4,
+      "new_words": [
+        "t17_stand",
+        "t17_laugh",
+        "t17_hug"
+      ],
+      "sentence": "p_stand_and_sit",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t17_stand",
+            "t17_laugh",
+            "t17_hug"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t17_run",
+            "t17_jump",
+            "t17_walk",
+            "t17_dance",
+            "t17_sing",
+            "t17_swim",
+            "t17_fly",
+            "t17_climb",
+            "t17_sit",
+            "t17_stand",
+            "t17_laugh",
+            "t17_hug"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t17_stand",
+            "t17_laugh",
+            "t17_hug"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t17_stand",
+            "t17_laugh",
+            "t17_hug"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t17_stand",
+            "t17_laugh",
+            "t17_hug"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t17_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_stand_and_sit"
+        ],
+        "activity_vi": "Bố mẹ chơi trò \"Simon Says\" hô các động từ tiếng Anh để bé vận động theo."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_dance_spin",
+      "text": "Spin around and dance with me!",
+      "image": "images/tpr/cmd_dance_spin.png",
+      "audio": "audio/instructions/cmd_dance_spin.mp3"
+    },
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    }
+  ]
+}

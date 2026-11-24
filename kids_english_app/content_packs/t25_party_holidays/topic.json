@@ -1,0 +1,433 @@
+{
+  "id": "t25_party_holidays",
+  "level": 5,
+  "order": 25,
+  "title_en": "Party & Holidays",
+  "title_vi": "Sinh nhật & Lễ hội",
+  "map_icon": "images/map/island_t25_party_holidays.png",
+  "song": {
+    "id": "s25_party_song",
+    "title": "Momo's Big Celebration Party",
+    "audio": "audio/songs/s25_party_song.mp3",
+    "cover": "images/songs/cover_s25_party.png",
+    "lyrics": [
+      {
+        "t": 7.8,
+        "text": "Put on your Party Hat, wear your gold Crown,"
+      },
+      {
+        "t": 12.6,
+        "text": "It's the biggest Birthday party in town!"
+      },
+      {
+        "t": 17,
+        "text": "Light up the Candle, close your eyes tight,"
+      },
+      {
+        "t": 20.8,
+        "text": "Make a sweet Wish in the warm candlelight!"
+      },
+      {
+        "t": 26.8,
+        "text": "Open the Gift with a big red bow,"
+      },
+      {
+        "t": 31.1,
+        "text": "Dance to the Music and watch Lanterns glow!"
+      },
+      {
+        "t": 35.6,
+        "text": "Fireworks sparkle high up above,"
+      },
+      {
+        "t": 39.1,
+        "text": "Let's Celebrate with joy and love!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t25_birthday",
+      "text": "Birthday",
+      "vi": "Sinh nhật",
+      "image": "images/topics/t25_party_holidays/birthday.png",
+      "audio": "audio/words/t25_birthday.mp3",
+      "sentence": "Happy birthday to you!",
+      "sentence_audio": "audio/sentences/t25_birthday_s.mp3"
+    },
+    {
+      "id": "t25_gift",
+      "text": "Gift",
+      "vi": "Hộp quà",
+      "image": "images/topics/t25_party_holidays/gift.png",
+      "audio": "audio/words/t25_gift.mp3",
+      "sentence": "A colorful gift with a big ribbon!",
+      "sentence_audio": "audio/sentences/t25_gift_s.mp3"
+    },
+    {
+      "id": "t25_candle",
+      "text": "Candle",
+      "vi": "Ngọn nến",
+      "image": "images/topics/t25_party_holidays/candle.png",
+      "audio": "audio/words/t25_candle.mp3",
+      "sentence": "Blow out the birthday candles! Whoosh!",
+      "sentence_audio": "audio/sentences/t25_candle_s.mp3"
+    },
+    {
+      "id": "t25_party_hat",
+      "text": "Party hat",
+      "vi": "Mũ sinh nhật",
+      "image": "images/topics/t25_party_holidays/party_hat.png",
+      "audio": "audio/words/t25_party_hat.mp3",
+      "sentence": "Wear a sparkly party hat!",
+      "sentence_audio": "audio/sentences/t25_party_hat_s.mp3"
+    },
+    {
+      "id": "t25_crown",
+      "text": "Crown",
+      "vi": "Vương miện",
+      "image": "images/topics/t25_party_holidays/crown.png",
+      "audio": "audio/words/t25_crown.mp3",
+      "sentence": "A shiny golden crown for the birthday star!",
+      "sentence_audio": "audio/sentences/t25_crown_s.mp3"
+    },
+    {
+      "id": "t25_music",
+      "text": "Music",
+      "vi": "Âm nhạc",
+      "image": "images/topics/t25_party_holidays/music.png",
+      "audio": "audio/words/t25_music.mp3",
+      "sentence": "Clap and dance to the party music!",
+      "sentence_audio": "audio/sentences/t25_music_s.mp3"
+    },
+    {
+      "id": "t25_fireworks",
+      "text": "Fireworks",
+      "vi": "Pháo hoa",
+      "image": "images/topics/t25_party_holidays/fireworks.png",
+      "audio": "audio/words/t25_fireworks.mp3",
+      "sentence": "Boom, sparkle! Bright fireworks in the night sky!",
+      "sentence_audio": "audio/sentences/t25_fireworks_s.mp3"
+    },
+    {
+      "id": "t25_lantern",
+      "text": "Lantern",
+      "vi": "Đèn lồng",
+      "image": "images/topics/t25_party_holidays/lantern.png",
+      "audio": "audio/words/t25_lantern.mp3",
+      "sentence": "A glowing red lantern for the festival!",
+      "sentence_audio": "audio/sentences/t25_lantern_s.mp3"
+    },
+    {
+      "id": "t25_wish",
+      "text": "Wish",
+      "vi": "Điều ước",
+      "image": "images/topics/t25_party_holidays/wish.png",
+      "audio": "audio/words/t25_wish.mp3",
+      "sentence": "Close your eyes and make a happy wish!",
+      "sentence_audio": "audio/sentences/t25_wish_s.mp3"
+    },
+    {
+      "id": "t25_celebrate",
+      "text": "Celebrate",
+      "vi": "Ăn mừng",
+      "image": "images/topics/t25_party_holidays/celebrate.png",
+      "audio": "audio/words/t25_celebrate.mp3",
+      "sentence": "Hooray! Let's celebrate together!",
+      "sentence_audio": "audio/sentences/t25_celebrate_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_happy_birthday",
+      "text": "Happy birthday! Make a wish!",
+      "audio": "audio/sentences/p_happy_birthday.mp3",
+      "vi": "Chúc mừng sinh nhật! Ước một điều ước nào!",
+      "pron_vi": "Hép-pi bớt-đây! Mếch ờ quýt-sờ!"
+    },
+    {
+      "id": "p_thank_for_gift",
+      "text": "Thank you for the lovely gift!",
+      "audio": "audio/sentences/p_thank_for_gift.mp3",
+      "vi": "Con cảm ơn vì món quà đáng yêu ạ!",
+      "pron_vi": "Thanh kiu pho đờ lấp-li gíp-tờ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t25_party_holidays_l1",
+      "order": 1,
+      "new_words": [
+        "t25_birthday",
+        "t25_gift",
+        "t25_candle"
+      ],
+      "sentence": "p_happy_birthday",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t25_birthday",
+            "t25_gift",
+            "t25_candle"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t25_birthday",
+            "t25_gift",
+            "t25_candle"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t25_birthday",
+            "t25_gift"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t25_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_happy_birthday"
+        ],
+        "activity_vi": "Bố mẹ cùng bé hát bài chúc mừng sinh nhật và tập nói lời cảm ơn khi nhận quà."
+      }
+    },
+    {
+      "id": "t25_party_holidays_l2",
+      "order": 2,
+      "new_words": [
+        "t25_party_hat",
+        "t25_crown",
+        "t25_music"
+      ],
+      "sentence": "p_thank_for_gift",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t25_party_hat",
+            "t25_crown",
+            "t25_music"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t25_party_hat",
+            "t25_crown",
+            "t25_music"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t25_party_hat",
+            "t25_crown",
+            "t25_music"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t25_party_hat",
+            "t25_crown"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_put_on_hat"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t25_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_thank_for_gift"
+        ],
+        "activity_vi": "Bố mẹ cùng bé hát bài chúc mừng sinh nhật và tập nói lời cảm ơn khi nhận quà."
+      }
+    },
+    {
+      "id": "t25_party_holidays_l3",
+      "order": 3,
+      "new_words": [
+        "t25_fireworks",
+        "t25_lantern"
+      ],
+      "sentence": "p_happy_birthday",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t25_fireworks",
+            "t25_lantern"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t25_fireworks",
+            "t25_lantern"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t25_fireworks",
+            "t25_lantern"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t25_fireworks",
+            "t25_lantern"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t25_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_happy_birthday"
+        ],
+        "activity_vi": "Bố mẹ cùng bé hát bài chúc mừng sinh nhật và tập nói lời cảm ơn khi nhận quà."
+      }
+    },
+    {
+      "id": "t25_party_holidays_l4",
+      "order": 4,
+      "new_words": [
+        "t25_wish",
+        "t25_celebrate"
+      ],
+      "sentence": "p_thank_for_gift",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t25_wish",
+            "t25_celebrate"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t25_birthday",
+            "t25_gift",
+            "t25_candle",
+            "t25_party_hat",
+            "t25_crown",
+            "t25_music",
+            "t25_fireworks",
+            "t25_lantern",
+            "t25_wish",
+            "t25_celebrate"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t25_wish",
+            "t25_celebrate"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t25_wish",
+            "t25_celebrate"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t25_wish",
+            "t25_celebrate"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_put_on_hat"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t25_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_thank_for_gift"
+        ],
+        "activity_vi": "Bố mẹ cùng bé hát bài chúc mừng sinh nhật và tập nói lời cảm ơn khi nhận quà."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_dance_spin",
+      "text": "Spin around and dance with me!",
+      "image": "images/tpr/cmd_dance_spin.png",
+      "audio": "audio/instructions/cmd_dance_spin.mp3"
+    },
+    {
+      "id": "cmd_put_on_hat",
+      "text": "Put a cool hat on your head!",
+      "image": "images/tpr/cmd_put_on_hat.png",
+      "audio": "audio/instructions/cmd_put_on_hat.mp3"
+    }
+  ]
+}

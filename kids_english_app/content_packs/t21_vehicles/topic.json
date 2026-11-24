@@ -1,0 +1,463 @@
+{
+  "id": "t21_vehicles",
+  "level": 5,
+  "order": 21,
+  "title_en": "Beep! Vehicles",
+  "title_vi": "Phương tiện giao thông",
+  "map_icon": "images/map/island_t21_vehicles.png",
+  "song": {
+    "id": "s21_vehicles_song",
+    "title": "Zoom, Beep, Choo-Choo Go!",
+    "audio": "audio/songs/s21_vehicles_song.mp3",
+    "cover": "images/songs/cover_s21_vehicles.png",
+    "lyrics": [
+      {
+        "t": 5.6,
+        "text": "Beep goes the Car and the yellow Bus,"
+      },
+      {
+        "t": 7.7,
+        "text": "Ring goes the Bike as it rides with us!"
+      },
+      {
+        "t": 9.9,
+        "text": "Motorbike rolls and the big Truck hauls,"
+      },
+      {
+        "t": 11.9,
+        "text": "Fire Truck and Police Car answer the calls!"
+      },
+      {
+        "t": 14,
+        "text": "Choo-choo Train on the long steel track,"
+      },
+      {
+        "t": 16.4,
+        "text": "Boat and big Ship sail out and back!"
+      },
+      {
+        "t": 18.8,
+        "text": "Airplane and Helicopter high in the sky,"
+      },
+      {
+        "t": 21.5,
+        "text": "Wave to Momo as we fly by!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t21_car",
+      "text": "Car",
+      "vi": "Xe ô tô",
+      "image": "images/topics/t21_vehicles/car.png",
+      "audio": "audio/words/t21_car.mp3",
+      "sentence": "Beep, beep! Drive the little car!",
+      "sentence_audio": "audio/sentences/t21_car_s.mp3"
+    },
+    {
+      "id": "t21_bus",
+      "text": "Bus",
+      "vi": "Xe buýt",
+      "image": "images/topics/t21_vehicles/bus.png",
+      "audio": "audio/words/t21_bus.mp3",
+      "sentence": "The yellow school bus goes round and round!",
+      "sentence_audio": "audio/sentences/t21_bus_s.mp3"
+    },
+    {
+      "id": "t21_bike",
+      "text": "Bike",
+      "vi": "Xe đạp",
+      "image": "images/topics/t21_vehicles/bike.png",
+      "audio": "audio/words/t21_bike.mp3",
+      "sentence": "Ring, ring! Ride a blue bike!",
+      "sentence_audio": "audio/sentences/t21_bike_s.mp3"
+    },
+    {
+      "id": "t21_motorbike",
+      "text": "Motorbike",
+      "vi": "Xe máy",
+      "image": "images/topics/t21_vehicles/motorbike.png",
+      "audio": "audio/words/t21_motorbike.mp3",
+      "sentence": "Wear a helmet on the motorbike!",
+      "sentence_audio": "audio/sentences/t21_motorbike_s.mp3"
+    },
+    {
+      "id": "t21_train",
+      "text": "Train",
+      "vi": "Tàu hỏa",
+      "image": "images/topics/t21_vehicles/train.png",
+      "audio": "audio/words/t21_train.mp3",
+      "sentence": "Choo, choo! Here comes the long train!",
+      "sentence_audio": "audio/sentences/t21_train_s.mp3"
+    },
+    {
+      "id": "t21_airplane",
+      "text": "Airplane",
+      "vi": "Máy bay",
+      "image": "images/topics/t21_vehicles/airplane.png",
+      "audio": "audio/words/t21_airplane.mp3",
+      "sentence": "Whoosh! The airplane flies above the clouds!",
+      "sentence_audio": "audio/sentences/t21_airplane_s.mp3"
+    },
+    {
+      "id": "t21_helicopter",
+      "text": "Helicopter",
+      "vi": "Trực thăng",
+      "image": "images/topics/t21_vehicles/helicopter.png",
+      "audio": "audio/words/t21_helicopter.mp3",
+      "sentence": "The helicopter spins up in the sky!",
+      "sentence_audio": "audio/sentences/t21_helicopter_s.mp3"
+    },
+    {
+      "id": "t21_boat",
+      "text": "Boat",
+      "vi": "Thuyền nhỏ",
+      "image": "images/topics/t21_vehicles/boat.png",
+      "audio": "audio/words/t21_boat.mp3",
+      "sentence": "Row, row the little wooden boat!",
+      "sentence_audio": "audio/sentences/t21_boat_s.mp3"
+    },
+    {
+      "id": "t21_ship",
+      "text": "Ship",
+      "vi": "Tàu thủy lớn",
+      "image": "images/topics/t21_vehicles/ship.png",
+      "audio": "audio/words/t21_ship.mp3",
+      "sentence": "The big ship sails across the ocean!",
+      "sentence_audio": "audio/sentences/t21_ship_s.mp3"
+    },
+    {
+      "id": "t21_truck",
+      "text": "Truck",
+      "vi": "Xe tải",
+      "image": "images/topics/t21_vehicles/truck.png",
+      "audio": "audio/words/t21_truck.mp3",
+      "sentence": "The strong truck carries big boxes!",
+      "sentence_audio": "audio/sentences/t21_truck_s.mp3"
+    },
+    {
+      "id": "t21_fire_truck",
+      "text": "Fire truck",
+      "vi": "Xe cứu hỏa",
+      "image": "images/topics/t21_vehicles/fire_truck.png",
+      "audio": "audio/words/t21_fire_truck.mp3",
+      "sentence": "Wee-oo! The red fire truck is coming!",
+      "sentence_audio": "audio/sentences/t21_fire_truck_s.mp3"
+    },
+    {
+      "id": "t21_police_car",
+      "text": "Police car",
+      "vi": "Xe cảnh sát",
+      "image": "images/topics/t21_vehicles/police_car.png",
+      "audio": "audio/words/t21_police_car.mp3",
+      "sentence": "The police car helps keep us safe!",
+      "sentence_audio": "audio/sentences/t21_police_car_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_look_fire_truck",
+      "text": "Look! A big red fire truck!",
+      "audio": "audio/sentences/p_look_fire_truck.mp3",
+      "vi": "Nhìn kìa! Xe cứu hỏa màu đỏ to chưa!",
+      "pron_vi": "Lúc! Ờ bíc rét phai-ờ trắc!"
+    },
+    {
+      "id": "p_red_light_stop",
+      "text": "Red light, stop! Green light, go!",
+      "audio": "audio/sentences/p_red_light_stop.mp3",
+      "vi": "Đèn đỏ dừng lại! Đèn xanh đi thôi!",
+      "pron_vi": "Rét lai, xờ-tóp! Gờ-rin lai, gâu!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t21_vehicles_l1",
+      "order": 1,
+      "new_words": [
+        "t21_car",
+        "t21_bus",
+        "t21_bike"
+      ],
+      "sentence": "p_look_fire_truck",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t21_car",
+            "t21_bus",
+            "t21_bike"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t21_car",
+            "t21_bus",
+            "t21_bike"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t21_car",
+            "t21_bus"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_drive_car"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t21_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_look_fire_truck"
+        ],
+        "activity_vi": "Khi đi ngoài đường, bố mẹ cùng bé chỉ các loại xe và đọc tên tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t21_vehicles_l2",
+      "order": 2,
+      "new_words": [
+        "t21_motorbike",
+        "t21_train",
+        "t21_airplane"
+      ],
+      "sentence": "p_red_light_stop",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t21_motorbike",
+            "t21_train",
+            "t21_airplane"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t21_motorbike",
+            "t21_train",
+            "t21_airplane"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t21_motorbike",
+            "t21_train",
+            "t21_airplane"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t21_motorbike",
+            "t21_train"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t21_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_red_light_stop"
+        ],
+        "activity_vi": "Khi đi ngoài đường, bố mẹ cùng bé chỉ các loại xe và đọc tên tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t21_vehicles_l3",
+      "order": 3,
+      "new_words": [
+        "t21_helicopter",
+        "t21_boat",
+        "t21_ship"
+      ],
+      "sentence": "p_look_fire_truck",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t21_helicopter",
+            "t21_boat",
+            "t21_ship"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t21_helicopter",
+            "t21_boat",
+            "t21_ship"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t21_helicopter",
+            "t21_boat",
+            "t21_ship"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t21_helicopter",
+            "t21_boat",
+            "t21_ship"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_drive_car"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t21_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_look_fire_truck"
+        ],
+        "activity_vi": "Khi đi ngoài đường, bố mẹ cùng bé chỉ các loại xe và đọc tên tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t21_vehicles_l4",
+      "order": 4,
+      "new_words": [
+        "t21_truck",
+        "t21_fire_truck",
+        "t21_police_car"
+      ],
+      "sentence": "p_red_light_stop",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t21_truck",
+            "t21_fire_truck",
+            "t21_police_car"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t21_car",
+            "t21_bus",
+            "t21_bike",
+            "t21_motorbike",
+            "t21_train",
+            "t21_airplane",
+            "t21_helicopter",
+            "t21_boat",
+            "t21_ship",
+            "t21_truck",
+            "t21_fire_truck",
+            "t21_police_car"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t21_truck",
+            "t21_fire_truck",
+            "t21_police_car"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t21_truck",
+            "t21_fire_truck",
+            "t21_police_car"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t21_truck",
+            "t21_fire_truck",
+            "t21_police_car"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t21_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_red_light_stop"
+        ],
+        "activity_vi": "Khi đi ngoài đường, bố mẹ cùng bé chỉ các loại xe và đọc tên tiếng Anh nhé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_drive_car",
+      "text": "Drive your little car! Beep, beep!",
+      "image": "images/tpr/cmd_drive_car.png",
+      "audio": "audio/instructions/cmd_drive_car.mp3"
+    },
+    {
+      "id": "cmd_fly_bird",
+      "text": "Fly like a little bird!",
+      "image": "images/tpr/cmd_fly_bird.png",
+      "audio": "audio/instructions/cmd_fly_bird.mp3"
+    }
+  ]
+}

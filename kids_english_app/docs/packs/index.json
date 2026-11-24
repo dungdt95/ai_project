@@ -1,0 +1,165 @@
+{
+  "updated_at": "2026-11-24T06:33:33.796525Z",
+  "packs": [
+    {
+      "id": "t06_family",
+      "version": 3,
+      "file": "t06_family.bvpack",
+      "title_en": "My Big Family",
+      "title_vi": "Đại gia đình yêu thương",
+      "word_count": 10
+    },
+    {
+      "id": "t07_wild_animals",
+      "version": 3,
+      "file": "t07_wild_animals.bvpack",
+      "title_en": "Zoo Animals",
+      "title_vi": "Động vật sở thú",
+      "word_count": 12
+    },
+    {
+      "id": "t08_sea_bugs",
+      "version": 3,
+      "file": "t08_sea_bugs.bvpack",
+      "title_en": "Ocean & Bugs",
+      "title_vi": "Sinh vật biển & Côn trùng",
+      "word_count": 10
+    },
+    {
+      "id": "t09_shapes",
+      "version": 3,
+      "file": "t09_shapes.bvpack",
+      "title_en": "Fun Shapes",
+      "title_vi": "Hình khối quanh bé",
+      "word_count": 10
+    },
+    {
+      "id": "t10_numbers_sizes",
+      "version": 3,
+      "file": "t10_numbers_sizes.bvpack",
+      "title_en": "Numbers & Sizes",
+      "title_vi": "Số đếm & Kích thước",
+      "word_count": 10
+    },
+    {
+      "id": "t11_fruits",
+      "version": 3,
+      "file": "t11_fruits.bvpack",
+      "title_en": "Yummy Fruits",
+      "title_vi": "Trái cây tươi ngon",
+      "word_count": 10
+    },
+    {
+      "id": "t12_food_drinks",
+      "version": 3,
+      "file": "t12_food_drinks.bvpack",
+      "title_en": "Food & Drinks",
+      "title_vi": "Đồ ăn & Thức uống",
+      "word_count": 12
+    },
+    {
+      "id": "t13_toys",
+      "version": 3,
+      "file": "t13_toys.bvpack",
+      "title_en": "My Toys",
+      "title_vi": "Đồ chơi của bé",
+      "word_count": 10
+    },
+    {
+      "id": "t14_clothes",
+      "version": 3,
+      "file": "t14_clothes.bvpack",
+      "title_en": "My Clothes",
+      "title_vi": "Quần áo & Trang phục",
+      "word_count": 10
+    },
+    {
+      "id": "t15_my_house",
+      "version": 3,
+      "file": "t15_my_house.bvpack",
+      "title_en": "My Cozy House",
+      "title_vi": "Ngôi nhà thân yêu",
+      "word_count": 12
+    },
+    {
+      "id": "t16_feelings",
+      "version": 3,
+      "file": "t16_feelings.bvpack",
+      "title_en": "My Feelings",
+      "title_vi": "Cảm xúc của bé",
+      "word_count": 10
+    },
+    {
+      "id": "t17_actions",
+      "version": 3,
+      "file": "t17_actions.bvpack",
+      "title_en": "Let's Move!",
+      "title_vi": "Hành động & Vận động",
+      "word_count": 12
+    },
+    {
+      "id": "t18_routines",
+      "version": 3,
+      "file": "t18_routines.bvpack",
+      "title_en": "Daily Routines",
+      "title_vi": "Thói quen hằng ngày",
+      "word_count": 10
+    },
+    {
+      "id": "t19_tableware",
+      "version": 3,
+      "file": "t19_tableware.bvpack",
+      "title_en": "Mealtime Tools",
+      "title_vi": "Đồ dùng bàn ăn",
+      "word_count": 10
+    },
+    {
+      "id": "t20_opposites",
+      "version": 3,
+      "file": "t20_opposites.bvpack",
+      "title_en": "Fun Opposites",
+      "title_vi": "Cặp từ trái nghĩa",
+      "word_count": 10
+    },
+    {
+      "id": "t21_vehicles",
+      "version": 3,
+      "file": "t21_vehicles.bvpack",
+      "title_en": "Beep! Vehicles",
+      "title_vi": "Phương tiện giao thông",
+      "word_count": 12
+    },
+    {
+      "id": "t22_weather_nature",
+      "version": 3,
+      "file": "t22_weather_nature.bvpack",
+      "title_en": "Weather & Nature",
+      "title_vi": "Thời tiết & Thiên nhiên",
+      "word_count": 12
+    },
+    {
+      "id": "t23_school",
+      "version": 3,
+      "file": "t23_school.bvpack",
+      "title_en": "My Preschool",
+      "title_vi": "Trường học của bé",
+      "word_count": 10
+    },
+    {
+      "id": "t24_jobs",
+      "version": 3,
+      "file": "t24_jobs.bvpack",
+      "title_en": "Cool Jobs",
+      "title_vi": "Nghề nghiệp quanh bé",
+      "word_count": 10
+    },
+    {
+      "id": "t25_party_holidays",
+      "version": 3,
+      "file": "t25_party_holidays.bvpack",
+      "title_en": "Party & Holidays",
+      "title_vi": "Sinh nhật & Lễ hội",
+      "word_count": 10
+    }
+  ]
+}

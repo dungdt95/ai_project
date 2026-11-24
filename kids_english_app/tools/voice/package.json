@@ -1,0 +1,12 @@
+{
+  "name": "be-vui-pack-voices",
+  "private": true,
+  "type": "module",
+  "description": "Sinh giọng đọc còn thiếu cho các gói chủ đề trong content_packs/ (không đưa vào app).",
+  "scripts": {
+    "gen": "node gen_pack_voices.mjs"
+  },
+  "dependencies": {
+    "msedge-tts": "2.1.1"
+  }
+}

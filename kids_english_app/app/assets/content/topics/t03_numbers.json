@@ -1,0 +1,428 @@
+{
+  "id": "t03_numbers",
+  "level": 1,
+  "order": 3,
+  "title_en": "Numbers",
+  "title_vi": "Số đếm 1-10",
+  "map_icon": "images/map/island_t03_numbers.png",
+  "song": {
+    "id": "s03_ten_little_fingers",
+    "title": "Ten Little Fingers",
+    "audio": "audio/songs/s03_ten_little_fingers.mp3",
+    "cover": "images/songs/cover_s03_numbers.png",
+    "lyrics": [
+      {
+        "t": 11.5,
+        "text": "One and two, and three bright stars,"
+      },
+      {
+        "t": 13.9,
+        "text": "Four and five, and six so far!"
+      },
+      {
+        "t": 16.2,
+        "text": "Seven, eight, and nine, and ten,"
+      },
+      {
+        "t": 18.5,
+        "text": "Let's all count them once again!"
+      },
+      {
+        "t": 20.9,
+        "text": "Show your fingers, ready, go!"
+      },
+      {
+        "t": 23.3,
+        "text": "One, two, three, four, five in a row!"
+      },
+      {
+        "t": 25.6,
+        "text": "Six, seven, eight, nine, ten up high!"
+      },
+      {
+        "t": 32.7,
+        "text": "Clap your hands and touch the sky!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t03_one",
+      "text": "One",
+      "image": "images/topics/t03_numbers/one.png",
+      "audio": "audio/words/t03_one.mp3",
+      "sentence": "One! One little star.",
+      "sentence_audio": "audio/sentences/t03_one_s.mp3",
+      "vi": "Số một (1)"
+    },
+    {
+      "id": "t03_two",
+      "text": "Two",
+      "image": "images/topics/t03_numbers/two.png",
+      "audio": "audio/words/t03_two.mp3",
+      "sentence": "Two! One, two strawberries.",
+      "sentence_audio": "audio/sentences/t03_two_s.mp3",
+      "vi": "Số hai (2)"
+    },
+    {
+      "id": "t03_three",
+      "text": "Three",
+      "image": "images/topics/t03_numbers/three.png",
+      "audio": "audio/words/t03_three.mp3",
+      "sentence": "Three! Three yellow ducks.",
+      "sentence_audio": "audio/sentences/t03_three_s.mp3",
+      "vi": "Số ba (3)"
+    },
+    {
+      "id": "t03_four",
+      "text": "Four",
+      "image": "images/topics/t03_numbers/four.png",
+      "audio": "audio/words/t03_four.mp3",
+      "sentence": "Four! I am four years old!",
+      "sentence_audio": "audio/sentences/t03_four_s.mp3",
+      "vi": "Số bốn (4)"
+    },
+    {
+      "id": "t03_five",
+      "text": "Five",
+      "image": "images/topics/t03_numbers/five.png",
+      "audio": "audio/words/t03_five.mp3",
+      "sentence": "Five! Give me high five!",
+      "sentence_audio": "audio/sentences/t03_five_s.mp3",
+      "vi": "Số năm (5)"
+    },
+    {
+      "id": "t03_six",
+      "text": "Six",
+      "image": "images/topics/t03_numbers/six.png",
+      "audio": "audio/words/t03_six.mp3",
+      "sentence": "Six! Six big balloons.",
+      "sentence_audio": "audio/sentences/t03_six_s.mp3",
+      "vi": "Số sáu (6)"
+    },
+    {
+      "id": "t03_seven",
+      "text": "Seven",
+      "image": "images/topics/t03_numbers/seven.png",
+      "audio": "audio/words/t03_seven.mp3",
+      "sentence": "Seven! Seven rainbow stars.",
+      "sentence_audio": "audio/sentences/t03_seven_s.mp3",
+      "vi": "Số bảy (7)"
+    },
+    {
+      "id": "t03_eight",
+      "text": "Eight",
+      "image": "images/topics/t03_numbers/eight.png",
+      "audio": "audio/words/t03_eight.mp3",
+      "sentence": "Eight! Eight yummy carrots.",
+      "sentence_audio": "audio/sentences/t03_eight_s.mp3",
+      "vi": "Số tám (8)"
+    },
+    {
+      "id": "t03_nine",
+      "text": "Nine",
+      "image": "images/topics/t03_numbers/nine.png",
+      "audio": "audio/words/t03_nine.mp3",
+      "sentence": "Nine! Nine blue butterflies.",
+      "sentence_audio": "audio/sentences/t03_nine_s.mp3",
+      "vi": "Số chín (9)"
+    },
+    {
+      "id": "t03_ten",
+      "text": "Ten",
+      "image": "images/topics/t03_numbers/ten.png",
+      "audio": "audio/words/t03_ten.mp3",
+      "sentence": "Ten! Ten little fingers!",
+      "sentence_audio": "audio/sentences/t03_ten_s.mp3",
+      "vi": "Số mười (10)"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_lets_count",
+      "text": "Let's count! One, two, three!",
+      "audio": "audio/sentences/p_lets_count.mp3",
+      "vi": "Cùng đếm nào! Một, hai, ba!",
+      "pron_vi": "Lét-xơ cao-tờ! Oăn, tu, th-ri!"
+    },
+    {
+      "id": "p_how_many",
+      "text": "How many? Five!",
+      "audio": "audio/sentences/p_how_many.mp3",
+      "vi": "Có bao nhiêu nhỉ? Năm!",
+      "pron_vi": "Hao me-ni? Fai-vờ!"
+    },
+    {
+      "id": "p_how_old",
+      "text": "I'm four years old!",
+      "audio": "audio/sentences/p_how_old.mp3",
+      "vi": "Con lên bốn tuổi!",
+      "pron_vi": "Ai-mơ fo gia-zơ âu!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t03_numbers_l1",
+      "order": 1,
+      "new_words": [
+        "t03_one",
+        "t03_two",
+        "t03_three"
+      ],
+      "sentence": "p_lets_count",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_one",
+            "t03_two",
+            "t03_three"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_one",
+            "t03_two"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_lets_count"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l2",
+      "order": 2,
+      "new_words": [
+        "t03_four",
+        "t03_five",
+        "t03_six"
+      ],
+      "sentence": "p_how_many",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_four",
+            "t03_five",
+            "t03_six"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_four",
+            "t03_five"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_many"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l3",
+      "order": 3,
+      "new_words": [
+        "t03_seven",
+        "t03_eight",
+        "t03_nine"
+      ],
+      "sentence": "p_how_old",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_seven",
+            "t03_eight",
+            "t03_nine"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_seven",
+            "t03_eight"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_old"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    },
+    {
+      "id": "t03_numbers_l4",
+      "order": 4,
+      "new_words": [
+        "t03_ten"
+      ],
+      "sentence": "p_lets_count",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t03_ten"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t03_ten"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t03_ten"
+          ],
+          "pairs": 1
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t03_ten"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t03_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_lets_count"
+        ],
+        "activity_vi": "Bố mẹ dùng các từ này trong lúc chơi và sinh hoạt hằng ngày cùng bé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    }
+  ]
+}

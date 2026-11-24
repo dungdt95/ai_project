@@ -1,0 +1,463 @@
+{
+  "id": "t22_weather_nature",
+  "level": 5,
+  "order": 22,
+  "title_en": "Weather & Nature",
+  "title_vi": "Thời tiết & Thiên nhiên",
+  "map_icon": "images/map/island_t22_weather_nature.png",
+  "song": {
+    "id": "s22_weather_song",
+    "title": "Sunny Sky or Rainy Day",
+    "audio": "audio/songs/s22_weather_song.mp3",
+    "cover": "images/songs/cover_s22_weather.png",
+    "lyrics": [
+      {
+        "t": 5,
+        "text": "Look out the window, what do you see?"
+      },
+      {
+        "t": 10,
+        "text": "Bright yellow Sun and a tall green Tree!"
+      },
+      {
+        "t": 14.8,
+        "text": "Fluffy white Cloud in the Sunny sky,"
+      },
+      {
+        "t": 19.6,
+        "text": "Cool Windy breeze blows gently by!"
+      },
+      {
+        "t": 24.4,
+        "text": "Pitter-patter Rain on a Rainy day,"
+      },
+      {
+        "t": 29.6,
+        "text": "Flower and Grass drink water and sway!"
+      },
+      {
+        "t": 34.5,
+        "text": "Soft white Snow and the glowing Moon,"
+      },
+      {
+        "t": 39.3,
+        "text": "Nature sings a happy tune!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t22_sun",
+      "text": "Sun",
+      "vi": "Mặt trời",
+      "image": "images/topics/t22_weather_nature/sun.png",
+      "audio": "audio/words/t22_sun.mp3",
+      "sentence": "The bright yellow sun shines in the sky!",
+      "sentence_audio": "audio/sentences/t22_sun_s.mp3"
+    },
+    {
+      "id": "t22_moon",
+      "text": "Moon",
+      "vi": "Mặt trăng",
+      "image": "images/topics/t22_weather_nature/moon.png",
+      "audio": "audio/words/t22_moon.mp3",
+      "sentence": "The gentle moon glows at night!",
+      "sentence_audio": "audio/sentences/t22_moon_s.mp3"
+    },
+    {
+      "id": "t22_cloud",
+      "text": "Cloud",
+      "vi": "Đám mây",
+      "image": "images/topics/t22_weather_nature/cloud.png",
+      "audio": "audio/words/t22_cloud.mp3",
+      "sentence": "Fluffy white clouds float by!",
+      "sentence_audio": "audio/sentences/t22_cloud_s.mp3"
+    },
+    {
+      "id": "t22_rain",
+      "text": "Rain",
+      "vi": "Cơn mưa",
+      "image": "images/topics/t22_weather_nature/rain.png",
+      "audio": "audio/words/t22_rain.mp3",
+      "sentence": "Pitter-patter falls the rain!",
+      "sentence_audio": "audio/sentences/t22_rain_s.mp3"
+    },
+    {
+      "id": "t22_wind",
+      "text": "Wind",
+      "vi": "Cơn gió",
+      "image": "images/topics/t22_weather_nature/wind.png",
+      "audio": "audio/words/t22_wind.mp3",
+      "sentence": "Whoosh! The wind blows the leaves!",
+      "sentence_audio": "audio/sentences/t22_wind_s.mp3"
+    },
+    {
+      "id": "t22_snow",
+      "text": "Snow",
+      "vi": "Tuyết",
+      "image": "images/topics/t22_weather_nature/snow.png",
+      "audio": "audio/words/t22_snow.mp3",
+      "sentence": "Soft white snow falls down!",
+      "sentence_audio": "audio/sentences/t22_snow_s.mp3"
+    },
+    {
+      "id": "t22_tree",
+      "text": "Tree",
+      "vi": "Cái cây",
+      "image": "images/topics/t22_weather_nature/tree.png",
+      "audio": "audio/words/t22_tree.mp3",
+      "sentence": "A tall green tree with many leaves!",
+      "sentence_audio": "audio/sentences/t22_tree_s.mp3"
+    },
+    {
+      "id": "t22_flower",
+      "text": "Flower",
+      "vi": "Bông hoa",
+      "image": "images/topics/t22_weather_nature/flower.png",
+      "audio": "audio/words/t22_flower.mp3",
+      "sentence": "Smell the pretty blooming flower!",
+      "sentence_audio": "audio/sentences/t22_flower_s.mp3"
+    },
+    {
+      "id": "t22_grass",
+      "text": "Grass",
+      "vi": "Thảm cỏ",
+      "image": "images/topics/t22_weather_nature/grass.png",
+      "audio": "audio/words/t22_grass.mp3",
+      "sentence": "Soft green grass under my feet!",
+      "sentence_audio": "audio/sentences/t22_grass_s.mp3"
+    },
+    {
+      "id": "t22_sunny",
+      "text": "Sunny",
+      "vi": "Trời nắng",
+      "image": "images/topics/t22_weather_nature/sunny.png",
+      "audio": "audio/words/t22_sunny.mp3",
+      "sentence": "It's a sunny day! Let's play outside!",
+      "sentence_audio": "audio/sentences/t22_sunny_s.mp3"
+    },
+    {
+      "id": "t22_rainy",
+      "text": "Rainy",
+      "vi": "Trời mưa",
+      "image": "images/topics/t22_weather_nature/rainy.png",
+      "audio": "audio/words/t22_rainy.mp3",
+      "sentence": "It's rainy! Open your umbrella!",
+      "sentence_audio": "audio/sentences/t22_rainy_s.mp3"
+    },
+    {
+      "id": "t22_windy",
+      "text": "Windy",
+      "vi": "Trời gió",
+      "image": "images/topics/t22_weather_nature/windy.png",
+      "audio": "audio/words/t22_windy.mp3",
+      "sentence": "It's windy! Great for flying a kite!",
+      "sentence_audio": "audio/sentences/t22_windy_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_hows_weather",
+      "text": "How's the weather today? It's sunny!",
+      "audio": "audio/sentences/p_hows_weather.mp3",
+      "vi": "Thời tiết hôm nay thế nào? Trời nắng đẹp!",
+      "pron_vi": "Hao-zơ đờ que-đờ tu-đây? Ít-xơ xăn-ni!"
+    },
+    {
+      "id": "p_its_raining",
+      "text": "It's rainy today! Bring an umbrella!",
+      "audio": "audio/sentences/p_its_raining.mp3",
+      "vi": "Hôm nay trời mưa! Nhớ mang ô nhé!",
+      "pron_vi": "Ít-xơ rên-ni tu-đây! Bờ-rinh ần ăm-bờ-re-la!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t22_weather_nature_l1",
+      "order": 1,
+      "new_words": [
+        "t22_sun",
+        "t22_moon",
+        "t22_cloud"
+      ],
+      "sentence": "p_hows_weather",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t22_sun",
+            "t22_moon",
+            "t22_cloud"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t22_sun",
+            "t22_moon",
+            "t22_cloud"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t22_sun",
+            "t22_moon"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t22_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hows_weather"
+        ],
+        "activity_vi": "Mỗi sáng bố mẹ cùng bé nhìn ra cửa sổ và nói thời tiết hôm nay bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t22_weather_nature_l2",
+      "order": 2,
+      "new_words": [
+        "t22_rain",
+        "t22_wind",
+        "t22_snow"
+      ],
+      "sentence": "p_its_raining",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t22_rain",
+            "t22_wind",
+            "t22_snow"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t22_rain",
+            "t22_wind",
+            "t22_snow"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t22_rain",
+            "t22_wind",
+            "t22_snow"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t22_rain",
+            "t22_wind"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t22_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_its_raining"
+        ],
+        "activity_vi": "Mỗi sáng bố mẹ cùng bé nhìn ra cửa sổ và nói thời tiết hôm nay bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t22_weather_nature_l3",
+      "order": 3,
+      "new_words": [
+        "t22_tree",
+        "t22_flower",
+        "t22_grass"
+      ],
+      "sentence": "p_hows_weather",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t22_tree",
+            "t22_flower",
+            "t22_grass"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t22_tree",
+            "t22_flower",
+            "t22_grass"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t22_tree",
+            "t22_flower",
+            "t22_grass"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t22_tree",
+            "t22_flower",
+            "t22_grass"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t22_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hows_weather"
+        ],
+        "activity_vi": "Mỗi sáng bố mẹ cùng bé nhìn ra cửa sổ và nói thời tiết hôm nay bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t22_weather_nature_l4",
+      "order": 4,
+      "new_words": [
+        "t22_sunny",
+        "t22_rainy",
+        "t22_windy"
+      ],
+      "sentence": "p_its_raining",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t22_sunny",
+            "t22_rainy",
+            "t22_windy"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t22_sun",
+            "t22_moon",
+            "t22_cloud",
+            "t22_rain",
+            "t22_wind",
+            "t22_snow",
+            "t22_tree",
+            "t22_flower",
+            "t22_grass",
+            "t22_sunny",
+            "t22_rainy",
+            "t22_windy"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t22_sunny",
+            "t22_rainy",
+            "t22_windy"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t22_sunny",
+            "t22_rainy",
+            "t22_windy"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t22_sunny",
+            "t22_rainy",
+            "t22_windy"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t22_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_its_raining"
+        ],
+        "activity_vi": "Mỗi sáng bố mẹ cùng bé nhìn ra cửa sổ và nói thời tiết hôm nay bằng tiếng Anh."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_fly_bird",
+      "text": "Fly like a little bird!",
+      "image": "images/tpr/cmd_fly_bird.png",
+      "audio": "audio/instructions/cmd_fly_bird.mp3"
+    },
+    {
+      "id": "cmd_reach_tall",
+      "text": "Stretch up tall like a giraffe!",
+      "image": "images/tpr/cmd_reach_tall.png",
+      "audio": "audio/instructions/cmd_reach_tall.mp3"
+    }
+  ]
+}

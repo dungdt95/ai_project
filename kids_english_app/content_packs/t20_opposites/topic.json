@@ -1,0 +1,433 @@
+{
+  "id": "t20_opposites",
+  "level": 4,
+  "order": 20,
+  "title_en": "Fun Opposites",
+  "title_vi": "Cặp từ trái nghĩa",
+  "map_icon": "images/map/island_t20_opposites.png",
+  "song": {
+    "id": "s20_opposites_song",
+    "title": "Hot and Cold, Up and Down",
+    "audio": "audio/songs/s20_opposites_song.mp3",
+    "cover": "images/songs/cover_s20_opposites.png",
+    "lyrics": [
+      {
+        "t": 0.6,
+        "text": "Soup is hot and ice cream is cold,"
+      },
+      {
+        "t": 5.1,
+        "text": "Fun little opposites to behold!"
+      },
+      {
+        "t": 7.4,
+        "text": "Rabbit is fast and turtle is slow,"
+      },
+      {
+        "t": 9.5,
+        "text": "Ready, steady, off they go!"
+      },
+      {
+        "t": 12,
+        "text": "Reach up high and bend down low,"
+      },
+      {
+        "t": 14.4,
+        "text": "Open the box and close it so!"
+      },
+      {
+        "t": 16.6,
+        "text": "Wash dirty hands till they're shiny clean,"
+      },
+      {
+        "t": 19.4,
+        "text": "Best little helpers you have ever seen!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t20_hot",
+      "text": "Hot",
+      "vi": "Nóng",
+      "image": "images/topics/t20_opposites/hot.png",
+      "audio": "audio/words/t20_hot.mp3",
+      "sentence": "The sun is hot! The soup is hot!",
+      "sentence_audio": "audio/sentences/t20_hot_s.mp3"
+    },
+    {
+      "id": "t20_cold",
+      "text": "Cold",
+      "vi": "Lạnh",
+      "image": "images/topics/t20_opposites/cold.png",
+      "audio": "audio/words/t20_cold.mp3",
+      "sentence": "The ice cream is cold! Brrr!",
+      "sentence_audio": "audio/sentences/t20_cold_s.mp3"
+    },
+    {
+      "id": "t20_fast",
+      "text": "Fast",
+      "vi": "Nhanh",
+      "image": "images/topics/t20_opposites/fast.png",
+      "audio": "audio/words/t20_fast.mp3",
+      "sentence": "The rabbit runs super fast!",
+      "sentence_audio": "audio/sentences/t20_fast_s.mp3"
+    },
+    {
+      "id": "t20_slow",
+      "text": "Slow",
+      "vi": "Chậm",
+      "image": "images/topics/t20_opposites/slow.png",
+      "audio": "audio/words/t20_slow.mp3",
+      "sentence": "The little turtle walks very slow!",
+      "sentence_audio": "audio/sentences/t20_slow_s.mp3"
+    },
+    {
+      "id": "t20_up",
+      "text": "Up",
+      "vi": "Lên trên",
+      "image": "images/topics/t20_opposites/up.png",
+      "audio": "audio/words/t20_up.mp3",
+      "sentence": "Hands up high in the sky!",
+      "sentence_audio": "audio/sentences/t20_up_s.mp3"
+    },
+    {
+      "id": "t20_down",
+      "text": "Down",
+      "vi": "Xuống dưới",
+      "image": "images/topics/t20_opposites/down.png",
+      "audio": "audio/words/t20_down.mp3",
+      "sentence": "Sit down low on the floor!",
+      "sentence_audio": "audio/sentences/t20_down_s.mp3"
+    },
+    {
+      "id": "t20_open",
+      "text": "Open",
+      "vi": "Mở ra",
+      "image": "images/topics/t20_opposites/open.png",
+      "audio": "audio/words/t20_open.mp3",
+      "sentence": "Open the surprise gift box!",
+      "sentence_audio": "audio/sentences/t20_open_s.mp3"
+    },
+    {
+      "id": "t20_close",
+      "text": "Close",
+      "vi": "Đóng lại",
+      "image": "images/topics/t20_opposites/close.png",
+      "audio": "audio/words/t20_close.mp3",
+      "sentence": "Close your eyes and count to three!",
+      "sentence_audio": "audio/sentences/t20_close_s.mp3"
+    },
+    {
+      "id": "t20_clean",
+      "text": "Clean",
+      "vi": "Sạch sẽ",
+      "image": "images/topics/t20_opposites/clean.png",
+      "audio": "audio/words/t20_clean.mp3",
+      "sentence": "My hands are shiny and clean!",
+      "sentence_audio": "audio/sentences/t20_clean_s.mp3"
+    },
+    {
+      "id": "t20_dirty",
+      "text": "Dirty",
+      "vi": "Bẩn / Lấm lem",
+      "image": "images/topics/t20_opposites/dirty.png",
+      "audio": "audio/words/t20_dirty.mp3",
+      "sentence": "Muddy shoes are dirty! Let's wash them!",
+      "sentence_audio": "audio/sentences/t20_dirty_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_careful_hot",
+      "text": "Be careful! The soup is hot!",
+      "audio": "audio/sentences/p_careful_hot.mp3",
+      "vi": "Cẩn thận nhé con! Canh còn nóng đấy!",
+      "pron_vi": "Bi ke-phồ! Đờ xúp i-zơ hót!"
+    },
+    {
+      "id": "p_fast_and_slow",
+      "text": "Go fast! Now go slow!",
+      "audio": "audio/sentences/p_fast_and_slow.mp3",
+      "vi": "Đi nhanh nào! Giờ đi chậm thôi!",
+      "pron_vi": "Gâu phát-xờ! Nao gâu xờ-lâu!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t20_opposites_l1",
+      "order": 1,
+      "new_words": [
+        "t20_hot",
+        "t20_cold",
+        "t20_fast"
+      ],
+      "sentence": "p_careful_hot",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t20_hot",
+            "t20_cold",
+            "t20_fast"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t20_hot",
+            "t20_cold",
+            "t20_fast"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t20_hot",
+            "t20_cold"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t20_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_careful_hot"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chơi trò đối lập: chạy nhanh (fast) rồi đi chậm (slow), mở (open) và đóng (close)."
+      }
+    },
+    {
+      "id": "t20_opposites_l2",
+      "order": 2,
+      "new_words": [
+        "t20_slow",
+        "t20_up",
+        "t20_down"
+      ],
+      "sentence": "p_fast_and_slow",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t20_slow",
+            "t20_up",
+            "t20_down"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t20_slow",
+            "t20_up",
+            "t20_down"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t20_slow",
+            "t20_up",
+            "t20_down"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t20_slow",
+            "t20_up"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_walk_robot"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t20_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_fast_and_slow"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chơi trò đối lập: chạy nhanh (fast) rồi đi chậm (slow), mở (open) và đóng (close)."
+      }
+    },
+    {
+      "id": "t20_opposites_l3",
+      "order": 3,
+      "new_words": [
+        "t20_open",
+        "t20_close"
+      ],
+      "sentence": "p_careful_hot",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t20_open",
+            "t20_close"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t20_open",
+            "t20_close"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t20_open",
+            "t20_close"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t20_open",
+            "t20_close"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t20_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_careful_hot"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chơi trò đối lập: chạy nhanh (fast) rồi đi chậm (slow), mở (open) và đóng (close)."
+      }
+    },
+    {
+      "id": "t20_opposites_l4",
+      "order": 4,
+      "new_words": [
+        "t20_clean",
+        "t20_dirty"
+      ],
+      "sentence": "p_fast_and_slow",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t20_clean",
+            "t20_dirty"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t20_hot",
+            "t20_cold",
+            "t20_fast",
+            "t20_slow",
+            "t20_up",
+            "t20_down",
+            "t20_open",
+            "t20_close",
+            "t20_clean",
+            "t20_dirty"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t20_clean",
+            "t20_dirty"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t20_clean",
+            "t20_dirty"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t20_clean",
+            "t20_dirty"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_walk_robot"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t20_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_fast_and_slow"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chơi trò đối lập: chạy nhanh (fast) rồi đi chậm (slow), mở (open) và đóng (close)."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    },
+    {
+      "id": "cmd_walk_robot",
+      "text": "Walk like a funny robot! Beep, boop!",
+      "image": "images/tpr/cmd_walk_robot.png",
+      "audio": "audio/instructions/cmd_walk_robot.mp3"
+    }
+  ]
+}

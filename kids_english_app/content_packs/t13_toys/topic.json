@@ -1,0 +1,433 @@
+{
+  "id": "t13_toys",
+  "level": 3,
+  "order": 13,
+  "title_en": "My Toys",
+  "title_vi": "Đồ chơi của bé",
+  "map_icon": "images/map/island_t13_toys.png",
+  "song": {
+    "id": "s13_toys_song",
+    "title": "The Magic Toy Box",
+    "audio": "audio/songs/s13_toys_song.mp3",
+    "cover": "images/songs/cover_s13_toys.png",
+    "lyrics": [
+      {
+        "t": 2.8,
+        "text": "Open up the magic toy box wide,"
+      },
+      {
+        "t": 7,
+        "text": "Look at all the fun inside!"
+      },
+      {
+        "t": 11.4,
+        "text": "Bounce the Ball and hug the Doll,"
+      },
+      {
+        "t": 13.8,
+        "text": "Soft Teddy Bear and Blocks so tall!"
+      },
+      {
+        "t": 16.2,
+        "text": "Red Toy Car goes zoom, zoom, zoom,"
+      },
+      {
+        "t": 18.6,
+        "text": "Robot marches across the room!"
+      },
+      {
+        "t": 21,
+        "text": "Kite, Balloon, Puzzle, and Drum,"
+      },
+      {
+        "t": 23.4,
+        "text": "Let's share our toys, everyone!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t13_ball",
+      "text": "Ball",
+      "vi": "Quả bóng",
+      "image": "images/topics/t13_toys/ball.png",
+      "audio": "audio/words/t13_ball.mp3",
+      "sentence": "Bounce, bounce the colorful ball!",
+      "sentence_audio": "audio/sentences/t13_ball_s.mp3"
+    },
+    {
+      "id": "t13_doll",
+      "text": "Doll",
+      "vi": "Búp bê",
+      "image": "images/topics/t13_toys/doll.png",
+      "audio": "audio/words/t13_doll.mp3",
+      "sentence": "A cute little doll in a pink dress!",
+      "sentence_audio": "audio/sentences/t13_doll_s.mp3"
+    },
+    {
+      "id": "t13_teddy_bear",
+      "text": "Teddy bear",
+      "vi": "Gấu bông",
+      "image": "images/topics/t13_toys/teddy_bear.png",
+      "audio": "audio/words/t13_teddy_bear.mp3",
+      "sentence": "Hug my soft brown teddy bear!",
+      "sentence_audio": "audio/sentences/t13_teddy_bear_s.mp3"
+    },
+    {
+      "id": "t13_toy_car",
+      "text": "Toy car",
+      "vi": "Xe đồ chơi",
+      "image": "images/topics/t13_toys/toy_car.png",
+      "audio": "audio/words/t13_toy_car.mp3",
+      "sentence": "Zoom, zoom goes the red toy car!",
+      "sentence_audio": "audio/sentences/t13_toy_car_s.mp3"
+    },
+    {
+      "id": "t13_blocks",
+      "text": "Blocks",
+      "vi": "Khối xếp hình",
+      "image": "images/topics/t13_toys/blocks.png",
+      "audio": "audio/words/t13_blocks.mp3",
+      "sentence": "Build a tall tower with blocks!",
+      "sentence_audio": "audio/sentences/t13_blocks_s.mp3"
+    },
+    {
+      "id": "t13_kite",
+      "text": "Kite",
+      "vi": "Cánh diều",
+      "image": "images/topics/t13_toys/kite.png",
+      "audio": "audio/words/t13_kite.mp3",
+      "sentence": "Fly the kite high in the sky!",
+      "sentence_audio": "audio/sentences/t13_kite_s.mp3"
+    },
+    {
+      "id": "t13_robot",
+      "text": "Robot",
+      "vi": "Người máy",
+      "image": "images/topics/t13_toys/robot.png",
+      "audio": "audio/words/t13_robot.mp3",
+      "sentence": "Beep, boop! Walk like a robot!",
+      "sentence_audio": "audio/sentences/t13_robot_s.mp3"
+    },
+    {
+      "id": "t13_balloon",
+      "text": "Balloon",
+      "vi": "Bóng bay",
+      "image": "images/topics/t13_toys/balloon.png",
+      "audio": "audio/words/t13_balloon.mp3",
+      "sentence": "Hold the shiny floating balloon!",
+      "sentence_audio": "audio/sentences/t13_balloon_s.mp3"
+    },
+    {
+      "id": "t13_puzzle",
+      "text": "Puzzle",
+      "vi": "Tranh ghép hình",
+      "image": "images/topics/t13_toys/puzzle.png",
+      "audio": "audio/words/t13_puzzle.mp3",
+      "sentence": "Put the puzzle pieces together!",
+      "sentence_audio": "audio/sentences/t13_puzzle_s.mp3"
+    },
+    {
+      "id": "t13_drum",
+      "text": "Drum",
+      "vi": "Cái trống",
+      "image": "images/topics/t13_toys/drum.png",
+      "audio": "audio/words/t13_drum.mp3",
+      "sentence": "Boom, boom, play the little drum!",
+      "sentence_audio": "audio/sentences/t13_drum_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_play_with_ball",
+      "text": "Let's play with the ball!",
+      "audio": "audio/sentences/p_play_with_ball.mp3",
+      "vi": "Mình cùng chơi bóng nhé!",
+      "pron_vi": "Lét-xơ pờ-lây quít đờ bô!"
+    },
+    {
+      "id": "p_share_toys",
+      "text": "Let's share our toys! Clean up, please!",
+      "audio": "audio/sentences/p_share_toys.mp3",
+      "vi": "Mình cùng chia sẻ và dọn đồ chơi nhé!",
+      "pron_vi": "Lét-xơ se ao-ờ toi-zơ! Cờ-lin ắp, pờ-li-zơ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t13_toys_l1",
+      "order": 1,
+      "new_words": [
+        "t13_ball",
+        "t13_doll",
+        "t13_teddy_bear"
+      ],
+      "sentence": "p_play_with_ball",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t13_ball",
+            "t13_doll",
+            "t13_teddy_bear"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t13_ball",
+            "t13_doll",
+            "t13_teddy_bear"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t13_ball",
+            "t13_doll"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_walk_robot"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t13_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_play_with_ball"
+        ],
+        "activity_vi": "Bố mẹ chơi cùng bé và nhắc bé đọc tên món đồ chơi khi dọn vào thùng."
+      }
+    },
+    {
+      "id": "t13_toys_l2",
+      "order": 2,
+      "new_words": [
+        "t13_toy_car",
+        "t13_blocks",
+        "t13_kite"
+      ],
+      "sentence": "p_share_toys",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t13_toy_car",
+            "t13_blocks",
+            "t13_kite"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t13_toy_car",
+            "t13_blocks",
+            "t13_kite"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t13_toy_car",
+            "t13_blocks",
+            "t13_kite"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t13_toy_car",
+            "t13_blocks"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t13_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_share_toys"
+        ],
+        "activity_vi": "Bố mẹ chơi cùng bé và nhắc bé đọc tên món đồ chơi khi dọn vào thùng."
+      }
+    },
+    {
+      "id": "t13_toys_l3",
+      "order": 3,
+      "new_words": [
+        "t13_robot",
+        "t13_balloon"
+      ],
+      "sentence": "p_play_with_ball",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t13_robot",
+            "t13_balloon"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t13_robot",
+            "t13_balloon"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t13_robot",
+            "t13_balloon"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t13_robot",
+            "t13_balloon"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_walk_robot"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t13_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_play_with_ball"
+        ],
+        "activity_vi": "Bố mẹ chơi cùng bé và nhắc bé đọc tên món đồ chơi khi dọn vào thùng."
+      }
+    },
+    {
+      "id": "t13_toys_l4",
+      "order": 4,
+      "new_words": [
+        "t13_puzzle",
+        "t13_drum"
+      ],
+      "sentence": "p_share_toys",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t13_puzzle",
+            "t13_drum"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t13_ball",
+            "t13_doll",
+            "t13_teddy_bear",
+            "t13_toy_car",
+            "t13_blocks",
+            "t13_kite",
+            "t13_robot",
+            "t13_balloon",
+            "t13_puzzle",
+            "t13_drum"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t13_puzzle",
+            "t13_drum"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t13_puzzle",
+            "t13_drum"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t13_puzzle",
+            "t13_drum"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t13_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_share_toys"
+        ],
+        "activity_vi": "Bố mẹ chơi cùng bé và nhắc bé đọc tên món đồ chơi khi dọn vào thùng."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_walk_robot",
+      "text": "Walk like a funny robot! Beep, boop!",
+      "image": "images/tpr/cmd_walk_robot.png",
+      "audio": "audio/instructions/cmd_walk_robot.mp3"
+    },
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    }
+  ]
+}

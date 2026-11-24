@@ -1,0 +1,433 @@
+{
+  "id": "t19_tableware",
+  "level": 4,
+  "order": 19,
+  "title_en": "Mealtime Tools",
+  "title_vi": "Đồ dùng bàn ăn",
+  "map_icon": "images/map/island_t19_tableware.png",
+  "song": {
+    "id": "s19_tableware_song",
+    "title": "Set the Table, One Two Three",
+    "audio": "audio/songs/s19_tableware_song.mp3",
+    "cover": "images/songs/cover_s19_tableware.png",
+    "lyrics": [
+      {
+        "t": 1.5,
+        "text": "Let's set the table, one, two, three,"
+      },
+      {
+        "t": 5,
+        "text": "Dinner is ready for you and me!"
+      },
+      {
+        "t": 7.3,
+        "text": "Put down the Plate and the little Bowl,"
+      },
+      {
+        "t": 9.6,
+        "text": "Spoon and Fork on the table roll!"
+      },
+      {
+        "t": 11.9,
+        "text": "Chopsticks ready, Napkin neat,"
+      },
+      {
+        "t": 14.4,
+        "text": "Yummy soup in the Pot so sweet!"
+      },
+      {
+        "t": 16.7,
+        "text": "Water in the Bottle, Glass, and Cup,"
+      },
+      {
+        "t": 19,
+        "text": "Sit down nicely and eat it up!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t19_spoon",
+      "text": "Spoon",
+      "vi": "Cái thìa (muỗng)",
+      "image": "images/topics/t19_tableware/spoon.png",
+      "audio": "audio/words/t19_spoon.mp3",
+      "sentence": "Eat your soup with a spoon!",
+      "sentence_audio": "audio/sentences/t19_spoon_s.mp3"
+    },
+    {
+      "id": "t19_fork",
+      "text": "Fork",
+      "vi": "Cái nĩa",
+      "image": "images/topics/t19_tableware/fork.png",
+      "audio": "audio/words/t19_fork.mp3",
+      "sentence": "Use a fork for your fruit!",
+      "sentence_audio": "audio/sentences/t19_fork_s.mp3"
+    },
+    {
+      "id": "t19_bowl",
+      "text": "Bowl",
+      "vi": "Cái bát (chén)",
+      "image": "images/topics/t19_tableware/bowl.png",
+      "audio": "audio/words/t19_bowl.mp3",
+      "sentence": "A full bowl of warm rice!",
+      "sentence_audio": "audio/sentences/t19_bowl_s.mp3"
+    },
+    {
+      "id": "t19_plate",
+      "text": "Plate",
+      "vi": "Cái đĩa",
+      "image": "images/topics/t19_tableware/plate.png",
+      "audio": "audio/words/t19_plate.mp3",
+      "sentence": "Put the sandwich on the plate!",
+      "sentence_audio": "audio/sentences/t19_plate_s.mp3"
+    },
+    {
+      "id": "t19_cup",
+      "text": "Cup",
+      "vi": "Cái cốc có quai",
+      "image": "images/topics/t19_tableware/cup.png",
+      "audio": "audio/words/t19_cup.mp3",
+      "sentence": "A cute yellow cup for my milk!",
+      "sentence_audio": "audio/sentences/t19_cup_s.mp3"
+    },
+    {
+      "id": "t19_glass",
+      "text": "Glass",
+      "vi": "Ly thủy tinh",
+      "image": "images/topics/t19_tableware/glass.png",
+      "audio": "audio/words/t19_glass.mp3",
+      "sentence": "A glass of cool water!",
+      "sentence_audio": "audio/sentences/t19_glass_s.mp3"
+    },
+    {
+      "id": "t19_bottle",
+      "text": "Bottle",
+      "vi": "Bình nước",
+      "image": "images/topics/t19_tableware/bottle.png",
+      "audio": "audio/words/t19_bottle.mp3",
+      "sentence": "Bring your water bottle to the park!",
+      "sentence_audio": "audio/sentences/t19_bottle_s.mp3"
+    },
+    {
+      "id": "t19_napkin",
+      "text": "Napkin",
+      "vi": "Khăn ăn",
+      "image": "images/topics/t19_tableware/napkin.png",
+      "audio": "audio/words/t19_napkin.mp3",
+      "sentence": "Wipe your mouth with a napkin!",
+      "sentence_audio": "audio/sentences/t19_napkin_s.mp3"
+    },
+    {
+      "id": "t19_chopsticks",
+      "text": "Chopsticks",
+      "vi": "Đôi đũa",
+      "image": "images/topics/t19_tableware/chopsticks.png",
+      "audio": "audio/words/t19_chopsticks.mp3",
+      "sentence": "Mommy and Daddy use chopsticks!",
+      "sentence_audio": "audio/sentences/t19_chopsticks_s.mp3"
+    },
+    {
+      "id": "t19_pot",
+      "text": "Pot",
+      "vi": "Cái nồi",
+      "image": "images/topics/t19_tableware/pot.png",
+      "audio": "audio/words/t19_pot.mp3",
+      "sentence": "Yummy soup is cooking in the pot!",
+      "sentence_audio": "audio/sentences/t19_pot_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_pass_the_spoon",
+      "text": "Pass me the spoon, please!",
+      "audio": "audio/sentences/p_pass_the_spoon.mp3",
+      "vi": "Đưa giúp mẹ cái thìa nhé con!",
+      "pron_vi": "Pát-xơ mi đờ xờ-pun, pờ-li-zơ!"
+    },
+    {
+      "id": "p_hold_your_cup",
+      "text": "Hold your cup with two hands!",
+      "audio": "audio/sentences/p_hold_your_cup.mp3",
+      "vi": "Con cầm cốc bằng cả hai tay nhé!",
+      "pron_vi": "Hâu gio cắp quít tu hen-zơ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t19_tableware_l1",
+      "order": 1,
+      "new_words": [
+        "t19_spoon",
+        "t19_fork",
+        "t19_bowl"
+      ],
+      "sentence": "p_pass_the_spoon",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t19_spoon",
+            "t19_fork",
+            "t19_bowl"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t19_spoon",
+            "t19_fork",
+            "t19_bowl"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t19_spoon",
+            "t19_fork"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t19_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_pass_the_spoon"
+        ],
+        "activity_vi": "Bố mẹ nhờ bé phụ dọn bàn ăn và gọi tên bát, đĩa, thìa, cốc bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t19_tableware_l2",
+      "order": 2,
+      "new_words": [
+        "t19_plate",
+        "t19_cup",
+        "t19_glass"
+      ],
+      "sentence": "p_hold_your_cup",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t19_plate",
+            "t19_cup",
+            "t19_glass"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t19_plate",
+            "t19_cup",
+            "t19_glass"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t19_plate",
+            "t19_cup",
+            "t19_glass"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t19_plate",
+            "t19_cup"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t19_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hold_your_cup"
+        ],
+        "activity_vi": "Bố mẹ nhờ bé phụ dọn bàn ăn và gọi tên bát, đĩa, thìa, cốc bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t19_tableware_l3",
+      "order": 3,
+      "new_words": [
+        "t19_bottle",
+        "t19_napkin"
+      ],
+      "sentence": "p_pass_the_spoon",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t19_bottle",
+            "t19_napkin"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t19_bottle",
+            "t19_napkin"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t19_bottle",
+            "t19_napkin"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t19_bottle",
+            "t19_napkin"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t19_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_pass_the_spoon"
+        ],
+        "activity_vi": "Bố mẹ nhờ bé phụ dọn bàn ăn và gọi tên bát, đĩa, thìa, cốc bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t19_tableware_l4",
+      "order": 4,
+      "new_words": [
+        "t19_chopsticks",
+        "t19_pot"
+      ],
+      "sentence": "p_hold_your_cup",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t19_chopsticks",
+            "t19_pot"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t19_spoon",
+            "t19_fork",
+            "t19_bowl",
+            "t19_plate",
+            "t19_cup",
+            "t19_glass",
+            "t19_bottle",
+            "t19_napkin",
+            "t19_chopsticks",
+            "t19_pot"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t19_chopsticks",
+            "t19_pot"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t19_chopsticks",
+            "t19_pot"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t19_chopsticks",
+            "t19_pot"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t19_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hold_your_cup"
+        ],
+        "activity_vi": "Bố mẹ nhờ bé phụ dọn bàn ăn và gọi tên bát, đĩa, thìa, cốc bằng tiếng Anh."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_rub_tummy",
+      "text": "Rub your yummy tummy! Yummy, yummy!",
+      "image": "images/tpr/cmd_rub_tummy.png",
+      "audio": "audio/instructions/cmd_rub_tummy.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

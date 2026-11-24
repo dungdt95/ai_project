@@ -1,0 +1,463 @@
+{
+  "id": "t15_my_house",
+  "level": 3,
+  "order": 15,
+  "title_en": "My Cozy House",
+  "title_vi": "Ngôi nhà thân yêu",
+  "map_icon": "images/map/island_t15_my_house.png",
+  "song": {
+    "id": "s15_house_song",
+    "title": "Welcome to My Cozy House",
+    "audio": "audio/songs/s15_house_song.mp3",
+    "cover": "images/songs/cover_s15_house.png",
+    "lyrics": [
+      {
+        "t": 4.8,
+        "text": "Knock, knock, knock on the wooden Door,"
+      },
+      {
+        "t": 9.8,
+        "text": "Step inside on the cozy floor!"
+      },
+      {
+        "t": 14.8,
+        "text": "Look out the Window, sunny and bright,"
+      },
+      {
+        "t": 19.6,
+        "text": "Turn on the Lamp for a warm soft light!"
+      },
+      {
+        "t": 24.6,
+        "text": "Table and Chair in the Kitchen neat,"
+      },
+      {
+        "t": 29.5,
+        "text": "Sofa to rest our little feet!"
+      },
+      {
+        "t": 34.4,
+        "text": "Clean in the Bathroom, Clock on the wall,"
+      },
+      {
+        "t": 39,
+        "text": "Soft Bed in the Bedroom, good night all!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t15_house",
+      "text": "House",
+      "vi": "Ngôi nhà",
+      "image": "images/topics/t15_my_house/house.png",
+      "audio": "audio/words/t15_house.mp3",
+      "sentence": "This is my cozy little house!",
+      "sentence_audio": "audio/sentences/t15_house_s.mp3"
+    },
+    {
+      "id": "t15_door",
+      "text": "Door",
+      "vi": "Cánh cửa",
+      "image": "images/topics/t15_my_house/door.png",
+      "audio": "audio/words/t15_door.mp3",
+      "sentence": "Knock, knock! Open the door!",
+      "sentence_audio": "audio/sentences/t15_door_s.mp3"
+    },
+    {
+      "id": "t15_window",
+      "text": "Window",
+      "vi": "Cửa sổ",
+      "image": "images/topics/t15_my_house/window.png",
+      "audio": "audio/words/t15_window.mp3",
+      "sentence": "Look out the sunny window!",
+      "sentence_audio": "audio/sentences/t15_window_s.mp3"
+    },
+    {
+      "id": "t15_bedroom",
+      "text": "Bedroom",
+      "vi": "Phòng ngủ",
+      "image": "images/topics/t15_my_house/bedroom.png",
+      "audio": "audio/words/t15_bedroom.mp3",
+      "sentence": "I sleep in my quiet bedroom!",
+      "sentence_audio": "audio/sentences/t15_bedroom_s.mp3"
+    },
+    {
+      "id": "t15_kitchen",
+      "text": "Kitchen",
+      "vi": "Phòng bếp",
+      "image": "images/topics/t15_my_house/kitchen.png",
+      "audio": "audio/words/t15_kitchen.mp3",
+      "sentence": "Daddy cooks in the kitchen!",
+      "sentence_audio": "audio/sentences/t15_kitchen_s.mp3"
+    },
+    {
+      "id": "t15_bathroom",
+      "text": "Bathroom",
+      "vi": "Phòng tắm",
+      "image": "images/topics/t15_my_house/bathroom.png",
+      "audio": "audio/words/t15_bathroom.mp3",
+      "sentence": "Wash hands in the bathroom!",
+      "sentence_audio": "audio/sentences/t15_bathroom_s.mp3"
+    },
+    {
+      "id": "t15_bed",
+      "text": "Bed",
+      "vi": "Cái giường",
+      "image": "images/topics/t15_my_house/bed.png",
+      "audio": "audio/words/t15_bed.mp3",
+      "sentence": "A soft pillow on my bed!",
+      "sentence_audio": "audio/sentences/t15_bed_s.mp3"
+    },
+    {
+      "id": "t15_table",
+      "text": "Table",
+      "vi": "Cái bàn",
+      "image": "images/topics/t15_my_house/table.png",
+      "audio": "audio/words/t15_table.mp3",
+      "sentence": "Put the book on the table!",
+      "sentence_audio": "audio/sentences/t15_table_s.mp3"
+    },
+    {
+      "id": "t15_chair",
+      "text": "Chair",
+      "vi": "Cái ghế",
+      "image": "images/topics/t15_my_house/chair.png",
+      "audio": "audio/words/t15_chair.mp3",
+      "sentence": "Sit down nicely on the chair!",
+      "sentence_audio": "audio/sentences/t15_chair_s.mp3"
+    },
+    {
+      "id": "t15_sofa",
+      "text": "Sofa",
+      "vi": "Ghế sô-pha",
+      "image": "images/topics/t15_my_house/sofa.png",
+      "audio": "audio/words/t15_sofa.mp3",
+      "sentence": "We read stories on the sofa!",
+      "sentence_audio": "audio/sentences/t15_sofa_s.mp3"
+    },
+    {
+      "id": "t15_lamp",
+      "text": "Lamp",
+      "vi": "Đèn bàn",
+      "image": "images/topics/t15_my_house/lamp.png",
+      "audio": "audio/words/t15_lamp.mp3",
+      "sentence": "Turn on the bright little lamp!",
+      "sentence_audio": "audio/sentences/t15_lamp_s.mp3"
+    },
+    {
+      "id": "t15_clock",
+      "text": "Clock",
+      "vi": "Đồng hồ",
+      "image": "images/topics/t15_my_house/clock.png",
+      "audio": "audio/words/t15_clock.mp3",
+      "sentence": "Tick-tock goes the wall clock!",
+      "sentence_audio": "audio/sentences/t15_clock_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_open_door",
+      "text": "Open the door, please! Close the door!",
+      "audio": "audio/sentences/p_open_door.mp3",
+      "vi": "Mở cửa giúp mẹ nhé! Đóng cửa lại nào!",
+      "pron_vi": "Âu-pần đờ đo, pờ-li-zơ! Cờ-lâu-zơ đờ đo!"
+    },
+    {
+      "id": "p_where_is_cat",
+      "text": "Where is the cat? Under the table!",
+      "audio": "audio/sentences/p_where_is_cat.mp3",
+      "vi": "Con mèo đâu rồi? Ở dưới gầm bàn kìa!",
+      "pron_vi": "Que i-zơ đờ két? Ăn-đờ đờ tây-bồ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t15_my_house_l1",
+      "order": 1,
+      "new_words": [
+        "t15_house",
+        "t15_door",
+        "t15_window"
+      ],
+      "sentence": "p_open_door",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t15_house",
+            "t15_door",
+            "t15_window"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t15_house",
+            "t15_door",
+            "t15_window"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t15_house",
+            "t15_door"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_knock_door"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t15_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_open_door"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đi quanh nhà, gõ cửa và gọi tên các phòng, đồ vật quen thuộc."
+      }
+    },
+    {
+      "id": "t15_my_house_l2",
+      "order": 2,
+      "new_words": [
+        "t15_bedroom",
+        "t15_kitchen",
+        "t15_bathroom"
+      ],
+      "sentence": "p_where_is_cat",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t15_bedroom",
+            "t15_kitchen",
+            "t15_bathroom"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t15_bedroom",
+            "t15_kitchen",
+            "t15_bathroom"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t15_bedroom",
+            "t15_kitchen",
+            "t15_bathroom"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t15_bedroom",
+            "t15_kitchen"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t15_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_where_is_cat"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đi quanh nhà, gõ cửa và gọi tên các phòng, đồ vật quen thuộc."
+      }
+    },
+    {
+      "id": "t15_my_house_l3",
+      "order": 3,
+      "new_words": [
+        "t15_bed",
+        "t15_table",
+        "t15_chair"
+      ],
+      "sentence": "p_open_door",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t15_bed",
+            "t15_table",
+            "t15_chair"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t15_bed",
+            "t15_table",
+            "t15_chair"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t15_bed",
+            "t15_table",
+            "t15_chair"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t15_bed",
+            "t15_table",
+            "t15_chair"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_knock_door"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t15_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_open_door"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đi quanh nhà, gõ cửa và gọi tên các phòng, đồ vật quen thuộc."
+      }
+    },
+    {
+      "id": "t15_my_house_l4",
+      "order": 4,
+      "new_words": [
+        "t15_sofa",
+        "t15_lamp",
+        "t15_clock"
+      ],
+      "sentence": "p_where_is_cat",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t15_sofa",
+            "t15_lamp",
+            "t15_clock"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t15_house",
+            "t15_door",
+            "t15_window",
+            "t15_bedroom",
+            "t15_kitchen",
+            "t15_bathroom",
+            "t15_bed",
+            "t15_table",
+            "t15_chair",
+            "t15_sofa",
+            "t15_lamp",
+            "t15_clock"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t15_sofa",
+            "t15_lamp",
+            "t15_clock"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t15_sofa",
+            "t15_lamp",
+            "t15_clock"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t15_sofa",
+            "t15_lamp",
+            "t15_clock"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t15_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_where_is_cat"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đi quanh nhà, gõ cửa và gọi tên các phòng, đồ vật quen thuộc."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_knock_door",
+      "text": "Knock on the door! Knock, knock, knock!",
+      "image": "images/tpr/cmd_knock_door.png",
+      "audio": "audio/instructions/cmd_knock_door.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

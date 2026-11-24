@@ -1,0 +1,433 @@
+{
+  "id": "t10_numbers_sizes",
+  "level": 2,
+  "order": 10,
+  "title_en": "Numbers & Sizes",
+  "title_vi": "Số đếm & Kích thước",
+  "map_icon": "images/map/island_t10_numbers_sizes.png",
+  "song": {
+    "id": "s10_sizes_song",
+    "title": "Big and Small, Count Them All",
+    "audio": "audio/songs/s10_sizes_song.mp3",
+    "cover": "images/songs/cover_s10_sizes.png",
+    "lyrics": [
+      {
+        "t": 1,
+        "text": "Eleven, twelve, and fifteen stars,"
+      },
+      {
+        "t": 3.5,
+        "text": "Count to twenty, near and far!"
+      },
+      {
+        "t": 5.9,
+        "text": "Some are big and some are small,"
+      },
+      {
+        "t": 8.3,
+        "text": "Some are short and some are tall!"
+      },
+      {
+        "t": 10.8,
+        "text": "Elephant is big and heavy too,"
+      },
+      {
+        "t": 13.2,
+        "text": "Little mouse is small and new!"
+      },
+      {
+        "t": 15.4,
+        "text": "Long choo-choo train rolls down the track,"
+      },
+      {
+        "t": 18,
+        "text": "Count to twenty forward and back!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t10_eleven",
+      "text": "Eleven",
+      "vi": "Số mười một (11)",
+      "image": "images/topics/t10_numbers_sizes/eleven.png",
+      "audio": "audio/words/t10_eleven.mp3",
+      "sentence": "Eleven! Eleven shiny stars!",
+      "sentence_audio": "audio/sentences/t10_eleven_s.mp3"
+    },
+    {
+      "id": "t10_twelve",
+      "text": "Twelve",
+      "vi": "Số mười hai (12)",
+      "image": "images/topics/t10_numbers_sizes/twelve.png",
+      "audio": "audio/words/t10_twelve.mp3",
+      "sentence": "Twelve! Twelve yummy cookies!",
+      "sentence_audio": "audio/sentences/t10_twelve_s.mp3"
+    },
+    {
+      "id": "t10_fifteen",
+      "text": "Fifteen",
+      "vi": "Số mười lăm (15)",
+      "image": "images/topics/t10_numbers_sizes/fifteen.png",
+      "audio": "audio/words/t10_fifteen.mp3",
+      "sentence": "Fifteen! Let's count to fifteen!",
+      "sentence_audio": "audio/sentences/t10_fifteen_s.mp3"
+    },
+    {
+      "id": "t10_twenty",
+      "text": "Twenty",
+      "vi": "Số hai mươi (20)",
+      "image": "images/topics/t10_numbers_sizes/twenty.png",
+      "audio": "audio/words/t10_twenty.mp3",
+      "sentence": "Twenty! Ten fingers and ten toes make twenty!",
+      "sentence_audio": "audio/sentences/t10_twenty_s.mp3"
+    },
+    {
+      "id": "t10_big",
+      "text": "Big",
+      "vi": "To / Lớn",
+      "image": "images/topics/t10_numbers_sizes/big.png",
+      "audio": "audio/words/t10_big.mp3",
+      "sentence": "The elephant is very big!",
+      "sentence_audio": "audio/sentences/t10_big_s.mp3"
+    },
+    {
+      "id": "t10_small",
+      "text": "Small",
+      "vi": "Nhỏ / Bé",
+      "image": "images/topics/t10_numbers_sizes/small.png",
+      "audio": "audio/words/t10_small.mp3",
+      "sentence": "The little mouse is so small!",
+      "sentence_audio": "audio/sentences/t10_small_s.mp3"
+    },
+    {
+      "id": "t10_tall",
+      "text": "Tall",
+      "vi": "Cao",
+      "image": "images/topics/t10_numbers_sizes/tall.png",
+      "audio": "audio/words/t10_tall.mp3",
+      "sentence": "The giraffe is super tall!",
+      "sentence_audio": "audio/sentences/t10_tall_s.mp3"
+    },
+    {
+      "id": "t10_short",
+      "text": "Short",
+      "vi": "Thấp / Ngắn",
+      "image": "images/topics/t10_numbers_sizes/short.png",
+      "audio": "audio/words/t10_short.mp3",
+      "sentence": "The little puppy is short!",
+      "sentence_audio": "audio/sentences/t10_short_s.mp3"
+    },
+    {
+      "id": "t10_long",
+      "text": "Long",
+      "vi": "Dài",
+      "image": "images/topics/t10_numbers_sizes/long.png",
+      "audio": "audio/words/t10_long.mp3",
+      "sentence": "The train is very long!",
+      "sentence_audio": "audio/sentences/t10_long_s.mp3"
+    },
+    {
+      "id": "t10_heavy",
+      "text": "Heavy",
+      "vi": "Nặng",
+      "image": "images/topics/t10_numbers_sizes/heavy.png",
+      "audio": "audio/words/t10_heavy.mp3",
+      "sentence": "This big box is heavy!",
+      "sentence_audio": "audio/sentences/t10_heavy_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_big_or_small",
+      "text": "Is it big or small? It's big!",
+      "audio": "audio/sentences/p_big_or_small.mp3",
+      "vi": "Nó to hay nhỏ nhỉ? Nó to lắm!",
+      "pron_vi": "I-zơ ít bíc o xờ-mô? Ít-xơ bíc!"
+    },
+    {
+      "id": "p_count_twenty",
+      "text": "Let's count to twenty together!",
+      "audio": "audio/sentences/p_count_twenty.mp3",
+      "vi": "Cùng đếm đến hai mươi nào!",
+      "pron_vi": "Lét-xơ cao-tờ tu troen-ti tu-ge-đờ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t10_numbers_sizes_l1",
+      "order": 1,
+      "new_words": [
+        "t10_eleven",
+        "t10_twelve",
+        "t10_fifteen"
+      ],
+      "sentence": "p_big_or_small",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t10_eleven",
+            "t10_twelve",
+            "t10_fifteen"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t10_eleven",
+            "t10_twelve",
+            "t10_fifteen"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t10_eleven",
+            "t10_twelve"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t10_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_big_or_small"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đếm đồ chơi và so sánh đồ vật to (big) – nhỏ (small) quanh nhà."
+      }
+    },
+    {
+      "id": "t10_numbers_sizes_l2",
+      "order": 2,
+      "new_words": [
+        "t10_twenty",
+        "t10_big",
+        "t10_small"
+      ],
+      "sentence": "p_count_twenty",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t10_twenty",
+            "t10_big",
+            "t10_small"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t10_twenty",
+            "t10_big",
+            "t10_small"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t10_twenty",
+            "t10_big",
+            "t10_small"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t10_twenty",
+            "t10_big"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t10_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_count_twenty"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đếm đồ chơi và so sánh đồ vật to (big) – nhỏ (small) quanh nhà."
+      }
+    },
+    {
+      "id": "t10_numbers_sizes_l3",
+      "order": 3,
+      "new_words": [
+        "t10_tall",
+        "t10_short"
+      ],
+      "sentence": "p_big_or_small",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t10_tall",
+            "t10_short"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t10_tall",
+            "t10_short"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t10_tall",
+            "t10_short"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t10_tall",
+            "t10_short"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_reach_tall"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t10_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_big_or_small"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đếm đồ chơi và so sánh đồ vật to (big) – nhỏ (small) quanh nhà."
+      }
+    },
+    {
+      "id": "t10_numbers_sizes_l4",
+      "order": 4,
+      "new_words": [
+        "t10_long",
+        "t10_heavy"
+      ],
+      "sentence": "p_count_twenty",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t10_long",
+            "t10_heavy"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t10_eleven",
+            "t10_twelve",
+            "t10_fifteen",
+            "t10_twenty",
+            "t10_big",
+            "t10_small",
+            "t10_tall",
+            "t10_short",
+            "t10_long",
+            "t10_heavy"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t10_long",
+            "t10_heavy"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t10_long",
+            "t10_heavy"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t10_long",
+            "t10_heavy"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_jump_high"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t10_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_count_twenty"
+        ],
+        "activity_vi": "Bố mẹ cùng bé đếm đồ chơi và so sánh đồ vật to (big) – nhỏ (small) quanh nhà."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_reach_tall",
+      "text": "Stretch up tall like a giraffe!",
+      "image": "images/tpr/cmd_reach_tall.png",
+      "audio": "audio/instructions/cmd_reach_tall.mp3"
+    },
+    {
+      "id": "cmd_jump_high",
+      "text": "Jump up high!",
+      "image": "images/tpr/cmd_jump_high.png",
+      "audio": "audio/instructions/cmd_jump_high.mp3"
+    }
+  ]
+}
