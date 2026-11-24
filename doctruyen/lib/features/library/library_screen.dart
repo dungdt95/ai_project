@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,14 +21,37 @@ class LibraryScreen extends ConsumerStatefulWidget {
   ConsumerState<LibraryScreen> createState() => _LibraryScreenState();
 }
 
-class _LibraryScreenState extends ConsumerState<LibraryScreen> {
+class _LibraryScreenState extends ConsumerState<LibraryScreen>
+    with WidgetsBindingObserver {
   bool _searching = false;
   final TextEditingController _searchController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    // Mở app: tự cập nhật truyện/chương mới từ thư mục Drive chung.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncLibrary());
+  }
+
+  @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _searchController.dispose();
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // Quay lại app sau một lúc: cập nhật lại (tối đa 10 phút/lần).
+    if (state == AppLifecycleState.resumed) _syncLibrary();
+  }
+
+  void _syncLibrary({bool manual = false}) {
+    if (!mounted) return;
+    unawaited(
+      DriveUi.syncLibrary(ScaffoldMessenger.of(context), ref, manual: manual),
+    );
   }
 
   void _toggleSearch() {
@@ -44,10 +69,13 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
     if (mounted) await ref.read(libraryProvider.notifier).refresh();
   }
 
-  /// Kéo để làm mới: tải lại danh sách và kiểm tra cập nhật các truyện Drive.
-  Future<void> _refresh() async {
-    await ref.read(libraryProvider.notifier).refresh();
-    await ref.read(driveUpdatesProvider.notifier).checkAll(force: true);
+  /// Kéo để làm mới = bấm "Cập nhật": đồng bộ kỹ với thư mục Drive chung.
+  Future<void> _refresh() =>
+      DriveUi.syncLibrary(ScaffoldMessenger.of(context), ref, manual: true);
+
+  Future<void> _restoreHidden() async {
+    await ref.read(librarySyncProvider.notifier).restoreIgnored();
+    _syncLibrary(manual: true);
   }
 
   Future<void> _onBookMenu(Book book, String action) async {
@@ -64,7 +92,8 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
       builder: (ctx) => AlertDialog(
         title: const Text('Xóa truyện?'),
         content: Text(
-          'Xóa "${book.displayTitle}" cùng tiến độ đọc, dấu trang và thống kê của truyện này?',
+          'Xóa "${book.displayTitle}" cùng tiến độ đọc, dấu trang và thống kê của truyện này?'
+          '${book.isDrive ? '\n\nTruyện sẽ không tự tải lại khi cập nhật (có thể hiện lại trong menu).' : ''}',
         ),
         actions: [
           TextButton(
@@ -78,13 +107,22 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
         ],
       ),
     );
-    if (ok == true) await ref.read(libraryProvider.notifier).delete(book.id);
+    if (ok != true) return;
+    if (book.isDrive) {
+      await ref.read(librarySyncProvider.notifier).ignore(book.driveFolderId);
+    }
+    await ref.read(libraryProvider.notifier).delete(book.id);
   }
 
   @override
   Widget build(BuildContext context) {
     final books = ref.watch(visibleBooksProvider);
     final sort = ref.watch(bookSortProvider);
+    final sync = ref.watch(librarySyncProvider);
+    final hiddenCount = ref
+        .read(librarySyncProvider.notifier)
+        .ignoredFolders
+        .length;
 
     return Scaffold(
       appBar: AppBar(
@@ -99,7 +137,13 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                 onChanged: ref.read(bookQueryProvider.notifier).set,
               )
             : const Text('Thư viện'),
+        bottom: sync.running ? _SyncProgressBar(state: sync) : null,
         actions: [
+          IconButton(
+            tooltip: sync.running ? 'Đang cập nhật...' : 'Cập nhật truyện',
+            icon: const Icon(Icons.sync),
+            onPressed: sync.running ? null : () => _syncLibrary(manual: true),
+          ),
           IconButton(
             tooltip: _searching ? 'Đóng tìm kiếm' : 'Tìm truyện',
             icon: Icon(_searching ? Icons.close : Icons.search),
@@ -118,6 +162,8 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                   );
                 case 'tts':
                   showTtsSettingsSheet(context);
+                case 'restore':
+                  unawaited(_restoreHidden());
               }
             },
             itemBuilder: (_) => [
@@ -134,14 +180,19 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
               const PopupMenuDivider(),
               const PopupMenuItem(value: 'stats', child: Text('Thống kê đọc')),
               const PopupMenuItem(value: 'tts', child: Text('Giọng đọc (TTS)')),
+              if (hiddenCount > 0)
+                PopupMenuItem(
+                  value: 'restore',
+                  child: Text('Hiện lại truyện đã xóa ($hiddenCount)'),
+                ),
             ],
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => ImportController.showImportMenu(context, ref),
+        onPressed: () => ImportController.pickAndImport(context, ref),
         icon: const Icon(Icons.add),
-        label: const Text('Nhập truyện'),
+        label: const Text('Nhập tệp'),
       ),
       body: books.when(
         loading: () => const Center(child: CircularProgressIndicator()),
@@ -150,6 +201,8 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
           if (list.isEmpty) {
             return _EmptyState(
               searching: ref.watch(bookQueryProvider).isNotEmpty,
+              syncing: sync.running,
+              onSync: () => _syncLibrary(manual: true),
             );
           }
           final now = DateTime.now();
@@ -274,10 +327,52 @@ class _UpdateBadge extends StatelessWidget {
   }
 }
 
+/// Thanh tiến độ dưới AppBar khi đang đồng bộ thư viện.
+class _SyncProgressBar extends StatelessWidget implements PreferredSizeWidget {
+  const _SyncProgressBar({required this.state});
+
+  final LibrarySyncState state;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(24);
+
+  @override
+  Widget build(BuildContext context) {
+    final s = state;
+    final label = s.total == 0
+        ? 'Đang kiểm tra truyện mới...'
+        : 'Cập nhật ${s.index + 1}/${s.total}: ${s.title}'
+              '${s.chapters > 0 ? ' (${s.done}/${s.chapters} chương)' : ''}';
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+        ),
+        const SizedBox(height: 4),
+        LinearProgressIndicator(value: s.fraction, minHeight: 3),
+      ],
+    );
+  }
+}
+
 class _EmptyState extends StatelessWidget {
-  const _EmptyState({required this.searching});
+  const _EmptyState({
+    required this.searching,
+    required this.syncing,
+    required this.onSync,
+  });
 
   final bool searching;
+  final bool syncing;
+  final VoidCallback onSync;
 
   @override
   Widget build(BuildContext context) {
@@ -294,9 +389,22 @@ class _EmptyState extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              searching ? 'Không có truyện khớp.' : 'Thư viện còn trống.\nBấm "Nhập truyện" để thêm tệp .zip, .txt, .epub, các tệp chương .md hoặc thư mục Google Drive.',
+              searching
+                  ? 'Không có truyện khớp.'
+                  : syncing
+                  ? 'Đang tải truyện từ thư viện chung...'
+                  : 'Thư viện còn trống.\nBấm "Cập nhật" để tải truyện từ thư viện chung, '
+                        'hoặc "Nhập tệp" để thêm tệp .zip, .txt, .epub, .md trên máy.',
               textAlign: TextAlign.center,
             ),
+            if (!searching && !syncing) ...[
+              const SizedBox(height: 16),
+              FilledButton.icon(
+                onPressed: onSync,
+                icon: const Icon(Icons.sync),
+                label: const Text('Cập nhật'),
+              ),
+            ],
           ],
         ),
       ),

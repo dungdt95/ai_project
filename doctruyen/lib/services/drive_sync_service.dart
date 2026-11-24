@@ -51,6 +51,45 @@ class DriveSyncReport {
 
 typedef DriveProgress = void Function(int done, int total);
 
+/// Tiến độ đồng bộ thư viện: đang xử lý truyện thứ [index] (từ 0) trên [total]
+/// truyện, tên [title]; trong truyện đó đã tải [done]/[chapters] chương.
+typedef LibraryProgress = void Function(
+  String title,
+  int index,
+  int total,
+  int done,
+  int chapters,
+);
+
+/// Kết quả đồng bộ thư mục chung (mỗi thư mục con là một truyện).
+class LibrarySyncReport {
+  const LibrarySyncReport({
+    required this.newBooks,
+    required this.addedChapters,
+    required this.updatedChapters,
+    required this.failedChapters,
+    required this.failedBooks,
+    required this.syncedBookIds,
+  });
+
+  /// Tên các truyện mới được thêm vào thư viện.
+  final List<String> newBooks;
+
+  /// Chương mới của các truyện đã có (không tính chương của truyện mới).
+  final int addedChapters;
+  final int updatedChapters;
+  final int failedChapters;
+
+  /// Truyện không đồng bộ được (tên -> lý do).
+  final Map<String, String> failedBooks;
+
+  /// Truyện đã đồng bộ xong (để xóa dấu "có cập nhật").
+  final List<int> syncedBookIds;
+
+  bool get nothingChanged =>
+      newBooks.isEmpty && addedChapters == 0 && updatedChapters == 0;
+}
+
 /// Nhập và đồng bộ truyện từ thư mục Google Drive.
 class DriveSyncService {
   DriveSyncService(
@@ -103,6 +142,73 @@ class DriveSyncService {
     );
   }
 
+  /// Đồng bộ thư mục chung: mỗi thư mục con là một truyện. Thư mục mới được
+  /// nhập thành truyện mới; truyện đã có được thêm chương mới, cập nhật chương
+  /// đã sửa. Tệp nằm thẳng trong thư mục chung bị bỏ qua.
+  ///
+  /// [ignoredFolderIds]: thư mục truyện người dùng đã xóa khỏi thư viện.
+  /// [thorough] = `false` (tự động khi mở app): chỉ tải chương chắc chắn mới
+  /// hoặc đã sửa, bỏ qua chương có nhãn thời gian không chắc để tiết kiệm mạng.
+  Future<LibrarySyncReport> syncLibrary(
+    String rootFolderId, {
+    Set<String> ignoredFolderIds = const {},
+    bool thorough = true,
+    LibraryProgress? onProgress,
+    CancelToken? cancel,
+  }) async {
+    final root = await _source.listFolder(rootFolderId);
+    cancel?.throwIfCancelled();
+    final folders = root.entries
+        .where((e) => e.isFolder && !ignoredFolderIds.contains(e.id))
+        .toList();
+    final byFolder = {
+      for (final b in await _dao.listDriveBooks()) b.driveFolderId: b,
+    };
+
+    final newBooks = <String>[];
+    final failedBooks = <String, String>{};
+    final synced = <int>[];
+    var added = 0, updated = 0, failedChapters = 0;
+    for (var i = 0; i < folders.length; i++) {
+      cancel?.throwIfCancelled();
+      final folder = folders[i];
+      final existing = byFolder[folder.id];
+      final title = existing?.title ?? folder.title;
+      onProgress?.call(title, i, folders.length, 0, 0);
+      try {
+        final r = await _run(
+          folder.id,
+          existing?.id,
+          (d, t) => onProgress?.call(title, i, folders.length, d, t),
+          cancel,
+          includeAmbiguous: thorough,
+        );
+        synced.add(r.bookId);
+        if (r.isNewBook) {
+          newBooks.add(folder.title);
+        } else {
+          added += r.added;
+        }
+        updated += r.updated;
+        failedChapters += r.failed;
+      } on DriveCancelledException {
+        rethrow;
+      } on DriveEmptyFolderException {
+        // Thư mục truyện chưa có chương: bỏ qua, lần sau xét lại.
+      } catch (e) {
+        failedBooks[title] = e.toString();
+      }
+    }
+    return LibrarySyncReport(
+      newBooks: newBooks,
+      addedChapters: added,
+      updatedChapters: updated,
+      failedChapters: failedChapters,
+      failedBooks: failedBooks,
+      syncedBookIds: synced,
+    );
+  }
+
   /// Đồng bộ ngay: thêm chương mới, cập nhật chương đổi nội dung.
   Future<DriveSyncReport> syncBook(
     Book book, {
@@ -124,8 +230,9 @@ class DriveSyncService {
     String folderId,
     int? bookId,
     DriveProgress? onProgress,
-    CancelToken? cancel,
-  ) async {
+    CancelToken? cancel, {
+    bool includeAmbiguous = true,
+  }) async {
     final listing = await _source.listFolder(folderId);
     cancel?.throwIfCancelled();
     final plan = DrivePlan.compute(
@@ -136,12 +243,10 @@ class DriveSyncService {
           : await _dao.chapterNumbers(bookId),
     );
     if (bookId == null && plan.numbers.isEmpty) {
-      throw const DriveException(
-        'Thư mục không có tệp văn bản chương nào (cần .md, .txt hoặc Google Docs).',
-      );
+      throw const DriveEmptyFolderException();
     }
 
-    final toFetch = plan.toFetch(includeAmbiguous: true);
+    final toFetch = plan.toFetch(includeAmbiguous: includeAmbiguous);
     final chapters = <ParsedChapter>[];
     var failed = 0;
     var skipped = 0;
@@ -186,11 +291,8 @@ class DriveSyncService {
     if (chapters.isEmpty && bookId == null) {
       final err = firstError;
       if (err is DriveException) throw err;
-      throw DriveException(
-        err == null
-            ? 'Không có tệp văn bản chương nào để nhập.'
-            : 'Không tải được chương nào: $err',
-      );
+      if (err == null) throw const DriveEmptyFolderException();
+      throw DriveException('Không tải được chương nào: $err');
     }
     if (chapters.isEmpty) {
       if (bookId != null) await _dao.touchDriveSynced(bookId, _clock());

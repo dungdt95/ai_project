@@ -7,48 +7,12 @@ import '../../data/data_providers.dart';
 import '../../domain/importers/book_importer.dart';
 import '../../domain/importers/local_chapters_importer.dart';
 import '../../domain/importers/parsed_book.dart';
-import '../drive/drive_ui.dart';
 import '../library/library_provider.dart';
 
-/// Menu "Nhập truyện": từ tệp trên máy hoặc từ thư mục Google Drive.
+/// Nhập truyện từ tệp trên máy. Truyện trên Google Drive được tự đồng bộ từ
+/// thư mục chung (xem `DriveUi.syncLibrary`), không cần dán liên kết.
 class ImportController {
   const ImportController._();
-
-  static Future<void> showImportMenu(
-    BuildContext context,
-    WidgetRef ref,
-  ) async {
-    final choice = await showModalBottomSheet<String>(
-      context: context,
-      builder: (ctx) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.folder_open),
-              title: const Text('Từ tệp trên máy'),
-              subtitle: const Text(
-                '.zip, .txt, .epub, hoặc nhiều tệp chương .md/.txt',
-              ),
-              onTap: () => Navigator.pop(ctx, 'file'),
-            ),
-            ListTile(
-              leading: const Icon(Icons.cloud_download_outlined),
-              title: const Text('Từ thư mục Google Drive'),
-              subtitle: const Text('Dán liên kết thư mục đã chia sẻ'),
-              onTap: () => Navigator.pop(ctx, 'drive'),
-            ),
-          ],
-        ),
-      ),
-    );
-    if (choice == null || !context.mounted) return;
-    if (choice == 'drive') {
-      await DriveUi.importFromLink(context, ref);
-    } else {
-      await pickAndImport(context, ref);
-    }
-  }
 
   static const List<String> _pickExtensions = [
     ...BookImporter.supportedExtensions,
