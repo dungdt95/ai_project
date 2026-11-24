@@ -3,57 +3,63 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../domain/drive/drive_link.dart';
 import '../../domain/drive/drive_models.dart';
 import '../../domain/models/book.dart';
 import '../../services/drive_sync_service.dart';
-import '../library/library_provider.dart';
 import 'drive_provider.dart';
 
-/// Giao diện nhập/đồng bộ từ Google Drive.
+/// Giao diện đồng bộ từ Google Drive.
 class DriveUi {
   const DriveUi._();
 
-  /// Hỏi liên kết thư mục rồi nhập (có hộp thoại tiến độ, hủy được).
-  static Future<void> importFromLink(
-    BuildContext context,
-    WidgetRef ref,
-  ) async {
-    final input = await showDialog<String>(
-      context: context,
-      builder: (_) => const _LinkDialog(),
-    );
-    if (input == null || !context.mounted) return;
-    final folderId = DriveLink.parseFolderId(input);
-    if (folderId == null) {
-      _snack(context, 'Liên kết hoặc ID thư mục Drive không hợp lệ.');
-      return;
-    }
-    final messenger = ScaffoldMessenger.of(context);
-    final progress = ValueNotifier<(int, int)>((0, 0));
-    final cancel = CancelToken();
-    final dialog = _showProgress(context, progress, cancel);
+  /// Đồng bộ thư viện với thư mục Drive chung (không chặn màn hình; tiến độ
+  /// hiện ở thanh trên thư viện).
+  ///
+  /// [manual] = người dùng bấm "Cập nhật": luôn báo kết quả, kể cả lỗi.
+  /// Tự động (mở app): chỉ báo khi có truyện/chương mới, lỗi mạng thì im lặng.
+  static Future<void> syncLibrary(
+    ScaffoldMessengerState messenger,
+    WidgetRef ref, {
+    required bool manual,
+  }) async {
     try {
       final report = await ref
-          .read(driveSyncServiceProvider)
-          .importFolder(
-            folderId,
-            cancel: cancel,
-            onProgress: (d, t) => progress.value = (d, t),
-          );
-      ref.read(driveUpdatesProvider.notifier).markImported(report.bookId);
-      await ref.read(libraryProvider.notifier).refresh();
-      _show(messenger, _importMessage(report));
+          .read(librarySyncProvider.notifier)
+          .sync(manual: manual);
+      if (report == null) {
+        if (manual) _show(messenger, 'Đang cập nhật thư viện...');
+        return;
+      }
+      if (manual || !report.nothingChanged) {
+        _show(messenger, libraryMessage(report));
+      }
     } on DriveCancelledException {
-      _show(messenger, 'Đã hủy nhập từ Drive.');
+      if (manual) _show(messenger, 'Đã hủy cập nhật.');
     } on DriveException catch (e) {
-      _show(messenger, e.message);
+      if (manual) _show(messenger, e.message);
     } catch (e) {
-      _show(messenger, 'Nhập từ Drive thất bại: $e');
-    } finally {
-      await dialog();
-      progress.dispose();
+      if (manual) _show(messenger, 'Cập nhật thất bại: $e');
     }
+  }
+
+  static String libraryMessage(LibrarySyncReport r) {
+    final parts = <String>[
+      if (r.newBooks.length == 1) 'Thêm truyện mới "${r.newBooks.first}"',
+      if (r.newBooks.length > 1) 'Thêm ${r.newBooks.length} truyện mới',
+      if (r.addedChapters > 0) '${r.addedChapters} chương mới',
+      if (r.updatedChapters > 0) 'cập nhật ${r.updatedChapters} chương',
+    ];
+    final problems = <String>[
+      if (r.failedChapters > 0) '${r.failedChapters} chương tải lỗi',
+      if (r.failedBooks.isNotEmpty)
+        '${r.failedBooks.length} truyện lỗi (${r.failedBooks.keys.join(', ')})',
+    ];
+    final head = parts.isEmpty
+        ? 'Thư viện đã là bản mới nhất'
+        : parts.join(', ');
+    return problems.isEmpty
+        ? '$head.'
+        : '$head. ${problems.join(', ')}, sẽ thử lại lần sau.';
   }
 
   /// "Cập nhật từ Drive": đồng bộ ngay và báo kết quả.
@@ -99,14 +105,6 @@ class DriveUi {
     return 'Đã thêm ${r.added} chương mới, cập nhật ${r.updated} chương$failed.';
   }
 
-  static String _importMessage(DriveSyncReport r) {
-    if (!r.isNewBook) return syncMessage(r);
-    final failed = r.failed > 0
-        ? ' (${r.failed} chương tải lỗi, bấm "Cập nhật từ Drive" để thử lại)'
-        : '';
-    return 'Đã nhập truyện từ Drive: ${r.added} chương$failed.';
-  }
-
   /// Thông báo "Có N chương mới" không chặn, kèm nút Cập nhật.
   static void showUpdateAvailable(
     ScaffoldMessengerState messenger,
@@ -128,9 +126,6 @@ class DriveUi {
         ),
       );
   }
-
-  static void _snack(BuildContext context, String text) =>
-      _show(ScaffoldMessenger.of(context), text);
 
   static void _show(ScaffoldMessengerState m, String text) => m
     ..hideCurrentSnackBar()
@@ -184,60 +179,5 @@ class DriveUi {
     return () async {
       if (open) navigator.pop();
     };
-  }
-}
-
-class _LinkDialog extends StatefulWidget {
-  const _LinkDialog();
-
-  @override
-  State<_LinkDialog> createState() => _LinkDialogState();
-}
-
-class _LinkDialogState extends State<_LinkDialog> {
-  final TextEditingController _c = TextEditingController();
-
-  @override
-  void dispose() {
-    _c.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Nhập từ Google Drive'),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextField(
-            controller: _c,
-            autofocus: true,
-            keyboardType: TextInputType.url,
-            decoration: const InputDecoration(
-              hintText: 'Dán liên kết hoặc ID thư mục',
-            ),
-            onSubmitted: (v) => Navigator.pop(context, v),
-          ),
-          const SizedBox(height: 12),
-          Text(
-            'Thư mục cần chia sẻ "Bất kỳ ai có đường liên kết". Mỗi tệp .md/.txt '
-            'hoặc Google Docs là một chương (tên dạng "Chương 1: ...").',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-        ],
-      ),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context),
-          child: const Text('Hủy'),
-        ),
-        FilledButton(
-          onPressed: () => Navigator.pop(context, _c.text),
-          child: const Text('Tải về'),
-        ),
-      ],
-    );
   }
 }

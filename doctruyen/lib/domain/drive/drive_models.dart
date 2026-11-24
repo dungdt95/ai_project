@@ -73,6 +73,14 @@ class DriveSignInRequiredException extends DriveException {
       );
 }
 
+/// Thư mục không có tệp văn bản chương nào.
+class DriveEmptyFolderException extends DriveException {
+  const DriveEmptyFolderException()
+    : super(
+        'Thư mục không có tệp văn bản chương nào (cần .md, .txt hoặc Google Docs).',
+      );
+}
+
 /// Người dùng hủy giữa chừng.
 class DriveCancelledException extends DriveException {
   const DriveCancelledException() : super('Đã hủy.');
