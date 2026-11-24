@@ -1,0 +1,463 @@
+{
+  "id": "t12_food_drinks",
+  "level": 3,
+  "order": 12,
+  "title_en": "Food & Drinks",
+  "title_vi": "Đồ ăn & Thức uống",
+  "map_icon": "images/map/island_t12_food_drinks.png",
+  "song": {
+    "id": "s12_food_song",
+    "title": "Hungry Tummy, Yummy Food",
+    "audio": "audio/songs/s12_food_song.mp3",
+    "cover": "images/songs/cover_s12_food.png",
+    "lyrics": [
+      {
+        "t": 1.2,
+        "text": "Rub your tummy, it's time to eat,"
+      },
+      {
+        "t": 3.6,
+        "text": "Healthy food is such a treat!"
+      },
+      {
+        "t": 6,
+        "text": "White warm Rice and golden Bread,"
+      },
+      {
+        "t": 8.4,
+        "text": "Egg and Soup just like Mom said!"
+      },
+      {
+        "t": 10.8,
+        "text": "Yummy Noodles, Pizza slice,"
+      },
+      {
+        "t": 13.2,
+        "text": "Milk and Water, cool and nice!"
+      },
+      {
+        "t": 15.6,
+        "text": "Orange Juice and Cake and Cookie too,"
+      },
+      {
+        "t": 20.4,
+        "text": "Thank you for the food we chew!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t12_rice",
+      "text": "Rice",
+      "vi": "Cơm",
+      "image": "images/topics/t12_food_drinks/rice.png",
+      "audio": "audio/words/t12_rice.mp3",
+      "sentence": "White rice in my little bowl!",
+      "sentence_audio": "audio/sentences/t12_rice_s.mp3"
+    },
+    {
+      "id": "t12_bread",
+      "text": "Bread",
+      "vi": "Bánh mì",
+      "image": "images/topics/t12_food_drinks/bread.png",
+      "audio": "audio/words/t12_bread.mp3",
+      "sentence": "Warm bread for breakfast!",
+      "sentence_audio": "audio/sentences/t12_bread_s.mp3"
+    },
+    {
+      "id": "t12_egg",
+      "text": "Egg",
+      "vi": "Quả trứng",
+      "image": "images/topics/t12_food_drinks/egg.png",
+      "audio": "audio/words/t12_egg.mp3",
+      "sentence": "One yummy egg for you!",
+      "sentence_audio": "audio/sentences/t12_egg_s.mp3"
+    },
+    {
+      "id": "t12_soup",
+      "text": "Soup",
+      "vi": "Canh / Súp",
+      "image": "images/topics/t12_food_drinks/soup.png",
+      "audio": "audio/words/t12_soup.mp3",
+      "sentence": "Blow on the warm soup!",
+      "sentence_audio": "audio/sentences/t12_soup_s.mp3"
+    },
+    {
+      "id": "t12_noodles",
+      "text": "Noodles",
+      "vi": "Mì / Phở",
+      "image": "images/topics/t12_food_drinks/noodles.png",
+      "audio": "audio/words/t12_noodles.mp3",
+      "sentence": "Slurp, slurp! Yummy noodles!",
+      "sentence_audio": "audio/sentences/t12_noodles_s.mp3"
+    },
+    {
+      "id": "t12_pizza",
+      "text": "Pizza",
+      "vi": "Bánh pizza",
+      "image": "images/topics/t12_food_drinks/pizza.png",
+      "audio": "audio/words/t12_pizza.mp3",
+      "sentence": "Let's share a slice of pizza!",
+      "sentence_audio": "audio/sentences/t12_pizza_s.mp3"
+    },
+    {
+      "id": "t12_cake",
+      "text": "Cake",
+      "vi": "Bánh kem",
+      "image": "images/topics/t12_food_drinks/cake.png",
+      "audio": "audio/words/t12_cake.mp3",
+      "sentence": "A sweet strawberry cake!",
+      "sentence_audio": "audio/sentences/t12_cake_s.mp3"
+    },
+    {
+      "id": "t12_ice_cream",
+      "text": "Ice cream",
+      "vi": "Kem",
+      "image": "images/topics/t12_food_drinks/ice_cream.png",
+      "audio": "audio/words/t12_ice_cream.mp3",
+      "sentence": "Cold and sweet ice cream!",
+      "sentence_audio": "audio/sentences/t12_ice_cream_s.mp3"
+    },
+    {
+      "id": "t12_milk",
+      "text": "Milk",
+      "vi": "Sữa",
+      "image": "images/topics/t12_food_drinks/milk.png",
+      "audio": "audio/words/t12_milk.mp3",
+      "sentence": "Drink your milk to grow tall!",
+      "sentence_audio": "audio/sentences/t12_milk_s.mp3"
+    },
+    {
+      "id": "t12_water",
+      "text": "Water",
+      "vi": "Nước lọc",
+      "image": "images/topics/t12_food_drinks/water.png",
+      "audio": "audio/words/t12_water.mp3",
+      "sentence": "Drink clean water every day!",
+      "sentence_audio": "audio/sentences/t12_water_s.mp3"
+    },
+    {
+      "id": "t12_juice",
+      "text": "Juice",
+      "vi": "Nước ép",
+      "image": "images/topics/t12_food_drinks/juice.png",
+      "audio": "audio/words/t12_juice.mp3",
+      "sentence": "Fresh orange juice, please!",
+      "sentence_audio": "audio/sentences/t12_juice_s.mp3"
+    },
+    {
+      "id": "t12_cookie",
+      "text": "Cookie",
+      "vi": "Bánh quy",
+      "image": "images/topics/t12_food_drinks/cookie.png",
+      "audio": "audio/words/t12_cookie.mp3",
+      "sentence": "Crunchy chocolate chip cookie!",
+      "sentence_audio": "audio/sentences/t12_cookie_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_hungry_thirsty",
+      "text": "I'm hungry! I'm thirsty!",
+      "audio": "audio/sentences/p_hungry_thirsty.mp3",
+      "vi": "Con đói bụng! Con khát nước!",
+      "pron_vi": "Ai-mơ hăng-gờ-ri! Ai-mơ thơ-xờ-ti!"
+    },
+    {
+      "id": "p_have_some_milk",
+      "text": "Can I have some milk, please?",
+      "audio": "audio/sentences/p_have_some_milk.mp3",
+      "vi": "Cho con xin một ít sữa ạ!",
+      "pron_vi": "Ken ai hép xăm miu-kờ, pờ-li-zơ?"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t12_food_drinks_l1",
+      "order": 1,
+      "new_words": [
+        "t12_rice",
+        "t12_bread",
+        "t12_egg"
+      ],
+      "sentence": "p_hungry_thirsty",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t12_rice",
+            "t12_bread",
+            "t12_egg"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t12_rice",
+            "t12_bread",
+            "t12_egg"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t12_rice",
+            "t12_bread"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t12_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hungry_thirsty"
+        ],
+        "activity_vi": "Trong bữa ăn, bố mẹ khuyến khích bé gọi tên món ăn và đồ uống bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t12_food_drinks_l2",
+      "order": 2,
+      "new_words": [
+        "t12_soup",
+        "t12_noodles",
+        "t12_pizza"
+      ],
+      "sentence": "p_have_some_milk",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t12_soup",
+            "t12_noodles",
+            "t12_pizza"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t12_soup",
+            "t12_noodles",
+            "t12_pizza"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t12_soup",
+            "t12_noodles",
+            "t12_pizza"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t12_soup",
+            "t12_noodles"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t12_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_have_some_milk"
+        ],
+        "activity_vi": "Trong bữa ăn, bố mẹ khuyến khích bé gọi tên món ăn và đồ uống bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t12_food_drinks_l3",
+      "order": 3,
+      "new_words": [
+        "t12_cake",
+        "t12_ice_cream",
+        "t12_milk"
+      ],
+      "sentence": "p_hungry_thirsty",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t12_cake",
+            "t12_ice_cream",
+            "t12_milk"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t12_cake",
+            "t12_ice_cream",
+            "t12_milk"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t12_cake",
+            "t12_ice_cream",
+            "t12_milk"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t12_cake",
+            "t12_ice_cream",
+            "t12_milk"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t12_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_hungry_thirsty"
+        ],
+        "activity_vi": "Trong bữa ăn, bố mẹ khuyến khích bé gọi tên món ăn và đồ uống bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t12_food_drinks_l4",
+      "order": 4,
+      "new_words": [
+        "t12_water",
+        "t12_juice",
+        "t12_cookie"
+      ],
+      "sentence": "p_have_some_milk",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t12_water",
+            "t12_juice",
+            "t12_cookie"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t12_rice",
+            "t12_bread",
+            "t12_egg",
+            "t12_soup",
+            "t12_noodles",
+            "t12_pizza",
+            "t12_cake",
+            "t12_ice_cream",
+            "t12_milk",
+            "t12_water",
+            "t12_juice",
+            "t12_cookie"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t12_water",
+            "t12_juice",
+            "t12_cookie"
+          ],
+          "pairs": 3
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t12_water",
+            "t12_juice",
+            "t12_cookie"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t12_water",
+            "t12_juice",
+            "t12_cookie"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t12_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_have_some_milk"
+        ],
+        "activity_vi": "Trong bữa ăn, bố mẹ khuyến khích bé gọi tên món ăn và đồ uống bằng tiếng Anh."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_rub_tummy",
+      "text": "Rub your yummy tummy! Yummy, yummy!",
+      "image": "images/tpr/cmd_rub_tummy.png",
+      "audio": "audio/instructions/cmd_rub_tummy.mp3"
+    },
+    {
+      "id": "cmd_smile_happy",
+      "text": "Show me your biggest happy smile!",
+      "image": "images/tpr/cmd_smile_happy.png",
+      "audio": "audio/instructions/cmd_smile_happy.mp3"
+    }
+  ]
+}

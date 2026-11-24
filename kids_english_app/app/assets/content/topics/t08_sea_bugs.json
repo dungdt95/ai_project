@@ -1,0 +1,433 @@
+{
+  "id": "t08_sea_bugs",
+  "level": 2,
+  "order": 8,
+  "title_en": "Ocean & Bugs",
+  "title_vi": "Sinh vật biển & Côn trùng",
+  "map_icon": "images/map/island_t08_sea_bugs.png",
+  "song": {
+    "id": "s08_ocean_song",
+    "title": "Deep Down in the Sparkly Sea",
+    "audio": "audio/songs/s08_ocean_song.mp3",
+    "cover": "images/songs/cover_s08_ocean.png",
+    "lyrics": [
+      {
+        "t": 6.5,
+        "text": "Deep down in the sparkly sea,"
+      },
+      {
+        "t": 8.8,
+        "text": "Who is swimming next to me?"
+      },
+      {
+        "t": 11.2,
+        "text": "Dolphin jumps and blue Whale sings,"
+      },
+      {
+        "t": 13.6,
+        "text": "Shark and Turtle flap their fins!"
+      },
+      {
+        "t": 16,
+        "text": "Octopus waves eight arms high,"
+      },
+      {
+        "t": 18.4,
+        "text": "Crab and Starfish say hi-hi!"
+      },
+      {
+        "t": 20.8,
+        "text": "Up above, the Bee goes buzz,"
+      },
+      {
+        "t": 23.1,
+        "text": "Butterfly and Ladybug dance with us!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t08_shark",
+      "text": "Shark",
+      "vi": "Cá mập",
+      "image": "images/topics/t08_sea_bugs/shark.png",
+      "audio": "audio/words/t08_shark.mp3",
+      "sentence": "The baby shark swims fast in the sea!",
+      "sentence_audio": "audio/sentences/t08_shark_s.mp3"
+    },
+    {
+      "id": "t08_whale",
+      "text": "Whale",
+      "vi": "Cá voi",
+      "image": "images/topics/t08_sea_bugs/whale.png",
+      "audio": "audio/words/t08_whale.mp3",
+      "sentence": "The blue whale is super big!",
+      "sentence_audio": "audio/sentences/t08_whale_s.mp3"
+    },
+    {
+      "id": "t08_dolphin",
+      "text": "Dolphin",
+      "vi": "Cá heo",
+      "image": "images/topics/t08_sea_bugs/dolphin.png",
+      "audio": "audio/words/t08_dolphin.mp3",
+      "sentence": "The clever dolphin jumps over the waves!",
+      "sentence_audio": "audio/sentences/t08_dolphin_s.mp3"
+    },
+    {
+      "id": "t08_turtle",
+      "text": "Turtle",
+      "vi": "Rùa biển",
+      "image": "images/topics/t08_sea_bugs/turtle.png",
+      "audio": "audio/words/t08_turtle.mp3",
+      "sentence": "The sea turtle swims nice and slow!",
+      "sentence_audio": "audio/sentences/t08_turtle_s.mp3"
+    },
+    {
+      "id": "t08_crab",
+      "text": "Crab",
+      "vi": "Con cua",
+      "image": "images/topics/t08_sea_bugs/crab.png",
+      "audio": "audio/words/t08_crab.mp3",
+      "sentence": "The red crab walks sideways! Click, click!",
+      "sentence_audio": "audio/sentences/t08_crab_s.mp3"
+    },
+    {
+      "id": "t08_octopus",
+      "text": "Octopus",
+      "vi": "Bạch tuộc",
+      "image": "images/topics/t08_sea_bugs/octopus.png",
+      "audio": "audio/words/t08_octopus.mp3",
+      "sentence": "The octopus has eight funny arms!",
+      "sentence_audio": "audio/sentences/t08_octopus_s.mp3"
+    },
+    {
+      "id": "t08_starfish",
+      "text": "Starfish",
+      "vi": "Sao biển",
+      "image": "images/topics/t08_sea_bugs/starfish.png",
+      "audio": "audio/words/t08_starfish.mp3",
+      "sentence": "Look at the pretty star under the sea!",
+      "sentence_audio": "audio/sentences/t08_starfish_s.mp3"
+    },
+    {
+      "id": "t08_bee",
+      "text": "Bee",
+      "vi": "Con ong",
+      "image": "images/topics/t08_sea_bugs/bee.png",
+      "audio": "audio/words/t08_bee.mp3",
+      "sentence": "Buzz, buzz goes the yellow bee!",
+      "sentence_audio": "audio/sentences/t08_bee_s.mp3"
+    },
+    {
+      "id": "t08_butterfly",
+      "text": "Butterfly",
+      "vi": "Con bướm",
+      "image": "images/topics/t08_sea_bugs/butterfly.png",
+      "audio": "audio/words/t08_butterfly.mp3",
+      "sentence": "The colorful butterfly flies over the flowers!",
+      "sentence_audio": "audio/sentences/t08_butterfly_s.mp3"
+    },
+    {
+      "id": "t08_ladybug",
+      "text": "Ladybug",
+      "vi": "Bọ rùa",
+      "image": "images/topics/t08_sea_bugs/ladybug.png",
+      "audio": "audio/words/t08_ladybug.mp3",
+      "sentence": "The little red ladybug has black spots!",
+      "sentence_audio": "audio/sentences/t08_ladybug_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_in_the_ocean",
+      "text": "What lives in the ocean?",
+      "audio": "audio/sentences/p_in_the_ocean.mp3",
+      "vi": "Con gì sống ở dưới biển nhỉ?",
+      "pron_vi": "Quát líp-xơ in đờ âu-sần?"
+    },
+    {
+      "id": "p_pretty_butterfly",
+      "text": "Look! A pretty butterfly!",
+      "audio": "audio/sentences/p_pretty_butterfly.mp3",
+      "vi": "Nhìn kìa! Một chú bướm xinh đẹp!",
+      "pron_vi": "Lúc! Ờ pờ-rít-ti bắt-tơ-phờ-lai!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t08_sea_bugs_l1",
+      "order": 1,
+      "new_words": [
+        "t08_shark",
+        "t08_whale",
+        "t08_dolphin"
+      ],
+      "sentence": "p_in_the_ocean",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t08_shark",
+            "t08_whale",
+            "t08_dolphin"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t08_shark",
+            "t08_whale",
+            "t08_dolphin"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t08_shark",
+            "t08_whale"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_swim_fish"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t08_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_in_the_ocean"
+        ],
+        "activity_vi": "Bố mẹ cùng bé làm động tác bơi như cá heo hoặc vẫy cánh như bướm nhé."
+      }
+    },
+    {
+      "id": "t08_sea_bugs_l2",
+      "order": 2,
+      "new_words": [
+        "t08_turtle",
+        "t08_crab",
+        "t08_octopus"
+      ],
+      "sentence": "p_pretty_butterfly",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t08_turtle",
+            "t08_crab",
+            "t08_octopus"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t08_turtle",
+            "t08_crab",
+            "t08_octopus"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t08_turtle",
+            "t08_crab",
+            "t08_octopus"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t08_turtle",
+            "t08_crab"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t08_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_pretty_butterfly"
+        ],
+        "activity_vi": "Bố mẹ cùng bé làm động tác bơi như cá heo hoặc vẫy cánh như bướm nhé."
+      }
+    },
+    {
+      "id": "t08_sea_bugs_l3",
+      "order": 3,
+      "new_words": [
+        "t08_starfish",
+        "t08_bee"
+      ],
+      "sentence": "p_in_the_ocean",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t08_starfish",
+            "t08_bee"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t08_starfish",
+            "t08_bee"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t08_starfish",
+            "t08_bee"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t08_starfish",
+            "t08_bee"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_swim_fish"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t08_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_in_the_ocean"
+        ],
+        "activity_vi": "Bố mẹ cùng bé làm động tác bơi như cá heo hoặc vẫy cánh như bướm nhé."
+      }
+    },
+    {
+      "id": "t08_sea_bugs_l4",
+      "order": 4,
+      "new_words": [
+        "t08_butterfly",
+        "t08_ladybug"
+      ],
+      "sentence": "p_pretty_butterfly",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t08_butterfly",
+            "t08_ladybug"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t08_shark",
+            "t08_whale",
+            "t08_dolphin",
+            "t08_turtle",
+            "t08_crab",
+            "t08_octopus",
+            "t08_starfish",
+            "t08_bee",
+            "t08_butterfly",
+            "t08_ladybug"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t08_butterfly",
+            "t08_ladybug"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t08_butterfly",
+            "t08_ladybug"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t08_butterfly",
+            "t08_ladybug"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_fly_bird"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t08_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_pretty_butterfly"
+        ],
+        "activity_vi": "Bố mẹ cùng bé làm động tác bơi như cá heo hoặc vẫy cánh như bướm nhé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_swim_fish",
+      "text": "Swim like a happy fish!",
+      "image": "images/tpr/cmd_swim_fish.png",
+      "audio": "audio/instructions/cmd_swim_fish.mp3"
+    },
+    {
+      "id": "cmd_fly_bird",
+      "text": "Fly like a little bird!",
+      "image": "images/tpr/cmd_fly_bird.png",
+      "audio": "audio/instructions/cmd_fly_bird.mp3"
+    }
+  ]
+}

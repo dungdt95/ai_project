@@ -1,0 +1,433 @@
+{
+  "id": "t16_feelings",
+  "level": 4,
+  "order": 16,
+  "title_en": "My Feelings",
+  "title_vi": "Cảm xúc của bé",
+  "map_icon": "images/map/island_t16_feelings.png",
+  "song": {
+    "id": "s16_feelings_song",
+    "title": "Happy Faces, Many Feelings",
+    "audio": "audio/songs/s16_feelings_song.mp3",
+    "cover": "images/songs/cover_s16_feelings.png",
+    "lyrics": [
+      {
+        "t": 10.1,
+        "text": "How do you feel inside today?"
+      },
+      {
+        "t": 15.5,
+        "text": "Every feeling is okay!"
+      },
+      {
+        "t": 20.5,
+        "text": "When I am Happy, I smile wide,"
+      },
+      {
+        "t": 25.4,
+        "text": "When I am Sad, Mom's by my side!"
+      },
+      {
+        "t": 29.3,
+        "text": "Angry or Scared, take a breath so deep,"
+      },
+      {
+        "t": 34.8,
+        "text": "Tired and Sleepy, ready to sleep!"
+      },
+      {
+        "t": 39.8,
+        "text": "Hungry or Thirsty, Surprised, Excited too,"
+      },
+      {
+        "t": 44.3,
+        "text": "Momo is always here with you!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t16_happy",
+      "text": "Happy",
+      "vi": "Vui vẻ",
+      "image": "images/topics/t16_feelings/happy.png",
+      "audio": "audio/words/t16_happy.mp3",
+      "sentence": "I am happy! Smile big!",
+      "sentence_audio": "audio/sentences/t16_happy_s.mp3"
+    },
+    {
+      "id": "t16_sad",
+      "text": "Sad",
+      "vi": "Buồn",
+      "image": "images/topics/t16_feelings/sad.png",
+      "audio": "audio/words/t16_sad.mp3",
+      "sentence": "When I feel sad, I need a hug.",
+      "sentence_audio": "audio/sentences/t16_sad_s.mp3"
+    },
+    {
+      "id": "t16_angry",
+      "text": "Angry",
+      "vi": "Tức giận",
+      "image": "images/topics/t16_feelings/angry.png",
+      "audio": "audio/words/t16_angry.mp3",
+      "sentence": "Take a deep breath when you're angry.",
+      "sentence_audio": "audio/sentences/t16_angry_s.mp3"
+    },
+    {
+      "id": "t16_scared",
+      "text": "Scared",
+      "vi": "Sợ hãi",
+      "image": "images/topics/t16_feelings/scared.png",
+      "audio": "audio/words/t16_scared.mp3",
+      "sentence": "Don't be scared, Mommy is here!",
+      "sentence_audio": "audio/sentences/t16_scared_s.mp3"
+    },
+    {
+      "id": "t16_sleepy",
+      "text": "Sleepy",
+      "vi": "Buồn ngủ",
+      "image": "images/topics/t16_feelings/sleepy.png",
+      "audio": "audio/words/t16_sleepy.mp3",
+      "sentence": "Yawn! I am so sleepy now!",
+      "sentence_audio": "audio/sentences/t16_sleepy_s.mp3"
+    },
+    {
+      "id": "t16_tired",
+      "text": "Tired",
+      "vi": "Mệt",
+      "image": "images/topics/t16_feelings/tired.png",
+      "audio": "audio/words/t16_tired.mp3",
+      "sentence": "Let's sit and rest when we're tired.",
+      "sentence_audio": "audio/sentences/t16_tired_s.mp3"
+    },
+    {
+      "id": "t16_hungry",
+      "text": "Hungry",
+      "vi": "Đói bụng",
+      "image": "images/topics/t16_feelings/hungry.png",
+      "audio": "audio/words/t16_hungry.mp3",
+      "sentence": "My tummy says I'm hungry!",
+      "sentence_audio": "audio/sentences/t16_hungry_s.mp3"
+    },
+    {
+      "id": "t16_thirsty",
+      "text": "Thirsty",
+      "vi": "Khát nước",
+      "image": "images/topics/t16_feelings/thirsty.png",
+      "audio": "audio/words/t16_thirsty.mp3",
+      "sentence": "I'm thirsty, I want some water!",
+      "sentence_audio": "audio/sentences/t16_thirsty_s.mp3"
+    },
+    {
+      "id": "t16_surprised",
+      "text": "Surprised",
+      "vi": "Ngạc nhiên",
+      "image": "images/topics/t16_feelings/surprised.png",
+      "audio": "audio/words/t16_surprised.mp3",
+      "sentence": "Wow! What a big surprise!",
+      "sentence_audio": "audio/sentences/t16_surprised_s.mp3"
+    },
+    {
+      "id": "t16_excited",
+      "text": "Excited",
+      "vi": "Hào hứng",
+      "image": "images/topics/t16_feelings/excited.png",
+      "audio": "audio/words/t16_excited.mp3",
+      "sentence": "Hooray! I am super excited!",
+      "sentence_audio": "audio/sentences/t16_excited_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_how_do_you_feel",
+      "text": "How do you feel today? I'm happy!",
+      "audio": "audio/sentences/p_how_do_you_feel.mp3",
+      "vi": "Hôm nay con thấy thế nào? Con rất vui!",
+      "pron_vi": "Hao đu diu phiu tu-đây? Ai-mơ hép-pi!"
+    },
+    {
+      "id": "p_dont_be_scared",
+      "text": "Don't be scared! Mommy is here!",
+      "audio": "audio/sentences/p_dont_be_scared.mp3",
+      "vi": "Đừng sợ nhé! Có mẹ ở đây rồi!",
+      "pron_vi": "Đôn-tờ bi xờ-ke-đờ! Măm-mi i-zơ hia!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t16_feelings_l1",
+      "order": 1,
+      "new_words": [
+        "t16_happy",
+        "t16_sad",
+        "t16_angry"
+      ],
+      "sentence": "p_how_do_you_feel",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t16_happy",
+            "t16_sad",
+            "t16_angry"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t16_happy",
+            "t16_sad",
+            "t16_angry"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t16_happy",
+            "t16_sad"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t16_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_do_you_feel"
+        ],
+        "activity_vi": "Mỗi ngày bố mẹ hỏi \"How do you feel today?\" để bé biết gọi tên cảm xúc của mình."
+      }
+    },
+    {
+      "id": "t16_feelings_l2",
+      "order": 2,
+      "new_words": [
+        "t16_scared",
+        "t16_sleepy",
+        "t16_tired"
+      ],
+      "sentence": "p_dont_be_scared",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t16_scared",
+            "t16_sleepy",
+            "t16_tired"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t16_scared",
+            "t16_sleepy",
+            "t16_tired"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t16_scared",
+            "t16_sleepy",
+            "t16_tired"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t16_scared",
+            "t16_sleepy"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_give_hug"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t16_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_dont_be_scared"
+        ],
+        "activity_vi": "Mỗi ngày bố mẹ hỏi \"How do you feel today?\" để bé biết gọi tên cảm xúc của mình."
+      }
+    },
+    {
+      "id": "t16_feelings_l3",
+      "order": 3,
+      "new_words": [
+        "t16_hungry",
+        "t16_thirsty"
+      ],
+      "sentence": "p_how_do_you_feel",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t16_hungry",
+            "t16_thirsty"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t16_hungry",
+            "t16_thirsty"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t16_hungry",
+            "t16_thirsty"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t16_hungry",
+            "t16_thirsty"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t16_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_how_do_you_feel"
+        ],
+        "activity_vi": "Mỗi ngày bố mẹ hỏi \"How do you feel today?\" để bé biết gọi tên cảm xúc của mình."
+      }
+    },
+    {
+      "id": "t16_feelings_l4",
+      "order": 4,
+      "new_words": [
+        "t16_surprised",
+        "t16_excited"
+      ],
+      "sentence": "p_dont_be_scared",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t16_surprised",
+            "t16_excited"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t16_happy",
+            "t16_sad",
+            "t16_angry",
+            "t16_scared",
+            "t16_sleepy",
+            "t16_tired",
+            "t16_hungry",
+            "t16_thirsty",
+            "t16_surprised",
+            "t16_excited"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t16_surprised",
+            "t16_excited"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t16_surprised",
+            "t16_excited"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t16_surprised",
+            "t16_excited"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_give_hug"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t16_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_dont_be_scared"
+        ],
+        "activity_vi": "Mỗi ngày bố mẹ hỏi \"How do you feel today?\" để bé biết gọi tên cảm xúc của mình."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_smile_happy",
+      "text": "Show me your biggest happy smile!",
+      "image": "images/tpr/cmd_smile_happy.png",
+      "audio": "audio/instructions/cmd_smile_happy.mp3"
+    },
+    {
+      "id": "cmd_give_hug",
+      "text": "Give yourself a big warm hug!",
+      "image": "images/tpr/cmd_give_hug.png",
+      "audio": "audio/instructions/cmd_give_hug.mp3"
+    }
+  ]
+}

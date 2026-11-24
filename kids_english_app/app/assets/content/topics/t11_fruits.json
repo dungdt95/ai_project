@@ -1,0 +1,433 @@
+{
+  "id": "t11_fruits",
+  "level": 3,
+  "order": 11,
+  "title_en": "Yummy Fruits",
+  "title_vi": "Trái cây tươi ngon",
+  "map_icon": "images/map/island_t11_fruits.png",
+  "song": {
+    "id": "s11_fruits_song",
+    "title": "Yummy Fruit Salad Dance",
+    "audio": "audio/songs/s11_fruits_song.mp3",
+    "cover": "images/songs/cover_s11_fruits.png",
+    "lyrics": [
+      {
+        "t": 0.9,
+        "text": "Red sweet Apple, crunch, crunch, crunch!"
+      },
+      {
+        "t": 5.5,
+        "text": "Yellow Banana for our lunch!"
+      },
+      {
+        "t": 9.4,
+        "text": "Juicy Orange and Mango sweet,"
+      },
+      {
+        "t": 13.9,
+        "text": "Big Watermelon is a treat!"
+      },
+      {
+        "t": 18.5,
+        "text": "Purple Grapes and Strawberry red,"
+      },
+      {
+        "t": 23.2,
+        "text": "Pineapple wears a crown on its head!"
+      },
+      {
+        "t": 27.7,
+        "text": "Soft pink Peach and Coconut cool,"
+      },
+      {
+        "t": 32.5,
+        "text": "Yummy fruit makes us strong for school!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t11_apple",
+      "text": "Apple",
+      "vi": "Quả táo",
+      "image": "images/topics/t11_fruits/apple.png",
+      "audio": "audio/words/t11_apple.mp3",
+      "sentence": "Crunch! A sweet red apple!",
+      "sentence_audio": "audio/sentences/t11_apple_s.mp3"
+    },
+    {
+      "id": "t11_banana",
+      "text": "Banana",
+      "vi": "Quả chuối",
+      "image": "images/topics/t11_fruits/banana.png",
+      "audio": "audio/words/t11_banana.mp3",
+      "sentence": "Momo loves yellow bananas!",
+      "sentence_audio": "audio/sentences/t11_banana_s.mp3"
+    },
+    {
+      "id": "t11_orange",
+      "text": "Orange",
+      "vi": "Quả cam",
+      "image": "images/topics/t11_fruits/orange.png",
+      "audio": "audio/words/t11_orange.mp3",
+      "sentence": "A juicy round orange!",
+      "sentence_audio": "audio/sentences/t11_orange_s.mp3"
+    },
+    {
+      "id": "t11_mango",
+      "text": "Mango",
+      "vi": "Quả xoài",
+      "image": "images/topics/t11_fruits/mango.png",
+      "audio": "audio/words/t11_mango.mp3",
+      "sentence": "Sweet yellow mango, yummy!",
+      "sentence_audio": "audio/sentences/t11_mango_s.mp3"
+    },
+    {
+      "id": "t11_watermelon",
+      "text": "Watermelon",
+      "vi": "Quả dưa hấu",
+      "image": "images/topics/t11_fruits/watermelon.png",
+      "audio": "audio/words/t11_watermelon.mp3",
+      "sentence": "Big green watermelon, red inside!",
+      "sentence_audio": "audio/sentences/t11_watermelon_s.mp3"
+    },
+    {
+      "id": "t11_grapes",
+      "text": "Grapes",
+      "vi": "Chùm nho",
+      "image": "images/topics/t11_fruits/grapes.png",
+      "audio": "audio/words/t11_grapes.mp3",
+      "sentence": "Purple grapes, one by one!",
+      "sentence_audio": "audio/sentences/t11_grapes_s.mp3"
+    },
+    {
+      "id": "t11_strawberry",
+      "text": "Strawberry",
+      "vi": "Quả dâu tây",
+      "image": "images/topics/t11_fruits/strawberry.png",
+      "audio": "audio/words/t11_strawberry.mp3",
+      "sentence": "A cute little red strawberry!",
+      "sentence_audio": "audio/sentences/t11_strawberry_s.mp3"
+    },
+    {
+      "id": "t11_pineapple",
+      "text": "Pineapple",
+      "vi": "Quả dứa (thơm)",
+      "image": "images/topics/t11_fruits/pineapple.png",
+      "audio": "audio/words/t11_pineapple.mp3",
+      "sentence": "A pineapple wears a green crown!",
+      "sentence_audio": "audio/sentences/t11_pineapple_s.mp3"
+    },
+    {
+      "id": "t11_peach",
+      "text": "Peach",
+      "vi": "Quả đào",
+      "image": "images/topics/t11_fruits/peach.png",
+      "audio": "audio/words/t11_peach.mp3",
+      "sentence": "A soft pink peach!",
+      "sentence_audio": "audio/sentences/t11_peach_s.mp3"
+    },
+    {
+      "id": "t11_coconut",
+      "text": "Coconut",
+      "vi": "Quả dừa",
+      "image": "images/topics/t11_fruits/coconut.png",
+      "audio": "audio/words/t11_coconut.mp3",
+      "sentence": "Cool coconut water on a sunny day!",
+      "sentence_audio": "audio/sentences/t11_coconut_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_like_apples",
+      "text": "Do you like apples? Yes, I do!",
+      "audio": "audio/sentences/p_like_apples.mp3",
+      "vi": "Con có thích táo không? Dạ có ạ!",
+      "pron_vi": "Đu diu lai áp-pồ-xơ? Diét, ai đu!"
+    },
+    {
+      "id": "p_eat_fruit",
+      "text": "Eat your fruit! It's yummy!",
+      "audio": "audio/sentences/p_eat_fruit.mp3",
+      "vi": "Ăn hoa quả nào con! Ngon lắm đấy!",
+      "pron_vi": "Ít gio phờ-rút! Ít-xơ dăm-mi!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t11_fruits_l1",
+      "order": 1,
+      "new_words": [
+        "t11_apple",
+        "t11_banana",
+        "t11_orange"
+      ],
+      "sentence": "p_like_apples",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t11_apple",
+            "t11_banana",
+            "t11_orange"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t11_apple",
+            "t11_banana",
+            "t11_orange"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t11_apple",
+            "t11_banana"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t11_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_like_apples"
+        ],
+        "activity_vi": "Khi ăn hoa quả hằng ngày, bố mẹ hỏi bé tên trái cây đó bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t11_fruits_l2",
+      "order": 2,
+      "new_words": [
+        "t11_mango",
+        "t11_watermelon",
+        "t11_grapes"
+      ],
+      "sentence": "p_eat_fruit",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t11_mango",
+            "t11_watermelon",
+            "t11_grapes"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t11_mango",
+            "t11_watermelon",
+            "t11_grapes"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t11_mango",
+            "t11_watermelon",
+            "t11_grapes"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t11_mango",
+            "t11_watermelon"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t11_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_eat_fruit"
+        ],
+        "activity_vi": "Khi ăn hoa quả hằng ngày, bố mẹ hỏi bé tên trái cây đó bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t11_fruits_l3",
+      "order": 3,
+      "new_words": [
+        "t11_strawberry",
+        "t11_pineapple"
+      ],
+      "sentence": "p_like_apples",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t11_strawberry",
+            "t11_pineapple"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t11_strawberry",
+            "t11_pineapple"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t11_strawberry",
+            "t11_pineapple"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t11_strawberry",
+            "t11_pineapple"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_rub_tummy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t11_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_like_apples"
+        ],
+        "activity_vi": "Khi ăn hoa quả hằng ngày, bố mẹ hỏi bé tên trái cây đó bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t11_fruits_l4",
+      "order": 4,
+      "new_words": [
+        "t11_peach",
+        "t11_coconut"
+      ],
+      "sentence": "p_eat_fruit",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t11_peach",
+            "t11_coconut"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t11_apple",
+            "t11_banana",
+            "t11_orange",
+            "t11_mango",
+            "t11_watermelon",
+            "t11_grapes",
+            "t11_strawberry",
+            "t11_pineapple",
+            "t11_peach",
+            "t11_coconut"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t11_peach",
+            "t11_coconut"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t11_peach",
+            "t11_coconut"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t11_peach",
+            "t11_coconut"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t11_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_eat_fruit"
+        ],
+        "activity_vi": "Khi ăn hoa quả hằng ngày, bố mẹ hỏi bé tên trái cây đó bằng tiếng Anh nhé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_rub_tummy",
+      "text": "Rub your yummy tummy! Yummy, yummy!",
+      "image": "images/tpr/cmd_rub_tummy.png",
+      "audio": "audio/instructions/cmd_rub_tummy.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

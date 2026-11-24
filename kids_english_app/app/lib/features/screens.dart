@@ -351,7 +351,7 @@ class _Island extends StatelessWidget {
               SizedBox(
                 height: 150,
                 width: 150,
-                child: MediaImage(topic.mapIcon, label: topic.titleEn),
+                child: MediaImage(topic.mapIcon, baseDir: topic.baseDir, label: topic.titleEn),
               ),
               const SizedBox(height: 6),
               Text(

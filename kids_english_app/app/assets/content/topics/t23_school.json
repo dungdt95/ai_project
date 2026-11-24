@@ -1,0 +1,433 @@
+{
+  "id": "t23_school",
+  "level": 5,
+  "order": 23,
+  "title_en": "My Preschool",
+  "title_vi": "Trường học của bé",
+  "map_icon": "images/map/island_t23_school.png",
+  "song": {
+    "id": "s23_school_song",
+    "title": "Off to Preschool We Go",
+    "audio": "audio/songs/s23_school_song.mp3",
+    "cover": "images/songs/cover_s23_school.png",
+    "lyrics": [
+      {
+        "t": 0.4,
+        "text": "Pack your school Bag, ready, set, go,"
+      },
+      {
+        "t": 2.9,
+        "text": "Off to our happy School we go!"
+      },
+      {
+        "t": 5.1,
+        "text": "Kind sweet Teacher smiles at the door,"
+      },
+      {
+        "t": 7.3,
+        "text": "Friends in the Classroom on the floor!"
+      },
+      {
+        "t": 9.7,
+        "text": "Open a Book and read a rhyme,"
+      },
+      {
+        "t": 12.1,
+        "text": "Pencil, Crayon, and Paper time!"
+      },
+      {
+        "t": 14.5,
+        "text": "Safe little Scissors, cut with care,"
+      },
+      {
+        "t": 16.8,
+        "text": "Out to the Playground in the fresh air!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t23_school",
+      "text": "School",
+      "vi": "Trường học",
+      "image": "images/topics/t23_school/school.png",
+      "audio": "audio/words/t23_school.mp3",
+      "sentence": "I love going to my happy school!",
+      "sentence_audio": "audio/sentences/t23_school_s.mp3"
+    },
+    {
+      "id": "t23_teacher",
+      "text": "Teacher",
+      "vi": "Cô giáo",
+      "image": "images/topics/t23_school/teacher.png",
+      "audio": "audio/words/t23_teacher.mp3",
+      "sentence": "My teacher is kind and sweet!",
+      "sentence_audio": "audio/sentences/t23_teacher_s.mp3"
+    },
+    {
+      "id": "t23_classroom",
+      "text": "Classroom",
+      "vi": "Lớp học",
+      "image": "images/topics/t23_school/classroom.png",
+      "audio": "audio/words/t23_classroom.mp3",
+      "sentence": "We sing and play in our classroom!",
+      "sentence_audio": "audio/sentences/t23_classroom_s.mp3"
+    },
+    {
+      "id": "t23_book",
+      "text": "Book",
+      "vi": "Quyển sách",
+      "image": "images/topics/t23_school/book.png",
+      "audio": "audio/words/t23_book.mp3",
+      "sentence": "Open the picture book and read!",
+      "sentence_audio": "audio/sentences/t23_book_s.mp3"
+    },
+    {
+      "id": "t23_crayon",
+      "text": "Crayon",
+      "vi": "Bút sáp màu",
+      "image": "images/topics/t23_school/crayon.png",
+      "audio": "audio/words/t23_crayon.mp3",
+      "sentence": "Color the picture with a red crayon!",
+      "sentence_audio": "audio/sentences/t23_crayon_s.mp3"
+    },
+    {
+      "id": "t23_pencil",
+      "text": "Pencil",
+      "vi": "Bút chì",
+      "image": "images/topics/t23_school/pencil.png",
+      "audio": "audio/words/t23_pencil.mp3",
+      "sentence": "Draw a circle with a pencil!",
+      "sentence_audio": "audio/sentences/t23_pencil_s.mp3"
+    },
+    {
+      "id": "t23_paper",
+      "text": "Paper",
+      "vi": "Tờ giấy",
+      "image": "images/topics/t23_school/paper.png",
+      "audio": "audio/words/t23_paper.mp3",
+      "sentence": "A clean sheet of white paper!",
+      "sentence_audio": "audio/sentences/t23_paper_s.mp3"
+    },
+    {
+      "id": "t23_bag",
+      "text": "Bag",
+      "vi": "Cặp sách (Ba lô)",
+      "image": "images/topics/t23_school/bag.png",
+      "audio": "audio/words/t23_bag.mp3",
+      "sentence": "Put your book inside your school bag!",
+      "sentence_audio": "audio/sentences/t23_bag_s.mp3"
+    },
+    {
+      "id": "t23_scissors",
+      "text": "Scissors",
+      "vi": "Cái kéo",
+      "image": "images/topics/t23_school/scissors.png",
+      "audio": "audio/words/t23_scissors.mp3",
+      "sentence": "Cut the paper carefully with safety scissors!",
+      "sentence_audio": "audio/sentences/t23_scissors_s.mp3"
+    },
+    {
+      "id": "t23_playground",
+      "text": "Playground",
+      "vi": "Sân chơi",
+      "image": "images/topics/t23_school/playground.png",
+      "audio": "audio/words/t23_playground.mp3",
+      "sentence": "Slide and swing at the playground!",
+      "sentence_audio": "audio/sentences/t23_playground_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_ready_for_school",
+      "text": "Are you ready for school? Pack your bag!",
+      "audio": "audio/sentences/p_ready_for_school.mp3",
+      "vi": "Con sẵn sàng đi học chưa? Cất đồ vào cặp nào!",
+      "pron_vi": "A diu re-đi pho xờ-cun? Péc gio béc!"
+    },
+    {
+      "id": "p_listen_teacher",
+      "text": "Listen to your teacher at school!",
+      "audio": "audio/sentences/p_listen_teacher.mp3",
+      "vi": "Ở trường con nhớ nghe lời cô giáo nhé!",
+      "pron_vi": "Lít-sần tu gio tít-chờ ét xờ-cun!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t23_school_l1",
+      "order": 1,
+      "new_words": [
+        "t23_school",
+        "t23_teacher",
+        "t23_classroom"
+      ],
+      "sentence": "p_ready_for_school",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t23_school",
+            "t23_teacher",
+            "t23_classroom"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t23_school",
+            "t23_teacher",
+            "t23_classroom"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t23_school",
+            "t23_teacher"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_draw_circle"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t23_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_ready_for_school"
+        ],
+        "activity_vi": "Bố mẹ cùng bé soạn ba lô đi học và gọi tên sách, bút chì, bút màu bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t23_school_l2",
+      "order": 2,
+      "new_words": [
+        "t23_book",
+        "t23_crayon",
+        "t23_pencil"
+      ],
+      "sentence": "p_listen_teacher",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t23_book",
+            "t23_crayon",
+            "t23_pencil"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t23_book",
+            "t23_crayon",
+            "t23_pencil"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t23_book",
+            "t23_crayon",
+            "t23_pencil"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t23_book",
+            "t23_crayon"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t23_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_listen_teacher"
+        ],
+        "activity_vi": "Bố mẹ cùng bé soạn ba lô đi học và gọi tên sách, bút chì, bút màu bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t23_school_l3",
+      "order": 3,
+      "new_words": [
+        "t23_paper",
+        "t23_bag"
+      ],
+      "sentence": "p_ready_for_school",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t23_paper",
+            "t23_bag"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t23_paper",
+            "t23_bag"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t23_paper",
+            "t23_bag"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t23_paper",
+            "t23_bag"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_draw_circle"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t23_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_ready_for_school"
+        ],
+        "activity_vi": "Bố mẹ cùng bé soạn ba lô đi học và gọi tên sách, bút chì, bút màu bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t23_school_l4",
+      "order": 4,
+      "new_words": [
+        "t23_scissors",
+        "t23_playground"
+      ],
+      "sentence": "p_listen_teacher",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t23_scissors",
+            "t23_playground"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t23_school",
+            "t23_teacher",
+            "t23_classroom",
+            "t23_book",
+            "t23_crayon",
+            "t23_pencil",
+            "t23_paper",
+            "t23_bag",
+            "t23_scissors",
+            "t23_playground"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t23_scissors",
+            "t23_playground"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t23_scissors",
+            "t23_playground"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t23_scissors",
+            "t23_playground"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_clap_hands"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t23_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_listen_teacher"
+        ],
+        "activity_vi": "Bố mẹ cùng bé soạn ba lô đi học và gọi tên sách, bút chì, bút màu bằng tiếng Anh."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_draw_circle",
+      "text": "Draw a big round circle in the air!",
+      "image": "images/tpr/cmd_draw_circle.png",
+      "audio": "audio/instructions/cmd_draw_circle.mp3"
+    },
+    {
+      "id": "cmd_clap_hands",
+      "text": "Clap your hands!",
+      "image": "images/tpr/cmd_clap_hands.png",
+      "audio": "audio/instructions/cmd_clap_hands.mp3"
+    }
+  ]
+}

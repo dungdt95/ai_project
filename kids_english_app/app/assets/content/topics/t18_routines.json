@@ -1,0 +1,433 @@
+{
+  "id": "t18_routines",
+  "level": 4,
+  "order": 18,
+  "title_en": "Daily Routines",
+  "title_vi": "Thói quen hằng ngày",
+  "map_icon": "images/map/island_t18_routines.png",
+  "song": {
+    "id": "s18_routines_song",
+    "title": "Every Morning, Every Night",
+    "audio": "audio/songs/s18_routines_song.mp3",
+    "cover": "images/songs/cover_s18_routines.png",
+    "lyrics": [
+      {
+        "t": 1.8,
+        "text": "Wake up smiling with the morning sun,"
+      },
+      {
+        "t": 4.5,
+        "text": "A brand new day has just begun!"
+      },
+      {
+        "t": 7.2,
+        "text": "Brush your teeth and wash your face,"
+      },
+      {
+        "t": 9.7,
+        "text": "Comb your hair neatly in place!"
+      },
+      {
+        "t": 12,
+        "text": "Wash your hands before we eat,"
+      },
+      {
+        "t": 14.4,
+        "text": "Healthy breakfast, warm and sweet!"
+      },
+      {
+        "t": 16.9,
+        "text": "Take a bath and read a book,"
+      },
+      {
+        "t": 19.4,
+        "text": "Go to bed, good night, sweet dreams!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t18_wake_up",
+      "text": "Wake up",
+      "vi": "Thức dậy",
+      "image": "images/topics/t18_routines/wake_up.png",
+      "audio": "audio/words/t18_wake_up.mp3",
+      "sentence": "Good morning! Time to wake up!",
+      "sentence_audio": "audio/sentences/t18_wake_up_s.mp3"
+    },
+    {
+      "id": "t18_brush_teeth",
+      "text": "Brush teeth",
+      "vi": "Đánh răng",
+      "image": "images/topics/t18_routines/brush_teeth.png",
+      "audio": "audio/words/t18_brush_teeth.mp3",
+      "sentence": "Brush your teeth up and down!",
+      "sentence_audio": "audio/sentences/t18_brush_teeth_s.mp3"
+    },
+    {
+      "id": "t18_wash_face",
+      "text": "Wash face",
+      "vi": "Rửa mặt",
+      "image": "images/topics/t18_routines/wash_face.png",
+      "audio": "audio/words/t18_wash_face.mp3",
+      "sentence": "Splash! Wash your cute face!",
+      "sentence_audio": "audio/sentences/t18_wash_face_s.mp3"
+    },
+    {
+      "id": "t18_wash_hands",
+      "text": "Wash hands",
+      "vi": "Rửa tay",
+      "image": "images/topics/t18_routines/wash_hands.png",
+      "audio": "audio/words/t18_wash_hands.mp3",
+      "sentence": "Wash your hands with soap and water!",
+      "sentence_audio": "audio/sentences/t18_wash_hands_s.mp3"
+    },
+    {
+      "id": "t18_comb_hair",
+      "text": "Comb hair",
+      "vi": "Chải tóc",
+      "image": "images/topics/t18_routines/comb_hair.png",
+      "audio": "audio/words/t18_comb_hair.mp3",
+      "sentence": "Comb your hair nice and neat!",
+      "sentence_audio": "audio/sentences/t18_comb_hair_s.mp3"
+    },
+    {
+      "id": "t18_take_a_bath",
+      "text": "Take a bath",
+      "vi": "Đi tắm",
+      "image": "images/topics/t18_routines/take_a_bath.png",
+      "audio": "audio/words/t18_take_a_bath.mp3",
+      "sentence": "Rub-a-dub! Take a warm bubble bath!",
+      "sentence_audio": "audio/sentences/t18_take_a_bath_s.mp3"
+    },
+    {
+      "id": "t18_eat_breakfast",
+      "text": "Eat breakfast",
+      "vi": "Ăn sáng",
+      "image": "images/topics/t18_routines/eat_breakfast.png",
+      "audio": "audio/words/t18_eat_breakfast.mp3",
+      "sentence": "Eat a healthy breakfast every morning!",
+      "sentence_audio": "audio/sentences/t18_eat_breakfast_s.mp3"
+    },
+    {
+      "id": "t18_read_a_book",
+      "text": "Read a book",
+      "vi": "Đọc sách",
+      "image": "images/topics/t18_routines/read_a_book.png",
+      "audio": "audio/words/t18_read_a_book.mp3",
+      "sentence": "Read a storybook before bedtime!",
+      "sentence_audio": "audio/sentences/t18_read_a_book_s.mp3"
+    },
+    {
+      "id": "t18_go_to_bed",
+      "text": "Go to bed",
+      "vi": "Đi ngủ",
+      "image": "images/topics/t18_routines/go_to_bed.png",
+      "audio": "audio/words/t18_go_to_bed.mp3",
+      "sentence": "Put on pajamas and go to bed!",
+      "sentence_audio": "audio/sentences/t18_go_to_bed_s.mp3"
+    },
+    {
+      "id": "t18_good_night",
+      "text": "Good night",
+      "vi": "Chúc ngủ ngon",
+      "image": "images/topics/t18_routines/good_night.png",
+      "audio": "audio/words/t18_good_night.mp3",
+      "sentence": "Good night, sweet dreams!",
+      "sentence_audio": "audio/sentences/t18_good_night_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_time_to_brush",
+      "text": "Good morning! Time to brush your teeth!",
+      "audio": "audio/sentences/p_time_to_brush.mp3",
+      "vi": "Chào buổi sáng! Đến giờ đánh răng rồi!",
+      "pron_vi": "Gút mo-ninh! Tham tu bơ-rắt-sờ gio tít!"
+    },
+    {
+      "id": "p_good_night_sleep",
+      "text": "Time to go to bed! Good night!",
+      "audio": "audio/sentences/p_good_night_sleep.mp3",
+      "vi": "Đến giờ đi ngủ rồi! Chúc con ngủ ngon!",
+      "pron_vi": "Tham tu gâu tu bét! Gút nai!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t18_routines_l1",
+      "order": 1,
+      "new_words": [
+        "t18_wake_up",
+        "t18_brush_teeth",
+        "t18_wash_face"
+      ],
+      "sentence": "p_time_to_brush",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t18_wake_up",
+            "t18_brush_teeth",
+            "t18_wash_face"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t18_wake_up",
+            "t18_brush_teeth",
+            "t18_wash_face"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t18_wake_up",
+            "t18_brush_teeth"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_brush_teeth"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t18_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_time_to_brush"
+        ],
+        "activity_vi": "Bố mẹ nhắc bé các hoạt động sáng và tối bằng tiếng Anh: wake up, brush teeth, go to bed."
+      }
+    },
+    {
+      "id": "t18_routines_l2",
+      "order": 2,
+      "new_words": [
+        "t18_wash_hands",
+        "t18_comb_hair",
+        "t18_take_a_bath"
+      ],
+      "sentence": "p_good_night_sleep",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t18_wash_hands",
+            "t18_comb_hair",
+            "t18_take_a_bath"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t18_wash_hands",
+            "t18_comb_hair",
+            "t18_take_a_bath"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t18_wash_hands",
+            "t18_comb_hair",
+            "t18_take_a_bath"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t18_wash_hands",
+            "t18_comb_hair"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t18_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_good_night_sleep"
+        ],
+        "activity_vi": "Bố mẹ nhắc bé các hoạt động sáng và tối bằng tiếng Anh: wake up, brush teeth, go to bed."
+      }
+    },
+    {
+      "id": "t18_routines_l3",
+      "order": 3,
+      "new_words": [
+        "t18_eat_breakfast",
+        "t18_read_a_book"
+      ],
+      "sentence": "p_time_to_brush",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t18_eat_breakfast",
+            "t18_read_a_book"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t18_eat_breakfast",
+            "t18_read_a_book"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t18_eat_breakfast",
+            "t18_read_a_book"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t18_eat_breakfast",
+            "t18_read_a_book"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_brush_teeth"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t18_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_time_to_brush"
+        ],
+        "activity_vi": "Bố mẹ nhắc bé các hoạt động sáng và tối bằng tiếng Anh: wake up, brush teeth, go to bed."
+      }
+    },
+    {
+      "id": "t18_routines_l4",
+      "order": 4,
+      "new_words": [
+        "t18_go_to_bed",
+        "t18_good_night"
+      ],
+      "sentence": "p_good_night_sleep",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t18_go_to_bed",
+            "t18_good_night"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t18_wake_up",
+            "t18_brush_teeth",
+            "t18_wash_face",
+            "t18_wash_hands",
+            "t18_comb_hair",
+            "t18_take_a_bath",
+            "t18_eat_breakfast",
+            "t18_read_a_book",
+            "t18_go_to_bed",
+            "t18_good_night"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t18_go_to_bed",
+            "t18_good_night"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t18_go_to_bed",
+            "t18_good_night"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t18_go_to_bed",
+            "t18_good_night"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t18_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_good_night_sleep"
+        ],
+        "activity_vi": "Bố mẹ nhắc bé các hoạt động sáng và tối bằng tiếng Anh: wake up, brush teeth, go to bed."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_brush_teeth",
+      "text": "Brush your teeth! Up and down!",
+      "image": "images/tpr/cmd_brush_teeth.png",
+      "audio": "audio/instructions/cmd_brush_teeth.mp3"
+    },
+    {
+      "id": "cmd_smile_happy",
+      "text": "Show me your biggest happy smile!",
+      "image": "images/tpr/cmd_smile_happy.png",
+      "audio": "audio/instructions/cmd_smile_happy.mp3"
+    }
+  ]
+}

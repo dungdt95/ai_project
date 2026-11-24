@@ -1,0 +1,433 @@
+{
+  "id": "t06_family",
+  "level": 2,
+  "order": 6,
+  "title_en": "My Big Family",
+  "title_vi": "Đại gia đình yêu thương",
+  "map_icon": "images/map/island_t06_family.png",
+  "song": {
+    "id": "s06_family_song",
+    "title": "Momo's Happy Family Tree",
+    "audio": "audio/songs/s06_family_song.mp3",
+    "cover": "images/songs/cover_s06_family.png",
+    "lyrics": [
+      {
+        "t": 5.2,
+        "text": "Welcome to my happy home,"
+      },
+      {
+        "t": 7.6,
+        "text": "Full of love wherever we roam!"
+      },
+      {
+        "t": 10,
+        "text": "Grandma, Grandpa smile so bright,"
+      },
+      {
+        "t": 12.4,
+        "text": "Mommy, Daddy hold me tight!"
+      },
+      {
+        "t": 14.8,
+        "text": "Brother, Sister, play with me,"
+      },
+      {
+        "t": 17.2,
+        "text": "Uncle, Aunt, and Cousin, see!"
+      },
+      {
+        "t": 19.6,
+        "text": "One big family under the sun,"
+      },
+      {
+        "t": 23.4,
+        "text": "I love you all, everyone!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t06_family",
+      "text": "Family",
+      "vi": "Gia đình",
+      "image": "images/topics/t06_family/family.png",
+      "audio": "audio/words/t06_family.mp3",
+      "sentence": "I love my big family!",
+      "sentence_audio": "audio/sentences/t06_family_s.mp3"
+    },
+    {
+      "id": "t06_grandma",
+      "text": "Grandma",
+      "vi": "Bà",
+      "image": "images/topics/t06_family/grandma.png",
+      "audio": "audio/words/t06_grandma.mp3",
+      "sentence": "My grandma makes yummy cookies!",
+      "sentence_audio": "audio/sentences/t06_grandma_s.mp3"
+    },
+    {
+      "id": "t06_grandpa",
+      "text": "Grandpa",
+      "vi": "Ông",
+      "image": "images/topics/t06_family/grandpa.png",
+      "audio": "audio/words/t06_grandpa.mp3",
+      "sentence": "My grandpa tells funny stories!",
+      "sentence_audio": "audio/sentences/t06_grandpa_s.mp3"
+    },
+    {
+      "id": "t06_brother",
+      "text": "Brother",
+      "vi": "Anh / Em trai",
+      "image": "images/topics/t06_family/brother.png",
+      "audio": "audio/words/t06_brother.mp3",
+      "sentence": "I play ball with my brother!",
+      "sentence_audio": "audio/sentences/t06_brother_s.mp3"
+    },
+    {
+      "id": "t06_sister",
+      "text": "Sister",
+      "vi": "Chị / Em gái",
+      "image": "images/topics/t06_family/sister.png",
+      "audio": "audio/words/t06_sister.mp3",
+      "sentence": "My sister sings with me!",
+      "sentence_audio": "audio/sentences/t06_sister_s.mp3"
+    },
+    {
+      "id": "t06_uncle",
+      "text": "Uncle",
+      "vi": "Chú / Bác trai",
+      "image": "images/topics/t06_family/uncle.png",
+      "audio": "audio/words/t06_uncle.mp3",
+      "sentence": "My uncle is tall and kind!",
+      "sentence_audio": "audio/sentences/t06_uncle_s.mp3"
+    },
+    {
+      "id": "t06_aunt",
+      "text": "Aunt",
+      "vi": "Cô / Dì",
+      "image": "images/topics/t06_family/aunt.png",
+      "audio": "audio/words/t06_aunt.mp3",
+      "sentence": "My aunt gives me a warm hug!",
+      "sentence_audio": "audio/sentences/t06_aunt_s.mp3"
+    },
+    {
+      "id": "t06_cousin",
+      "text": "Cousin",
+      "vi": "Anh chị em họ",
+      "image": "images/topics/t06_family/cousin.png",
+      "audio": "audio/words/t06_cousin.mp3",
+      "sentence": "My cousin is my good friend!",
+      "sentence_audio": "audio/sentences/t06_cousin_s.mp3"
+    },
+    {
+      "id": "t06_home",
+      "text": "Home",
+      "vi": "Tổ ấm / Nhà",
+      "image": "images/topics/t06_family/home.png",
+      "audio": "audio/words/t06_home.mp3",
+      "sentence": "Welcome to my happy home!",
+      "sentence_audio": "audio/sentences/t06_home_s.mp3"
+    },
+    {
+      "id": "t06_love",
+      "text": "Love",
+      "vi": "Yêu thương",
+      "image": "images/topics/t06_family/love.png",
+      "audio": "audio/words/t06_love.mp3",
+      "sentence": "I love you so much!",
+      "sentence_audio": "audio/sentences/t06_love_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_who_is_this",
+      "text": "Who is this? This is my grandma!",
+      "audio": "audio/sentences/p_who_is_this.mp3",
+      "vi": "Ai đây nhỉ? Đây là bà của con!",
+      "pron_vi": "Hu i-zơ đít? Đít i-zơ mai gờ-ren-ma!"
+    },
+    {
+      "id": "p_love_family",
+      "text": "I love my family very much!",
+      "audio": "audio/sentences/p_love_family.mp3",
+      "vi": "Con yêu gia đình mình nhiều lắm!",
+      "pron_vi": "Ai lấp mai pha-mi-li ve-ri mắt-chờ!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t06_family_l1",
+      "order": 1,
+      "new_words": [
+        "t06_family",
+        "t06_grandma",
+        "t06_grandpa"
+      ],
+      "sentence": "p_who_is_this",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t06_family",
+            "t06_grandma",
+            "t06_grandpa"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t06_family",
+            "t06_grandma",
+            "t06_grandpa"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t06_family",
+            "t06_grandma"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_give_hug"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t06_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_who_is_this"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chỉ vào ảnh người thân trong nhà và gọi tên bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t06_family_l2",
+      "order": 2,
+      "new_words": [
+        "t06_brother",
+        "t06_sister",
+        "t06_uncle"
+      ],
+      "sentence": "p_love_family",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t06_brother",
+            "t06_sister",
+            "t06_uncle"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t06_brother",
+            "t06_sister",
+            "t06_uncle"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t06_brother",
+            "t06_sister",
+            "t06_uncle"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t06_brother",
+            "t06_sister"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t06_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_love_family"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chỉ vào ảnh người thân trong nhà và gọi tên bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t06_family_l3",
+      "order": 3,
+      "new_words": [
+        "t06_aunt",
+        "t06_cousin"
+      ],
+      "sentence": "p_who_is_this",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t06_aunt",
+            "t06_cousin"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t06_aunt",
+            "t06_cousin"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t06_aunt",
+            "t06_cousin"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t06_aunt",
+            "t06_cousin"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_give_hug"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t06_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_who_is_this"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chỉ vào ảnh người thân trong nhà và gọi tên bằng tiếng Anh nhé."
+      }
+    },
+    {
+      "id": "t06_family_l4",
+      "order": 4,
+      "new_words": [
+        "t06_home",
+        "t06_love"
+      ],
+      "sentence": "p_love_family",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t06_home",
+            "t06_love"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t06_family",
+            "t06_grandma",
+            "t06_grandpa",
+            "t06_brother",
+            "t06_sister",
+            "t06_uncle",
+            "t06_aunt",
+            "t06_cousin",
+            "t06_home",
+            "t06_love"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t06_home",
+            "t06_love"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t06_home",
+            "t06_love"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t06_home",
+            "t06_love"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_smile_happy"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t06_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_love_family"
+        ],
+        "activity_vi": "Bố mẹ cùng bé chỉ vào ảnh người thân trong nhà và gọi tên bằng tiếng Anh nhé."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_give_hug",
+      "text": "Give yourself a big warm hug!",
+      "image": "images/tpr/cmd_give_hug.png",
+      "audio": "audio/instructions/cmd_give_hug.mp3"
+    },
+    {
+      "id": "cmd_smile_happy",
+      "text": "Show me your biggest happy smile!",
+      "image": "images/tpr/cmd_smile_happy.png",
+      "audio": "audio/instructions/cmd_smile_happy.mp3"
+    }
+  ]
+}

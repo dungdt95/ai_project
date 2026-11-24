@@ -1,0 +1,433 @@
+{
+  "id": "t14_clothes",
+  "level": 3,
+  "order": 14,
+  "title_en": "My Clothes",
+  "title_vi": "Quần áo & Trang phục",
+  "map_icon": "images/map/island_t14_clothes.png",
+  "song": {
+    "id": "s14_clothes_song",
+    "title": "Get Dressed with Momo",
+    "audio": "audio/songs/s14_clothes_song.mp3",
+    "cover": "images/songs/cover_s14_clothes.png",
+    "lyrics": [
+      {
+        "t": 9,
+        "text": "Good morning, friend! Let's get dressed today,"
+      },
+      {
+        "t": 13.8,
+        "text": "Put on our clothes and go out to play!"
+      },
+      {
+        "t": 18.6,
+        "text": "Put on your T-shirt, Shirt, and Pants,"
+      },
+      {
+        "t": 21.2,
+        "text": "Dress, Skirt, or Shorts for a happy dance!"
+      },
+      {
+        "t": 23.6,
+        "text": "Two warm Socks and two fast Shoes,"
+      },
+      {
+        "t": 26,
+        "text": "Which bright color will you choose?"
+      },
+      {
+        "t": 28.6,
+        "text": "Zip your Jacket, wear your Hat,"
+      },
+      {
+        "t": 30.8,
+        "text": "We are ready just like that!"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "t14_shirt",
+      "text": "Shirt",
+      "vi": "Áo sơ mi",
+      "image": "images/topics/t14_clothes/shirt.png",
+      "audio": "audio/words/t14_shirt.mp3",
+      "sentence": "Button up your clean shirt!",
+      "sentence_audio": "audio/sentences/t14_shirt_s.mp3"
+    },
+    {
+      "id": "t14_t_shirt",
+      "text": "T-shirt",
+      "vi": "Áo thun",
+      "image": "images/topics/t14_clothes/t_shirt.png",
+      "audio": "audio/words/t14_t_shirt.mp3",
+      "sentence": "Momo wears a blue T-shirt!",
+      "sentence_audio": "audio/sentences/t14_t_shirt_s.mp3"
+    },
+    {
+      "id": "t14_pants",
+      "text": "Pants",
+      "vi": "Quần dài",
+      "image": "images/topics/t14_clothes/pants.png",
+      "audio": "audio/words/t14_pants.mp3",
+      "sentence": "Put on your comfy pants!",
+      "sentence_audio": "audio/sentences/t14_pants_s.mp3"
+    },
+    {
+      "id": "t14_shorts",
+      "text": "Shorts",
+      "vi": "Quần đùi",
+      "image": "images/topics/t14_clothes/shorts.png",
+      "audio": "audio/words/t14_shorts.mp3",
+      "sentence": "Cool shorts for a sunny day!",
+      "sentence_audio": "audio/sentences/t14_shorts_s.mp3"
+    },
+    {
+      "id": "t14_dress",
+      "text": "Dress",
+      "vi": "Váy liền",
+      "image": "images/topics/t14_clothes/dress.png",
+      "audio": "audio/words/t14_dress.mp3",
+      "sentence": "A pretty yellow dress!",
+      "sentence_audio": "audio/sentences/t14_dress_s.mp3"
+    },
+    {
+      "id": "t14_skirt",
+      "text": "Skirt",
+      "vi": "Chân váy",
+      "image": "images/topics/t14_clothes/skirt.png",
+      "audio": "audio/words/t14_skirt.mp3",
+      "sentence": "Spin around in a cute skirt!",
+      "sentence_audio": "audio/sentences/t14_skirt_s.mp3"
+    },
+    {
+      "id": "t14_shoes",
+      "text": "Shoes",
+      "vi": "Đôi giày",
+      "image": "images/topics/t14_clothes/shoes.png",
+      "audio": "audio/words/t14_shoes.mp3",
+      "sentence": "Put on your shoes to go outside!",
+      "sentence_audio": "audio/sentences/t14_shoes_s.mp3"
+    },
+    {
+      "id": "t14_socks",
+      "text": "Socks",
+      "vi": "Đôi tất (vớ)",
+      "image": "images/topics/t14_clothes/socks.png",
+      "audio": "audio/words/t14_socks.mp3",
+      "sentence": "Two warm socks for my two feet!",
+      "sentence_audio": "audio/sentences/t14_socks_s.mp3"
+    },
+    {
+      "id": "t14_hat",
+      "text": "Hat",
+      "vi": "Cái mũ (nón)",
+      "image": "images/topics/t14_clothes/hat.png",
+      "audio": "audio/words/t14_hat.mp3",
+      "sentence": "Wear a sun hat on your head!",
+      "sentence_audio": "audio/sentences/t14_hat_s.mp3"
+    },
+    {
+      "id": "t14_jacket",
+      "text": "Jacket",
+      "vi": "Áo khoác",
+      "image": "images/topics/t14_clothes/jacket.png",
+      "audio": "audio/words/t14_jacket.mp3",
+      "sentence": "Zip up your warm jacket!",
+      "sentence_audio": "audio/sentences/t14_jacket_s.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "p_put_on_shoes",
+      "text": "Put on your shoes, please!",
+      "audio": "audio/sentences/p_put_on_shoes.mp3",
+      "vi": "Con đi giày vào nhé!",
+      "pron_vi": "Pút on gio su-zơ, pờ-li-zơ!"
+    },
+    {
+      "id": "p_take_off_hat",
+      "text": "Take off your hat and jacket!",
+      "audio": "audio/sentences/p_take_off_hat.mp3",
+      "vi": "Cởi mũ và áo khoác ra nào con!",
+      "pron_vi": "Tếch óp gio hét en chéc-kịt!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "t14_clothes_l1",
+      "order": 1,
+      "new_words": [
+        "t14_shirt",
+        "t14_t_shirt",
+        "t14_pants"
+      ],
+      "sentence": "p_put_on_shoes",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t14_shirt",
+            "t14_t_shirt",
+            "t14_pants"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t14_shirt",
+            "t14_t_shirt",
+            "t14_pants"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t14_shirt",
+            "t14_t_shirt"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_put_on_hat"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t14_1"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_put_on_shoes"
+        ],
+        "activity_vi": "Mỗi sáng mặc quần áo, bố mẹ cùng bé gọi tên áo, quần, giày, mũ bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t14_clothes_l2",
+      "order": 2,
+      "new_words": [
+        "t14_shorts",
+        "t14_dress",
+        "t14_skirt"
+      ],
+      "sentence": "p_take_off_hat",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t14_shorts",
+            "t14_dress",
+            "t14_skirt"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t14_shorts",
+            "t14_dress",
+            "t14_skirt"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t14_shorts",
+            "t14_dress",
+            "t14_skirt"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t14_shorts",
+            "t14_dress"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t14_2"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_take_off_hat"
+        ],
+        "activity_vi": "Mỗi sáng mặc quần áo, bố mẹ cùng bé gọi tên áo, quần, giày, mũ bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t14_clothes_l3",
+      "order": 3,
+      "new_words": [
+        "t14_shoes",
+        "t14_socks"
+      ],
+      "sentence": "p_put_on_shoes",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t14_shoes",
+            "t14_socks"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t14_shoes",
+            "t14_socks"
+          ],
+          "rounds": 6,
+          "choices": 2
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t14_shoes",
+            "t14_socks"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t14_shoes",
+            "t14_socks"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_put_on_hat"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t14_3"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_put_on_shoes"
+        ],
+        "activity_vi": "Mỗi sáng mặc quần áo, bố mẹ cùng bé gọi tên áo, quần, giày, mũ bằng tiếng Anh."
+      }
+    },
+    {
+      "id": "t14_clothes_l4",
+      "order": 4,
+      "new_words": [
+        "t14_hat",
+        "t14_jacket"
+      ],
+      "sentence": "p_take_off_hat",
+      "steps": [
+        {
+          "type": "warmup",
+          "audio": "audio/instructions/warmup_start.mp3"
+        },
+        {
+          "type": "discover",
+          "words": [
+            "t14_hat",
+            "t14_jacket"
+          ]
+        },
+        {
+          "type": "tap_find",
+          "words": [
+            "t14_shirt",
+            "t14_t_shirt",
+            "t14_pants",
+            "t14_shorts",
+            "t14_dress",
+            "t14_skirt",
+            "t14_shoes",
+            "t14_socks",
+            "t14_hat",
+            "t14_jacket"
+          ],
+          "rounds": 8,
+          "choices": 3
+        },
+        {
+          "type": "memory_match",
+          "words": [
+            "t14_hat",
+            "t14_jacket"
+          ],
+          "pairs": 2
+        },
+        {
+          "type": "drag_drop",
+          "words": [
+            "t14_hat",
+            "t14_jacket"
+          ]
+        },
+        {
+          "type": "repeat_record",
+          "words": [
+            "t14_hat",
+            "t14_jacket"
+          ]
+        },
+        {
+          "type": "simon_says",
+          "commands": [
+            "cmd_dance_spin"
+          ]
+        },
+        {
+          "type": "celebrate",
+          "sticker": "stk_t14_4"
+        }
+      ],
+      "parent_tip": {
+        "sentences": [
+          "p_take_off_hat"
+        ],
+        "activity_vi": "Mỗi sáng mặc quần áo, bố mẹ cùng bé gọi tên áo, quần, giày, mũ bằng tiếng Anh."
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "cmd_put_on_hat",
+      "text": "Put a cool hat on your head!",
+      "image": "images/tpr/cmd_put_on_hat.png",
+      "audio": "audio/instructions/cmd_put_on_hat.mp3"
+    },
+    {
+      "id": "cmd_dance_spin",
+      "text": "Spin around and dance with me!",
+      "image": "images/tpr/cmd_dance_spin.png",
+      "audio": "audio/instructions/cmd_dance_spin.mp3"
+    }
+  ]
+}
