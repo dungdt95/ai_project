@@ -20,24 +20,46 @@ const { execSync } = require('child_process');
 const WORKSPACE_ROOT = 'c:\\workspace\\ai_project';
 const APP_ROOT = path.join(WORKSPACE_ROOT, 'kids_english_app', 'app');
 const TOPICS_DIR = path.join(APP_ROOT, 'assets', 'content', 'topics');
+// Chủ đề chỉ phát hành qua gói (t06..t25) nằm ở content_packs/<id>/topic.json, media cùng thư mục.
+const PACKS_SRC_DIR = path.join(WORKSPACE_ROOT, 'kids_english_app', 'content_packs');
+
+// Danh sách {name: "<id>.json", path} từ cả built-in (assets) lẫn content_packs.
+function listTopicFiles() {
+  const out = fs.readdirSync(TOPICS_DIR).filter(f => f.endsWith('.json'))
+    .map(f => ({ name: f, path: path.join(TOPICS_DIR, f) }));
+  if (fs.existsSync(PACKS_SRC_DIR)) {
+    for (const d of fs.readdirSync(PACKS_SRC_DIR)) {
+      const tj = path.join(PACKS_SRC_DIR, d, 'topic.json');
+      if (fs.existsSync(tj)) out.push({ name: d + '.json', path: tj });
+    }
+  }
+  return out.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// Thư mục gốc chứa media của chủ đề (assets/ cho built-in, content_packs/<id>/ cho gói).
+function mediaRootFor(topicJsonPath) {
+  return path.basename(topicJsonPath) === 'topic.json' ? path.dirname(topicJsonPath) : path.join(APP_ROOT, 'assets');
+}
 const SCRATCH_MODULES = 'C:\\Users\\User\\.gemini\\antigravity\\brain\\16ff3194-5821-40cd-ae00-c9944920f977\\scratch\\node_modules';
 
 function resolveTopicFile(topicArg) {
-  const files = fs.readdirSync(TOPICS_DIR).filter(f => f.endsWith('.json')).sort();
+  const entries = listTopicFiles();
+  const files = entries.map(e => e.name);
+  const pathOf = name => entries.find(e => e.name === name).path;
   const clean = String(topicArg).toLowerCase().trim();
 
   const exact = files.find(f => f.toLowerCase() === clean || f.toLowerCase() === `${clean}.json`);
-  if (exact) return path.join(TOPICS_DIR, exact);
+  if (exact) return pathOf(exact);
 
   const numMatch = clean.match(/(\d+)/);
   if (numMatch) {
     const padded = numMatch[1].padStart(2, '0');
     const found = files.find(f => f.startsWith(`t${padded}_`));
-    if (found) return path.join(TOPICS_DIR, found);
+    if (found) return pathOf(found);
   }
 
   const found = files.find(f => f.toLowerCase().includes(clean));
-  if (found) return path.join(TOPICS_DIR, found);
+  if (found) return pathOf(found);
 
   throw new Error(`Could not resolve topic "${topicArg}". Available topics: ${files.join(', ')}`);
 }
@@ -388,7 +410,7 @@ function main() {
   if (args[0] === '--slice') {
     const topicJsonPath = resolveTopicFile(args[1]);
     const topicData = JSON.parse(fs.readFileSync(topicJsonPath, 'utf8'));
-    const targetMp3Path = path.join(APP_ROOT, 'assets', ...topicData.song.audio.split('/'));
+    const targetMp3Path = path.join(mediaRootFor(topicJsonPath), ...topicData.song.audio.split('/'));
     const analysis = analyzeSongMp3(targetMp3Path, topicData.id, topicData.song.lyrics);
     const ts = args[2]
       ? args[2].split(',').map(Number)
@@ -407,7 +429,7 @@ function main() {
     for (const t of targets) {
       const topicJsonPath = resolveTopicFile(t);
       const topicData = JSON.parse(fs.readFileSync(topicJsonPath, 'utf8'));
-      const targetMp3Path = path.join(APP_ROOT, 'assets', ...topicData.song.audio.split('/'));
+      const targetMp3Path = path.join(mediaRootFor(topicJsonPath), ...topicData.song.audio.split('/'));
       const analysis = analyzeSongMp3(targetMp3Path, topicData.id, topicData.song.lyrics);
       printAnalysisReport(topicData, topicJsonPath, targetMp3Path, analysis);
     }
@@ -418,7 +440,7 @@ function main() {
   const topicJsonPath = resolveTopicFile(topicArg);
   const topicData = JSON.parse(fs.readFileSync(topicJsonPath, 'utf8'));
   const targetRelAudio = topicData.song.audio;
-  const targetMp3Path = path.join(APP_ROOT, 'assets', ...targetRelAudio.split('/'));
+  const targetMp3Path = path.join(mediaRootFor(topicJsonPath), ...targetRelAudio.split('/'));
 
   if (sourceMp3) {
     if (!fs.existsSync(sourceMp3)) {

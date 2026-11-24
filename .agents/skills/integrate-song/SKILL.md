@@ -20,7 +20,7 @@ This skill integrates an MP3 song file into any topic (`t01` through `t25`) of t
      ```powershell
      node c:\workspace\ai_project\.agents\skills\integrate-song\scripts\integrate_song.js "<topic>" "<mp3_file_path>"
      ```
-   - Or to analyze already-copied song(s) in `assets/audio/songs/`:
+   - Or to analyze already-copied song(s) (`app/assets/audio/songs/` for t01..t05, `content_packs/<topic_id>/audio/songs/` for t06..t25):
      ```powershell
      node c:\workspace\ai_project\.agents\skills\integrate-song\scripts\integrate_song.js --analyze t06 t07
      ```
@@ -52,12 +52,13 @@ This skill integrates an MP3 song file into any topic (`t01` through `t25`) of t
    - Because each clip's filename states its exact start timestamp, you immediately hear if a line starts on beat or is early/late by `X.Xs` — adjust accordingly and re-slice if needed.
 
 3. **Update Topic JSON & Re-pack `.bvpack` (if topic is `t06`..`t25`)**:
-   - Edit `c:\workspace\ai_project\kids_english_app\app\assets\content\topics\<topic>.json` (`song.lyrics`) with the calibrated `t` values and verified lyric text.
-   - If the topic is an expansion pack (`t06`..`t25`), run `dart run tools/pack_topic.dart <topic_id>` (with `BypassSandbox: true`) and sync the updated `.bvpack` and `index.json` to `kids_english_app/docs/packs/`.
+   - Built-in topics (`t01`..`t05`): edit `c:\workspace\ai_project\kids_english_app\app\assets\content\topics\<topic>.json` (`song.lyrics`) with the calibrated `t` values and verified lyric text.
+   - Expansion packs (`t06`..`t25`) are NOT in the app source: edit `c:\workspace\ai_project\kids_english_app\content_packs\<topic_id>\topic.json` (the song MP3 lives in `content_packs\<topic_id>\audio\songs\`). Never copy them back into `app/assets`.
+   - Then re-pack (step 4).
 3. **Apply Verified Timestamps (`--apply`)**:
    ```powershell
    node c:\workspace\ai_project\.agents\skills\integrate-song\scripts\integrate_song.js --apply t06 5.2,7.6,10.0,12.4,14.8,17.2,19.6,23.4
    ```
 
 4. **Re-pack `.bvpack` (for `t06`..`t25`)**:
-   Run `dart run tools/pack_topic.dart <topic_id> --version <N>` (with `BypassSandbox: true`) and sync `build/packs/*` to `docs/packs/`.
+   In `kids_english_app/app/`, run `dart run tools/pack_topic.dart <topic_id> --out ../docs/packs` (with `BypassSandbox: true`). The tool reads `../content_packs/<topic_id>/` automatically, writes the `.bvpack` straight into `docs/packs/` and bumps that topic's `version` in `docs/packs/index.json` so installed apps pick up the update.

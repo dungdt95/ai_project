@@ -38,13 +38,20 @@ void main() {
     expect(ids, ['t01_hello', 't02_colors', 't03_numbers', 't04_animals', 't05_body']);
   });
 
+  test('chủ đề t06..t25 chỉ phát hành qua gói: KHÔNG nằm trong app/assets', () {
+    for (final id in expectedIds) {
+      expect(File('assets/content/topics/$id.json').existsSync(), isFalse, reason: '$id không được nằm trong app');
+      expect(Directory('assets/images/topics/$id').existsSync(), isFalse, reason: '$id không được nằm trong app');
+    }
+  });
+
   test('20 file JSON t06..t25 hợp lệ 100%, đủ từ vựng, bài hát, emoji', () {
     var totalWords = 0;
     for (var i = 0; i < expectedIds.length; i++) {
       final id = expectedIds[i];
       final order = i + 6;
       final expectedLevel = ((order - 1) ~/ 5) + 1;
-      final file = File('assets/content/topics/$id.json');
+      final file = File('../content_packs/$id/topic.json');
       expect(file.existsSync(), isTrue, reason: 'Thiếu ${file.path}');
 
       final json = jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
@@ -78,7 +85,7 @@ void main() {
   });
 
   test('20 gói .bvpack và index.json cài đặt qua PackInstaller thành công ở cả 2 thư mục', () async {
-    for (final packDirPath in ['build/packs', '../docs/packs']) {
+    for (final packDirPath in ['../docs/packs']) {
       final indexFile = File('$packDirPath/index.json');
       expect(indexFile.existsSync(), isTrue, reason: 'Thiếu ${indexFile.path}');
       final indexJson = jsonDecode(indexFile.readAsStringSync()) as Map<String, dynamic>;
@@ -86,7 +93,7 @@ void main() {
       expect(packs.length, 20, reason: '${indexFile.path} phải có đủ 20 gói');
       expect([for (final p in packs) (p as Map)['id']], expectedIds);
       for (final p in packs) {
-        expect((p as Map)['version'], 2, reason: '${p['id']} trong ${indexFile.path} phải ở version 2');
+        expect((p as Map)['version'], greaterThanOrEqualTo(2), reason: '${p['id']} trong ${indexFile.path} phải >= version 2');
       }
 
       final tempRoot = await Directory.systemTemp.createTemp('verify_20_packs_');
@@ -102,6 +109,12 @@ void main() {
           expect(names.contains('topic.json'), isTrue, reason: '${packFile.path} thiếu topic.json');
           final hasSong = names.any((n) => RegExp(r'^audio/songs/s\d{2}_.+\.mp3$').hasMatch(n));
           expect(hasSong, isTrue, reason: '${packFile.path} thiếu file nhạc audio/songs/sXX_*.mp3');
+
+          // Mọi đường dẫn media (ảnh + giọng đọc từ/câu/TPR + nhạc) trong topic.json phải có trong gói.
+          final topicText = utf8.decode(archive.findFile('topic.json')!.content as List<int>);
+          final refs = RegExp(r'"((?:images|audio)/[^"]+)"').allMatches(topicText).map((m) => m.group(1)!).toSet();
+          final missingMedia = refs.where((r) => !names.contains(r)).toList();
+          expect(missingMedia, isEmpty, reason: '${packFile.path} thiếu media: $missingMedia');
 
           final installedTopic = await installer.install(bytes);
           expect(installedTopic.id, id);

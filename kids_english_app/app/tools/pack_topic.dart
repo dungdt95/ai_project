@@ -5,10 +5,14 @@ import 'package:archive/archive.dart';
 // Đóng gói một chủ đề thành .bvpack và tạo/cập nhật index.json để đưa lên Google Drive.
 //
 // Cách dùng (chạy trong thư mục app/):
-//   dart run tools/pack_topic.dart <topicId> [--version N] [--out thư_mục] [--assets thư_mục_assets]
+//   dart run tools/pack_topic.dart <topicId> [--version N] [--out thư_mục] [--src thư_mục_nguồn] [--assets thư_mục_assets]
 //
-// - Đọc assets/content/topics/<topicId>.json, gom mọi đường dẫn media (images/..., audio/...) có thật
-//   dưới assets/, kèm sticker (images/stickers/<sticker>.png), ghi <out>/<topicId>.bvpack.
+// - Nguồn chủ đề (ưu tiên theo thứ tự):
+//   1. --src <dir>: <dir>/topic.json + media nằm ngay trong <dir> (images/..., audio/...).
+//   2. ../content_packs/<topicId>/ nếu có (chủ đề chỉ phát hành qua gói, KHÔNG nằm trong app).
+//   3. assets/content/topics/<topicId>.json + media dưới assets/ (chủ đề built-in).
+// - Gom mọi đường dẫn media (images/..., audio/...) có thật, kèm sticker (images/stickers/<sticker>.png),
+//   ghi <out>/<topicId>.bvpack.
 // - Gói có topic.json ở gốc và các thư mục images/, audio/ giống hệt assets/.
 // - Ghi/gộp <out>/index.json. Không truyền --version: gói mới = 1, gói đã có trong index = version cũ + 1.
 void main(List<String> args) {
@@ -16,6 +20,7 @@ void main(List<String> args) {
   int? version;
   var out = 'build/packs';
   var assets = 'assets';
+  String? src;
   for (var i = 0; i < args.length; i++) {
     switch (args[i]) {
       case '--version':
@@ -24,6 +29,8 @@ void main(List<String> args) {
         out = args[++i];
       case '--assets':
         assets = args[++i];
+      case '--src':
+        src = args[++i];
       default:
         topicId = args[i];
     }
@@ -33,7 +40,12 @@ void main(List<String> args) {
     exit(64);
   }
 
-  final topicFile = File('$assets/content/topics/$topicId.json');
+  if (src == null && File('../content_packs/$topicId/topic.json').existsSync()) {
+    src = '../content_packs/$topicId';
+  }
+  final mediaRoot = src ?? assets;
+  final topicFile = File(src != null ? '$src/topic.json' : '$assets/content/topics/$topicId.json');
+  stdout.writeln('Nguồn: ${topicFile.path}');
   if (!topicFile.existsSync()) {
     stderr.writeln('Không tìm thấy ${topicFile.path}');
     exit(66);
@@ -68,7 +80,7 @@ void main(List<String> args) {
   archive.addFile(ArchiveFile('topic.json', topicBytes.length, topicBytes));
   var missing = 0;
   for (final p in media.toList()..sort()) {
-    final f = File('$assets/$p');
+    final f = File('$mediaRoot/$p');
     if (!f.existsSync()) {
       stderr.writeln('Cảnh báo: thiếu file $p');
       missing++;
