@@ -1,0 +1,11 @@
+// Cấu hình Google Sign-In cho iOS (đọc vào Info.plist: GIDClientID, GIDServerClientID, URL scheme).
+// Lưu ý: trong file .xcconfig, "//" là chú thích → không đặt URL có "//" ở đây.
+//
+// GOOGLE_IOS_CLIENT_ID: Client ID của OAuth client loại iOS (Bundle ID com.bevui.kidsenglish).
+// GOOGLE_IOS_REVERSED_CLIENT_ID: chính Client ID đó viết ngược, dạng com.googleusercontent.apps.<số>-<chuỗi>
+// Xem docs/HUONG_DAN_BUILD_IOS.md bước 3.
+GOOGLE_IOS_CLIENT_ID = REPLACE_ME.apps.googleusercontent.com
+GOOGLE_IOS_REVERSED_CLIENT_ID = com.googleusercontent.apps.REPLACE_ME
+
+// Web client (dùng chung với Android).
+GOOGLE_SERVER_CLIENT_ID = 84168100648-5lo151npadkulfcn8pov821nqo9lc2dg.apps.googleusercontent.com
