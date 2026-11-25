@@ -24,8 +24,26 @@ class AudioService {
   /// Độ dài bài hát hiện tại.
   Duration? get duration => _voice.duration;
 
+  bool _iosTtsConfigured = false;
+
+  /// iOS: mặc định TTS bị tắt tiếng khi gạt công tắc im lặng → đặt category playback (như just_audio)
+  /// (không kèm option: defaultToSpeaker chỉ hợp lệ với playAndRecord). Chỉ làm một lần; Android không bị ảnh hưởng.
+  Future<void> _configureIosTts() async {
+    if (_iosTtsConfigured || !Platform.isIOS) return;
+    _iosTtsConfigured = true;
+    try {
+      await _tts.setSharedInstance(true);
+      await _tts.setIosAudioCategory(
+        IosTextToSpeechAudioCategory.playback,
+        const [],
+        IosTextToSpeechAudioMode.defaultMode,
+      );
+    } catch (_) {}
+  }
+
   Future<void> _initTts() async {
     if (_ttsReady) return;
+    await _configureIosTts();
     await _tts.setLanguage('en-US');
     await _tts.setSpeechRate(0.4);
     await _tts.setPitch(1.1);
@@ -106,6 +124,7 @@ class AudioService {
     }
     if (text.isEmpty) return;
     try {
+      await _configureIosTts();
       await _tts.setLanguage('vi-VN');
       await _tts.setSpeechRate(0.4);
       await _tts.setPitch(1.0);

@@ -28,6 +28,12 @@ Future<void> main() async {
 
   final storage = await Storage.open();
   final packsDir = Directory('${(await getApplicationSupportDirectory()).path}/packs');
+  if (Platform.isIOS) {
+    // Gói chủ đề tải lại được từ Google Drive → không sao lưu iCloud (quy định của Apple).
+    try {
+      await const MethodChannel('kids_english/backup').invokeMethod('excludeFromBackup', packsDir.path);
+    } catch (_) {}
+  }
   runApp(ProviderScope(
     overrides: [
       storageProvider.overrideWithValue(storage),
