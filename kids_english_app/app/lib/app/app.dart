@@ -46,7 +46,7 @@ class BeVuiApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
-      title: 'Bé Vui Tiếng Anh',
+      title: 'Kids English',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
       routerConfig: _router,
