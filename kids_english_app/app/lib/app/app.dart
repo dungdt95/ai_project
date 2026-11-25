@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../data/models.dart';
+import '../data/review_planner.dart';
+import '../features/review/review_session_screen.dart';
 import '../features/lesson_player/lesson_player_screen.dart';
 import '../features/screen_time/bedtime_sleep_screen.dart';
 import '../features/screens.dart';
@@ -34,6 +36,12 @@ final _router = GoRouter(
         });
       },
     ),
+    GoRoute(
+      path: '/review',
+      builder: (_, s) => ReviewSessionScreen(
+        mode: s.uri.queryParameters['mode'] == 'weak' ? ReviewMode.weakWordsOnly : ReviewMode.smartMix,
+      ),
+    ),
     GoRoute(path: '/sleep', builder: (_, _) => const BedtimeSleepScreen()),
     GoRoute(path: '/gate', builder: (_, _) => const ParentGateScreen()),
     GoRoute(path: '/parent', builder: (_, _) => const ParentHomeScreen()),
@@ -46,7 +54,7 @@ class BeVuiApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
-      title: 'Bé Vui Tiếng Anh',
+      title: 'Kids English',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
       routerConfig: _router,

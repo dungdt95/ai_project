@@ -67,8 +67,10 @@ class _LessonPlayerScreenState extends ConsumerState<LessonPlayerScreen> {
     final storage = ref.read(storageProvider);
 
     if (profile != null) {
-      for (final w in words) {
-        await storage.recordWordAttempt(profile.id, w.id, correct: true);
+      // Học xong bài chỉ "giới thiệu" từ vào Leitner (box 1), không cộng điểm đúng.
+      final ids = <String>{for (final w in words) w.id, for (final s in lesson.steps) ...s.words};
+      for (final id in ids) {
+        await storage.ensureWordIntroduced(profile.id, id);
       }
       await storage.completeLesson(profile.id, lesson.id, stars: 3);
       ref.read(progressVersionProvider.notifier).bump();

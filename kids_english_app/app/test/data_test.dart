@@ -58,26 +58,37 @@ void main() {
 
   group('Leitner', () {
     final now = DateTime(2026, 1, 10, 9);
-    test('đúng thì lên box, sai thì về box 1', () {
+    test('đúng thì lên box khi đến hạn, sai thì về box 1', () {
       var s = WordStat(nextReview: now);
       s = s.update(isCorrect: true, now: now);
       expect(s.box, 2);
+      expect(s.nextReview, DateTime(2026, 1, 11));
+      // Đúng lần 2 cùng ngày: chưa đến hạn → giữ box 2, chỉ tăng bộ đếm.
       s = s.update(isCorrect: true, now: now);
+      expect(s.box, 2);
+      expect(s.correct, 2);
+      expect(s.exposures, 2);
+      expect(s.nextReview, DateTime(2026, 1, 11));
+      // Sang ngày đến hạn mới lên box 3.
+      s = s.update(isCorrect: true, now: DateTime(2026, 1, 11, 8));
       expect(s.box, 3);
       expect(s.mastered, isTrue);
-      expect(s.nextReview, DateTime(2026, 1, 13));
-      s = s.update(isCorrect: false, now: now);
+      expect(s.nextReview, DateTime(2026, 1, 14));
+      s = s.update(isCorrect: false, now: DateTime(2026, 1, 11, 9));
       expect(s.box, 1);
       expect(s.wrong, 1);
+      expect(s.nextReview, DateTime(2026, 1, 11));
     });
 
     test('box tối đa 5', () {
       var s = WordStat(nextReview: now);
+      var t = now;
       for (var i = 0; i < 10; i++) {
-        s = s.update(isCorrect: true, now: now);
+        s = s.update(isCorrect: true, now: t);
+        if (i < 9) t = s.nextReview.add(const Duration(hours: 1)); // sang ngày đến hạn kế tiếp
       }
       expect(s.box, 5);
-      expect(s.nextReview, DateTime(2026, 1, 24));
+      expect(s.nextReview, DateTime(t.year, t.month, t.day + 14));
     });
   });
 
@@ -101,6 +112,12 @@ void main() {
       await st.completeLesson(p.id, 'l1', stars: 1);
       expect(st.starsFor(p.id, 'l1'), 2);
       await st.recordWordAttempt(p.id, 'w1', correct: true);
+      expect(st.wordStat(p.id, 'w1')!.box, 2);
+      await st.ensureWordIntroduced(p.id, 'w2');
+      expect(st.wordStat(p.id, 'w2')!.box, 1);
+      expect(st.wordStat(p.id, 'w2')!.exposures, 1);
+      expect(st.wordStat(p.id, 'w2')!.correct, 0);
+      await st.ensureWordIntroduced(p.id, 'w1'); // đã có → không đổi
       expect(st.wordStat(p.id, 'w1')!.box, 2);
       await st.addPlaySeconds(p.id, 60);
       expect(st.secondsPlayed(p.id, DateTime.now()), 60);

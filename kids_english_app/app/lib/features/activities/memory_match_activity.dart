@@ -18,10 +18,14 @@ class MemoryMatchActivity extends StatefulWidget {
     required this.baseDir,
     required this.onFinished,
     required this.playAudio,
+    this.wordBaseDirs,
   });
 
   final List<Word> words;
   final String? baseDir;
+
+  /// Thư mục gói theo từng từ (ôn tập đa chủ đề). null → dùng [baseDir]; giá trị null = built-in.
+  final Map<String, String?>? wordBaseDirs;
   final VoidCallback onFinished;
   final void Function(String? path, String text) playAudio;
 
@@ -30,6 +34,8 @@ class MemoryMatchActivity extends StatefulWidget {
 }
 
 class _MemoryMatchActivityState extends State<MemoryMatchActivity> {
+  String? _dirFor(Word w) => widget.wordBaseDirs != null ? widget.wordBaseDirs![w.id] : widget.baseDir;
+
   late List<_CardItem> _cards;
   _CardItem? _firstSelected;
   bool _busy = false;
@@ -124,7 +130,7 @@ class _MemoryMatchActivityState extends State<MemoryMatchActivity> {
                       child: card.isFaceUp || card.isMatched
                           ? Padding(
                               padding: const EdgeInsets.all(8),
-                              child: MediaImage(card.word.image, baseDir: widget.baseDir, label: card.word.text),
+                              child: MediaImage(card.word.image, baseDir: _dirFor(card.word), label: card.word.text),
                             )
                           : const Text('❓', style: TextStyle(fontSize: 38)),
                     ),

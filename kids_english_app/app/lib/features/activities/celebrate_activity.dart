@@ -10,12 +10,22 @@ class CelebrateActivity extends StatefulWidget {
     required this.baseDir,
     required this.onFinished,
     required this.playAudio,
+    this.title = "You are amazing!",
+    this.speech = "Hooray! You finished the lesson! Good job!",
+    this.speechVi = "Bé giỏi quá! Chúc mừng con!",
+    this.speechAudioPath = "audio/instructions/celebrate_sticker.mp3",
   });
 
   final String? stickerPath;
   final String? baseDir;
   final VoidCallback onFinished;
   final void Function(String? path, String text, {String? viText}) playAudio;
+
+  /// Lời chúc / giọng đọc tuỳ biến (mặc định = lời chúc hoàn thành bài học).
+  final String title;
+  final String speech;
+  final String speechVi;
+  final String? speechAudioPath;
 
   @override
   State<CelebrateActivity> createState() => _CelebrateActivityState();
@@ -31,9 +41,9 @@ class _CelebrateActivityState extends State<CelebrateActivity> {
     _confetti.play();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       widget.playAudio(
-        'audio/instructions/celebrate_sticker.mp3',
-        "Hooray! You finished the lesson! Good job!",
-        viText: "Bé giỏi quá! Chúc mừng con!",
+        widget.speechAudioPath,
+        widget.speech,
+        viText: widget.speechVi,
       );
     });
   }
@@ -92,9 +102,9 @@ class _CelebrateActivityState extends State<CelebrateActivity> {
                         .animate()
                         .scale(duration: 500.ms, curve: Curves.elasticOut),
                     const SizedBox(height: 6),
-                    const Text(
-                      "You are amazing!",
-                      style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
+                    Text(
+                      widget.title,
+                      style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Color(0xFF3D2C2E)),
                     ),
                     const SizedBox(height: 14),
                     FilledButton(

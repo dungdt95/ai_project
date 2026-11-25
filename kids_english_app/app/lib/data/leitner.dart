@@ -19,9 +19,21 @@ class WordStat {
   /// "Đã thuộc" khi box >= 3.
   bool get mastered => box >= 3;
 
+  ///
+  /// Quy tắc: sai → về box 1 (ôn ngay hôm nay); đúng chỉ thăng box khi từ đang đến hạn,
+  /// đúng khi chưa đến hạn (vd. nhiều lần trong cùng ngày) chỉ tăng bộ đếm, giữ nguyên box/nextReview.
   WordStat update({required bool isCorrect, required DateTime now}) {
-    final newBox = isCorrect ? (box + 1).clamp(1, 5) : 1;
     final day = DateTime(now.year, now.month, now.day);
+    if (isCorrect && !isDue(now)) {
+      return WordStat(
+        exposures: exposures + 1,
+        correct: correct + 1,
+        wrong: wrong,
+        box: box,
+        nextReview: nextReview,
+      );
+    }
+    final newBox = isCorrect ? (box + 1).clamp(1, 5) : 1;
     return WordStat(
       exposures: exposures + 1,
       correct: correct + (isCorrect ? 1 : 0),

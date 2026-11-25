@@ -12,10 +12,18 @@ class DragDropActivity extends StatefulWidget {
     required this.onWordAttempt,
     required this.onFinished,
     required this.playAudio,
+    this.wordBaseDirs,
+    this.rounds = 1,
   });
 
   final List<Word> words;
   final String? baseDir;
+
+  /// Thư mục gói theo từng từ (ôn tập đa chủ đề). null → dùng [baseDir]; giá trị null = built-in.
+  final Map<String, String?>? wordBaseDirs;
+
+  /// Số vòng kéo thả liên tiếp (mỗi vòng một từ mục tiêu khác nhau khi đủ từ). Mặc định 1 = hành vi cũ.
+  final int rounds;
   final void Function(String wordId, bool isCorrect) onWordAttempt;
   final VoidCallback onFinished;
   final void Function(String? path, String text) playAudio;
@@ -25,18 +33,25 @@ class DragDropActivity extends StatefulWidget {
 }
 
 class _DragDropActivityState extends State<DragDropActivity> {
+  String? _dirFor(Word w) => widget.wordBaseDirs != null ? widget.wordBaseDirs![w.id] : widget.baseDir;
+
   final _random = Random();
+  late final List<Word> _order; // thứ tự từ mục tiêu qua các vòng
   late Word _targetWord;
   late List<Word> _items;
+  int _round = 0;
+  bool _locked = false; // đã kéo đúng, đang chờ sang vòng kế
 
   @override
   void initState() {
     super.initState();
+    _order = List.of(widget.words)..shuffle(_random);
     _startRound();
   }
 
   void _startRound() {
-    _targetWord = widget.words[_random.nextInt(widget.words.length)];
+    _locked = false;
+    _targetWord = _order[_round % _order.length];
     _items = List.of(widget.words)..shuffle(_random);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       widget.playAudio(_targetWord.audio, "Put ${_targetWord.text} into the magic box!");
@@ -77,7 +92,7 @@ class _DragDropActivityState extends State<DragDropActivity> {
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 10)],
                           ),
-                          child: MediaImage(w.image, baseDir: widget.baseDir, label: w.text),
+                          child: MediaImage(w.image, baseDir: _dirFor(w), label: w.text),
                         ),
                       ),
                       childWhenDragging: Opacity(
@@ -89,7 +104,7 @@ class _DragDropActivityState extends State<DragDropActivity> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(18),
                           ),
-                          child: MediaImage(w.image, baseDir: widget.baseDir, label: w.text),
+                          child: MediaImage(w.image, baseDir: _dirFor(w), label: w.text),
                         ),
                       ),
                       child: Container(
@@ -101,7 +116,7 @@ class _DragDropActivityState extends State<DragDropActivity> {
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 6)],
                         ),
-                        child: MediaImage(w.image, baseDir: widget.baseDir, label: w.text),
+                        child: MediaImage(w.image, baseDir: _dirFor(w), label: w.text),
                       ),
                     );
                   }).toList(),
@@ -111,13 +126,23 @@ class _DragDropActivityState extends State<DragDropActivity> {
                 DragTarget<Word>(
                   onWillAcceptWithDetails: (details) => true,
                   onAcceptWithDetails: (details) {
+                    if (_locked) return;
                     final droppedWord = details.data;
                     final isCorrect = droppedWord.id == _targetWord.id;
                     widget.onWordAttempt(_targetWord.id, isCorrect);
 
                     if (isCorrect) {
+                      _locked = true;
                       widget.playAudio(null, "Yes! That's ${_targetWord.text}!");
-                      Future.delayed(1000.ms, widget.onFinished);
+                      Future.delayed(1000.ms, () {
+                        if (!mounted) return;
+                        if (_round + 1 >= widget.rounds) {
+                          widget.onFinished();
+                        } else {
+                          setState(() => _round++);
+                          _startRound();
+                        }
+                      });
                     } else {
                       widget.playAudio(null, "Not that one! Try again!");
                     }
