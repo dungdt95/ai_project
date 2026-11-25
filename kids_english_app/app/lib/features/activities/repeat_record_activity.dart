@@ -18,10 +18,14 @@ class RepeatRecordActivity extends StatefulWidget {
     required this.playAudio,
     this.capture,
     this.recordDuration = const Duration(seconds: 3),
+    this.wordBaseDirs,
   });
 
   final List<Word> words;
   final String? baseDir;
+
+  /// Thư mục gói theo từng từ (ôn tập đa chủ đề). null → dùng [baseDir]; giá trị null = built-in.
+  final Map<String, String?>? wordBaseDirs;
   final VoidCallback onFinished;
   final Future<void> Function(String? path, String text) playAudio;
 
@@ -43,6 +47,8 @@ class RepeatRecordActivity extends StatefulWidget {
 enum _Phase { prompting, idle, listening, playingBack, feedback }
 
 class _RepeatRecordActivityState extends State<RepeatRecordActivity> {
+  String? _dirFor(Word w) => widget.wordBaseDirs != null ? widget.wordBaseDirs![w.id] : widget.baseDir;
+
   late final SpeechCapture _capture = widget.capture ?? RecordSpeechCapture();
   int _index = 0;
   _Phase _phase = _Phase.prompting;
@@ -197,7 +203,7 @@ class _RepeatRecordActivityState extends State<RepeatRecordActivity> {
                   SizedBox(
                     width: 140,
                     height: 140,
-                    child: MediaImage(w.image, baseDir: widget.baseDir, label: w.text),
+                    child: MediaImage(w.image, baseDir: _dirFor(w), label: w.text),
                   ),
                   const SizedBox(width: 24),
                   Column(

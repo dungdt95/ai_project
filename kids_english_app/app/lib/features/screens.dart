@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -229,6 +230,7 @@ class _KidHomeScreenState extends ConsumerState<KidHomeScreen> {
     final profile = ref.watch(activeProfileProvider);
     ref.watch(progressVersionProvider);
     final storage = ref.read(storageProvider);
+    final review = ref.watch(reviewSummaryProvider);
 
     // Kiểm tra giới hạn thời gian màn hình
     final screenTime = ref.watch(screenTimeProvider);
@@ -290,6 +292,12 @@ class _KidHomeScreenState extends ConsumerState<KidHomeScreen> {
                   ),
                 ),
               ),
+            ),
+          if (review.canReview)
+            Positioned(
+              right: 76,
+              top: 6,
+              child: ReviewStarButton(dueCount: review.dueOrWeakWords.length, onTap: () => context.push('/review')),
             ),
           // Cổng phụ huynh: nút nhỏ, phải nhấn giữ 2 giây.
           Positioned(right: 12, top: 8, child: _HoldToOpen(onOpen: () => context.push('/gate'))),
@@ -624,6 +632,73 @@ class ParentHomeScreen extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Nút "Review ⭐" mời bé ôn tập; badge = số từ cần ôn. Chỉ hiện khi đủ từ (xem [ReviewSummary.canReview]).
+class ReviewStarButton extends StatelessWidget {
+  const ReviewStarButton({super.key, required this.dueCount, required this.onTap});
+  final int dueCount;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final button = GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: kKidTouch + 16,
+        height: kKidTouch,
+        decoration: BoxDecoration(
+          color: AppColors.orange,
+          borderRadius: BorderRadius.circular(28),
+          border: Border.all(color: Colors.white, width: 3),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 3))],
+        ),
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.star_rounded, color: AppColors.yellow, size: 38),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 6),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text('Review', maxLines: 1, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ).animate(onPlay: (c) => c.repeat(reverse: true)).scale(
+          begin: const Offset(1, 1),
+          end: const Offset(1.06, 1.06),
+          duration: 900.ms,
+          curve: Curves.easeInOut,
+        );
+
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        button,
+        if (dueCount > 0)
+          Positioned(
+            right: -6,
+            top: -6,
+            child: Container(
+              key: const Key('review_badge'),
+              constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
+              padding: const EdgeInsets.symmetric(horizontal: 6),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: AppColors.pink,
+                shape: dueCount > 9 ? BoxShape.rectangle : BoxShape.circle,
+                borderRadius: dueCount > 9 ? BorderRadius.circular(14) : null,
+                border: Border.all(color: Colors.white, width: 2),
+              ),
+              child: Text('$dueCount', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16)),
+            ),
+          ),
+      ],
     );
   }
 }

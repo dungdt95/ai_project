@@ -14,12 +14,16 @@ class TapFindActivity extends StatefulWidget {
     required this.onWordAttempt,
     required this.onFinished,
     required this.playAudio,
+    this.wordBaseDirs,
   });
 
   final List<Word> words;
   final List<Word> allTopicWords;
   final int rounds;
   final String? baseDir;
+
+  /// Thư mục gói theo từng từ (ôn tập đa chủ đề). null → dùng [baseDir]; giá trị null = built-in.
+  final Map<String, String?>? wordBaseDirs;
   final void Function(String wordId, bool isCorrect) onWordAttempt;
   final VoidCallback onFinished;
   final void Function(String? path, String text) playAudio;
@@ -29,6 +33,8 @@ class TapFindActivity extends StatefulWidget {
 }
 
 class _TapFindActivityState extends State<TapFindActivity> {
+  String? _dirFor(Word w) => widget.wordBaseDirs != null ? widget.wordBaseDirs![w.id] : widget.baseDir;
+
   final _random = Random();
   late Word _targetWord;
   late List<Word> _choices;
@@ -154,7 +160,7 @@ class _TapFindActivityState extends State<TapFindActivity> {
                           BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 4)),
                         ],
                       ),
-                      child: MediaImage(w.image, baseDir: widget.baseDir, label: w.text),
+                      child: MediaImage(w.image, baseDir: _dirFor(w), label: w.text),
                     ),
                   );
 

@@ -91,6 +91,15 @@ class Storage {
     return _wordStatsBox.put('$profileId|$wordId', cur.update(isCorrect: correct, now: t).toJson());
   }
 
+  /// Đánh dấu từ đã được giới thiệu (vào hệ thống Leitner ở box 1) mà KHÔNG cộng đúng/sai.
+  /// Đã có thống kê thì giữ nguyên.
+  Future<void> ensureWordIntroduced(String profileId, String wordId, {DateTime? now}) async {
+    if (wordStat(profileId, wordId) != null) return;
+    final t = now ?? DateTime.now();
+    final day = DateTime(t.year, t.month, t.day);
+    await _wordStatsBox.put('$profileId|$wordId', WordStat(exposures: 1, nextReview: day).toJson());
+  }
+
   // ---- Thời gian chơi ----
   String _dayKey(DateTime d) => '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
 

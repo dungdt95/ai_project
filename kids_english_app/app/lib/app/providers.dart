@@ -8,6 +8,7 @@ import '../data/content_repository.dart';
 import '../data/drive_sync_service.dart';
 import '../data/pack_installer.dart';
 import '../data/models.dart';
+import '../data/review_planner.dart';
 import '../data/storage.dart';
 
 /// Được ghi đè trong main() sau khi mở Hive.
@@ -178,6 +179,21 @@ class ProgressVersion extends Notifier<int> {
 }
 
 final progressVersionProvider = NotifierProvider<ProgressVersion, int>(ProgressVersion.new);
+
+/// Kho từ đã học của hồ sơ đang chọn, chia nhóm theo Leitner. Tính lại khi chủ đề, hồ sơ hoặc tiến độ đổi.
+final reviewSummaryProvider = Provider<ReviewSummary>((ref) {
+  final topics = ref.watch(topicsProvider).value;
+  final profile = ref.watch(activeProfileProvider);
+  ref.watch(progressVersionProvider);
+  if (topics == null || profile == null) return ReviewSummary.empty;
+  final storage = ref.read(storageProvider);
+  return buildReviewSummary(
+    topics: topics,
+    isLessonDone: (lessonId) => storage.isLessonDone(profile.id, lessonId),
+    wordStat: (wordId) => storage.wordStat(profile.id, wordId),
+    now: DateTime.now(),
+  );
+});
 
 // ---------------- Âm thanh ----------------
 final audioProvider = Provider<AudioService>((ref) {
